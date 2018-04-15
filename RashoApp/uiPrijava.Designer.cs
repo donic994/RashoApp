@@ -1,6 +1,6 @@
 ﻿namespace RashoApp
 {
-    partial class Prijava
+    partial class uiPrijava
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,7 @@
             this.uiInputLozinka = new System.Windows.Forms.TextBox();
             this.uiInputKorisničkoIme = new System.Windows.Forms.TextBox();
             this.uiAkcijaPrijaviSe = new System.Windows.Forms.Button();
+            this.HelpPrijava = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // uiOznakaLozinka
@@ -79,7 +80,11 @@
             this.uiAkcijaPrijaviSe.Text = "Prijavi se";
             this.uiAkcijaPrijaviSe.UseVisualStyleBackColor = true;
             // 
-            // Prijava
+            // HelpPrijava
+            // 
+            this.HelpPrijava.HelpNamespace = "C:\\Users\\filip\\Desktop\\help.html";
+            // 
+            // uiPrijava
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,7 +97,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
             this.MaximizeBox = false;
-            this.Name = "Prijava";
+            this.MinimizeBox = false;
+            this.Name = "uiPrijava";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
             this.ResumeLayout(false);
@@ -106,5 +112,6 @@
         private System.Windows.Forms.TextBox uiInputLozinka;
         private System.Windows.Forms.TextBox uiInputKorisničkoIme;
         private System.Windows.Forms.Button uiAkcijaPrijaviSe;
+        private System.Windows.Forms.HelpProvider HelpPrijava;
     }
 }

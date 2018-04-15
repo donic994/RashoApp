@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RashoApp
 {
-    public partial class Prijava : Form
+    public partial class uiPrijava : Form
     {
-        public Prijava()
+        public uiPrijava()
         {
             InitializeComponent();
         }
