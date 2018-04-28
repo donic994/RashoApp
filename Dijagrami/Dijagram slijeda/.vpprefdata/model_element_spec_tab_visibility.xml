@@ -328,7 +328,6 @@
 	</Type>
 	<Type id="Operation">
 		<Tab id="ORM Operation Detail"/>
-		<Tab id="Parameters"/>
 	</Type>
 	<Type id="OutputPin">
 		<Tab id="InStates"/>
