@@ -15,7 +15,7 @@ namespace RashoApp
         public uiDjelovi()
         {
             InitializeComponent();
-            uiOutputTableDataDio.BackgroundColor = PopisBoja.bojaProizvod;        }
+        }
 
         private void uiDjelovi_Load(object sender, EventArgs e)
         {

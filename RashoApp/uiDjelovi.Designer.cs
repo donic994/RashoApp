@@ -51,7 +51,7 @@
             this.uiOutputTableDataDio.AllowUserToDeleteRows = false;
             this.uiOutputTableDataDio.AutoGenerateColumns = false;
             this.uiOutputTableDataDio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.uiOutputTableDataDio.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.uiOutputTableDataDio.BackgroundColor = System.Drawing.Color.White;
             this.uiOutputTableDataDio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uiOutputTableDataDio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,

@@ -20,10 +20,10 @@ namespace RashoApp
         private void uiTabControl_DrawItem(object sender, DrawItemEventArgs e)
         {
             Graphics g = e.Graphics;
-            Brush _textBrush;
+            Brush textBrush;
 
-            TabPage _tabPage = uiTabControl.TabPages[e.Index];
-            Rectangle _tabBounds = uiTabControl.GetTabRect(e.Index);
+            TabPage tabPage = uiTabControl.TabPages[e.Index];
+            Rectangle tabBounds = uiTabControl.GetTabRect(e.Index);
 
             //Custom boje za prozore
             SolidBrush brushProizvodi = new SolidBrush(PopisBoja.bojaProizvod);
@@ -32,9 +32,10 @@ namespace RashoApp
             SolidBrush brushKorisnici = new SolidBrush(PopisBoja.bojaKorisnici);
             SolidBrush brushNeaktivno = new SolidBrush(PopisBoja.bojaNeaktivniTab);
 
+            g.FillRectangle(brushNeaktivno, e.Bounds);
             if (e.State == DrawItemState.Selected)
             {
-                _textBrush = new SolidBrush(Color.White);
+                textBrush = new SolidBrush(Color.White);
                 if (e.Index == 0)
                 {
                     g.FillRectangle(brushProizvodi, e.Bounds);
@@ -55,15 +56,16 @@ namespace RashoApp
             else
             {
                 g.FillRectangle(brushNeaktivno, e.Bounds);
-                _textBrush = new System.Drawing.SolidBrush(Color.White);
+                textBrush = new System.Drawing.SolidBrush(Color.White);
             }
             Font _tabFont = new Font("Arial", (float)18.0, FontStyle.Bold, GraphicsUnit.Pixel);
-
+           
+            
             // Nacrtaj string i poravnaj ga po sredini
             StringFormat _stringFlags = new StringFormat();
             _stringFlags.Alignment = StringAlignment.Center;
             _stringFlags.LineAlignment = StringAlignment.Center;
-            g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));                    
+            g.DrawString(tabPage.Text, _tabFont, textBrush, tabBounds, new StringFormat(_stringFlags));                    
         }
 
         private void uiTabControl_SelectedIndexChanged(object sender, EventArgs e)
@@ -77,11 +79,16 @@ namespace RashoApp
                         frm.Visible = true;
                         frm.FormBorderStyle = FormBorderStyle.None;
                         frm.Dock = DockStyle.Fill;
-                        uiTabControl.TabPages[0].Controls.Add(frm);
+                        uiTabProizvodiDio.Controls.Add(frm);
                         break;
                     }
 
             }
+        }
+
+        private void uiGlavniIzbornik_SizeChanged(object sender, EventArgs e)
+        {
+            this.uiTabControl.ItemSize = new System.Drawing.Size((this.Height / 4)-11, 120);
         }
     }
 }
