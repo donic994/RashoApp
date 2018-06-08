@@ -15,13 +15,12 @@ namespace RashoApp
         public uiDjelovi()
         {
             InitializeComponent();
-        }
+            uiOutputTableDataDio.BackgroundColor = PopisBoja.bojaProizvod;        }
 
         private void uiDjelovi_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Dio' table. You can move, or remove it, as needed.
             this.dioTableAdapter.Fill(this.baza18043_DBDataSet.Dio);
-
         }
     }
 }

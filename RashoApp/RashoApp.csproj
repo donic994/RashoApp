@@ -66,6 +66,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Baza18043_DBDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PopisBoja.cs" />
     <Compile Include="uiDjelovi.cs">
       <SubType>Form</SubType>
     </Compile>

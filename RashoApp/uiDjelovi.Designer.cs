@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.uiOutputTableDataDio = new System.Windows.Forms.DataGridView();
-            this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
-            this.dioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dioTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.DioTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duljinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,14 +37,21 @@
             this.visinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.slikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materijalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
+            this.dioTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.DioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataDio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // uiOutputTableDataDio
             // 
+            this.uiOutputTableDataDio.AllowUserToAddRows = false;
+            this.uiOutputTableDataDio.AllowUserToDeleteRows = false;
             this.uiOutputTableDataDio.AutoGenerateColumns = false;
+            this.uiOutputTableDataDio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.uiOutputTableDataDio.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.uiOutputTableDataDio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uiOutputTableDataDio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
@@ -66,27 +70,12 @@
             this.uiOutputTableDataDio.Size = new System.Drawing.Size(796, 500);
             this.uiOutputTableDataDio.TabIndex = 0;
             // 
-            // baza18043_DBDataSet
-            // 
-            this.baza18043_DBDataSet.DataSetName = "Baza18043_DBDataSet";
-            this.baza18043_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dioBindingSource
-            // 
-            this.dioBindingSource.DataMember = "Dio";
-            this.dioBindingSource.DataSource = this.baza18043_DBDataSet;
-            // 
-            // dioTableAdapter
-            // 
-            this.dioTableAdapter.ClearBeforeFill = true;
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Width = 25;
             // 
             // nazivDataGridViewTextBoxColumn
             // 
@@ -101,7 +90,6 @@
             this.duljinaDataGridViewTextBoxColumn.HeaderText = "Duljina(mm)";
             this.duljinaDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.duljinaDataGridViewTextBoxColumn.Name = "duljinaDataGridViewTextBoxColumn";
-            this.duljinaDataGridViewTextBoxColumn.Width = 65;
             // 
             // sirinaDataGridViewTextBoxColumn
             // 
@@ -109,7 +97,6 @@
             this.sirinaDataGridViewTextBoxColumn.HeaderText = "Širina(mm)";
             this.sirinaDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.sirinaDataGridViewTextBoxColumn.Name = "sirinaDataGridViewTextBoxColumn";
-            this.sirinaDataGridViewTextBoxColumn.Width = 65;
             // 
             // visinaDataGridViewTextBoxColumn
             // 
@@ -117,7 +104,6 @@
             this.visinaDataGridViewTextBoxColumn.HeaderText = "Visina(mm)";
             this.visinaDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.visinaDataGridViewTextBoxColumn.Name = "visinaDataGridViewTextBoxColumn";
-            this.visinaDataGridViewTextBoxColumn.Width = 65;
             // 
             // slikaDataGridViewTextBoxColumn
             // 
@@ -133,19 +119,33 @@
             this.materijalDataGridViewTextBoxColumn.MinimumWidth = 15;
             this.materijalDataGridViewTextBoxColumn.Name = "materijalDataGridViewTextBoxColumn";
             // 
+            // dioBindingSource
+            // 
+            this.dioBindingSource.DataMember = "Dio";
+            this.dioBindingSource.DataSource = this.baza18043_DBDataSet;
+            // 
+            // baza18043_DBDataSet
+            // 
+            this.baza18043_DBDataSet.DataSetName = "Baza18043_DBDataSet";
+            this.baza18043_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dioTableAdapter
+            // 
+            this.dioTableAdapter.ClearBeforeFill = true;
+            // 
             // uiDjelovi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(796, 500);
             this.Controls.Add(this.uiOutputTableDataDio);
             this.Name = "uiDjelovi";
             this.Text = "uiDjelovi";
             this.Load += new System.EventHandler(this.uiDjelovi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataDio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
