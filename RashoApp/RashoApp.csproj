@@ -61,6 +61,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Baza18043_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Baza18043_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="uiDjelovi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiDjelovi.Designer.cs">
+      <DependentUpon>uiDjelovi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uiGlavniIzbornik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uiGlavniIzbornik.Designer.cs">
+      <DependentUpon>uiGlavniIzbornik.cs</DependentUpon>
+    </Compile>
     <Compile Include="uiPrijava.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +86,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="uiDjelovi.resx">
+      <DependentUpon>uiDjelovi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uiGlavniIzbornik.resx">
+      <DependentUpon>uiGlavniIzbornik.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uiPrijava.resx">
       <DependentUpon>uiPrijava.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +104,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Baza18043_DBDataSet.xsc">
+      <DependentUpon>Baza18043_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Baza18043_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Baza18043_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Baza18043_DBDataSet.xss">
+      <DependentUpon>Baza18043_DBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
