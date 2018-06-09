@@ -84,6 +84,12 @@
     <Compile Include="Element\uiElement.Designer.cs">
       <DependentUpon>uiElement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Komponenta\uiDodajUrediKomponenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Komponenta\uiDodajUrediKomponenta.Designer.cs">
+      <DependentUpon>uiDodajUrediKomponenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Komponenta\uiKomponenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Element\uiElement.resx">
       <DependentUpon>uiElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Komponenta\uiDodajUrediKomponenta.resx">
+      <DependentUpon>uiDodajUrediKomponenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Komponenta\uiKomponenta.resx">
       <DependentUpon>uiKomponenta.cs</DependentUpon>

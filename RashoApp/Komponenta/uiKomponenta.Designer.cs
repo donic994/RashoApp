@@ -54,9 +54,9 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uiActionObrišiElement = new System.Windows.Forms.Button();
-            this.uiActionUrediElement = new System.Windows.Forms.Button();
-            this.uiActionDodajNoviElement = new System.Windows.Forms.Button();
+            this.uiActionObrišiKomponenta = new System.Windows.Forms.Button();
+            this.uiActionUrediKomponenta = new System.Windows.Forms.Button();
+            this.uiActionDodajNoviKomponenta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingNavigator)).BeginInit();
@@ -285,56 +285,56 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 110;
             // 
-            // uiActionObrišiElement
+            // uiActionObrišiKomponenta
             // 
-            this.uiActionObrišiElement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiActionObrišiElement.BackColor = System.Drawing.Color.Crimson;
-            this.uiActionObrišiElement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiActionObrišiElement.ForeColor = System.Drawing.Color.White;
-            this.uiActionObrišiElement.Location = new System.Drawing.Point(693, 443);
-            this.uiActionObrišiElement.Name = "uiActionObrišiElement";
-            this.uiActionObrišiElement.Size = new System.Drawing.Size(97, 39);
-            this.uiActionObrišiElement.TabIndex = 9;
-            this.uiActionObrišiElement.Text = "Obriši";
-            this.uiActionObrišiElement.UseVisualStyleBackColor = false;
-            this.uiActionObrišiElement.Click += new System.EventHandler(this.uiActionObrišiElement_Click);
+            this.uiActionObrišiKomponenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiActionObrišiKomponenta.BackColor = System.Drawing.Color.Crimson;
+            this.uiActionObrišiKomponenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionObrišiKomponenta.ForeColor = System.Drawing.Color.White;
+            this.uiActionObrišiKomponenta.Location = new System.Drawing.Point(693, 443);
+            this.uiActionObrišiKomponenta.Name = "uiActionObrišiKomponenta";
+            this.uiActionObrišiKomponenta.Size = new System.Drawing.Size(97, 39);
+            this.uiActionObrišiKomponenta.TabIndex = 9;
+            this.uiActionObrišiKomponenta.Text = "Obriši";
+            this.uiActionObrišiKomponenta.UseVisualStyleBackColor = false;
+            this.uiActionObrišiKomponenta.Click += new System.EventHandler(this.uiActionObrišiElement_Click);
             // 
-            // uiActionUrediElement
+            // uiActionUrediKomponenta
             // 
-            this.uiActionUrediElement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiActionUrediElement.BackColor = System.Drawing.Color.Gold;
-            this.uiActionUrediElement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiActionUrediElement.ForeColor = System.Drawing.Color.White;
-            this.uiActionUrediElement.Location = new System.Drawing.Point(563, 443);
-            this.uiActionUrediElement.Name = "uiActionUrediElement";
-            this.uiActionUrediElement.Size = new System.Drawing.Size(97, 39);
-            this.uiActionUrediElement.TabIndex = 8;
-            this.uiActionUrediElement.Text = "Uredi";
-            this.uiActionUrediElement.UseVisualStyleBackColor = false;
-            this.uiActionUrediElement.Click += new System.EventHandler(this.uiActionUrediElement_Click);
+            this.uiActionUrediKomponenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiActionUrediKomponenta.BackColor = System.Drawing.Color.Gold;
+            this.uiActionUrediKomponenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionUrediKomponenta.ForeColor = System.Drawing.Color.White;
+            this.uiActionUrediKomponenta.Location = new System.Drawing.Point(563, 443);
+            this.uiActionUrediKomponenta.Name = "uiActionUrediKomponenta";
+            this.uiActionUrediKomponenta.Size = new System.Drawing.Size(97, 39);
+            this.uiActionUrediKomponenta.TabIndex = 8;
+            this.uiActionUrediKomponenta.Text = "Uredi";
+            this.uiActionUrediKomponenta.UseVisualStyleBackColor = false;
+            this.uiActionUrediKomponenta.Click += new System.EventHandler(this.uiActionUrediElement_Click);
             // 
-            // uiActionDodajNoviElement
+            // uiActionDodajNoviKomponenta
             // 
-            this.uiActionDodajNoviElement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiActionDodajNoviElement.BackColor = System.Drawing.Color.LimeGreen;
-            this.uiActionDodajNoviElement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiActionDodajNoviElement.ForeColor = System.Drawing.Color.White;
-            this.uiActionDodajNoviElement.Location = new System.Drawing.Point(436, 443);
-            this.uiActionDodajNoviElement.Name = "uiActionDodajNoviElement";
-            this.uiActionDodajNoviElement.Size = new System.Drawing.Size(97, 39);
-            this.uiActionDodajNoviElement.TabIndex = 7;
-            this.uiActionDodajNoviElement.Text = "Dodaj";
-            this.uiActionDodajNoviElement.UseVisualStyleBackColor = false;
-            this.uiActionDodajNoviElement.Click += new System.EventHandler(this.uiActionDodajNoviElement_Click);
+            this.uiActionDodajNoviKomponenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiActionDodajNoviKomponenta.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionDodajNoviKomponenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionDodajNoviKomponenta.ForeColor = System.Drawing.Color.White;
+            this.uiActionDodajNoviKomponenta.Location = new System.Drawing.Point(436, 443);
+            this.uiActionDodajNoviKomponenta.Name = "uiActionDodajNoviKomponenta";
+            this.uiActionDodajNoviKomponenta.Size = new System.Drawing.Size(97, 39);
+            this.uiActionDodajNoviKomponenta.TabIndex = 7;
+            this.uiActionDodajNoviKomponenta.Text = "Dodaj";
+            this.uiActionDodajNoviKomponenta.UseVisualStyleBackColor = false;
+            this.uiActionDodajNoviKomponenta.Click += new System.EventHandler(this.uiActionDodajNoviElement_Click);
             // 
             // uiKomponenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 508);
-            this.Controls.Add(this.uiActionObrišiElement);
-            this.Controls.Add(this.uiActionUrediElement);
-            this.Controls.Add(this.uiActionDodajNoviElement);
+            this.Controls.Add(this.uiActionObrišiKomponenta);
+            this.Controls.Add(this.uiActionUrediKomponenta);
+            this.Controls.Add(this.uiActionDodajNoviKomponenta);
             this.Controls.Add(this.uiOutputDataKoponenta);
             this.Controls.Add(this.komponentaBindingNavigator);
             this.Name = "uiKomponenta";
@@ -377,8 +377,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Button uiActionObrišiElement;
-        private System.Windows.Forms.Button uiActionUrediElement;
-        private System.Windows.Forms.Button uiActionDodajNoviElement;
+        private System.Windows.Forms.Button uiActionObrišiKomponenta;
+        private System.Windows.Forms.Button uiActionUrediKomponenta;
+        private System.Windows.Forms.Button uiActionDodajNoviKomponenta;
     }
 }

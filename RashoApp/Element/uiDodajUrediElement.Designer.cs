@@ -300,6 +300,7 @@
             this.Controls.Add(kolicinaLabel);
             this.Controls.Add(this.kolicinaTextBox);
             this.Controls.Add(this.elementBindingNavigator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "uiDodajUrediElement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "uiDodajUediElement";
