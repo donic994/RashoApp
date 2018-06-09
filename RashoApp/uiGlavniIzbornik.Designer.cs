@@ -31,23 +31,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiGlavniIzbornik));
             this.uiTabControl = new System.Windows.Forms.TabControl();
             this.Proizvodi = new System.Windows.Forms.TabPage();
-            this.Narudžbe = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.Dnevnik = new System.Windows.Forms.TabPage();
-            this.Korisnici = new System.Windows.Forms.TabPage();
             this.uiTabControlProizvodi = new System.Windows.Forms.TabControl();
             this.uiTabProizvodiDio = new System.Windows.Forms.TabPage();
             this.uiTabProizvodiElement = new System.Windows.Forms.TabPage();
             this.uiTabProizvodiKomponenta = new System.Windows.Forms.TabPage();
             this.uiTabProizvodiProizvod = new System.Windows.Forms.TabPage();
             this.uiTabProizvodiUlogaDijela = new System.Windows.Forms.TabPage();
+            this.Narudžbe = new System.Windows.Forms.TabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Dnevnik = new System.Windows.Forms.TabPage();
+            this.Korisnici = new System.Windows.Forms.TabPage();
             this.uiTabControl.SuspendLayout();
             this.Proizvodi.SuspendLayout();
+            this.uiTabControlProizvodi.SuspendLayout();
             this.Narudžbe.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.uiTabControlProizvodi.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiTabControl
@@ -87,6 +87,76 @@
             this.Proizvodi.Size = new System.Drawing.Size(944, 598);
             this.Proizvodi.TabIndex = 0;
             this.Proizvodi.Text = "Proizvodi";
+            // 
+            // uiTabControlProizvodi
+            // 
+            this.uiTabControlProizvodi.Controls.Add(this.uiTabProizvodiDio);
+            this.uiTabControlProizvodi.Controls.Add(this.uiTabProizvodiElement);
+            this.uiTabControlProizvodi.Controls.Add(this.uiTabProizvodiKomponenta);
+            this.uiTabControlProizvodi.Controls.Add(this.uiTabProizvodiProizvod);
+            this.uiTabControlProizvodi.Controls.Add(this.uiTabProizvodiUlogaDijela);
+            this.uiTabControlProizvodi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiTabControlProizvodi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiTabControlProizvodi.ItemSize = new System.Drawing.Size(60, 40);
+            this.uiTabControlProizvodi.Location = new System.Drawing.Point(0, 0);
+            this.uiTabControlProizvodi.Margin = new System.Windows.Forms.Padding(0);
+            this.uiTabControlProizvodi.Name = "uiTabControlProizvodi";
+            this.uiTabControlProizvodi.Padding = new System.Drawing.Point(0, 0);
+            this.uiTabControlProizvodi.SelectedIndex = 0;
+            this.uiTabControlProizvodi.Size = new System.Drawing.Size(942, 596);
+            this.uiTabControlProizvodi.TabIndex = 0;
+            // 
+            // uiTabProizvodiDio
+            // 
+            this.uiTabProizvodiDio.AutoScroll = true;
+            this.uiTabProizvodiDio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiTabProizvodiDio.Location = new System.Drawing.Point(4, 44);
+            this.uiTabProizvodiDio.Margin = new System.Windows.Forms.Padding(0);
+            this.uiTabProizvodiDio.Name = "uiTabProizvodiDio";
+            this.uiTabProizvodiDio.Size = new System.Drawing.Size(934, 548);
+            this.uiTabProizvodiDio.TabIndex = 0;
+            this.uiTabProizvodiDio.Text = "Dio";
+            this.uiTabProizvodiDio.UseVisualStyleBackColor = true;
+            // 
+            // uiTabProizvodiElement
+            // 
+            this.uiTabProizvodiElement.Location = new System.Drawing.Point(4, 44);
+            this.uiTabProizvodiElement.Margin = new System.Windows.Forms.Padding(0);
+            this.uiTabProizvodiElement.Name = "uiTabProizvodiElement";
+            this.uiTabProizvodiElement.Size = new System.Drawing.Size(934, 548);
+            this.uiTabProizvodiElement.TabIndex = 1;
+            this.uiTabProizvodiElement.Text = "Element";
+            this.uiTabProizvodiElement.UseVisualStyleBackColor = true;
+            // 
+            // uiTabProizvodiKomponenta
+            // 
+            this.uiTabProizvodiKomponenta.Location = new System.Drawing.Point(4, 44);
+            this.uiTabProizvodiKomponenta.Margin = new System.Windows.Forms.Padding(0);
+            this.uiTabProizvodiKomponenta.Name = "uiTabProizvodiKomponenta";
+            this.uiTabProizvodiKomponenta.Size = new System.Drawing.Size(934, 548);
+            this.uiTabProizvodiKomponenta.TabIndex = 2;
+            this.uiTabProizvodiKomponenta.Text = "Komponenta";
+            this.uiTabProizvodiKomponenta.UseVisualStyleBackColor = true;
+            // 
+            // uiTabProizvodiProizvod
+            // 
+            this.uiTabProizvodiProizvod.Location = new System.Drawing.Point(4, 44);
+            this.uiTabProizvodiProizvod.Margin = new System.Windows.Forms.Padding(0);
+            this.uiTabProizvodiProizvod.Name = "uiTabProizvodiProizvod";
+            this.uiTabProizvodiProizvod.Size = new System.Drawing.Size(934, 548);
+            this.uiTabProizvodiProizvod.TabIndex = 3;
+            this.uiTabProizvodiProizvod.Text = "Proizvod";
+            this.uiTabProizvodiProizvod.UseVisualStyleBackColor = true;
+            // 
+            // uiTabProizvodiUlogaDijela
+            // 
+            this.uiTabProizvodiUlogaDijela.Location = new System.Drawing.Point(4, 44);
+            this.uiTabProizvodiUlogaDijela.Margin = new System.Windows.Forms.Padding(0);
+            this.uiTabProizvodiUlogaDijela.Name = "uiTabProizvodiUlogaDijela";
+            this.uiTabProizvodiUlogaDijela.Size = new System.Drawing.Size(934, 548);
+            this.uiTabProizvodiUlogaDijela.TabIndex = 4;
+            this.uiTabProizvodiUlogaDijela.Text = "Uloga dijela";
+            this.uiTabProizvodiUlogaDijela.UseVisualStyleBackColor = true;
             // 
             // Narudžbe
             // 
@@ -139,7 +209,7 @@
             this.Dnevnik.Location = new System.Drawing.Point(124, 4);
             this.Dnevnik.Margin = new System.Windows.Forms.Padding(0);
             this.Dnevnik.Name = "Dnevnik";
-            this.Dnevnik.Size = new System.Drawing.Size(945, 598);
+            this.Dnevnik.Size = new System.Drawing.Size(944, 598);
             this.Dnevnik.TabIndex = 2;
             this.Dnevnik.Text = "Dnevnik";
             // 
@@ -149,78 +219,9 @@
             this.Korisnici.Location = new System.Drawing.Point(124, 4);
             this.Korisnici.Margin = new System.Windows.Forms.Padding(0);
             this.Korisnici.Name = "Korisnici";
-            this.Korisnici.Size = new System.Drawing.Size(945, 598);
+            this.Korisnici.Size = new System.Drawing.Size(944, 598);
             this.Korisnici.TabIndex = 3;
             this.Korisnici.Text = "Korisnici";
-            // 
-            // uiTabControlProizvodi
-            // 
-            this.uiTabControlProizvodi.Controls.Add(this.uiTabProizvodiDio);
-            this.uiTabControlProizvodi.Controls.Add(this.uiTabProizvodiElement);
-            this.uiTabControlProizvodi.Controls.Add(this.uiTabProizvodiKomponenta);
-            this.uiTabControlProizvodi.Controls.Add(this.uiTabProizvodiProizvod);
-            this.uiTabControlProizvodi.Controls.Add(this.uiTabProizvodiUlogaDijela);
-            this.uiTabControlProizvodi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiTabControlProizvodi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.uiTabControlProizvodi.ItemSize = new System.Drawing.Size(60, 40);
-            this.uiTabControlProizvodi.Location = new System.Drawing.Point(0, 0);
-            this.uiTabControlProizvodi.Margin = new System.Windows.Forms.Padding(0);
-            this.uiTabControlProizvodi.Name = "uiTabControlProizvodi";
-            this.uiTabControlProizvodi.Padding = new System.Drawing.Point(0, 0);
-            this.uiTabControlProizvodi.SelectedIndex = 0;
-            this.uiTabControlProizvodi.Size = new System.Drawing.Size(942, 596);
-            this.uiTabControlProizvodi.TabIndex = 0;
-            // 
-            // uiTabProizvodiDio
-            // 
-            this.uiTabProizvodiDio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.uiTabProizvodiDio.Location = new System.Drawing.Point(4, 44);
-            this.uiTabProizvodiDio.Margin = new System.Windows.Forms.Padding(0);
-            this.uiTabProizvodiDio.Name = "uiTabProizvodiDio";
-            this.uiTabProizvodiDio.Size = new System.Drawing.Size(934, 548);
-            this.uiTabProizvodiDio.TabIndex = 0;
-            this.uiTabProizvodiDio.Text = "Dio";
-            this.uiTabProizvodiDio.UseVisualStyleBackColor = true;
-            // 
-            // uiTabProizvodiElement
-            // 
-            this.uiTabProizvodiElement.Location = new System.Drawing.Point(4, 29);
-            this.uiTabProizvodiElement.Margin = new System.Windows.Forms.Padding(0);
-            this.uiTabProizvodiElement.Name = "uiTabProizvodiElement";
-            this.uiTabProizvodiElement.Size = new System.Drawing.Size(934, 563);
-            this.uiTabProizvodiElement.TabIndex = 1;
-            this.uiTabProizvodiElement.Text = "Element";
-            this.uiTabProizvodiElement.UseVisualStyleBackColor = true;
-            // 
-            // uiTabProizvodiKomponenta
-            // 
-            this.uiTabProizvodiKomponenta.Location = new System.Drawing.Point(4, 29);
-            this.uiTabProizvodiKomponenta.Margin = new System.Windows.Forms.Padding(0);
-            this.uiTabProizvodiKomponenta.Name = "uiTabProizvodiKomponenta";
-            this.uiTabProizvodiKomponenta.Size = new System.Drawing.Size(934, 563);
-            this.uiTabProizvodiKomponenta.TabIndex = 2;
-            this.uiTabProizvodiKomponenta.Text = "Komponenta";
-            this.uiTabProizvodiKomponenta.UseVisualStyleBackColor = true;
-            // 
-            // uiTabProizvodiProizvod
-            // 
-            this.uiTabProizvodiProizvod.Location = new System.Drawing.Point(4, 29);
-            this.uiTabProizvodiProizvod.Margin = new System.Windows.Forms.Padding(0);
-            this.uiTabProizvodiProizvod.Name = "uiTabProizvodiProizvod";
-            this.uiTabProizvodiProizvod.Size = new System.Drawing.Size(934, 563);
-            this.uiTabProizvodiProizvod.TabIndex = 3;
-            this.uiTabProizvodiProizvod.Text = "Proizvod";
-            this.uiTabProizvodiProizvod.UseVisualStyleBackColor = true;
-            // 
-            // uiTabProizvodiUlogaDijela
-            // 
-            this.uiTabProizvodiUlogaDijela.Location = new System.Drawing.Point(4, 29);
-            this.uiTabProizvodiUlogaDijela.Margin = new System.Windows.Forms.Padding(0);
-            this.uiTabProizvodiUlogaDijela.Name = "uiTabProizvodiUlogaDijela";
-            this.uiTabProizvodiUlogaDijela.Size = new System.Drawing.Size(934, 563);
-            this.uiTabProizvodiUlogaDijela.TabIndex = 4;
-            this.uiTabProizvodiUlogaDijela.Text = "Uloga dijela";
-            this.uiTabProizvodiUlogaDijela.UseVisualStyleBackColor = true;
             // 
             // uiGlavniIzbornik
             // 
@@ -231,15 +232,16 @@
             this.Controls.Add(this.uiTabControl);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(750, 300);
             this.Name = "uiGlavniIzbornik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "uiGlavniIzbornik";
             this.SizeChanged += new System.EventHandler(this.uiGlavniIzbornik_SizeChanged);
             this.uiTabControl.ResumeLayout(false);
             this.Proizvodi.ResumeLayout(false);
+            this.uiTabControlProizvodi.ResumeLayout(false);
             this.Narudžbe.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.uiTabControlProizvodi.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

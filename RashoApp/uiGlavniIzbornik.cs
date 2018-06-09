@@ -15,6 +15,7 @@ namespace RashoApp
         public uiGlavniIzbornik()
         {
             InitializeComponent();
+            PopuniOdUiDjelovi();
         }
 
         private void uiTabControl_DrawItem(object sender, DrawItemEventArgs e)
@@ -67,10 +68,10 @@ namespace RashoApp
             _stringFlags.LineAlignment = StringAlignment.Center;
             g.DrawString(tabPage.Text, _tabFont, textBrush, tabBounds, new StringFormat(_stringFlags));                    
         }
-
+        
         private void uiTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (uiTabControl.SelectedIndex)
+           /* switch (uiTabControl.SelectedIndex)
             {
                 case 0:
                     {
@@ -83,12 +84,23 @@ namespace RashoApp
                         break;
                     }
 
-            }
+            }*/
         }
 
+
+        private void PopuniOdUiDjelovi()
+        {
+            uiDjelovi frm = new uiDjelovi();
+            frm.TopLevel = false;
+            frm.Visible = true;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            uiTabProizvodiDio.Controls.Add(frm);
+
+        }
         private void uiGlavniIzbornik_SizeChanged(object sender, EventArgs e)
         {
-            this.uiTabControl.ItemSize = new System.Drawing.Size((this.Height / 4)-11, 120);
+            uiTabControl.ItemSize = new System.Drawing.Size((this.Height / uiTabControl.TabCount)-11, 120);
         }
     }
 }

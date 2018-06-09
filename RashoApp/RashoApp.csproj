@@ -66,11 +66,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Baza18043_DBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PopisBoja.cs" />
-    <Compile Include="uiDjelovi.cs">
+    <Compile Include="Djelovi\uiDodajUrediDio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="uiDjelovi.Designer.cs">
+    <Compile Include="Djelovi\uiDodajUrediDio.Designer.cs">
+      <DependentUpon>uiDodajUrediDio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopisBoja.cs" />
+    <Compile Include="Djelovi\uiDjelovi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Djelovi\uiDjelovi.Designer.cs">
       <DependentUpon>uiDjelovi.cs</DependentUpon>
     </Compile>
     <Compile Include="uiGlavniIzbornik.cs">
@@ -87,8 +93,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="uiDjelovi.resx">
+    <EmbeddedResource Include="Djelovi\uiDjelovi.resx">
       <DependentUpon>uiDjelovi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Djelovi\uiDodajUrediDio.resx">
+      <DependentUpon>uiDodajUrediDio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uiGlavniIzbornik.resx">
       <DependentUpon>uiGlavniIzbornik.cs</DependentUpon>
