@@ -55,7 +55,7 @@
             this.uiActionDodajNoviDio.BackColor = System.Drawing.Color.LimeGreen;
             this.uiActionDodajNoviDio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionDodajNoviDio.ForeColor = System.Drawing.Color.White;
-            this.uiActionDodajNoviDio.Location = new System.Drawing.Point(438, 443);
+            this.uiActionDodajNoviDio.Location = new System.Drawing.Point(436, 443);
             this.uiActionDodajNoviDio.Name = "uiActionDodajNoviDio";
             this.uiActionDodajNoviDio.Size = new System.Drawing.Size(97, 39);
             this.uiActionDodajNoviDio.TabIndex = 1;
@@ -69,7 +69,7 @@
             this.uiActionUrediDio.BackColor = System.Drawing.Color.Gold;
             this.uiActionUrediDio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionUrediDio.ForeColor = System.Drawing.Color.White;
-            this.uiActionUrediDio.Location = new System.Drawing.Point(565, 443);
+            this.uiActionUrediDio.Location = new System.Drawing.Point(563, 443);
             this.uiActionUrediDio.Name = "uiActionUrediDio";
             this.uiActionUrediDio.Size = new System.Drawing.Size(97, 39);
             this.uiActionUrediDio.TabIndex = 2;
@@ -83,7 +83,7 @@
             this.uiActionObrišiDio.BackColor = System.Drawing.Color.Crimson;
             this.uiActionObrišiDio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionObrišiDio.ForeColor = System.Drawing.Color.White;
-            this.uiActionObrišiDio.Location = new System.Drawing.Point(695, 443);
+            this.uiActionObrišiDio.Location = new System.Drawing.Point(693, 443);
             this.uiActionObrišiDio.Name = "uiActionObrišiDio";
             this.uiActionObrišiDio.Size = new System.Drawing.Size(97, 39);
             this.uiActionObrišiDio.TabIndex = 3;
@@ -113,7 +113,7 @@
             this.uiOutputTableDataDio.Name = "uiOutputTableDataDio";
             this.uiOutputTableDataDio.RowTemplate.Height = 24;
             this.uiOutputTableDataDio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputTableDataDio.Size = new System.Drawing.Size(804, 508);
+            this.uiOutputTableDataDio.Size = new System.Drawing.Size(802, 508);
             this.uiOutputTableDataDio.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
@@ -204,7 +204,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(804, 508);
+            this.ClientSize = new System.Drawing.Size(802, 508);
             this.Controls.Add(this.uiActionObrišiDio);
             this.Controls.Add(this.uiActionUrediDio);
             this.Controls.Add(this.uiActionDodajNoviDio);
