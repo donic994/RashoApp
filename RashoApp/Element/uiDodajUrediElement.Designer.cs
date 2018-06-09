@@ -1,6 +1,6 @@
 ﻿namespace RashoApp.Element
 {
-    partial class uiElement
+    partial class uiDodajUrediElement
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiElement));
+            System.Windows.Forms.Label kolicinaLabel;
+            System.Windows.Forms.Label id_proizvodLabel;
+            System.Windows.Forms.Label id_elementLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiDodajUrediElement));
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
             this.elementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.elementTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ElementTableAdapter();
@@ -47,22 +50,45 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.elementBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.uiOutputDataElement = new System.Windows.Forms.DataGridView();
-            this.uiActionObrišiElement = new System.Windows.Forms.Button();
-            this.uiActionUrediElement = new System.Windows.Forms.Button();
-            this.uiActionDodajNoviElement = new System.Windows.Forms.Button();
-            this.proizvodBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proizvodTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolicinaTextBox = new System.Windows.Forms.TextBox();
+            this.id_proizvodComboBox = new System.Windows.Forms.ComboBox();
+            this.id_elementTextBox = new System.Windows.Forms.TextBox();
+            this.uiActionSpremiElement = new System.Windows.Forms.Button();
+            kolicinaLabel = new System.Windows.Forms.Label();
+            id_proizvodLabel = new System.Windows.Forms.Label();
+            id_elementLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingNavigator)).BeginInit();
             this.elementBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataElement)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // kolicinaLabel
+            // 
+            kolicinaLabel.AutoSize = true;
+            kolicinaLabel.Location = new System.Drawing.Point(67, 65);
+            kolicinaLabel.Name = "kolicinaLabel";
+            kolicinaLabel.Size = new System.Drawing.Size(61, 17);
+            kolicinaLabel.TabIndex = 1;
+            kolicinaLabel.Text = "Količina:";
+            // 
+            // id_proizvodLabel
+            // 
+            id_proizvodLabel.AutoSize = true;
+            id_proizvodLabel.Location = new System.Drawing.Point(61, 93);
+            id_proizvodLabel.Name = "id_proizvodLabel";
+            id_proizvodLabel.Size = new System.Drawing.Size(67, 17);
+            id_proizvodLabel.TabIndex = 3;
+            id_proizvodLabel.Text = "Proizvod:";
+            // 
+            // id_elementLabel
+            // 
+            id_elementLabel.AutoSize = true;
+            id_elementLabel.Location = new System.Drawing.Point(49, 123);
+            id_elementLabel.Name = "id_elementLabel";
+            id_elementLabel.Size = new System.Drawing.Size(79, 17);
+            id_elementLabel.TabIndex = 5;
+            id_elementLabel.Text = "ID element:";
             // 
             // baza18043_DBDataSet
             // 
@@ -99,6 +125,7 @@
             this.elementBindingNavigator.BindingSource = this.elementBindingSource;
             this.elementBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.elementBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.elementBindingNavigator.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.elementBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.elementBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
@@ -120,7 +147,7 @@
             this.elementBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.elementBindingNavigator.Name = "elementBindingNavigator";
             this.elementBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.elementBindingNavigator.Size = new System.Drawing.Size(802, 27);
+            this.elementBindingNavigator.Size = new System.Drawing.Size(317, 27);
             this.elementBindingNavigator.TabIndex = 0;
             this.elementBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -218,127 +245,70 @@
             this.elementBindingNavigatorSaveItem.Text = "Save Data";
             this.elementBindingNavigatorSaveItem.Click += new System.EventHandler(this.elementBindingNavigatorSaveItem_Click);
             // 
-            // uiOutputDataElement
+            // kolicinaTextBox
             // 
-            this.uiOutputDataElement.AllowUserToAddRows = false;
-            this.uiOutputDataElement.AllowUserToDeleteRows = false;
-            this.uiOutputDataElement.AutoGenerateColumns = false;
-            this.uiOutputDataElement.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.uiOutputDataElement.BackgroundColor = System.Drawing.Color.White;
-            this.uiOutputDataElement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uiOutputDataElement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.uiOutputDataElement.DataSource = this.elementBindingSource;
-            this.uiOutputDataElement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiOutputDataElement.Location = new System.Drawing.Point(0, 27);
-            this.uiOutputDataElement.MultiSelect = false;
-            this.uiOutputDataElement.Name = "uiOutputDataElement";
-            this.uiOutputDataElement.RowTemplate.Height = 24;
-            this.uiOutputDataElement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputDataElement.Size = new System.Drawing.Size(802, 481);
-            this.uiOutputDataElement.TabIndex = 1;
+            this.kolicinaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.elementBindingSource, "kolicina", true));
+            this.kolicinaTextBox.Location = new System.Drawing.Point(134, 62);
+            this.kolicinaTextBox.Name = "kolicinaTextBox";
+            this.kolicinaTextBox.Size = new System.Drawing.Size(100, 22);
+            this.kolicinaTextBox.TabIndex = 2;
             // 
-            // uiActionObrišiElement
+            // id_proizvodComboBox
             // 
-            this.uiActionObrišiElement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiActionObrišiElement.BackColor = System.Drawing.Color.Crimson;
-            this.uiActionObrišiElement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiActionObrišiElement.ForeColor = System.Drawing.Color.White;
-            this.uiActionObrišiElement.Location = new System.Drawing.Point(693, 443);
-            this.uiActionObrišiElement.Name = "uiActionObrišiElement";
-            this.uiActionObrišiElement.Size = new System.Drawing.Size(97, 39);
-            this.uiActionObrišiElement.TabIndex = 6;
-            this.uiActionObrišiElement.Text = "Obriši";
-            this.uiActionObrišiElement.UseVisualStyleBackColor = false;
-            this.uiActionObrišiElement.Click += new System.EventHandler(this.uiActionObrišiDio_Click);
+            this.id_proizvodComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.elementBindingSource, "id_proizvod", true));
+            this.id_proizvodComboBox.DataSource = this.elementBindingSource;
+            this.id_proizvodComboBox.DisplayMember = "id_proizvod";
+            this.id_proizvodComboBox.FormattingEnabled = true;
+            this.id_proizvodComboBox.Location = new System.Drawing.Point(134, 90);
+            this.id_proizvodComboBox.Name = "id_proizvodComboBox";
+            this.id_proizvodComboBox.Size = new System.Drawing.Size(100, 24);
+            this.id_proizvodComboBox.TabIndex = 4;
+            this.id_proizvodComboBox.ValueMember = "id_proizvod";
             // 
-            // uiActionUrediElement
+            // id_elementTextBox
             // 
-            this.uiActionUrediElement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiActionUrediElement.BackColor = System.Drawing.Color.Gold;
-            this.uiActionUrediElement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiActionUrediElement.ForeColor = System.Drawing.Color.White;
-            this.uiActionUrediElement.Location = new System.Drawing.Point(563, 443);
-            this.uiActionUrediElement.Name = "uiActionUrediElement";
-            this.uiActionUrediElement.Size = new System.Drawing.Size(97, 39);
-            this.uiActionUrediElement.TabIndex = 5;
-            this.uiActionUrediElement.Text = "Uredi";
-            this.uiActionUrediElement.UseVisualStyleBackColor = false;
-            this.uiActionUrediElement.Click += new System.EventHandler(this.uiActionUrediDio_Click);
+            this.id_elementTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.elementBindingSource, "id_element", true));
+            this.id_elementTextBox.Location = new System.Drawing.Point(134, 120);
+            this.id_elementTextBox.Name = "id_elementTextBox";
+            this.id_elementTextBox.Size = new System.Drawing.Size(100, 22);
+            this.id_elementTextBox.TabIndex = 6;
             // 
-            // uiActionDodajNoviElement
+            // uiActionSpremiElement
             // 
-            this.uiActionDodajNoviElement.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiActionDodajNoviElement.BackColor = System.Drawing.Color.LimeGreen;
-            this.uiActionDodajNoviElement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiActionDodajNoviElement.ForeColor = System.Drawing.Color.White;
-            this.uiActionDodajNoviElement.Location = new System.Drawing.Point(436, 443);
-            this.uiActionDodajNoviElement.Name = "uiActionDodajNoviElement";
-            this.uiActionDodajNoviElement.Size = new System.Drawing.Size(97, 39);
-            this.uiActionDodajNoviElement.TabIndex = 4;
-            this.uiActionDodajNoviElement.Text = "Dodaj";
-            this.uiActionDodajNoviElement.UseVisualStyleBackColor = false;
-            this.uiActionDodajNoviElement.Click += new System.EventHandler(this.uiActionDodajNoviDio_Click);
+            this.uiActionSpremiElement.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionSpremiElement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionSpremiElement.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiActionSpremiElement.ForeColor = System.Drawing.Color.White;
+            this.uiActionSpremiElement.Location = new System.Drawing.Point(100, 172);
+            this.uiActionSpremiElement.Name = "uiActionSpremiElement";
+            this.uiActionSpremiElement.Size = new System.Drawing.Size(112, 51);
+            this.uiActionSpremiElement.TabIndex = 8;
+            this.uiActionSpremiElement.Text = "Spremi";
+            this.uiActionSpremiElement.UseVisualStyleBackColor = false;
             // 
-            // proizvodBindingSource
-            // 
-            this.proizvodBindingSource.DataMember = "Proizvod";
-            this.proizvodBindingSource.DataSource = this.baza18043_DBDataSet;
-            // 
-            // proizvodTableAdapter
-            // 
-            this.proizvodTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "kolicina";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Količina";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 86;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "id_proizvod";
-            this.dataGridViewTextBoxColumn2.DataSource = this.proizvodBindingSource;
-            this.dataGridViewTextBoxColumn2.DisplayMember = "naziv";
-            this.dataGridViewTextBoxColumn2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Proizvod";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn2.ValueMember = "ID";
-            this.dataGridViewTextBoxColumn2.Width = 92;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "id_element";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Element";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.Width = 88;
-            // 
-            // uiElement
+            // uiDodajUrediElement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 508);
-            this.Controls.Add(this.uiActionObrišiElement);
-            this.Controls.Add(this.uiActionUrediElement);
-            this.Controls.Add(this.uiActionDodajNoviElement);
-            this.Controls.Add(this.uiOutputDataElement);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(317, 235);
+            this.Controls.Add(this.uiActionSpremiElement);
+            this.Controls.Add(id_elementLabel);
+            this.Controls.Add(this.id_elementTextBox);
+            this.Controls.Add(id_proizvodLabel);
+            this.Controls.Add(this.id_proizvodComboBox);
+            this.Controls.Add(kolicinaLabel);
+            this.Controls.Add(this.kolicinaTextBox);
             this.Controls.Add(this.elementBindingNavigator);
-            this.Name = "uiElement";
-            this.Text = "uiElement";
-            this.Load += new System.EventHandler(this.uiElement_Load);
+            this.Name = "uiDodajUrediElement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "uiDodajUediElement";
+            this.Load += new System.EventHandler(this.uiDodajUediElement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingNavigator)).EndInit();
             this.elementBindingNavigator.ResumeLayout(false);
             this.elementBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataElement)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,14 +333,9 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton elementBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView uiOutputDataElement;
-        private System.Windows.Forms.Button uiActionObrišiElement;
-        private System.Windows.Forms.Button uiActionUrediElement;
-        private System.Windows.Forms.Button uiActionDodajNoviElement;
-        private System.Windows.Forms.BindingSource proizvodBindingSource;
-        private Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter proizvodTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.TextBox kolicinaTextBox;
+        private System.Windows.Forms.ComboBox id_proizvodComboBox;
+        private System.Windows.Forms.TextBox id_elementTextBox;
+        private System.Windows.Forms.Button uiActionSpremiElement;
     }
 }

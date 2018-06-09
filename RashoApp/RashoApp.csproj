@@ -72,6 +72,12 @@
     <Compile Include="Djelovi\uiDodajUrediDio.Designer.cs">
       <DependentUpon>uiDodajUrediDio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Element\uiDodajUrediElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Element\uiDodajUrediElement.Designer.cs">
+      <DependentUpon>uiDodajUrediElement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Element\uiElement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Djelovi\uiDodajUrediDio.resx">
       <DependentUpon>uiDodajUrediDio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Element\uiDodajUrediElement.resx">
+      <DependentUpon>uiDodajUrediElement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Element\uiElement.resx">
       <DependentUpon>uiElement.cs</DependentUpon>

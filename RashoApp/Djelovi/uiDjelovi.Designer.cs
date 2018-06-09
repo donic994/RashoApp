@@ -110,6 +110,7 @@
             this.uiOutputTableDataDio.DataSource = this.dioBindingSource;
             this.uiOutputTableDataDio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiOutputTableDataDio.Location = new System.Drawing.Point(0, 0);
+            this.uiOutputTableDataDio.MultiSelect = false;
             this.uiOutputTableDataDio.Name = "uiOutputTableDataDio";
             this.uiOutputTableDataDio.RowTemplate.Height = 24;
             this.uiOutputTableDataDio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

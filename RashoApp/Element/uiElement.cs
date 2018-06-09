@@ -27,24 +27,34 @@ namespace RashoApp.Element
 
         private void uiElement_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Proizvod' table. You can move, or remove it, as needed.
+            this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Element' table. You can move, or remove it, as needed.
             this.elementTableAdapter.Fill(this.baza18043_DBDataSet.Element);
 
         }
 
+        private void uiActionDodajNoviDio_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(uiOutputDataElement.SelectedCells[0].Value.ToString());
+            Element.uiDodajUrediElement frm = new Element.uiDodajUrediElement(id, "dodaj");
+            frm.ShowDialog();
+        }
+
         private void uiActionUrediDio_Click(object sender, EventArgs e)
         {
-
+            int id = int.Parse(uiOutputDataElement.SelectedCells[0].Value.ToString());
+            Element.uiDodajUrediElement frm = new Element.uiDodajUrediElement(id, "uredi");
+            frm.ShowDialog();
         }
 
         private void uiActionObrišiDio_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj element?", "Obrisati element", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                uiOutputDataElement.Rows.RemoveAt(uiOutputDataElement.CurrentRow.Index);
+            }
         }
 
-        private void uiActionDodajNoviDio_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
