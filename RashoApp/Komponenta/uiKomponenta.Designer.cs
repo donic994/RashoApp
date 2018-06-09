@@ -1,6 +1,6 @@
-﻿namespace RashoApp.Element
+﻿namespace RashoApp.Komponenta
 {
-    partial class uiElement
+    partial class uiKomponenta
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiElement));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiKomponenta));
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
-            this.elementBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.elementTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ElementTableAdapter();
+            this.komponentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.komponentaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter();
             this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
-            this.elementBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.komponentaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -46,22 +46,22 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.elementBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.uiOutputDataElement = new System.Windows.Forms.DataGridView();
+            this.komponentaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.uiOutputDataKoponenta = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.proizvodBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uiActionObrišiElement = new System.Windows.Forms.Button();
             this.uiActionUrediElement = new System.Windows.Forms.Button();
             this.uiActionDodajNoviElement = new System.Windows.Forms.Button();
-            this.proizvodTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elementBindingNavigator)).BeginInit();
-            this.elementBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataElement)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingNavigator)).BeginInit();
+            this.komponentaBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataKoponenta)).BeginInit();
             this.SuspendLayout();
             // 
             // baza18043_DBDataSet
@@ -69,22 +69,22 @@
             this.baza18043_DBDataSet.DataSetName = "Baza18043_DBDataSet";
             this.baza18043_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // elementBindingSource
+            // komponentaBindingSource
             // 
-            this.elementBindingSource.DataMember = "Element";
-            this.elementBindingSource.DataSource = this.baza18043_DBDataSet;
+            this.komponentaBindingSource.DataMember = "Komponenta";
+            this.komponentaBindingSource.DataSource = this.baza18043_DBDataSet;
             // 
-            // elementTableAdapter
+            // komponentaTableAdapter
             // 
-            this.elementTableAdapter.ClearBeforeFill = true;
+            this.komponentaTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.DioTableAdapter = null;
             this.tableAdapterManager.DobavljacTableAdapter = null;
-            this.tableAdapterManager.ElementTableAdapter = this.elementTableAdapter;
-            this.tableAdapterManager.KomponentaTableAdapter = null;
+            this.tableAdapterManager.ElementTableAdapter = null;
+            this.tableAdapterManager.KomponentaTableAdapter = this.komponentaTableAdapter;
             this.tableAdapterManager.KorisnikTableAdapter = null;
             this.tableAdapterManager.NarudzbaTableAdapter = null;
             this.tableAdapterManager.ProizvodTableAdapter = null;
@@ -93,14 +93,14 @@
             this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // elementBindingNavigator
+            // komponentaBindingNavigator
             // 
-            this.elementBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.elementBindingNavigator.BindingSource = this.elementBindingSource;
-            this.elementBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.elementBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.elementBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.elementBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.komponentaBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.komponentaBindingNavigator.BindingSource = this.komponentaBindingSource;
+            this.komponentaBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.komponentaBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.komponentaBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.komponentaBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -112,17 +112,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.elementBindingNavigatorSaveItem});
-            this.elementBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.elementBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.elementBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.elementBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.elementBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.elementBindingNavigator.Name = "elementBindingNavigator";
-            this.elementBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.elementBindingNavigator.Size = new System.Drawing.Size(802, 27);
-            this.elementBindingNavigator.TabIndex = 0;
-            this.elementBindingNavigator.Text = "bindingNavigator1";
+            this.komponentaBindingNavigatorSaveItem});
+            this.komponentaBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.komponentaBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.komponentaBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.komponentaBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.komponentaBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.komponentaBindingNavigator.Name = "komponentaBindingNavigator";
+            this.komponentaBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.komponentaBindingNavigator.Size = new System.Drawing.Size(802, 27);
+            this.komponentaBindingNavigator.TabIndex = 0;
+            this.komponentaBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -209,69 +209,81 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // elementBindingNavigatorSaveItem
+            // komponentaBindingNavigatorSaveItem
             // 
-            this.elementBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.elementBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("elementBindingNavigatorSaveItem.Image")));
-            this.elementBindingNavigatorSaveItem.Name = "elementBindingNavigatorSaveItem";
-            this.elementBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
-            this.elementBindingNavigatorSaveItem.Text = "Save Data";
-            this.elementBindingNavigatorSaveItem.Click += new System.EventHandler(this.elementBindingNavigatorSaveItem_Click);
+            this.komponentaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.komponentaBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("komponentaBindingNavigatorSaveItem.Image")));
+            this.komponentaBindingNavigatorSaveItem.Name = "komponentaBindingNavigatorSaveItem";
+            this.komponentaBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
+            this.komponentaBindingNavigatorSaveItem.Text = "Save Data";
+            this.komponentaBindingNavigatorSaveItem.Click += new System.EventHandler(this.komponentaBindingNavigatorSaveItem_Click);
             // 
-            // uiOutputDataElement
+            // uiOutputDataKoponenta
             // 
-            this.uiOutputDataElement.AllowUserToAddRows = false;
-            this.uiOutputDataElement.AllowUserToDeleteRows = false;
-            this.uiOutputDataElement.AutoGenerateColumns = false;
-            this.uiOutputDataElement.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.uiOutputDataElement.BackgroundColor = System.Drawing.Color.White;
-            this.uiOutputDataElement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uiOutputDataElement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.uiOutputDataKoponenta.AllowUserToAddRows = false;
+            this.uiOutputDataKoponenta.AllowUserToDeleteRows = false;
+            this.uiOutputDataKoponenta.AutoGenerateColumns = false;
+            this.uiOutputDataKoponenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.uiOutputDataKoponenta.BackgroundColor = System.Drawing.Color.White;
+            this.uiOutputDataKoponenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uiOutputDataKoponenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.uiOutputDataElement.DataSource = this.elementBindingSource;
-            this.uiOutputDataElement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiOutputDataElement.Location = new System.Drawing.Point(0, 27);
-            this.uiOutputDataElement.MultiSelect = false;
-            this.uiOutputDataElement.Name = "uiOutputDataElement";
-            this.uiOutputDataElement.RowTemplate.Height = 24;
-            this.uiOutputDataElement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputDataElement.Size = new System.Drawing.Size(802, 481);
-            this.uiOutputDataElement.TabIndex = 1;
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.uiOutputDataKoponenta.DataSource = this.komponentaBindingSource;
+            this.uiOutputDataKoponenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiOutputDataKoponenta.Location = new System.Drawing.Point(0, 27);
+            this.uiOutputDataKoponenta.MultiSelect = false;
+            this.uiOutputDataKoponenta.Name = "uiOutputDataKoponenta";
+            this.uiOutputDataKoponenta.RowTemplate.Height = 24;
+            this.uiOutputDataKoponenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.uiOutputDataKoponenta.Size = new System.Drawing.Size(802, 481);
+            this.uiOutputDataKoponenta.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "kolicina";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Količina";
+            this.dataGridViewTextBoxColumn1.HeaderText = "kolicina";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 86;
+            this.dataGridViewTextBoxColumn1.Width = 84;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "id_proizvod";
-            this.dataGridViewTextBoxColumn2.DataSource = this.proizvodBindingSource;
-            this.dataGridViewTextBoxColumn2.DisplayMember = "naziv";
-            this.dataGridViewTextBoxColumn2.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Proizvod";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "boja";
+            this.dataGridViewTextBoxColumn2.HeaderText = "boja";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn2.ValueMember = "ID";
-            this.dataGridViewTextBoxColumn2.Width = 92;
-            // 
-            // proizvodBindingSource
-            // 
-            this.proizvodBindingSource.DataMember = "Proizvod";
-            this.proizvodBindingSource.DataSource = this.baza18043_DBDataSet;
+            this.dataGridViewTextBoxColumn2.Width = 64;
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "id_element";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Element";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "kantiranost";
+            this.dataGridViewTextBoxColumn3.HeaderText = "kantiranost";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.Width = 88;
+            this.dataGridViewTextBoxColumn3.Width = 107;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "id_uloga";
+            this.dataGridViewTextBoxColumn4.HeaderText = "id_uloga";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 91;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "id_dio";
+            this.dataGridViewTextBoxColumn5.HeaderText = "id_dio";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "id_proizvod";
+            this.dataGridViewTextBoxColumn6.HeaderText = "id_proizvod";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 110;
             // 
             // uiActionObrišiElement
             // 
@@ -282,10 +294,10 @@
             this.uiActionObrišiElement.Location = new System.Drawing.Point(693, 443);
             this.uiActionObrišiElement.Name = "uiActionObrišiElement";
             this.uiActionObrišiElement.Size = new System.Drawing.Size(97, 39);
-            this.uiActionObrišiElement.TabIndex = 6;
+            this.uiActionObrišiElement.TabIndex = 9;
             this.uiActionObrišiElement.Text = "Obriši";
             this.uiActionObrišiElement.UseVisualStyleBackColor = false;
-            this.uiActionObrišiElement.Click += new System.EventHandler(this.uiActionObrišiDio_Click);
+            this.uiActionObrišiElement.Click += new System.EventHandler(this.uiActionObrišiElement_Click);
             // 
             // uiActionUrediElement
             // 
@@ -296,10 +308,10 @@
             this.uiActionUrediElement.Location = new System.Drawing.Point(563, 443);
             this.uiActionUrediElement.Name = "uiActionUrediElement";
             this.uiActionUrediElement.Size = new System.Drawing.Size(97, 39);
-            this.uiActionUrediElement.TabIndex = 5;
+            this.uiActionUrediElement.TabIndex = 8;
             this.uiActionUrediElement.Text = "Uredi";
             this.uiActionUrediElement.UseVisualStyleBackColor = false;
-            this.uiActionUrediElement.Click += new System.EventHandler(this.uiActionUrediDio_Click);
+            this.uiActionUrediElement.Click += new System.EventHandler(this.uiActionUrediElement_Click);
             // 
             // uiActionDodajNoviElement
             // 
@@ -310,16 +322,12 @@
             this.uiActionDodajNoviElement.Location = new System.Drawing.Point(436, 443);
             this.uiActionDodajNoviElement.Name = "uiActionDodajNoviElement";
             this.uiActionDodajNoviElement.Size = new System.Drawing.Size(97, 39);
-            this.uiActionDodajNoviElement.TabIndex = 4;
+            this.uiActionDodajNoviElement.TabIndex = 7;
             this.uiActionDodajNoviElement.Text = "Dodaj";
             this.uiActionDodajNoviElement.UseVisualStyleBackColor = false;
-            this.uiActionDodajNoviElement.Click += new System.EventHandler(this.uiActionDodajNoviDio_Click);
+            this.uiActionDodajNoviElement.Click += new System.EventHandler(this.uiActionDodajNoviElement_Click);
             // 
-            // proizvodTableAdapter
-            // 
-            this.proizvodTableAdapter.ClearBeforeFill = true;
-            // 
-            // uiElement
+            // uiKomponenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -327,18 +335,17 @@
             this.Controls.Add(this.uiActionObrišiElement);
             this.Controls.Add(this.uiActionUrediElement);
             this.Controls.Add(this.uiActionDodajNoviElement);
-            this.Controls.Add(this.uiOutputDataElement);
-            this.Controls.Add(this.elementBindingNavigator);
-            this.Name = "uiElement";
-            this.Text = "uiElement";
-            this.Load += new System.EventHandler(this.uiElement_Load);
+            this.Controls.Add(this.uiOutputDataKoponenta);
+            this.Controls.Add(this.komponentaBindingNavigator);
+            this.Name = "uiKomponenta";
+            this.Text = "uiKomponenta";
+            this.Load += new System.EventHandler(this.uiKomponenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.elementBindingNavigator)).EndInit();
-            this.elementBindingNavigator.ResumeLayout(false);
-            this.elementBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataElement)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingNavigator)).EndInit();
+            this.komponentaBindingNavigator.ResumeLayout(false);
+            this.komponentaBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataKoponenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,10 +354,10 @@
         #endregion
 
         private Baza18043_DBDataSet baza18043_DBDataSet;
-        private System.Windows.Forms.BindingSource elementBindingSource;
-        private Baza18043_DBDataSetTableAdapters.ElementTableAdapter elementTableAdapter;
+        private System.Windows.Forms.BindingSource komponentaBindingSource;
+        private Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter komponentaTableAdapter;
         private Baza18043_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator elementBindingNavigator;
+        private System.Windows.Forms.BindingNavigator komponentaBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -362,15 +369,16 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton elementBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView uiOutputDataElement;
+        private System.Windows.Forms.ToolStripButton komponentaBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView uiOutputDataKoponenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Button uiActionObrišiElement;
         private System.Windows.Forms.Button uiActionUrediElement;
         private System.Windows.Forms.Button uiActionDodajNoviElement;
-        private System.Windows.Forms.BindingSource proizvodBindingSource;
-        private Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter proizvodTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }

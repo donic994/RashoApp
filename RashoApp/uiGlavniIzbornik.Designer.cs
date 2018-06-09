@@ -131,6 +131,7 @@
             // 
             // uiTabProizvodiKomponenta
             // 
+            this.uiTabProizvodiKomponenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiTabProizvodiKomponenta.Location = new System.Drawing.Point(4, 44);
             this.uiTabProizvodiKomponenta.Margin = new System.Windows.Forms.Padding(0);
             this.uiTabProizvodiKomponenta.Name = "uiTabProizvodiKomponenta";
@@ -141,6 +142,7 @@
             // 
             // uiTabProizvodiProizvod
             // 
+            this.uiTabProizvodiProizvod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiTabProizvodiProizvod.Location = new System.Drawing.Point(4, 44);
             this.uiTabProizvodiProizvod.Margin = new System.Windows.Forms.Padding(0);
             this.uiTabProizvodiProizvod.Name = "uiTabProizvodiProizvod";
@@ -151,6 +153,7 @@
             // 
             // uiTabProizvodiUlogaDijela
             // 
+            this.uiTabProizvodiUlogaDijela.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiTabProizvodiUlogaDijela.Location = new System.Drawing.Point(4, 44);
             this.uiTabProizvodiUlogaDijela.Margin = new System.Windows.Forms.Padding(0);
             this.uiTabProizvodiUlogaDijela.Name = "uiTabProizvodiUlogaDijela";

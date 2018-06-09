@@ -15,8 +15,10 @@ namespace RashoApp
         public uiGlavniIzbornik()
         {
             InitializeComponent();
+
             PopuniOdUiDjelovi();
             PopuniOdUiElement();
+            PopuniOdUiKomponenta();
         }
 
         private void uiTabControl_DrawItem(object sender, DrawItemEventArgs e)
@@ -107,6 +109,16 @@ namespace RashoApp
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.Dock = DockStyle.Fill;
             uiTabProizvodiElement.Controls.Add(frm);
+        }
+
+        private void PopuniOdUiKomponenta()
+        {
+            Komponenta.uiKomponenta frm = new Komponenta.uiKomponenta();
+            frm.TopLevel = false;
+            frm.Visible = true;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            uiTabProizvodiKomponenta.Controls.Add(frm);
         }
 
         private void uiGlavniIzbornik_SizeChanged(object sender, EventArgs e)
