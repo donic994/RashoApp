@@ -31,5 +31,22 @@ namespace RashoApp.Proizvod
             this.tableAdapterManager.UpdateAll(this.baza18043_DBDataSet);
 
         }
+
+
+        private void uiActionDodajNoviProizvod_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uiActionUrediProizvod_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uiActionObrišiProizvod_Click(object sender, EventArgs e)
+        {
+
+        }
+        
     }
 }

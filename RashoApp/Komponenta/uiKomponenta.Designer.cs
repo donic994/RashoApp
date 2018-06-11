@@ -304,7 +304,7 @@
             this.uiActionObrišiKomponenta.TabIndex = 9;
             this.uiActionObrišiKomponenta.Text = "Obriši";
             this.uiActionObrišiKomponenta.UseVisualStyleBackColor = false;
-            this.uiActionObrišiKomponenta.Click += new System.EventHandler(this.uiActionObrišiElement_Click);
+            this.uiActionObrišiKomponenta.Click += new System.EventHandler(this.uiActionObrišiKomponenta_Click);
             // 
             // uiActionUrediKomponenta
             // 
@@ -318,7 +318,7 @@
             this.uiActionUrediKomponenta.TabIndex = 8;
             this.uiActionUrediKomponenta.Text = "Uredi";
             this.uiActionUrediKomponenta.UseVisualStyleBackColor = false;
-            this.uiActionUrediKomponenta.Click += new System.EventHandler(this.uiActionUrediElement_Click);
+            this.uiActionUrediKomponenta.Click += new System.EventHandler(this.uiActionUrediKomponenta_Click);
             // 
             // uiActionDodajNoviKomponenta
             // 
@@ -332,7 +332,7 @@
             this.uiActionDodajNoviKomponenta.TabIndex = 7;
             this.uiActionDodajNoviKomponenta.Text = "Dodaj";
             this.uiActionDodajNoviKomponenta.UseVisualStyleBackColor = false;
-            this.uiActionDodajNoviKomponenta.Click += new System.EventHandler(this.uiActionDodajNoviElement_Click);
+            this.uiActionDodajNoviKomponenta.Click += new System.EventHandler(this.uiActionDodajNoviKomponenta_Click);
             // 
             // uiKomponenta
             // 
