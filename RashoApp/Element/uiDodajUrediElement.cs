@@ -44,6 +44,8 @@ namespace RashoApp.Element
 
         private void uiDodajUediElement_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Proizvod' table. You can move, or remove it, as needed.
+            this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Element' table. You can move, or remove it, as needed.
             this.elementTableAdapter.Fill(this.baza18043_DBDataSet.Element);
 

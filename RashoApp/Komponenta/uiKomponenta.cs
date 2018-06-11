@@ -34,14 +34,14 @@ namespace RashoApp.Komponenta
 
         private void uiActionDodajNoviKomponenta_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(uiOutputDataKoponenta.SelectedCells[0].Value.ToString());
+            int id = int.Parse(uiOutputTableDataKoponenta.SelectedCells[0].Value.ToString());
             Komponenta.uiDodajUrediKomponenta frm = new Komponenta.uiDodajUrediKomponenta(id, "dodaj");
             frm.ShowDialog();
         }
 
         private void uiActionUrediKomponenta_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(uiOutputDataKoponenta.SelectedCells[0].Value.ToString());
+            int id = int.Parse(uiOutputTableDataKoponenta.SelectedCells[0].Value.ToString());
             Komponenta.uiDodajUrediKomponenta frm = new Komponenta.uiDodajUrediKomponenta(id, "uredi");
             frm.ShowDialog();
         }
@@ -50,7 +50,7 @@ namespace RashoApp.Komponenta
         {
             if (MessageBox.Show("Jeste li sigurni da želite obrisati ovu komponentu?", "Obrisati komponentu", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                uiOutputDataKoponenta.Rows.RemoveAt(uiOutputDataKoponenta.CurrentRow.Index);
+                uiOutputTableDataKoponenta.Rows.RemoveAt(uiOutputTableDataKoponenta.CurrentRow.Index);
             }
         }
     }

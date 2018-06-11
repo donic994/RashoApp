@@ -46,7 +46,7 @@ namespace RashoApp.UlogaDijela
         {
             if (MessageBox.Show("Jeste li sigurni da želite obrisati ovu ulogu?", "Obrisati ulogu dijela", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                uiOutputDataUlogaDijela.Rows.RemoveAt(uiOutputDataUlogaDijela.CurrentRow.Index);
+                uiOutputTableDataUlogaDijela.Rows.RemoveAt(uiOutputTableDataUlogaDijela.CurrentRow.Index);
             }
         }
     }

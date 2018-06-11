@@ -35,19 +35,19 @@
             this.ulogaDijelaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.UlogaDijelaTableAdapter();
             this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
             this.ulogaDijelaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.ulogaDijelaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.uiOutputDataUlogaDijela = new System.Windows.Forms.DataGridView();
+            this.uiOutputTableDataUlogaDijela = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uiActionObrišiUlogaDijela = new System.Windows.Forms.Button();
@@ -57,7 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ulogaDijelaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaDijelaBindingNavigator)).BeginInit();
             this.ulogaDijelaBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataUlogaDijela)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataUlogaDijela)).BeginInit();
             this.SuspendLayout();
             // 
             // baza18043_DBDataSet
@@ -120,6 +120,31 @@
             this.ulogaDijelaBindingNavigator.TabIndex = 0;
             this.ulogaDijelaBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -152,16 +177,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -184,26 +202,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // ulogaDijelaBindingNavigatorSaveItem
             // 
@@ -214,25 +214,26 @@
             this.ulogaDijelaBindingNavigatorSaveItem.Text = "Save Data";
             this.ulogaDijelaBindingNavigatorSaveItem.Click += new System.EventHandler(this.ulogaDijelaBindingNavigatorSaveItem_Click);
             // 
-            // uiOutputDataUlogaDijela
+            // uiOutputTableDataUlogaDijela
             // 
-            this.uiOutputDataUlogaDijela.AllowUserToAddRows = false;
-            this.uiOutputDataUlogaDijela.AllowUserToDeleteRows = false;
-            this.uiOutputDataUlogaDijela.AutoGenerateColumns = false;
-            this.uiOutputDataUlogaDijela.BackgroundColor = System.Drawing.Color.White;
-            this.uiOutputDataUlogaDijela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uiOutputDataUlogaDijela.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.uiOutputTableDataUlogaDijela.AllowUserToAddRows = false;
+            this.uiOutputTableDataUlogaDijela.AllowUserToDeleteRows = false;
+            this.uiOutputTableDataUlogaDijela.AutoGenerateColumns = false;
+            this.uiOutputTableDataUlogaDijela.BackgroundColor = System.Drawing.Color.White;
+            this.uiOutputTableDataUlogaDijela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uiOutputTableDataUlogaDijela.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.uiOutputDataUlogaDijela.DataSource = this.ulogaDijelaBindingSource;
-            this.uiOutputDataUlogaDijela.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiOutputDataUlogaDijela.Location = new System.Drawing.Point(0, 27);
-            this.uiOutputDataUlogaDijela.MultiSelect = false;
-            this.uiOutputDataUlogaDijela.Name = "uiOutputDataUlogaDijela";
-            this.uiOutputDataUlogaDijela.ReadOnly = true;
-            this.uiOutputDataUlogaDijela.RowTemplate.Height = 24;
-            this.uiOutputDataUlogaDijela.Size = new System.Drawing.Size(802, 481);
-            this.uiOutputDataUlogaDijela.TabIndex = 1;
+            this.uiOutputTableDataUlogaDijela.DataSource = this.ulogaDijelaBindingSource;
+            this.uiOutputTableDataUlogaDijela.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiOutputTableDataUlogaDijela.Location = new System.Drawing.Point(0, 27);
+            this.uiOutputTableDataUlogaDijela.MultiSelect = false;
+            this.uiOutputTableDataUlogaDijela.Name = "uiOutputTableDataUlogaDijela";
+            this.uiOutputTableDataUlogaDijela.ReadOnly = true;
+            this.uiOutputTableDataUlogaDijela.RowTemplate.Height = 24;
+            this.uiOutputTableDataUlogaDijela.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.uiOutputTableDataUlogaDijela.Size = new System.Drawing.Size(802, 481);
+            this.uiOutputTableDataUlogaDijela.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -282,8 +283,7 @@
             this.uiActionDodajNoviUlogaDijela.BackColor = System.Drawing.Color.LimeGreen;
             this.uiActionDodajNoviUlogaDijela.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionDodajNoviUlogaDijela.ForeColor = System.Drawing.Color.White;
-            this.uiActionDodajNoviUlogaDijela.Location = new System.Drawing.Point(436, 443
-                );
+            this.uiActionDodajNoviUlogaDijela.Location = new System.Drawing.Point(436, 443);
             this.uiActionDodajNoviUlogaDijela.Name = "uiActionDodajNoviUlogaDijela";
             this.uiActionDodajNoviUlogaDijela.Size = new System.Drawing.Size(97, 39);
             this.uiActionDodajNoviUlogaDijela.TabIndex = 13;
@@ -300,7 +300,7 @@
             this.Controls.Add(this.uiActionObrišiUlogaDijela);
             this.Controls.Add(this.uiActionUrediUlogaDijela);
             this.Controls.Add(this.uiActionDodajNoviUlogaDijela);
-            this.Controls.Add(this.uiOutputDataUlogaDijela);
+            this.Controls.Add(this.uiOutputTableDataUlogaDijela);
             this.Controls.Add(this.ulogaDijelaBindingNavigator);
             this.Name = "uiUlogaDijela";
             this.Text = "uiUlogaDijela";
@@ -310,7 +310,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ulogaDijelaBindingNavigator)).EndInit();
             this.ulogaDijelaBindingNavigator.ResumeLayout(false);
             this.ulogaDijelaBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataUlogaDijela)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataUlogaDijela)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,7 +335,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton ulogaDijelaBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView uiOutputDataUlogaDijela;
+        private System.Windows.Forms.DataGridView uiOutputTableDataUlogaDijela;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button uiActionObrišiUlogaDijela;

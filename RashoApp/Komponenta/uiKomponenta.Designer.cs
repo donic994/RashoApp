@@ -47,7 +47,7 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.komponentaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.uiOutputDataKoponenta = new System.Windows.Forms.DataGridView();
+            this.uiOutputTableDataKoponenta = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingNavigator)).BeginInit();
             this.komponentaBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataKoponenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataKoponenta)).BeginInit();
             this.SuspendLayout();
             // 
             // baza18043_DBDataSet
@@ -218,31 +218,31 @@
             this.komponentaBindingNavigatorSaveItem.Text = "Save Data";
             this.komponentaBindingNavigatorSaveItem.Click += new System.EventHandler(this.komponentaBindingNavigatorSaveItem_Click);
             // 
-            // uiOutputDataKoponenta
+            // uiOutputTableDataKoponenta
             // 
-            this.uiOutputDataKoponenta.AllowUserToAddRows = false;
-            this.uiOutputDataKoponenta.AllowUserToDeleteRows = false;
-            this.uiOutputDataKoponenta.AutoGenerateColumns = false;
-            this.uiOutputDataKoponenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.uiOutputDataKoponenta.BackgroundColor = System.Drawing.Color.White;
-            this.uiOutputDataKoponenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.uiOutputDataKoponenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.uiOutputTableDataKoponenta.AllowUserToAddRows = false;
+            this.uiOutputTableDataKoponenta.AllowUserToDeleteRows = false;
+            this.uiOutputTableDataKoponenta.AutoGenerateColumns = false;
+            this.uiOutputTableDataKoponenta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.uiOutputTableDataKoponenta.BackgroundColor = System.Drawing.Color.White;
+            this.uiOutputTableDataKoponenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uiOutputTableDataKoponenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
-            this.uiOutputDataKoponenta.DataSource = this.komponentaBindingSource;
-            this.uiOutputDataKoponenta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiOutputDataKoponenta.Location = new System.Drawing.Point(0, 27);
-            this.uiOutputDataKoponenta.MultiSelect = false;
-            this.uiOutputDataKoponenta.Name = "uiOutputDataKoponenta";
-            this.uiOutputDataKoponenta.ReadOnly = true;
-            this.uiOutputDataKoponenta.RowTemplate.Height = 24;
-            this.uiOutputDataKoponenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputDataKoponenta.Size = new System.Drawing.Size(802, 481);
-            this.uiOutputDataKoponenta.TabIndex = 1;
+            this.uiOutputTableDataKoponenta.DataSource = this.komponentaBindingSource;
+            this.uiOutputTableDataKoponenta.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiOutputTableDataKoponenta.Location = new System.Drawing.Point(0, 27);
+            this.uiOutputTableDataKoponenta.MultiSelect = false;
+            this.uiOutputTableDataKoponenta.Name = "uiOutputTableDataKoponenta";
+            this.uiOutputTableDataKoponenta.ReadOnly = true;
+            this.uiOutputTableDataKoponenta.RowTemplate.Height = 24;
+            this.uiOutputTableDataKoponenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.uiOutputTableDataKoponenta.Size = new System.Drawing.Size(802, 481);
+            this.uiOutputTableDataKoponenta.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -342,7 +342,7 @@
             this.Controls.Add(this.uiActionObrišiKomponenta);
             this.Controls.Add(this.uiActionUrediKomponenta);
             this.Controls.Add(this.uiActionDodajNoviKomponenta);
-            this.Controls.Add(this.uiOutputDataKoponenta);
+            this.Controls.Add(this.uiOutputTableDataKoponenta);
             this.Controls.Add(this.komponentaBindingNavigator);
             this.Name = "uiKomponenta";
             this.Text = "uiKomponenta";
@@ -352,7 +352,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingNavigator)).EndInit();
             this.komponentaBindingNavigator.ResumeLayout(false);
             this.komponentaBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataKoponenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataKoponenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,7 +377,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton komponentaBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView uiOutputDataKoponenta;
+        private System.Windows.Forms.DataGridView uiOutputTableDataKoponenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

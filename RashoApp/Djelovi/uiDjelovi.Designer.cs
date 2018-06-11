@@ -112,6 +112,7 @@
             this.uiOutputTableDataDio.Location = new System.Drawing.Point(0, 0);
             this.uiOutputTableDataDio.MultiSelect = false;
             this.uiOutputTableDataDio.Name = "uiOutputTableDataDio";
+            this.uiOutputTableDataDio.ReadOnly = true;
             this.uiOutputTableDataDio.RowTemplate.Height = 24;
             this.uiOutputTableDataDio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.uiOutputTableDataDio.Size = new System.Drawing.Size(802, 508);
@@ -130,6 +131,7 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "naziv";
             this.dataGridViewTextBoxColumn2.HeaderText = "Naziv";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 85;
             // 
             // dataGridViewTextBoxColumn3
@@ -138,6 +140,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Duljina(mm)";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 15;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 85;
             // 
             // dataGridViewTextBoxColumn4
@@ -146,6 +149,7 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Širina(mm)";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 15;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 85;
             // 
             // dataGridViewTextBoxColumn5
@@ -154,6 +158,7 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Visina(mm)";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 15;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 85;
             // 
             // dataGridViewTextBoxColumn6
@@ -162,6 +167,7 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Slika";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 15;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 85;
             // 
             // dataGridViewTextBoxColumn7
@@ -170,6 +176,7 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "Materijal";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 15;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dioBindingSource
             // 

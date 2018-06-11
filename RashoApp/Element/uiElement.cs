@@ -36,14 +36,14 @@ namespace RashoApp.Element
 
         private void uiActionDodajNoviDio_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(uiOutputDataElement.SelectedCells[0].Value.ToString());
+            int id = int.Parse(uiOutputTableDataElement.SelectedCells[0].Value.ToString());
             Element.uiDodajUrediElement frm = new Element.uiDodajUrediElement(id, "dodaj");
             frm.ShowDialog();
         }
 
         private void uiActionUrediDio_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(uiOutputDataElement.SelectedCells[0].Value.ToString());
+            int id = int.Parse(uiOutputTableDataElement.SelectedCells[0].Value.ToString());
             Element.uiDodajUrediElement frm = new Element.uiDodajUrediElement(id, "uredi");
             frm.ShowDialog();
         }
@@ -52,7 +52,7 @@ namespace RashoApp.Element
         {
             if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj element?", "Obrisati element", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                uiOutputDataElement.Rows.RemoveAt(uiOutputDataElement.CurrentRow.Index);
+                uiOutputTableDataElement.Rows.RemoveAt(uiOutputTableDataElement.CurrentRow.Index);
             }
         }
 

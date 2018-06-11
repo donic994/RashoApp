@@ -54,6 +54,8 @@
             this.id_proizvodComboBox = new System.Windows.Forms.ComboBox();
             this.id_elementTextBox = new System.Windows.Forms.TextBox();
             this.uiActionSpremiElement = new System.Windows.Forms.Button();
+            this.proizvodBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.proizvodTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
             kolicinaLabel = new System.Windows.Forms.Label();
             id_proizvodLabel = new System.Windows.Forms.Label();
             id_elementLabel = new System.Windows.Forms.Label();
@@ -61,6 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingNavigator)).BeginInit();
             this.elementBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // kolicinaLabel
@@ -256,14 +259,12 @@
             // id_proizvodComboBox
             // 
             this.id_proizvodComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.elementBindingSource, "id_proizvod", true));
-            this.id_proizvodComboBox.DataSource = this.elementBindingSource;
-            this.id_proizvodComboBox.DisplayMember = "id_proizvod";
             this.id_proizvodComboBox.FormattingEnabled = true;
             this.id_proizvodComboBox.Location = new System.Drawing.Point(134, 90);
             this.id_proizvodComboBox.Name = "id_proizvodComboBox";
             this.id_proizvodComboBox.Size = new System.Drawing.Size(100, 24);
             this.id_proizvodComboBox.TabIndex = 4;
-            this.id_proizvodComboBox.ValueMember = "id_proizvod";
+            this.id_proizvodComboBox.ValueMember = "ID";
             // 
             // id_elementTextBox
             // 
@@ -285,6 +286,15 @@
             this.uiActionSpremiElement.TabIndex = 8;
             this.uiActionSpremiElement.Text = "Spremi";
             this.uiActionSpremiElement.UseVisualStyleBackColor = false;
+            // 
+            // proizvodBindingSource
+            // 
+            this.proizvodBindingSource.DataMember = "Proizvod";
+            this.proizvodBindingSource.DataSource = this.baza18043_DBDataSet;
+            // 
+            // proizvodTableAdapter
+            // 
+            this.proizvodTableAdapter.ClearBeforeFill = true;
             // 
             // uiDodajUrediElement
             // 
@@ -310,6 +320,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingNavigator)).EndInit();
             this.elementBindingNavigator.ResumeLayout(false);
             this.elementBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,5 +349,7 @@
         private System.Windows.Forms.ComboBox id_proizvodComboBox;
         private System.Windows.Forms.TextBox id_elementTextBox;
         private System.Windows.Forms.Button uiActionSpremiElement;
+        private System.Windows.Forms.BindingSource proizvodBindingSource;
+        private Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter proizvodTableAdapter;
     }
 }
