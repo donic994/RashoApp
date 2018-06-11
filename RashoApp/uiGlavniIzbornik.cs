@@ -20,6 +20,7 @@ namespace RashoApp
             PopuniOdUiElement();
             PopuniOdUiKomponenta();
             PopuniOdUiProizvod();
+            PopuniOdUiUlogaDijela();
         }
 
         private void uiTabControl_DrawItem(object sender, DrawItemEventArgs e)
@@ -111,6 +112,16 @@ namespace RashoApp
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.Dock = DockStyle.Fill;
             uiTabProizvodiProizvod.Controls.Add(frm);
+        }
+
+        private void PopuniOdUiUlogaDijela()
+        {
+            UlogaDijela.uiUlogaDijela frm = new UlogaDijela.uiUlogaDijela();
+            frm.TopLevel = false;
+            frm.Visible = true;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            uiTabProizvodiUlogaDijela.Controls.Add(frm);
         }
 
         private void uiGlavniIzbornik_SizeChanged(object sender, EventArgs e)

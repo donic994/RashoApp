@@ -45,7 +45,10 @@ namespace RashoApp.Proizvod
 
         private void uiActionObrišiProizvod_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj proizvoid?", "Obrisati proizvod", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                uiOutputDataProizvod.Rows.RemoveAt(uiOutputDataProizvod.CurrentRow.Index);
+            }
         }
         
     }
