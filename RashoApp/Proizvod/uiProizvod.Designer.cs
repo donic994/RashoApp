@@ -48,20 +48,43 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.proizvodBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.uiOutputDataProizvod = new System.Windows.Forms.DataGridView();
-            this.uiActionObrišiProizvod = new System.Windows.Forms.Button();
-            this.uiActionUrediProizvod = new System.Windows.Forms.Button();
-            this.uiActionDodajNoviProizvod = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uiActionObrišiProizvod = new System.Windows.Forms.Button();
+            this.uiActionUrediProizvod = new System.Windows.Forms.Button();
+            this.uiActionDodajNoviProizvod = new System.Windows.Forms.Button();
+            this.elementBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.elementTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ElementTableAdapter();
+            this.uiOutputTableDataElement = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pogledDjelovaPoProoizvoduBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pogledDjelovaPoProoizvoduTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.PogledDjelovaPoProoizvoduTableAdapter();
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingNavigator)).BeginInit();
             this.proizvodBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataProizvod)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataElement)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pogledDjelovaPoProoizvoduBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataPogledDjelovaPoProoizvodu)).BeginInit();
             this.SuspendLayout();
             // 
             // baza18043_DBDataSet
@@ -120,7 +143,7 @@
             this.proizvodBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.proizvodBindingNavigator.Name = "proizvodBindingNavigator";
             this.proizvodBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.proizvodBindingNavigator.Size = new System.Drawing.Size(802, 27);
+            this.proizvodBindingNavigator.Size = new System.Drawing.Size(862, 27);
             this.proizvodBindingNavigator.TabIndex = 0;
             this.proizvodBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -222,6 +245,8 @@
             // 
             this.uiOutputDataProizvod.AllowUserToAddRows = false;
             this.uiOutputDataProizvod.AllowUserToDeleteRows = false;
+            this.uiOutputDataProizvod.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiOutputDataProizvod.AutoGenerateColumns = false;
             this.uiOutputDataProizvod.BackgroundColor = System.Drawing.Color.White;
             this.uiOutputDataProizvod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -233,57 +258,14 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.uiOutputDataProizvod.DataSource = this.proizvodBindingSource;
-            this.uiOutputDataProizvod.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiOutputDataProizvod.Location = new System.Drawing.Point(0, 27);
             this.uiOutputDataProizvod.MultiSelect = false;
             this.uiOutputDataProizvod.Name = "uiOutputDataProizvod";
             this.uiOutputDataProizvod.ReadOnly = true;
             this.uiOutputDataProizvod.RowTemplate.Height = 24;
             this.uiOutputDataProizvod.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputDataProizvod.Size = new System.Drawing.Size(802, 481);
+            this.uiOutputDataProizvod.Size = new System.Drawing.Size(862, 170);
             this.uiOutputDataProizvod.TabIndex = 1;
-            // 
-            // uiActionObrišiProizvod
-            // 
-            this.uiActionObrišiProizvod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiActionObrišiProizvod.BackColor = System.Drawing.Color.Crimson;
-            this.uiActionObrišiProizvod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiActionObrišiProizvod.ForeColor = System.Drawing.Color.White;
-            this.uiActionObrišiProizvod.Location = new System.Drawing.Point(693, 443);
-            this.uiActionObrišiProizvod.Name = "uiActionObrišiProizvod";
-            this.uiActionObrišiProizvod.Size = new System.Drawing.Size(97, 39);
-            this.uiActionObrišiProizvod.TabIndex = 12;
-            this.uiActionObrišiProizvod.Text = "Obriši";
-            this.uiActionObrišiProizvod.UseVisualStyleBackColor = false;
-            this.uiActionObrišiProizvod.Click += new System.EventHandler(this.uiActionObrišiProizvod_Click);
-            // 
-            // uiActionUrediProizvod
-            // 
-            this.uiActionUrediProizvod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiActionUrediProizvod.BackColor = System.Drawing.Color.Gold;
-            this.uiActionUrediProizvod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiActionUrediProizvod.ForeColor = System.Drawing.Color.White;
-            this.uiActionUrediProizvod.Location = new System.Drawing.Point(563, 443);
-            this.uiActionUrediProizvod.Name = "uiActionUrediProizvod";
-            this.uiActionUrediProizvod.Size = new System.Drawing.Size(97, 39);
-            this.uiActionUrediProizvod.TabIndex = 11;
-            this.uiActionUrediProizvod.Text = "Uredi";
-            this.uiActionUrediProizvod.UseVisualStyleBackColor = false;
-            this.uiActionUrediProizvod.Click += new System.EventHandler(this.uiActionUrediProizvod_Click);
-            // 
-            // uiActionDodajNoviProizvod
-            // 
-            this.uiActionDodajNoviProizvod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.uiActionDodajNoviProizvod.BackColor = System.Drawing.Color.LimeGreen;
-            this.uiActionDodajNoviProizvod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiActionDodajNoviProizvod.ForeColor = System.Drawing.Color.White;
-            this.uiActionDodajNoviProizvod.Location = new System.Drawing.Point(436, 443);
-            this.uiActionDodajNoviProizvod.Name = "uiActionDodajNoviProizvod";
-            this.uiActionDodajNoviProizvod.Size = new System.Drawing.Size(97, 39);
-            this.uiActionDodajNoviProizvod.TabIndex = 10;
-            this.uiActionDodajNoviProizvod.Text = "Dodaj";
-            this.uiActionDodajNoviProizvod.UseVisualStyleBackColor = false;
-            this.uiActionDodajNoviProizvod.Click += new System.EventHandler(this.uiActionDodajNoviProizvod_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -327,26 +309,237 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
+            // uiActionObrišiProizvod
+            // 
+            this.uiActionObrišiProizvod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiActionObrišiProizvod.BackColor = System.Drawing.Color.Crimson;
+            this.uiActionObrišiProizvod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionObrišiProizvod.ForeColor = System.Drawing.Color.White;
+            this.uiActionObrišiProizvod.Location = new System.Drawing.Point(753, 598);
+            this.uiActionObrišiProizvod.Name = "uiActionObrišiProizvod";
+            this.uiActionObrišiProizvod.Size = new System.Drawing.Size(97, 39);
+            this.uiActionObrišiProizvod.TabIndex = 12;
+            this.uiActionObrišiProizvod.Text = "Obriši";
+            this.uiActionObrišiProizvod.UseVisualStyleBackColor = false;
+            this.uiActionObrišiProizvod.Click += new System.EventHandler(this.uiActionObrišiProizvod_Click);
+            // 
+            // uiActionUrediProizvod
+            // 
+            this.uiActionUrediProizvod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiActionUrediProizvod.BackColor = System.Drawing.Color.Gold;
+            this.uiActionUrediProizvod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionUrediProizvod.ForeColor = System.Drawing.Color.White;
+            this.uiActionUrediProizvod.Location = new System.Drawing.Point(623, 598);
+            this.uiActionUrediProizvod.Name = "uiActionUrediProizvod";
+            this.uiActionUrediProizvod.Size = new System.Drawing.Size(97, 39);
+            this.uiActionUrediProizvod.TabIndex = 11;
+            this.uiActionUrediProizvod.Text = "Uredi";
+            this.uiActionUrediProizvod.UseVisualStyleBackColor = false;
+            this.uiActionUrediProizvod.Click += new System.EventHandler(this.uiActionUrediProizvod_Click);
+            // 
+            // uiActionDodajNoviProizvod
+            // 
+            this.uiActionDodajNoviProizvod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiActionDodajNoviProizvod.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionDodajNoviProizvod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionDodajNoviProizvod.ForeColor = System.Drawing.Color.White;
+            this.uiActionDodajNoviProizvod.Location = new System.Drawing.Point(496, 598);
+            this.uiActionDodajNoviProizvod.Name = "uiActionDodajNoviProizvod";
+            this.uiActionDodajNoviProizvod.Size = new System.Drawing.Size(97, 39);
+            this.uiActionDodajNoviProizvod.TabIndex = 10;
+            this.uiActionDodajNoviProizvod.Text = "Dodaj";
+            this.uiActionDodajNoviProizvod.UseVisualStyleBackColor = false;
+            this.uiActionDodajNoviProizvod.Click += new System.EventHandler(this.uiActionDodajNoviProizvod_Click);
+            // 
+            // elementBindingSource
+            // 
+            this.elementBindingSource.DataMember = "Element";
+            this.elementBindingSource.DataSource = this.baza18043_DBDataSet;
+            // 
+            // elementTableAdapter
+            // 
+            this.elementTableAdapter.ClearBeforeFill = true;
+            // 
+            // uiOutputTableDataElement
+            // 
+            this.uiOutputTableDataElement.AllowUserToAddRows = false;
+            this.uiOutputTableDataElement.AllowUserToDeleteRows = false;
+            this.uiOutputTableDataElement.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiOutputTableDataElement.AutoGenerateColumns = false;
+            this.uiOutputTableDataElement.BackgroundColor = System.Drawing.Color.White;
+            this.uiOutputTableDataElement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uiOutputTableDataElement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9});
+            this.uiOutputTableDataElement.DataSource = this.elementBindingSource;
+            this.uiOutputTableDataElement.Location = new System.Drawing.Point(0, 203);
+            this.uiOutputTableDataElement.MultiSelect = false;
+            this.uiOutputTableDataElement.Name = "uiOutputTableDataElement";
+            this.uiOutputTableDataElement.ReadOnly = true;
+            this.uiOutputTableDataElement.RowTemplate.Height = 24;
+            this.uiOutputTableDataElement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.uiOutputTableDataElement.Size = new System.Drawing.Size(862, 171);
+            this.uiOutputTableDataElement.TabIndex = 12;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "kolicina";
+            this.dataGridViewTextBoxColumn7.HeaderText = "kolicina";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "id_proizvod";
+            this.dataGridViewTextBoxColumn8.HeaderText = "id_proizvod";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "id_element";
+            this.dataGridViewTextBoxColumn9.HeaderText = "id_element";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // pogledDjelovaPoProoizvoduBindingSource
+            // 
+            this.pogledDjelovaPoProoizvoduBindingSource.DataMember = "PogledDjelovaPoProoizvodu";
+            this.pogledDjelovaPoProoizvoduBindingSource.DataSource = this.baza18043_DBDataSet;
+            // 
+            // pogledDjelovaPoProoizvoduTableAdapter
+            // 
+            this.pogledDjelovaPoProoizvoduTableAdapter.ClearBeforeFill = true;
+            // 
+            // uiOutputTableDataPogledDjelovaPoProoizvodu
+            // 
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.AllowUserToAddRows = false;
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.AllowUserToDeleteRows = false;
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.AutoGenerateColumns = false;
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.BackgroundColor = System.Drawing.Color.White;
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19});
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.DataSource = this.pogledDjelovaPoProoizvoduBindingSource;
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.Location = new System.Drawing.Point(0, 380);
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.MultiSelect = false;
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.Name = "uiOutputTableDataPogledDjelovaPoProoizvodu";
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.ReadOnly = true;
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.RowTemplate.Height = 24;
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.Size = new System.Drawing.Size(862, 283);
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.TabIndex = 12;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Naziv";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Naziv";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Duljina";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Duljina";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Širina";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Širina";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Visina";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Visina";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Slika";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Slika";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Materijal";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Materijal";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "Uloga";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Uloga";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Količina";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Količina";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Boja";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Boja";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "Kantiranost";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Kantiranost";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            // 
             // uiProizvod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(802, 508);
+            this.ClientSize = new System.Drawing.Size(862, 663);
+            this.Controls.Add(this.uiOutputTableDataElement);
             this.Controls.Add(this.uiActionObrišiProizvod);
             this.Controls.Add(this.uiActionUrediProizvod);
             this.Controls.Add(this.uiActionDodajNoviProizvod);
             this.Controls.Add(this.uiOutputDataProizvod);
             this.Controls.Add(this.proizvodBindingNavigator);
+            this.Controls.Add(this.uiOutputTableDataPogledDjelovaPoProoizvodu);
             this.Name = "uiProizvod";
             this.Text = "uiProizvod";
             this.Load += new System.EventHandler(this.uiProizvod_Load);
+            this.SizeChanged += new System.EventHandler(this.uiProizvod_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingNavigator)).EndInit();
             this.proizvodBindingNavigator.ResumeLayout(false);
             this.proizvodBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataProizvod)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataElement)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pogledDjelovaPoProoizvoduBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataPogledDjelovaPoProoizvodu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,5 +574,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.BindingSource elementBindingSource;
+        private Baza18043_DBDataSetTableAdapters.ElementTableAdapter elementTableAdapter;
+        private System.Windows.Forms.DataGridView uiOutputTableDataElement;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.BindingSource pogledDjelovaPoProoizvoduBindingSource;
+        private Baza18043_DBDataSetTableAdapters.PogledDjelovaPoProoizvoduTableAdapter pogledDjelovaPoProoizvoduTableAdapter;
+        private System.Windows.Forms.DataGridView uiOutputTableDataPogledDjelovaPoProoizvodu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
     }
 }

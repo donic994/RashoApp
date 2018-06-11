@@ -19,6 +19,10 @@ namespace RashoApp.Proizvod
 
         private void uiProizvod_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.PogledDjelovaPoProoizvodu' table. You can move, or remove it, as needed.
+            this.pogledDjelovaPoProoizvoduTableAdapter.Fill(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu);
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Element' table. You can move, or remove it, as needed.
+            this.elementTableAdapter.Fill(this.baza18043_DBDataSet.Element);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Proizvod' table. You can move, or remove it, as needed.
             this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
 
@@ -50,6 +54,16 @@ namespace RashoApp.Proizvod
                 uiOutputDataProizvod.Rows.RemoveAt(uiOutputDataProizvod.CurrentRow.Index);
             }
         }
-        
+
+        private void uiProizvod_SizeChanged(object sender, EventArgs e)
+        {
+            uiOutputDataProizvod.Height = this.Height / 3;
+            uiOutputTableDataElement.Height = this.Height / 3;
+            uiOutputTableDataPogledDjelovaPoProoizvodu.Height = this.Height / 3;
+
+            uiOutputDataProizvod.Location = new Point(0, 0);
+            uiOutputTableDataElement.Location = new Point(0, (this.Height / 3));
+            uiOutputTableDataPogledDjelovaPoProoizvodu.Location = new Point(0, (this.Height / 3)*2);
+        }
     }
 }

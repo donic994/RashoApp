@@ -653,6 +653,31 @@ SELECT ID, naziv, opis FROM UlogaKorisnika WHERE (ID = @ID)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PogledDjelovaPoProoizvoduTableAdapter" GeneratorDataComponentClassName="PogledDjelovaPoProoizvoduTableAdapter" Name="PogledDjelovaPoProoizvodu" UserDataComponentName="PogledDjelovaPoProoizvoduTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Baza18043_DBConnectionString (Settings)" DbObjectName="[18043_DB].dbo.PogledDjelovaPoProoizvodu" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Naziv, Duljina, Širina, Visina, Slika, Materijal, Uloga, Količina, Boja, Kantiranost FROM dbo.PogledDjelovaPoProoizvodu</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Naziv" DataSetColumn="Naziv" />
+              <Mapping SourceColumn="Duljina" DataSetColumn="Duljina" />
+              <Mapping SourceColumn="Širina" DataSetColumn="Širina" />
+              <Mapping SourceColumn="Visina" DataSetColumn="Visina" />
+              <Mapping SourceColumn="Slika" DataSetColumn="Slika" />
+              <Mapping SourceColumn="Materijal" DataSetColumn="Materijal" />
+              <Mapping SourceColumn="Uloga" DataSetColumn="Uloga" />
+              <Mapping SourceColumn="Količina" DataSetColumn="Količina" />
+              <Mapping SourceColumn="Boja" DataSetColumn="Boja" />
+              <Mapping SourceColumn="Kantiranost" DataSetColumn="Kantiranost" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -889,6 +914,58 @@ SELECT ID, naziv, opis FROM UlogaKorisnika WHERE (ID = @ID)</CommandText>
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PogledDjelovaPoProoizvodu" msprop:Generator_TableClassName="PogledDjelovaPoProoizvoduDataTable" msprop:Generator_TableVarName="tablePogledDjelovaPoProoizvodu" msprop:Generator_TablePropName="PogledDjelovaPoProoizvodu" msprop:Generator_RowDeletingName="PogledDjelovaPoProoizvoduRowDeleting" msprop:Generator_RowChangingName="PogledDjelovaPoProoizvoduRowChanging" msprop:Generator_RowEvHandlerName="PogledDjelovaPoProoizvoduRowChangeEventHandler" msprop:Generator_RowDeletedName="PogledDjelovaPoProoizvoduRowDeleted" msprop:Generator_UserTableName="PogledDjelovaPoProoizvodu" msprop:Generator_RowChangedName="PogledDjelovaPoProoizvoduRowChanged" msprop:Generator_RowEvArgName="PogledDjelovaPoProoizvoduRowChangeEvent" msprop:Generator_RowClassName="PogledDjelovaPoProoizvoduRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Naziv" msprop:Generator_ColumnVarNameInTable="columnNaziv" msprop:Generator_ColumnPropNameInRow="Naziv" msprop:Generator_ColumnPropNameInTable="NazivColumn" msprop:Generator_UserColumnName="Naziv">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Duljina" msprop:Generator_ColumnVarNameInTable="columnDuljina" msprop:Generator_ColumnPropNameInRow="Duljina" msprop:Generator_ColumnPropNameInTable="DuljinaColumn" msprop:Generator_UserColumnName="Duljina" type="xs:double" />
+              <xs:element name="Širina" msprop:Generator_ColumnVarNameInTable="columnŠirina" msprop:Generator_ColumnPropNameInRow="Širina" msprop:Generator_ColumnPropNameInTable="ŠirinaColumn" msprop:Generator_UserColumnName="Širina" type="xs:double" />
+              <xs:element name="Visina" msprop:Generator_ColumnVarNameInTable="columnVisina" msprop:Generator_ColumnPropNameInRow="Visina" msprop:Generator_ColumnPropNameInTable="VisinaColumn" msprop:Generator_UserColumnName="Visina" type="xs:double" />
+              <xs:element name="Slika" msprop:Generator_ColumnVarNameInTable="columnSlika" msprop:Generator_ColumnPropNameInRow="Slika" msprop:Generator_ColumnPropNameInTable="SlikaColumn" msprop:Generator_UserColumnName="Slika" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Materijal" msprop:Generator_ColumnVarNameInTable="columnMaterijal" msprop:Generator_ColumnPropNameInRow="Materijal" msprop:Generator_ColumnPropNameInTable="MaterijalColumn" msprop:Generator_UserColumnName="Materijal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Uloga" msprop:Generator_ColumnVarNameInTable="columnUloga" msprop:Generator_ColumnPropNameInRow="Uloga" msprop:Generator_ColumnPropNameInTable="UlogaColumn" msprop:Generator_UserColumnName="Uloga">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Količina" msprop:Generator_ColumnVarNameInTable="columnKoličina" msprop:Generator_ColumnPropNameInRow="Količina" msprop:Generator_ColumnPropNameInTable="KoličinaColumn" msprop:Generator_UserColumnName="Količina" type="xs:int" />
+              <xs:element name="Boja" msprop:Generator_ColumnVarNameInTable="columnBoja" msprop:Generator_ColumnPropNameInRow="Boja" msprop:Generator_ColumnPropNameInTable="BojaColumn" msprop:Generator_UserColumnName="Boja" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Kantiranost" msprop:Generator_ColumnVarNameInTable="columnKantiranost" msprop:Generator_ColumnPropNameInRow="Kantiranost" msprop:Generator_ColumnPropNameInTable="KantiranostColumn" msprop:Generator_UserColumnName="Kantiranost" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
