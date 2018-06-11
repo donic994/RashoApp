@@ -12,6 +12,8 @@ namespace RashoApp.Proizvod
 {
     public partial class uiProizvod : Form
     {
+        int idProizvoda = 0;
+
         public uiProizvod()
         {
             InitializeComponent();
@@ -19,10 +21,6 @@ namespace RashoApp.Proizvod
 
         private void uiProizvod_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'baza18043_DBDataSet.PogledDjelovaPoProoizvodu' table. You can move, or remove it, as needed.
-            this.pogledDjelovaPoProoizvoduTableAdapter.Fill(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu);
-            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Element' table. You can move, or remove it, as needed.
-            this.elementTableAdapter.Fill(this.baza18043_DBDataSet.Element);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Proizvod' table. You can move, or remove it, as needed.
             this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
 
@@ -64,6 +62,14 @@ namespace RashoApp.Proizvod
             uiOutputDataProizvod.Location = new Point(0, 0);
             uiOutputTableDataElement.Location = new Point(0, (this.Height / 3));
             uiOutputTableDataPogledDjelovaPoProoizvodu.Location = new Point(0, (this.Height / 3)*2);
+        }
+
+        private void uiOutputDataProizvod_SelectionChanged(object sender, EventArgs e)
+        {
+            idProizvoda = int.Parse(uiOutputDataProizvod.SelectedCells[0].Value.ToString());
+            this.elementTableAdapter.FillByIdProizvoda(this.baza18043_DBDataSet.Element, idProizvoda);
+
+            this.pogledDjelovaPoProoizvoduTableAdapter.FillByProizvodID(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu, idProizvoda);
         }
     }
 }

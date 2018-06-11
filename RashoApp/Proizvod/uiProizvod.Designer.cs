@@ -266,6 +266,7 @@
             this.uiOutputDataProizvod.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.uiOutputDataProizvod.Size = new System.Drawing.Size(862, 170);
             this.uiOutputDataProizvod.TabIndex = 1;
+            this.uiOutputDataProizvod.SelectionChanged += new System.EventHandler(this.uiOutputDataProizvod_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
