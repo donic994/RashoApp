@@ -49,6 +49,17 @@ namespace RashoApp.Element
 
         }
 
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.elementTableAdapter.FillBy(this.baza18043_DBDataSet.Element);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
+        }
     }
 }

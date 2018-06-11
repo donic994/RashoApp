@@ -238,6 +238,7 @@
             this.uiOutputDataKoponenta.Location = new System.Drawing.Point(0, 27);
             this.uiOutputDataKoponenta.MultiSelect = false;
             this.uiOutputDataKoponenta.Name = "uiOutputDataKoponenta";
+            this.uiOutputDataKoponenta.ReadOnly = true;
             this.uiOutputDataKoponenta.RowTemplate.Height = 24;
             this.uiOutputDataKoponenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.uiOutputDataKoponenta.Size = new System.Drawing.Size(802, 481);
@@ -248,6 +249,7 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "kolicina";
             this.dataGridViewTextBoxColumn1.HeaderText = "kolicina";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 84;
             // 
             // dataGridViewTextBoxColumn2
@@ -255,6 +257,7 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "boja";
             this.dataGridViewTextBoxColumn2.HeaderText = "boja";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 64;
             // 
             // dataGridViewTextBoxColumn3
@@ -262,6 +265,7 @@
             this.dataGridViewTextBoxColumn3.DataPropertyName = "kantiranost";
             this.dataGridViewTextBoxColumn3.HeaderText = "kantiranost";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Width = 107;
             // 
             // dataGridViewTextBoxColumn4
@@ -269,6 +273,7 @@
             this.dataGridViewTextBoxColumn4.DataPropertyName = "id_uloga";
             this.dataGridViewTextBoxColumn4.HeaderText = "id_uloga";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 91;
             // 
             // dataGridViewTextBoxColumn5
@@ -276,6 +281,7 @@
             this.dataGridViewTextBoxColumn5.DataPropertyName = "id_dio";
             this.dataGridViewTextBoxColumn5.HeaderText = "id_dio";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 75;
             // 
             // dataGridViewTextBoxColumn6
@@ -283,6 +289,7 @@
             this.dataGridViewTextBoxColumn6.DataPropertyName = "id_proizvod";
             this.dataGridViewTextBoxColumn6.HeaderText = "id_proizvod";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 110;
             // 
             // uiActionObrišiKomponenta

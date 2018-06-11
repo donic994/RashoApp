@@ -72,7 +72,6 @@
             this.uiTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl.TabIndex = 0;
             this.uiTabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.uiTabControl_DrawItem);
-            this.uiTabControl.SelectedIndexChanged += new System.EventHandler(this.uiTabControl_SelectedIndexChanged);
             // 
             // Proizvodi
             // 
