@@ -33,20 +33,23 @@
             this.uiActionUrediDio = new System.Windows.Forms.Button();
             this.uiActionObrišiDio = new System.Windows.Forms.Button();
             this.uiOutputTableDataDio = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
             this.dioTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.DioTableAdapter();
             this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
+            this.komponentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.komponentaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duljinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sirinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.visinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materijalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataDio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // uiActionDodajNoviDio
@@ -100,13 +103,13 @@
             this.uiOutputTableDataDio.BackgroundColor = System.Drawing.Color.White;
             this.uiOutputTableDataDio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uiOutputTableDataDio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
+            this.iDDataGridViewTextBoxColumn,
+            this.nazivDataGridViewTextBoxColumn,
+            this.duljinaDataGridViewTextBoxColumn,
+            this.sirinaDataGridViewTextBoxColumn,
+            this.visinaDataGridViewTextBoxColumn,
+            this.slikaDataGridViewTextBoxColumn,
+            this.materijalDataGridViewTextBoxColumn});
             this.uiOutputTableDataDio.DataSource = this.dioBindingSource;
             this.uiOutputTableDataDio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiOutputTableDataDio.Location = new System.Drawing.Point(0, 0);
@@ -117,66 +120,6 @@
             this.uiOutputTableDataDio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.uiOutputTableDataDio.Size = new System.Drawing.Size(802, 508);
             this.uiOutputTableDataDio.TabIndex = 3;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 30;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "naziv";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Naziv";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 85;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "duljina";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Duljina(mm)";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 15;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 85;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "sirina";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Širina(mm)";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 15;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 85;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "visina";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Visina(mm)";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 15;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 85;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "slika";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Slika";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 15;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 85;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "materijal";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Materijal";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 15;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dioBindingSource
             // 
@@ -207,6 +150,64 @@
             this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // komponentaBindingSource
+            // 
+            this.komponentaBindingSource.DataMember = "Komponenta";
+            this.komponentaBindingSource.DataSource = this.baza18043_DBDataSet;
+            // 
+            // komponentaTableAdapter
+            // 
+            this.komponentaTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // duljinaDataGridViewTextBoxColumn
+            // 
+            this.duljinaDataGridViewTextBoxColumn.DataPropertyName = "duljina";
+            this.duljinaDataGridViewTextBoxColumn.HeaderText = "duljina";
+            this.duljinaDataGridViewTextBoxColumn.Name = "duljinaDataGridViewTextBoxColumn";
+            this.duljinaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sirinaDataGridViewTextBoxColumn
+            // 
+            this.sirinaDataGridViewTextBoxColumn.DataPropertyName = "sirina";
+            this.sirinaDataGridViewTextBoxColumn.HeaderText = "sirina";
+            this.sirinaDataGridViewTextBoxColumn.Name = "sirinaDataGridViewTextBoxColumn";
+            this.sirinaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // visinaDataGridViewTextBoxColumn
+            // 
+            this.visinaDataGridViewTextBoxColumn.DataPropertyName = "visina";
+            this.visinaDataGridViewTextBoxColumn.HeaderText = "visina";
+            this.visinaDataGridViewTextBoxColumn.Name = "visinaDataGridViewTextBoxColumn";
+            this.visinaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // slikaDataGridViewTextBoxColumn
+            // 
+            this.slikaDataGridViewTextBoxColumn.DataPropertyName = "slika";
+            this.slikaDataGridViewTextBoxColumn.HeaderText = "slika";
+            this.slikaDataGridViewTextBoxColumn.Name = "slikaDataGridViewTextBoxColumn";
+            this.slikaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // materijalDataGridViewTextBoxColumn
+            // 
+            this.materijalDataGridViewTextBoxColumn.DataPropertyName = "materijal";
+            this.materijalDataGridViewTextBoxColumn.HeaderText = "materijal";
+            this.materijalDataGridViewTextBoxColumn.Name = "materijalDataGridViewTextBoxColumn";
+            this.materijalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // uiDjelovi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,6 +224,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataDio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,13 +237,15 @@
         private System.Windows.Forms.Button uiActionObrišiDio;
         private Baza18043_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView uiOutputTableDataDio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private Baza18043_DBDataSetTableAdapters.DioTableAdapter dioTableAdapter;
+        private System.Windows.Forms.BindingSource komponentaBindingSource;
+        private Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter komponentaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duljinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sirinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn visinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn slikaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn materijalDataGridViewTextBoxColumn;
     }
 }

@@ -19,6 +19,8 @@ namespace RashoApp
 
         private void uiDjelovi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Komponenta' table. You can move, or remove it, as needed.
+            this.komponentaTableAdapter.Fill(this.baza18043_DBDataSet.Komponenta);
             PopuniPodacimaDio();
         }
 
@@ -46,8 +48,13 @@ namespace RashoApp
         {
             if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj dio?", "Obrisati dio", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
             {
+
+                int id = int.Parse(uiOutputTableDataDio.SelectedCells[0].Value.ToString());
+
                 uiOutputTableDataDio.Rows.RemoveAt(uiOutputTableDataDio.CurrentRow.Index);
-                //SpremiTrenutnoStanje();
+               
+                this.komponentaTableAdapter.DeleteByDio(id);
+                SpremiTrenutnoStanje();
             }
         }
 
