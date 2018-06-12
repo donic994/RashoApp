@@ -50,8 +50,14 @@ namespace RashoApp.Proizvod
             if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj proizvoid?", "Obrisati proizvod", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
                 uiOutputDataProizvod.Rows.RemoveAt(uiOutputDataProizvod.CurrentRow.Index);
+
+                idProizvoda = int.Parse(uiOutputDataProizvod.SelectedCells[0].Value.ToString());
+
+                this.elementTableAdapter.DeleteByProizvod(idProizvoda);
+                this.komponentaTableAdapter.DeleteByProizvod(idProizvoda);
+                this.proizvodTableAdapter.DeleteByID(idProizvoda);
             }
-           // SpremiPromjene();
+           SpremiPromjene();
         }
 
         private void uiProizvod_SizeChanged(object sender, EventArgs e)
