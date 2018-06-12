@@ -36,15 +36,17 @@ namespace RashoApp.Element
 
         private void uiActionDodajNoviDio_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(uiOutputTableDataElement.SelectedCells[0].Value.ToString());
-            Element.uiDodajUrediElement frm = new Element.uiDodajUrediElement(id, "dodaj");
+            int proizvod = int.Parse(uiOutputTableDataElement.SelectedCells[1].Value.ToString());
+            int element = int.Parse(uiOutputTableDataElement.SelectedCells[2].Value.ToString());
+            Element.uiDodajUrediElement frm = new Element.uiDodajUrediElement(proizvod, element, "dodaj");
             frm.ShowDialog();
         }
 
         private void uiActionUrediDio_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(uiOutputTableDataElement.SelectedCells[0].Value.ToString());
-            Element.uiDodajUrediElement frm = new Element.uiDodajUrediElement(id, "uredi");
+            int proizvod = int.Parse(uiOutputTableDataElement.SelectedCells[1].Value.ToString());
+            int element = int.Parse(uiOutputTableDataElement.SelectedCells[2].Value.ToString());
+            Element.uiDodajUrediElement frm = new Element.uiDodajUrediElement(proizvod, element, "uredi");
             frm.ShowDialog();
         }
 

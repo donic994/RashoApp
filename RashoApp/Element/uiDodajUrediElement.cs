@@ -12,14 +12,16 @@ namespace RashoApp.Element
 {
     public partial class uiDodajUrediElement : Form
     {
-        private int id = 0;
+        private int Proizvod = 0;
+        private int Element = 0;
         private string kontrola = "";
 
-        public uiDodajUrediElement(int ID, string Kontrola)
+        public uiDodajUrediElement(int proizvod, int element, string Kontrola)
         {
             InitializeComponent();
 
-            id = ID;
+            Proizvod = proizvod;
+            Element = element;
             kontrola = Kontrola;
 
             if (kontrola == "dodaj")
@@ -34,7 +36,7 @@ namespace RashoApp.Element
             }
         }
 
-        private void elementBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void SpremiPromjene()
         {
             this.Validate();
             this.elementBindingSource.EndEdit();
@@ -44,10 +46,32 @@ namespace RashoApp.Element
 
         private void uiDodajUediElement_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Proizvod' table. You can move, or remove it, as needed.
-            this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
-            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Element' table. You can move, or remove it, as needed.
-            this.elementTableAdapter.Fill(this.baza18043_DBDataSet.Element);
+            if (kontrola == "uredi")
+            {
+                // TODO: This line of code loads data into the 'baza18043_DBDataSet.Element' table. You can move, or remove it, as needed.
+                this.elementTableAdapter.FillByProizvodElement(this.baza18043_DBDataSet.Element, Proizvod, Element);
+            }
+        }
+
+        private void uiActionSpremiElement_Click(object sender, EventArgs e)
+        {
+            if (kontrola == "uredi")
+            {
+                SpremiPromjene();
+            }
+            if (kontrola == "dodaj")
+            {
+                int kolicina = int.Parse(uiInputElementKolicina.Text.ToString());
+                int proizvod = int.Parse(uiInputElementProizvod.Text.ToString());
+                int element = int.Parse(uiInputElementElement.Text.ToString());
+
+                Baza18043_DBDataSetTableAdapters.ElementTableAdapter noviElementTableAdapter = new Baza18043_DBDataSetTableAdapters.ElementTableAdapter();
+                noviElementTableAdapter.Insert(kolicina, proizvod, element);
+
+                SpremiPromjene();
+            }
+
+            this.Close();
         }
     }
 }
