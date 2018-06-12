@@ -7273,12 +7273,20 @@ SELECT kolicina, boja, kantiranost, id_uloga, id_dio, id_proizvod FROM Komponent
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT kolicina, boja, kantiranost, id_uloga, id_dio, id_proizvod FROM dbo.Kompon" +
                 "enta";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT kolicina, boja, kantiranost, id_uloga, id_dio, id_proizvod FROM dbo.Kompon" +
+                "enta WHERE id_uloga= @uloga AND id_dio=@dio AND id_proizvod = @proizvod";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@uloga", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_uloga", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dio", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_dio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@proizvod", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_proizvod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7300,6 +7308,36 @@ SELECT kolicina, boja, kantiranost, id_uloga, id_dio, id_proizvod FROM Komponent
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual Baza18043_DBDataSet.KomponentaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            Baza18043_DBDataSet.KomponentaDataTable dataTable = new Baza18043_DBDataSet.KomponentaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByDioUlogaProizvod(Baza18043_DBDataSet.KomponentaDataTable dataTable, int uloga, int dio, int proizvod) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(uloga));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(dio));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(proizvod));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Baza18043_DBDataSet.KomponentaDataTable GetDataByDioUlogaProizvod(int uloga, int dio, int proizvod) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(uloga));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(dio));
+            this.Adapter.SelectCommand.Parameters[2].Value = ((int)(proizvod));
             Baza18043_DBDataSet.KomponentaDataTable dataTable = new Baza18043_DBDataSet.KomponentaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

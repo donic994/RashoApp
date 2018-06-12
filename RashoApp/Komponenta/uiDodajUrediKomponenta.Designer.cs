@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiDodajUrediKomponenta));
             System.Windows.Forms.Label kolicinaLabel;
             System.Windows.Forms.Label bojaLabel;
             System.Windows.Forms.Label kantiranostLabel;
             System.Windows.Forms.Label id_ulogaLabel;
             System.Windows.Forms.Label id_dioLabel;
             System.Windows.Forms.Label id_proizvodLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiDodajUrediKomponenta));
             this.uiActionSpremiKomponenta = new System.Windows.Forms.Button();
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
             this.komponentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.komponentaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter();
             this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
             this.komponentaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.komponentaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.kolicinaTextBox = new System.Windows.Forms.TextBox();
-            this.bojaTextBox = new System.Windows.Forms.TextBox();
-            this.kantiranostTextBox = new System.Windows.Forms.TextBox();
-            this.id_ulogaTextBox = new System.Windows.Forms.TextBox();
-            this.id_dioTextBox = new System.Windows.Forms.TextBox();
-            this.id_proizvodTextBox = new System.Windows.Forms.TextBox();
+            this.uiInputKomponentaKolicina = new System.Windows.Forms.TextBox();
+            this.uiInputKomponentaBoja = new System.Windows.Forms.TextBox();
+            this.uiInputKomponentaKantoranost = new System.Windows.Forms.TextBox();
+            this.uiInputKomponentaUloga = new System.Windows.Forms.TextBox();
+            this.uiInputKomponentaDio = new System.Windows.Forms.TextBox();
+            this.uiInputKomponentaProizvod = new System.Windows.Forms.TextBox();
             kolicinaLabel = new System.Windows.Forms.Label();
             bojaLabel = new System.Windows.Forms.Label();
             kantiranostLabel = new System.Windows.Forms.Label();
@@ -71,6 +71,60 @@
             ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingNavigator)).BeginInit();
             this.komponentaBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // kolicinaLabel
+            // 
+            kolicinaLabel.AutoSize = true;
+            kolicinaLabel.Location = new System.Drawing.Point(55, 59);
+            kolicinaLabel.Name = "kolicinaLabel";
+            kolicinaLabel.Size = new System.Drawing.Size(59, 17);
+            kolicinaLabel.TabIndex = 9;
+            kolicinaLabel.Text = "kolicina:";
+            // 
+            // bojaLabel
+            // 
+            bojaLabel.AutoSize = true;
+            bojaLabel.Location = new System.Drawing.Point(75, 87);
+            bojaLabel.Name = "bojaLabel";
+            bojaLabel.Size = new System.Drawing.Size(39, 17);
+            bojaLabel.TabIndex = 10;
+            bojaLabel.Text = "boja:";
+            // 
+            // kantiranostLabel
+            // 
+            kantiranostLabel.AutoSize = true;
+            kantiranostLabel.Location = new System.Drawing.Point(32, 115);
+            kantiranostLabel.Name = "kantiranostLabel";
+            kantiranostLabel.Size = new System.Drawing.Size(82, 17);
+            kantiranostLabel.TabIndex = 11;
+            kantiranostLabel.Text = "kantiranost:";
+            // 
+            // id_ulogaLabel
+            // 
+            id_ulogaLabel.AutoSize = true;
+            id_ulogaLabel.Location = new System.Drawing.Point(52, 143);
+            id_ulogaLabel.Name = "id_ulogaLabel";
+            id_ulogaLabel.Size = new System.Drawing.Size(62, 17);
+            id_ulogaLabel.TabIndex = 12;
+            id_ulogaLabel.Text = "id uloga:";
+            // 
+            // id_dioLabel
+            // 
+            id_dioLabel.AutoSize = true;
+            id_dioLabel.Location = new System.Drawing.Point(68, 171);
+            id_dioLabel.Name = "id_dioLabel";
+            id_dioLabel.Size = new System.Drawing.Size(46, 17);
+            id_dioLabel.TabIndex = 13;
+            id_dioLabel.Text = "id dio:";
+            // 
+            // id_proizvodLabel
+            // 
+            id_proizvodLabel.AutoSize = true;
+            id_proizvodLabel.Location = new System.Drawing.Point(33, 199);
+            id_proizvodLabel.Name = "id_proizvodLabel";
+            id_proizvodLabel.Size = new System.Drawing.Size(81, 17);
+            id_proizvodLabel.TabIndex = 14;
+            id_proizvodLabel.Text = "id proizvod:";
             // 
             // uiActionSpremiKomponenta
             // 
@@ -84,6 +138,7 @@
             this.uiActionSpremiKomponenta.TabIndex = 8;
             this.uiActionSpremiKomponenta.Text = "Spremi";
             this.uiActionSpremiKomponenta.UseVisualStyleBackColor = false;
+            this.uiActionSpremiKomponenta.Click += new System.EventHandler(this.uiActionSpremiKomponenta_Click);
             // 
             // baza18043_DBDataSet
             // 
@@ -145,13 +200,38 @@
             this.komponentaBindingNavigator.TabIndex = 9;
             this.komponentaBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -160,13 +240,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -177,17 +257,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 20);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -209,137 +282,64 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // komponentaBindingNavigatorSaveItem
             // 
             this.komponentaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.komponentaBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("komponentaBindingNavigatorSaveItem.Image")));
             this.komponentaBindingNavigatorSaveItem.Name = "komponentaBindingNavigatorSaveItem";
-            this.komponentaBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.komponentaBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.komponentaBindingNavigatorSaveItem.Text = "Save Data";
-            this.komponentaBindingNavigatorSaveItem.Click += new System.EventHandler(this.komponentaBindingNavigatorSaveItem_Click);
             // 
-            // kolicinaLabel
+            // uiInputKomponentaKolicina
             // 
-            kolicinaLabel.AutoSize = true;
-            kolicinaLabel.Location = new System.Drawing.Point(55, 59);
-            kolicinaLabel.Name = "kolicinaLabel";
-            kolicinaLabel.Size = new System.Drawing.Size(59, 17);
-            kolicinaLabel.TabIndex = 9;
-            kolicinaLabel.Text = "kolicina:";
+            this.uiInputKomponentaKolicina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "kolicina", true));
+            this.uiInputKomponentaKolicina.Location = new System.Drawing.Point(120, 56);
+            this.uiInputKomponentaKolicina.Name = "uiInputKomponentaKolicina";
+            this.uiInputKomponentaKolicina.Size = new System.Drawing.Size(100, 22);
+            this.uiInputKomponentaKolicina.TabIndex = 10;
             // 
-            // kolicinaTextBox
+            // uiInputKomponentaBoja
             // 
-            this.kolicinaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "kolicina", true));
-            this.kolicinaTextBox.Location = new System.Drawing.Point(120, 56);
-            this.kolicinaTextBox.Name = "kolicinaTextBox";
-            this.kolicinaTextBox.Size = new System.Drawing.Size(100, 22);
-            this.kolicinaTextBox.TabIndex = 10;
+            this.uiInputKomponentaBoja.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "boja", true));
+            this.uiInputKomponentaBoja.Location = new System.Drawing.Point(120, 84);
+            this.uiInputKomponentaBoja.Name = "uiInputKomponentaBoja";
+            this.uiInputKomponentaBoja.Size = new System.Drawing.Size(100, 22);
+            this.uiInputKomponentaBoja.TabIndex = 11;
             // 
-            // bojaLabel
+            // uiInputKomponentaKantoranost
             // 
-            bojaLabel.AutoSize = true;
-            bojaLabel.Location = new System.Drawing.Point(75, 87);
-            bojaLabel.Name = "bojaLabel";
-            bojaLabel.Size = new System.Drawing.Size(39, 17);
-            bojaLabel.TabIndex = 10;
-            bojaLabel.Text = "boja:";
+            this.uiInputKomponentaKantoranost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "kantiranost", true));
+            this.uiInputKomponentaKantoranost.Location = new System.Drawing.Point(120, 112);
+            this.uiInputKomponentaKantoranost.Name = "uiInputKomponentaKantoranost";
+            this.uiInputKomponentaKantoranost.Size = new System.Drawing.Size(100, 22);
+            this.uiInputKomponentaKantoranost.TabIndex = 12;
             // 
-            // bojaTextBox
+            // uiInputKomponentaUloga
             // 
-            this.bojaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "boja", true));
-            this.bojaTextBox.Location = new System.Drawing.Point(120, 84);
-            this.bojaTextBox.Name = "bojaTextBox";
-            this.bojaTextBox.Size = new System.Drawing.Size(100, 22);
-            this.bojaTextBox.TabIndex = 11;
+            this.uiInputKomponentaUloga.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "id_uloga", true));
+            this.uiInputKomponentaUloga.Location = new System.Drawing.Point(120, 140);
+            this.uiInputKomponentaUloga.Name = "uiInputKomponentaUloga";
+            this.uiInputKomponentaUloga.Size = new System.Drawing.Size(100, 22);
+            this.uiInputKomponentaUloga.TabIndex = 13;
             // 
-            // kantiranostLabel
+            // uiInputKomponentaDio
             // 
-            kantiranostLabel.AutoSize = true;
-            kantiranostLabel.Location = new System.Drawing.Point(32, 115);
-            kantiranostLabel.Name = "kantiranostLabel";
-            kantiranostLabel.Size = new System.Drawing.Size(82, 17);
-            kantiranostLabel.TabIndex = 11;
-            kantiranostLabel.Text = "kantiranost:";
+            this.uiInputKomponentaDio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "id_dio", true));
+            this.uiInputKomponentaDio.Location = new System.Drawing.Point(120, 168);
+            this.uiInputKomponentaDio.Name = "uiInputKomponentaDio";
+            this.uiInputKomponentaDio.Size = new System.Drawing.Size(100, 22);
+            this.uiInputKomponentaDio.TabIndex = 14;
             // 
-            // kantiranostTextBox
+            // uiInputKomponentaProizvod
             // 
-            this.kantiranostTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "kantiranost", true));
-            this.kantiranostTextBox.Location = new System.Drawing.Point(120, 112);
-            this.kantiranostTextBox.Name = "kantiranostTextBox";
-            this.kantiranostTextBox.Size = new System.Drawing.Size(100, 22);
-            this.kantiranostTextBox.TabIndex = 12;
-            // 
-            // id_ulogaLabel
-            // 
-            id_ulogaLabel.AutoSize = true;
-            id_ulogaLabel.Location = new System.Drawing.Point(52, 143);
-            id_ulogaLabel.Name = "id_ulogaLabel";
-            id_ulogaLabel.Size = new System.Drawing.Size(62, 17);
-            id_ulogaLabel.TabIndex = 12;
-            id_ulogaLabel.Text = "id uloga:";
-            // 
-            // id_ulogaTextBox
-            // 
-            this.id_ulogaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "id_uloga", true));
-            this.id_ulogaTextBox.Location = new System.Drawing.Point(120, 140);
-            this.id_ulogaTextBox.Name = "id_ulogaTextBox";
-            this.id_ulogaTextBox.Size = new System.Drawing.Size(100, 22);
-            this.id_ulogaTextBox.TabIndex = 13;
-            // 
-            // id_dioLabel
-            // 
-            id_dioLabel.AutoSize = true;
-            id_dioLabel.Location = new System.Drawing.Point(68, 171);
-            id_dioLabel.Name = "id_dioLabel";
-            id_dioLabel.Size = new System.Drawing.Size(46, 17);
-            id_dioLabel.TabIndex = 13;
-            id_dioLabel.Text = "id dio:";
-            // 
-            // id_dioTextBox
-            // 
-            this.id_dioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "id_dio", true));
-            this.id_dioTextBox.Location = new System.Drawing.Point(120, 168);
-            this.id_dioTextBox.Name = "id_dioTextBox";
-            this.id_dioTextBox.Size = new System.Drawing.Size(100, 22);
-            this.id_dioTextBox.TabIndex = 14;
-            // 
-            // id_proizvodLabel
-            // 
-            id_proizvodLabel.AutoSize = true;
-            id_proizvodLabel.Location = new System.Drawing.Point(33, 199);
-            id_proizvodLabel.Name = "id_proizvodLabel";
-            id_proizvodLabel.Size = new System.Drawing.Size(81, 17);
-            id_proizvodLabel.TabIndex = 14;
-            id_proizvodLabel.Text = "id proizvod:";
-            // 
-            // id_proizvodTextBox
-            // 
-            this.id_proizvodTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "id_proizvod", true));
-            this.id_proizvodTextBox.Location = new System.Drawing.Point(120, 196);
-            this.id_proizvodTextBox.Name = "id_proizvodTextBox";
-            this.id_proizvodTextBox.Size = new System.Drawing.Size(100, 22);
-            this.id_proizvodTextBox.TabIndex = 15;
+            this.uiInputKomponentaProizvod.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "id_proizvod", true));
+            this.uiInputKomponentaProizvod.Location = new System.Drawing.Point(120, 196);
+            this.uiInputKomponentaProizvod.Name = "uiInputKomponentaProizvod";
+            this.uiInputKomponentaProizvod.Size = new System.Drawing.Size(100, 22);
+            this.uiInputKomponentaProizvod.TabIndex = 15;
             // 
             // uiDodajUrediKomponenta
             // 
@@ -348,17 +348,17 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(297, 325);
             this.Controls.Add(id_proizvodLabel);
-            this.Controls.Add(this.id_proizvodTextBox);
+            this.Controls.Add(this.uiInputKomponentaProizvod);
             this.Controls.Add(id_dioLabel);
-            this.Controls.Add(this.id_dioTextBox);
+            this.Controls.Add(this.uiInputKomponentaDio);
             this.Controls.Add(id_ulogaLabel);
-            this.Controls.Add(this.id_ulogaTextBox);
+            this.Controls.Add(this.uiInputKomponentaUloga);
             this.Controls.Add(kantiranostLabel);
-            this.Controls.Add(this.kantiranostTextBox);
+            this.Controls.Add(this.uiInputKomponentaKantoranost);
             this.Controls.Add(bojaLabel);
-            this.Controls.Add(this.bojaTextBox);
+            this.Controls.Add(this.uiInputKomponentaBoja);
             this.Controls.Add(kolicinaLabel);
-            this.Controls.Add(this.kolicinaTextBox);
+            this.Controls.Add(this.uiInputKomponentaKolicina);
             this.Controls.Add(this.komponentaBindingNavigator);
             this.Controls.Add(this.uiActionSpremiKomponenta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -395,11 +395,11 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton komponentaBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox kolicinaTextBox;
-        private System.Windows.Forms.TextBox bojaTextBox;
-        private System.Windows.Forms.TextBox kantiranostTextBox;
-        private System.Windows.Forms.TextBox id_ulogaTextBox;
-        private System.Windows.Forms.TextBox id_dioTextBox;
-        private System.Windows.Forms.TextBox id_proizvodTextBox;
+        private System.Windows.Forms.TextBox uiInputKomponentaKolicina;
+        private System.Windows.Forms.TextBox uiInputKomponentaBoja;
+        private System.Windows.Forms.TextBox uiInputKomponentaKantoranost;
+        private System.Windows.Forms.TextBox uiInputKomponentaUloga;
+        private System.Windows.Forms.TextBox uiInputKomponentaDio;
+        private System.Windows.Forms.TextBox uiInputKomponentaProizvod;
     }
 }

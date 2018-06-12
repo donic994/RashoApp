@@ -34,15 +34,19 @@ namespace RashoApp.Komponenta
 
         private void uiActionDodajNoviKomponenta_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(uiOutputTableDataKoponenta.SelectedCells[0].Value.ToString());
-            Komponenta.uiDodajUrediKomponenta frm = new Komponenta.uiDodajUrediKomponenta(id, "dodaj");
+            int dio = int.Parse(uiOutputTableDataKoponenta.SelectedCells[4].Value.ToString());
+            int uloga = int.Parse(uiOutputTableDataKoponenta.SelectedCells[3].Value.ToString());
+            int proizvod = int.Parse(uiOutputTableDataKoponenta.SelectedCells[5].Value.ToString());
+            Komponenta.uiDodajUrediKomponenta frm = new Komponenta.uiDodajUrediKomponenta(dio, uloga, proizvod, "dodaj");
             frm.ShowDialog();
         }
 
         private void uiActionUrediKomponenta_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(uiOutputTableDataKoponenta.SelectedCells[0].Value.ToString());
-            Komponenta.uiDodajUrediKomponenta frm = new Komponenta.uiDodajUrediKomponenta(id, "uredi");
+            int dio = int.Parse(uiOutputTableDataKoponenta.SelectedCells[4].Value.ToString());
+            int uloga = int.Parse(uiOutputTableDataKoponenta.SelectedCells[3].Value.ToString());
+            int proizvod = int.Parse(uiOutputTableDataKoponenta.SelectedCells[5].Value.ToString());
+            Komponenta.uiDodajUrediKomponenta frm = new Komponenta.uiDodajUrediKomponenta(dio, uloga, proizvod, "uredi");
             frm.ShowDialog();
         }
 

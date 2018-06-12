@@ -62,7 +62,8 @@ namespace RashoApp.Djelovi
                 noviDioTableAdapter.Insert(naziv, duljina, sirina, visina, slika, materijal);
 
                 SpremiPromjene();
-            }
+            }     
+                        
             this.Close();
         }
 

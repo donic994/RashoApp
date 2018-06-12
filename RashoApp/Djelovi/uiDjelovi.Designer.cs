@@ -230,7 +230,6 @@
         #endregion
         private Baza18043_DBDataSet baza18043_DBDataSet;
         private System.Windows.Forms.BindingSource dioBindingSource;
-        private Baza18043_DBDataSetTableAdapters.DioTableAdapter dioTableAdapter;
         private System.Windows.Forms.Button uiActionDodajNoviDio;
         private System.Windows.Forms.Button uiActionUrediDio;
         private System.Windows.Forms.Button uiActionObrišiDio;
@@ -243,5 +242,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private Baza18043_DBDataSetTableAdapters.DioTableAdapter dioTableAdapter;
     }
 }
