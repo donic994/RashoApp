@@ -17,7 +17,7 @@ namespace RashoApp.Komponenta
             InitializeComponent();
         }
 
-        private void komponentaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void SpremiPromjene()
         {
             this.Validate();
             this.komponentaBindingSource.EndEdit();
@@ -56,6 +56,7 @@ namespace RashoApp.Komponenta
             {
                 uiOutputTableDataKoponenta.Rows.RemoveAt(uiOutputTableDataKoponenta.CurrentRow.Index);
             }
+            SpremiPromjene();
         }
     }
 }

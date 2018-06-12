@@ -17,7 +17,7 @@ namespace RashoApp.Element
             InitializeComponent();
         }
 
-        private void elementBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void SpremiPromjene()
         {
             this.Validate();
             this.elementBindingSource.EndEdit();
@@ -56,6 +56,7 @@ namespace RashoApp.Element
             {
                 uiOutputTableDataElement.Rows.RemoveAt(uiOutputTableDataElement.CurrentRow.Index);
             }
+            SpremiPromjene();
         }
 
     }

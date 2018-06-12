@@ -216,7 +216,6 @@
             this.komponentaBindingNavigatorSaveItem.Name = "komponentaBindingNavigatorSaveItem";
             this.komponentaBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.komponentaBindingNavigatorSaveItem.Text = "Save Data";
-            this.komponentaBindingNavigatorSaveItem.Click += new System.EventHandler(this.komponentaBindingNavigatorSaveItem_Click);
             // 
             // uiOutputTableDataKoponenta
             // 

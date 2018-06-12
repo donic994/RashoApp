@@ -26,7 +26,7 @@ namespace RashoApp.Proizvod
 
         }
 
-        private void proizvodBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void SpremiPromjene()
         {
             this.Validate();
             this.proizvodBindingSource.EndEdit();
@@ -51,6 +51,7 @@ namespace RashoApp.Proizvod
             {
                 uiOutputDataProizvod.Rows.RemoveAt(uiOutputDataProizvod.CurrentRow.Index);
             }
+           // SpremiPromjene();
         }
 
         private void uiProizvod_SizeChanged(object sender, EventArgs e)

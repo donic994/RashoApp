@@ -239,7 +239,6 @@
             this.proizvodBindingNavigatorSaveItem.Name = "proizvodBindingNavigatorSaveItem";
             this.proizvodBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.proizvodBindingNavigatorSaveItem.Text = "Save Data";
-            this.proizvodBindingNavigatorSaveItem.Click += new System.EventHandler(this.proizvodBindingNavigatorSaveItem_Click);
             // 
             // uiOutputDataProizvod
             // 
