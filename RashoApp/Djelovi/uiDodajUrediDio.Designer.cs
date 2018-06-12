@@ -211,6 +211,7 @@
             this.uiActionSpremiDio.TabIndex = 7;
             this.uiActionSpremiDio.Text = "Spremi";
             this.uiActionSpremiDio.UseVisualStyleBackColor = false;
+            this.uiActionSpremiDio.Click += new System.EventHandler(this.uiActionSpremiDio_Click);
             // 
             // uiDodajUrediDio
             // 

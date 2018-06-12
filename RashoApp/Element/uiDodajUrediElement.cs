@@ -48,20 +48,6 @@ namespace RashoApp.Element
             this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Element' table. You can move, or remove it, as needed.
             this.elementTableAdapter.Fill(this.baza18043_DBDataSet.Element);
-
-        }
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.elementTableAdapter.FillBy(this.baza18043_DBDataSet.Element);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
         }
     }
 }

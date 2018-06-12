@@ -17,7 +17,7 @@ namespace RashoApp
             InitializeComponent();
         }
 
-        private void uiDjelovi_Load(object sender, EventArgs e)
+        public void uiDjelovi_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Dio' table. You can move, or remove it, as needed.
             this.dioTableAdapter.Fill(this.baza18043_DBDataSet.Dio);
@@ -39,9 +39,10 @@ namespace RashoApp
 
         private void uiActionObrišiDio_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj dio?", "Obrisati dio", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj dio?", "Obrisati dio", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
             {
                 uiOutputTableDataDio.Rows.RemoveAt(uiOutputTableDataDio.CurrentRow.Index);
+                //SpremiTrenutnoStanje();
             }
         }
 
