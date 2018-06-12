@@ -31,9 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiUlogaDijela));
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
-            this.ulogaDijelaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ulogaDijelaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.UlogaDijelaTableAdapter();
-            this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
             this.ulogaDijelaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -48,16 +46,21 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.ulogaDijelaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.uiOutputTableDataUlogaDijela = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uiActionObrišiUlogaDijela = new System.Windows.Forms.Button();
             this.uiActionUrediUlogaDijela = new System.Windows.Forms.Button();
             this.uiActionDodajNoviUlogaDijela = new System.Windows.Forms.Button();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ulogaDijelaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
+            this.komponentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.komponentaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ulogaDijelaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaDijelaBindingNavigator)).BeginInit();
             this.ulogaDijelaBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataUlogaDijela)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ulogaDijelaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // baza18043_DBDataSet
@@ -65,29 +68,9 @@
             this.baza18043_DBDataSet.DataSetName = "Baza18043_DBDataSet";
             this.baza18043_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // ulogaDijelaBindingSource
-            // 
-            this.ulogaDijelaBindingSource.DataMember = "UlogaDijela";
-            this.ulogaDijelaBindingSource.DataSource = this.baza18043_DBDataSet;
-            // 
             // ulogaDijelaTableAdapter
             // 
             this.ulogaDijelaTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DioTableAdapter = null;
-            this.tableAdapterManager.DobavljacTableAdapter = null;
-            this.tableAdapterManager.ElementTableAdapter = null;
-            this.tableAdapterManager.KomponentaTableAdapter = null;
-            this.tableAdapterManager.KorisnikTableAdapter = null;
-            this.tableAdapterManager.NarudzbaTableAdapter = null;
-            this.tableAdapterManager.ProizvodTableAdapter = null;
-            this.tableAdapterManager.StavkaNarudzbeTableAdapter = null;
-            this.tableAdapterManager.UlogaDijelaTableAdapter = this.ulogaDijelaTableAdapter;
-            this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // ulogaDijelaBindingNavigator
             // 
@@ -212,7 +195,6 @@
             this.ulogaDijelaBindingNavigatorSaveItem.Name = "ulogaDijelaBindingNavigatorSaveItem";
             this.ulogaDijelaBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.ulogaDijelaBindingNavigatorSaveItem.Text = "Save Data";
-            this.ulogaDijelaBindingNavigatorSaveItem.Click += new System.EventHandler(this.ulogaDijelaBindingNavigatorSaveItem_Click);
             // 
             // uiOutputTableDataUlogaDijela
             // 
@@ -222,8 +204,8 @@
             this.uiOutputTableDataUlogaDijela.BackgroundColor = System.Drawing.Color.White;
             this.uiOutputTableDataUlogaDijela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uiOutputTableDataUlogaDijela.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
+            this.iDDataGridViewTextBoxColumn,
+            this.nazivDataGridViewTextBoxColumn});
             this.uiOutputTableDataUlogaDijela.DataSource = this.ulogaDijelaBindingSource;
             this.uiOutputTableDataUlogaDijela.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiOutputTableDataUlogaDijela.Location = new System.Drawing.Point(0, 27);
@@ -234,20 +216,6 @@
             this.uiOutputTableDataUlogaDijela.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.uiOutputTableDataUlogaDijela.Size = new System.Drawing.Size(802, 481);
             this.uiOutputTableDataUlogaDijela.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "naziv";
-            this.dataGridViewTextBoxColumn2.HeaderText = "naziv";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // uiActionObrišiUlogaDijela
             // 
@@ -291,6 +259,50 @@
             this.uiActionDodajNoviUlogaDijela.UseVisualStyleBackColor = false;
             this.uiActionDodajNoviUlogaDijela.Click += new System.EventHandler(this.uiActionDodajNoviUlogaDijela_Click);
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ulogaDijelaBindingSource
+            // 
+            this.ulogaDijelaBindingSource.DataMember = "UlogaDijela";
+            this.ulogaDijelaBindingSource.DataSource = this.baza18043_DBDataSet;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.DioTableAdapter = null;
+            this.tableAdapterManager.DobavljacTableAdapter = null;
+            this.tableAdapterManager.ElementTableAdapter = null;
+            this.tableAdapterManager.KomponentaTableAdapter = null;
+            this.tableAdapterManager.KorisnikTableAdapter = null;
+            this.tableAdapterManager.NarudzbaTableAdapter = null;
+            this.tableAdapterManager.ProizvodTableAdapter = null;
+            this.tableAdapterManager.StavkaNarudzbeTableAdapter = null;
+            this.tableAdapterManager.UlogaDijelaTableAdapter = null;
+            this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // komponentaBindingSource
+            // 
+            this.komponentaBindingSource.DataMember = "Komponenta";
+            this.komponentaBindingSource.DataSource = this.baza18043_DBDataSet;
+            // 
+            // komponentaTableAdapter
+            // 
+            this.komponentaTableAdapter.ClearBeforeFill = true;
+            // 
             // uiUlogaDijela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -306,11 +318,12 @@
             this.Text = "uiUlogaDijela";
             this.Load += new System.EventHandler(this.uiUlogaDijela_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ulogaDijelaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaDijelaBindingNavigator)).EndInit();
             this.ulogaDijelaBindingNavigator.ResumeLayout(false);
             this.ulogaDijelaBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataUlogaDijela)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ulogaDijelaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,10 +349,12 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton ulogaDijelaBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView uiOutputTableDataUlogaDijela;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button uiActionObrišiUlogaDijela;
         private System.Windows.Forms.Button uiActionUrediUlogaDijela;
         private System.Windows.Forms.Button uiActionDodajNoviUlogaDijela;
+        private System.Windows.Forms.BindingSource komponentaBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
+        private Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter komponentaTableAdapter;
     }
 }

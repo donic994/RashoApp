@@ -17,7 +17,7 @@ namespace RashoApp.UlogaDijela
             InitializeComponent();
         }
 
-        private void ulogaDijelaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void SpremiPromjene()
         {
             this.Validate();
             this.ulogaDijelaBindingSource.EndEdit();
@@ -27,6 +27,8 @@ namespace RashoApp.UlogaDijela
 
         private void uiUlogaDijela_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Komponenta' table. You can move, or remove it, as needed.
+            this.komponentaTableAdapter.Fill(this.baza18043_DBDataSet.Komponenta);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.UlogaDijela' table. You can move, or remove it, as needed.
             this.ulogaDijelaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaDijela);
 
@@ -34,20 +36,27 @@ namespace RashoApp.UlogaDijela
 
         private void uiActionDodajNoviUlogaDijela_Click(object sender, EventArgs e)
         {
-
+            int id = int.Parse(uiOutputTableDataUlogaDijela.SelectedCells[0].Value.ToString());
+            UlogaDijela.uiDodajUrediUlogaDijela frm = new UlogaDijela.uiDodajUrediUlogaDijela(id, "dodaj");
+            frm.ShowDialog();
         }
 
         private void uiActionUrediUlogaDijela_Click(object sender, EventArgs e)
         {
-
+            int id = int.Parse(uiOutputTableDataUlogaDijela.SelectedCells[0].Value.ToString());
+            UlogaDijela.uiDodajUrediUlogaDijela frm = new UlogaDijela.uiDodajUrediUlogaDijela(id, "uredi");
+            frm.ShowDialog();
         }
 
         private void uiActionObrišiUlogaDijela_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Jeste li sigurni da želite obrisati ovu ulogu?", "Obrisati ulogu dijela", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
+                int id = int.Parse(uiOutputTableDataUlogaDijela.SelectedCells[0].Value.ToString());
                 uiOutputTableDataUlogaDijela.Rows.RemoveAt(uiOutputTableDataUlogaDijela.CurrentRow.Index);
+
             }
+            SpremiPromjene();
         }
     }
 }
