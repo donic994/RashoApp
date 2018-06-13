@@ -66,9 +66,9 @@ namespace RashoApp.Proizvod
             uiOutputTableDataElement.Height = this.Height / 3;
             uiOutputTableDataPogledDjelovaPoProoizvodu.Height = this.Height / 3;
 
-            uiOutputDataProizvod.Location = new Point(0, 0);
-            uiOutputTableDataElement.Location = new Point(0, (this.Height / 3));
-            uiOutputTableDataPogledDjelovaPoProoizvodu.Location = new Point(0, (this.Height / 3)*2);
+            uiOutputDataProizvod.Location = new Point(10, 0);
+            uiOutputTableDataElement.Location = new Point(10, (this.Height / 3));
+            uiOutputTableDataPogledDjelovaPoProoizvodu.Location = new Point(10, (this.Height / 3)*2);
         }
 
         private void uiOutputDataProizvod_SelectionChanged(object sender, EventArgs e)
