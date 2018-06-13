@@ -74,5 +74,17 @@ namespace RashoApp.Element
             this.Close();
             Application.OpenForms.OfType<uiElement>().Single().PopuniPodacimaElement();
         }
+
+        private void uiActionOdaberiProizvod_Click(object sender, EventArgs e)
+        {
+            RashoApp.Proizvod.uiOdaberiProizvod frm = new RashoApp.Proizvod.uiOdaberiProizvod();
+            frm.ShowDialog();
+        }
+
+        private void uiActionOdaberiElement_Click(object sender, EventArgs e)
+        {
+            RashoApp.Proizvod.uiOdaberiProizvod frm = new RashoApp.Proizvod.uiOdaberiProizvod();
+            frm.ShowDialog();
+        }
     }
 }

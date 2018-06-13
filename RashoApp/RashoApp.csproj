@@ -117,6 +117,12 @@
     <Compile Include="Djelovi\uiDjelovi.Designer.cs">
       <DependentUpon>uiDjelovi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Proizvod\uiOdaberiProizvod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proizvod\uiOdaberiProizvod.Designer.cs">
+      <DependentUpon>uiOdaberiProizvod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Proizvod\uiProizvod.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Komponenta\uiKomponenta.resx">
       <DependentUpon>uiKomponenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proizvod\uiOdaberiProizvod.resx">
+      <DependentUpon>uiOdaberiProizvod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proizvod\uiProizvod.resx">
       <DependentUpon>uiProizvod.cs</DependentUpon>

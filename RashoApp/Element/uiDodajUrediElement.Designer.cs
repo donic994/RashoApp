@@ -40,6 +40,8 @@
             this.uiInputElementProizvod = new System.Windows.Forms.ComboBox();
             this.uiInputElementElement = new System.Windows.Forms.TextBox();
             this.uiActionSpremiElement = new System.Windows.Forms.Button();
+            this.uiActionOdaberiProizvod = new System.Windows.Forms.Button();
+            this.uiActionOdaberiElement = new System.Windows.Forms.Button();
             kolicinaLabel = new System.Windows.Forms.Label();
             id_proizvodLabel = new System.Windows.Forms.Label();
             id_elementLabel = new System.Windows.Forms.Label();
@@ -144,12 +146,36 @@
             this.uiActionSpremiElement.UseVisualStyleBackColor = false;
             this.uiActionSpremiElement.Click += new System.EventHandler(this.uiActionSpremiElement_Click);
             // 
+            // uiActionOdaberiProizvod
+            // 
+            this.uiActionOdaberiProizvod.Location = new System.Drawing.Point(249, 90);
+            this.uiActionOdaberiProizvod.Margin = new System.Windows.Forms.Padding(0);
+            this.uiActionOdaberiProizvod.Name = "uiActionOdaberiProizvod";
+            this.uiActionOdaberiProizvod.Size = new System.Drawing.Size(30, 24);
+            this.uiActionOdaberiProizvod.TabIndex = 9;
+            this.uiActionOdaberiProizvod.Text = "+";
+            this.uiActionOdaberiProizvod.UseVisualStyleBackColor = true;
+            this.uiActionOdaberiProizvod.Click += new System.EventHandler(this.uiActionOdaberiProizvod_Click);
+            // 
+            // uiActionOdaberiElement
+            // 
+            this.uiActionOdaberiElement.Location = new System.Drawing.Point(249, 120);
+            this.uiActionOdaberiElement.Margin = new System.Windows.Forms.Padding(0);
+            this.uiActionOdaberiElement.Name = "uiActionOdaberiElement";
+            this.uiActionOdaberiElement.Size = new System.Drawing.Size(30, 22);
+            this.uiActionOdaberiElement.TabIndex = 10;
+            this.uiActionOdaberiElement.Text = "+";
+            this.uiActionOdaberiElement.UseVisualStyleBackColor = true;
+            this.uiActionOdaberiElement.Click += new System.EventHandler(this.uiActionOdaberiElement_Click);
+            // 
             // uiDodajUrediElement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(317, 243);
+            this.Controls.Add(this.uiActionOdaberiElement);
+            this.Controls.Add(this.uiActionOdaberiProizvod);
             this.Controls.Add(this.uiActionSpremiElement);
             this.Controls.Add(id_elementLabel);
             this.Controls.Add(this.uiInputElementElement);
@@ -179,5 +205,7 @@
         private System.Windows.Forms.ComboBox uiInputElementProizvod;
         private System.Windows.Forms.TextBox uiInputElementElement;
         private System.Windows.Forms.Button uiActionSpremiElement;
+        private System.Windows.Forms.Button uiActionOdaberiProizvod;
+        private System.Windows.Forms.Button uiActionOdaberiElement;
     }
 }

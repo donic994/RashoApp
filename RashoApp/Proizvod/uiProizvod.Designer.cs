@@ -91,14 +91,14 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.uiOutputDataProizvod.DataSource = this.proizvodBindingSource;
-            this.uiOutputDataProizvod.Location = new System.Drawing.Point(10, 12);
+            this.uiOutputDataProizvod.Location = new System.Drawing.Point(0, 12);
             this.uiOutputDataProizvod.MultiSelect = false;
             this.uiOutputDataProizvod.Name = "uiOutputDataProizvod";
             this.uiOutputDataProizvod.ReadOnly = true;
             this.uiOutputDataProizvod.RowHeadersVisible = false;
             this.uiOutputDataProizvod.RowTemplate.Height = 24;
             this.uiOutputDataProizvod.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputDataProizvod.Size = new System.Drawing.Size(872, 170);
+            this.uiOutputDataProizvod.Size = new System.Drawing.Size(882, 170);
             this.uiOutputDataProizvod.TabIndex = 1;
             this.uiOutputDataProizvod.SelectionChanged += new System.EventHandler(this.uiOutputDataProizvod_SelectionChanged);
             // 
@@ -165,14 +165,14 @@
             this.Kantiranost,
             this.dataGridViewTextBoxColumn14});
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.DataSource = this.pogledDjelovaPoProoizvoduBindingSource;
-            this.uiOutputTableDataPogledDjelovaPoProoizvodu.Location = new System.Drawing.Point(10, 365);
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.Location = new System.Drawing.Point(0, 365);
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.MultiSelect = false;
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.Name = "uiOutputTableDataPogledDjelovaPoProoizvodu";
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.ReadOnly = true;
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.RowHeadersVisible = false;
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.RowTemplate.Height = 24;
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputTableDataPogledDjelovaPoProoizvodu.Size = new System.Drawing.Size(872, 318);
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.Size = new System.Drawing.Size(882, 318);
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.TabIndex = 12;
             // 
             // uiOutputTableDataElement
@@ -189,14 +189,14 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn7});
             this.uiOutputTableDataElement.DataSource = this.elementBindingSource;
-            this.uiOutputTableDataElement.Location = new System.Drawing.Point(10, 188);
+            this.uiOutputTableDataElement.Location = new System.Drawing.Point(0, 188);
             this.uiOutputTableDataElement.MultiSelect = false;
             this.uiOutputTableDataElement.Name = "uiOutputTableDataElement";
             this.uiOutputTableDataElement.ReadOnly = true;
             this.uiOutputTableDataElement.RowHeadersVisible = false;
             this.uiOutputTableDataElement.RowTemplate.Height = 24;
             this.uiOutputTableDataElement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputTableDataElement.Size = new System.Drawing.Size(872, 171);
+            this.uiOutputTableDataElement.Size = new System.Drawing.Size(882, 171);
             this.uiOutputTableDataElement.TabIndex = 12;
             this.uiOutputTableDataElement.SelectionChanged += new System.EventHandler(this.uiOutputTableDataElement_SelectionChanged);
             // 
@@ -415,7 +415,6 @@
             this.Controls.Add(this.uiOutputDataProizvod);
             this.Controls.Add(this.uiOutputTableDataPogledDjelovaPoProoizvodu);
             this.Name = "uiProizvod";
-            this.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.Text = "uiProizvod";
             this.Load += new System.EventHandler(this.uiProizvod_Load);
             this.SizeChanged += new System.EventHandler(this.uiProizvod_SizeChanged);
