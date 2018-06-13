@@ -41,8 +41,6 @@
             this.uiActionSpremiElement = new System.Windows.Forms.Button();
             this.uiActionOdaberiProizvod = new System.Windows.Forms.Button();
             this.uiActionOdaberiElement = new System.Windows.Forms.Button();
-            this.proizvodBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proizvodTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
             this.uiInputElementProizvod = new System.Windows.Forms.TextBox();
             this.uiOutputNazivProizvod = new System.Windows.Forms.TextBox();
             this.uiOutputNazivElement = new System.Windows.Forms.TextBox();
@@ -51,7 +49,6 @@
             id_proizvodLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // kolicinaLabel
@@ -143,34 +140,33 @@
             // 
             // uiActionOdaberiProizvod
             // 
+            this.uiActionOdaberiProizvod.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionOdaberiProizvod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionOdaberiProizvod.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiActionOdaberiProizvod.ForeColor = System.Drawing.Color.White;
             this.uiActionOdaberiProizvod.Location = new System.Drawing.Point(299, 95);
             this.uiActionOdaberiProizvod.Margin = new System.Windows.Forms.Padding(0);
             this.uiActionOdaberiProizvod.Name = "uiActionOdaberiProizvod";
             this.uiActionOdaberiProizvod.Size = new System.Drawing.Size(30, 24);
             this.uiActionOdaberiProizvod.TabIndex = 9;
             this.uiActionOdaberiProizvod.Text = "+";
-            this.uiActionOdaberiProizvod.UseVisualStyleBackColor = true;
+            this.uiActionOdaberiProizvod.UseVisualStyleBackColor = false;
             this.uiActionOdaberiProizvod.Click += new System.EventHandler(this.uiActionOdaberiProizvod_Click);
             // 
             // uiActionOdaberiElement
             // 
+            this.uiActionOdaberiElement.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionOdaberiElement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionOdaberiElement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiActionOdaberiElement.ForeColor = System.Drawing.Color.White;
             this.uiActionOdaberiElement.Location = new System.Drawing.Point(299, 123);
             this.uiActionOdaberiElement.Margin = new System.Windows.Forms.Padding(0);
             this.uiActionOdaberiElement.Name = "uiActionOdaberiElement";
             this.uiActionOdaberiElement.Size = new System.Drawing.Size(30, 24);
             this.uiActionOdaberiElement.TabIndex = 10;
             this.uiActionOdaberiElement.Text = "+";
-            this.uiActionOdaberiElement.UseVisualStyleBackColor = true;
+            this.uiActionOdaberiElement.UseVisualStyleBackColor = false;
             this.uiActionOdaberiElement.Click += new System.EventHandler(this.uiActionOdaberiElement_Click);
-            // 
-            // proizvodBindingSource
-            // 
-            this.proizvodBindingSource.DataMember = "Proizvod";
-            this.proizvodBindingSource.DataSource = this.baza18043_DBDataSet;
-            // 
-            // proizvodTableAdapter
-            // 
-            this.proizvodTableAdapter.ClearBeforeFill = true;
             // 
             // uiInputElementProizvod
             // 
@@ -221,7 +217,6 @@
             this.Load += new System.EventHandler(this.uiDodajUediElement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,8 +233,6 @@
         private System.Windows.Forms.Button uiActionSpremiElement;
         private System.Windows.Forms.Button uiActionOdaberiProizvod;
         private System.Windows.Forms.Button uiActionOdaberiElement;
-        private System.Windows.Forms.BindingSource proizvodBindingSource;
-        private Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter proizvodTableAdapter;
         private System.Windows.Forms.TextBox uiInputElementProizvod;
         private System.Windows.Forms.TextBox uiOutputNazivProizvod;
         private System.Windows.Forms.TextBox uiOutputNazivElement;
