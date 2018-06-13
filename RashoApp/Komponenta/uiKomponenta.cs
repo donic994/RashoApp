@@ -27,6 +27,12 @@ namespace RashoApp.Komponenta
 
         private void uiKomponenta_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Proizvod' table. You can move, or remove it, as needed.
+            this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Dio' table. You can move, or remove it, as needed.
+            this.dioTableAdapter.Fill(this.baza18043_DBDataSet.Dio);
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.UlogaDijela' table. You can move, or remove it, as needed.
+            this.ulogaDijelaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaDijela);
             PopuniPodacimaKomponenta();
         }
 
