@@ -27,8 +27,6 @@ namespace RashoApp.UlogaDijela
 
         private void uiUlogaDijela_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Komponenta' table. You can move, or remove it, as needed.
-            this.komponentaTableAdapter.Fill(this.baza18043_DBDataSet.Komponenta);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.UlogaDijela' table. You can move, or remove it, as needed.
             this.ulogaDijelaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaDijela);
 
@@ -55,7 +53,10 @@ namespace RashoApp.UlogaDijela
                 int id = int.Parse(uiOutputTableDataUlogaDijela.SelectedCells[0].Value.ToString());
                 uiOutputTableDataUlogaDijela.Rows.RemoveAt(uiOutputTableDataUlogaDijela.CurrentRow.Index);
 
+                this.ulogaDijelaTableAdapter.DeleteUlogaByID(id);
+                this.komponentaTableAdapter.DeleteByUlogaDijela(id);
             }
+
             SpremiPromjene();
         }
     }

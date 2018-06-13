@@ -72,7 +72,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Baza18043_DBDataSet.Designer.cs">
+    <Compile Include="Baza18043_DBDataSet.cs">
+      <DependentUpon>Baza18043_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Baza18043_DBDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Baza18043_DBDataSet.xsd</DependentUpon>
@@ -193,8 +196,8 @@
     </None>
     <None Include="Baza18043_DBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Baza18043_DBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Baza18043_DBDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="Baza18043_DBDataSet.xss">
       <DependentUpon>Baza18043_DBDataSet.xsd</DependentUpon>

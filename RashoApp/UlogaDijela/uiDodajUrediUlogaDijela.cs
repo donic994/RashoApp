@@ -48,7 +48,7 @@ namespace RashoApp.UlogaDijela
             if (kontrola == "uredi")
             {
                 // TODO: This line of code loads data into the 'baza18043_DBDataSet.UlogaDijela' table. You can move, or remove it, as needed.
-                this.ulogaDijelaTableAdapter.Fill(baza18043_DBDataSet.UlogaDijela);
+                this.ulogaDijelaTableAdapter.FillByUlogaID(baza18043_DBDataSet.UlogaDijela, id);
             }
         }
 
