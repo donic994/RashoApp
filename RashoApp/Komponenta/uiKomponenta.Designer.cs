@@ -238,6 +238,7 @@
             this.uiOutputTableDataKoponenta.MultiSelect = false;
             this.uiOutputTableDataKoponenta.Name = "uiOutputTableDataKoponenta";
             this.uiOutputTableDataKoponenta.ReadOnly = true;
+            this.uiOutputTableDataKoponenta.RowHeadersVisible = false;
             this.uiOutputTableDataKoponenta.RowTemplate.Height = 24;
             this.uiOutputTableDataKoponenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.uiOutputTableDataKoponenta.Size = new System.Drawing.Size(802, 481);
