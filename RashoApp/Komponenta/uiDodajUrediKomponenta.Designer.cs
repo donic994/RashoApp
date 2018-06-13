@@ -46,6 +46,12 @@
             this.uiInputKomponentaUloga = new System.Windows.Forms.TextBox();
             this.uiInputKomponentaDio = new System.Windows.Forms.TextBox();
             this.uiInputKomponentaProizvod = new System.Windows.Forms.TextBox();
+            this.uiOutputUloga = new System.Windows.Forms.TextBox();
+            this.uiActionOdaberiUloga = new System.Windows.Forms.Button();
+            this.uiOutputDio = new System.Windows.Forms.TextBox();
+            this.uiActionOdaberiDio = new System.Windows.Forms.Button();
+            this.uiOutputProizvod = new System.Windows.Forms.TextBox();
+            this.uiActionOdaberiProizvod = new System.Windows.Forms.Button();
             kolicinaLabel = new System.Windows.Forms.Label();
             bojaLabel = new System.Windows.Forms.Label();
             kantiranostLabel = new System.Windows.Forms.Label();
@@ -116,7 +122,7 @@
             this.uiActionSpremiKomponenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionSpremiKomponenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionSpremiKomponenta.ForeColor = System.Drawing.Color.White;
-            this.uiActionSpremiKomponenta.Location = new System.Drawing.Point(94, 249);
+            this.uiActionSpremiKomponenta.Location = new System.Drawing.Point(133, 262);
             this.uiActionSpremiKomponenta.Name = "uiActionSpremiKomponenta";
             this.uiActionSpremiKomponenta.Size = new System.Drawing.Size(112, 51);
             this.uiActionSpremiKomponenta.TabIndex = 8;
@@ -156,57 +162,135 @@
             // uiInputKomponentaKolicina
             // 
             this.uiInputKomponentaKolicina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "kolicina", true));
-            this.uiInputKomponentaKolicina.Location = new System.Drawing.Point(120, 56);
+            this.uiInputKomponentaKolicina.Location = new System.Drawing.Point(120, 58);
             this.uiInputKomponentaKolicina.Name = "uiInputKomponentaKolicina";
-            this.uiInputKomponentaKolicina.Size = new System.Drawing.Size(100, 22);
+            this.uiInputKomponentaKolicina.ReadOnly = true;
+            this.uiInputKomponentaKolicina.Size = new System.Drawing.Size(161, 22);
             this.uiInputKomponentaKolicina.TabIndex = 10;
             // 
             // uiInputKomponentaBoja
             // 
             this.uiInputKomponentaBoja.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "boja", true));
-            this.uiInputKomponentaBoja.Location = new System.Drawing.Point(120, 84);
+            this.uiInputKomponentaBoja.Location = new System.Drawing.Point(120, 86);
             this.uiInputKomponentaBoja.Name = "uiInputKomponentaBoja";
-            this.uiInputKomponentaBoja.Size = new System.Drawing.Size(100, 22);
+            this.uiInputKomponentaBoja.ReadOnly = true;
+            this.uiInputKomponentaBoja.Size = new System.Drawing.Size(161, 22);
             this.uiInputKomponentaBoja.TabIndex = 11;
             // 
             // uiInputKomponentaKantoranost
             // 
             this.uiInputKomponentaKantoranost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "kantiranost", true));
-            this.uiInputKomponentaKantoranost.Location = new System.Drawing.Point(120, 112);
+            this.uiInputKomponentaKantoranost.Location = new System.Drawing.Point(120, 114);
             this.uiInputKomponentaKantoranost.Name = "uiInputKomponentaKantoranost";
-            this.uiInputKomponentaKantoranost.Size = new System.Drawing.Size(100, 22);
+            this.uiInputKomponentaKantoranost.ReadOnly = true;
+            this.uiInputKomponentaKantoranost.Size = new System.Drawing.Size(161, 22);
             this.uiInputKomponentaKantoranost.TabIndex = 12;
             // 
             // uiInputKomponentaUloga
             // 
             this.uiInputKomponentaUloga.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "id_uloga", true));
-            this.uiInputKomponentaUloga.Location = new System.Drawing.Point(120, 140);
+            this.uiInputKomponentaUloga.Location = new System.Drawing.Point(328, 140);
             this.uiInputKomponentaUloga.Name = "uiInputKomponentaUloga";
-            this.uiInputKomponentaUloga.Size = new System.Drawing.Size(100, 22);
+            this.uiInputKomponentaUloga.ReadOnly = true;
+            this.uiInputKomponentaUloga.Size = new System.Drawing.Size(21, 22);
             this.uiInputKomponentaUloga.TabIndex = 13;
             // 
             // uiInputKomponentaDio
             // 
             this.uiInputKomponentaDio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "id_dio", true));
-            this.uiInputKomponentaDio.Location = new System.Drawing.Point(120, 168);
+            this.uiInputKomponentaDio.Location = new System.Drawing.Point(328, 168);
             this.uiInputKomponentaDio.Name = "uiInputKomponentaDio";
-            this.uiInputKomponentaDio.Size = new System.Drawing.Size(100, 22);
+            this.uiInputKomponentaDio.ReadOnly = true;
+            this.uiInputKomponentaDio.Size = new System.Drawing.Size(21, 22);
             this.uiInputKomponentaDio.TabIndex = 14;
             // 
             // uiInputKomponentaProizvod
             // 
             this.uiInputKomponentaProizvod.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "id_proizvod", true));
-            this.uiInputKomponentaProizvod.Location = new System.Drawing.Point(120, 196);
+            this.uiInputKomponentaProizvod.Location = new System.Drawing.Point(328, 196);
             this.uiInputKomponentaProizvod.Name = "uiInputKomponentaProizvod";
-            this.uiInputKomponentaProizvod.Size = new System.Drawing.Size(100, 22);
+            this.uiInputKomponentaProizvod.ReadOnly = true;
+            this.uiInputKomponentaProizvod.Size = new System.Drawing.Size(21, 22);
             this.uiInputKomponentaProizvod.TabIndex = 15;
+            // 
+            // uiOutputUloga
+            // 
+            this.uiOutputUloga.Location = new System.Drawing.Point(120, 142);
+            this.uiOutputUloga.Name = "uiOutputUloga";
+            this.uiOutputUloga.ReadOnly = true;
+            this.uiOutputUloga.Size = new System.Drawing.Size(161, 22);
+            this.uiOutputUloga.TabIndex = 23;
+            // 
+            // uiActionOdaberiUloga
+            // 
+            this.uiActionOdaberiUloga.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionOdaberiUloga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionOdaberiUloga.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiActionOdaberiUloga.ForeColor = System.Drawing.Color.White;
+            this.uiActionOdaberiUloga.Location = new System.Drawing.Point(285, 141);
+            this.uiActionOdaberiUloga.Margin = new System.Windows.Forms.Padding(0);
+            this.uiActionOdaberiUloga.Name = "uiActionOdaberiUloga";
+            this.uiActionOdaberiUloga.Size = new System.Drawing.Size(30, 24);
+            this.uiActionOdaberiUloga.TabIndex = 22;
+            this.uiActionOdaberiUloga.Text = "+";
+            this.uiActionOdaberiUloga.UseVisualStyleBackColor = false;
+            // 
+            // uiOutputDio
+            // 
+            this.uiOutputDio.Location = new System.Drawing.Point(120, 171);
+            this.uiOutputDio.Name = "uiOutputDio";
+            this.uiOutputDio.ReadOnly = true;
+            this.uiOutputDio.Size = new System.Drawing.Size(161, 22);
+            this.uiOutputDio.TabIndex = 25;
+            // 
+            // uiActionOdaberiDio
+            // 
+            this.uiActionOdaberiDio.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionOdaberiDio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionOdaberiDio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiActionOdaberiDio.ForeColor = System.Drawing.Color.White;
+            this.uiActionOdaberiDio.Location = new System.Drawing.Point(285, 170);
+            this.uiActionOdaberiDio.Margin = new System.Windows.Forms.Padding(0);
+            this.uiActionOdaberiDio.Name = "uiActionOdaberiDio";
+            this.uiActionOdaberiDio.Size = new System.Drawing.Size(30, 24);
+            this.uiActionOdaberiDio.TabIndex = 24;
+            this.uiActionOdaberiDio.Text = "+";
+            this.uiActionOdaberiDio.UseVisualStyleBackColor = false;
+            // 
+            // uiOutputProizvod
+            // 
+            this.uiOutputProizvod.Location = new System.Drawing.Point(120, 199);
+            this.uiOutputProizvod.Name = "uiOutputProizvod";
+            this.uiOutputProizvod.ReadOnly = true;
+            this.uiOutputProizvod.Size = new System.Drawing.Size(161, 22);
+            this.uiOutputProizvod.TabIndex = 27;
+            // 
+            // uiActionOdaberiProizvod
+            // 
+            this.uiActionOdaberiProizvod.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionOdaberiProizvod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionOdaberiProizvod.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiActionOdaberiProizvod.ForeColor = System.Drawing.Color.White;
+            this.uiActionOdaberiProizvod.Location = new System.Drawing.Point(285, 198);
+            this.uiActionOdaberiProizvod.Margin = new System.Windows.Forms.Padding(0);
+            this.uiActionOdaberiProizvod.Name = "uiActionOdaberiProizvod";
+            this.uiActionOdaberiProizvod.Size = new System.Drawing.Size(30, 24);
+            this.uiActionOdaberiProizvod.TabIndex = 26;
+            this.uiActionOdaberiProizvod.Text = "+";
+            this.uiActionOdaberiProizvod.UseVisualStyleBackColor = false;
             // 
             // uiDodajUrediKomponenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(297, 325);
+            this.ClientSize = new System.Drawing.Size(361, 325);
+            this.Controls.Add(this.uiOutputProizvod);
+            this.Controls.Add(this.uiActionOdaberiProizvod);
+            this.Controls.Add(this.uiOutputDio);
+            this.Controls.Add(this.uiActionOdaberiDio);
+            this.Controls.Add(this.uiOutputUloga);
+            this.Controls.Add(this.uiActionOdaberiUloga);
             this.Controls.Add(id_proizvodLabel);
             this.Controls.Add(this.uiInputKomponentaProizvod);
             this.Controls.Add(id_dioLabel);
@@ -244,5 +328,11 @@
         private System.Windows.Forms.TextBox uiInputKomponentaUloga;
         private System.Windows.Forms.TextBox uiInputKomponentaDio;
         private System.Windows.Forms.TextBox uiInputKomponentaProizvod;
+        private System.Windows.Forms.TextBox uiOutputUloga;
+        private System.Windows.Forms.Button uiActionOdaberiUloga;
+        private System.Windows.Forms.TextBox uiOutputDio;
+        private System.Windows.Forms.Button uiActionOdaberiDio;
+        private System.Windows.Forms.TextBox uiOutputProizvod;
+        private System.Windows.Forms.Button uiActionOdaberiProizvod;
     }
 }
