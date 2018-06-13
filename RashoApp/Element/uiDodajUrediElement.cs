@@ -72,6 +72,7 @@ namespace RashoApp.Element
             }
 
             this.Close();
+            Application.OpenForms.OfType<uiElement>().Single().PopuniPodacimaElement();
         }
     }
 }

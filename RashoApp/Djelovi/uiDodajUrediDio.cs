@@ -65,6 +65,7 @@ namespace RashoApp.Djelovi
             }     
                         
             this.Close();
+            Application.OpenForms.OfType<uiDjelovi>().Single().PopuniPodacimaDio();
         }
 
         private void SpremiPromjene()

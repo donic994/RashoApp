@@ -70,6 +70,7 @@ namespace RashoApp.UlogaDijela
             }
 
             this.Close();
+            Application.OpenForms.OfType<uiUlogaDijela>().Single().PopuniPodacimaUlogaDijela();
         }
     }
 }

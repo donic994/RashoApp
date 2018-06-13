@@ -27,9 +27,7 @@ namespace RashoApp.UlogaDijela
 
         private void uiUlogaDijela_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'baza18043_DBDataSet.UlogaDijela' table. You can move, or remove it, as needed.
-            this.ulogaDijelaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaDijela);
-
+            PopuniPodacimaUlogaDijela();
         }
 
         private void uiActionDodajNoviUlogaDijela_Click(object sender, EventArgs e)
@@ -58,6 +56,12 @@ namespace RashoApp.UlogaDijela
             }
 
             SpremiPromjene();
+        }
+
+        public void PopuniPodacimaUlogaDijela()
+        {
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.UlogaDijela' table. You can move, or remove it, as needed.
+            this.ulogaDijelaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaDijela);
         }
     }
 }

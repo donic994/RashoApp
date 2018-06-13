@@ -78,6 +78,7 @@ namespace RashoApp.Komponenta
             }
 
             this.Close();
+            Application.OpenForms.OfType<uiKomponenta>().Single().PopuniPodacimaKomponenta();
         }
     }
 }

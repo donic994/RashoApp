@@ -27,11 +27,15 @@ namespace RashoApp.Element
 
         private void uiElement_Load(object sender, EventArgs e)
         {
+            PopuniPodacimaElement();
+        }
+
+        public void PopuniPodacimaElement()
+        {
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Proizvod' table. You can move, or remove it, as needed.
             this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Element' table. You can move, or remove it, as needed.
             this.elementTableAdapter.Fill(this.baza18043_DBDataSet.Element);
-
         }
 
         private void uiActionDodajNoviDio_Click(object sender, EventArgs e)
