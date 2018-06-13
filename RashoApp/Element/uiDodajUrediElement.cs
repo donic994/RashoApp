@@ -90,14 +90,16 @@ namespace RashoApp.Element
         }
 
         //Metode za unos vrijednosti odabranog proizvoda iz forme uiOdaberiProizvod
-        public void PostaviVrijednostOdabranogProizvoda(int proizvod)
+        public void PostaviVrijednostOdabranogProizvoda(string ID, string naziv)
         {
-            uiInputElementProizvod.Text = proizvod.ToString();
+            uiInputElementProizvod.Text = ID;
+            uiOutputNazivProizvod.Text = naziv;
         }
 
-        public void PostaviVrijednostOdabranogElementa(int proizvod)
+        public void PostaviVrijednostOdabranogElementa(string ID, string naziv)
         {
-            uiInputElementElement.Text = proizvod.ToString();
+            uiInputElementElement.Text = ID;
+            uiOutputNazivElement.Text = naziv;
         }
     }
 }

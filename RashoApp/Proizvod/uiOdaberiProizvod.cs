@@ -39,15 +39,16 @@ namespace RashoApp.Proizvod
 
         private void uiActionOdaberiProizvod_Click(object sender, EventArgs e)
         {
-            int proizvod = int.Parse(uiOutputDataTableProizvod.SelectedCells[0].Value.ToString());
+            string id = uiOutputDataTableProizvod.SelectedCells[0].Value.ToString();
+            string naziv = uiOutputDataTableProizvod.SelectedCells[1].Value.ToString();
 
             if (naredba == "proizvod")
             {
-                Application.OpenForms.OfType<Element.uiDodajUrediElement>().Single().PostaviVrijednostOdabranogProizvoda(proizvod);
+                Application.OpenForms.OfType<Element.uiDodajUrediElement>().Single().PostaviVrijednostOdabranogProizvoda(id, naziv);
             }
             if(naredba == "element")
             {
-                Application.OpenForms.OfType<Element.uiDodajUrediElement>().Single().PostaviVrijednostOdabranogElementa(proizvod);
+                Application.OpenForms.OfType<Element.uiDodajUrediElement>().Single().PostaviVrijednostOdabranogElementa(id, naziv);
             }
             this.Close();
         }

@@ -44,6 +44,8 @@
             this.proizvodBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proizvodTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
             this.uiInputElementProizvod = new System.Windows.Forms.TextBox();
+            this.uiOutputNazivProizvod = new System.Windows.Forms.TextBox();
+            this.uiOutputNazivElement = new System.Windows.Forms.TextBox();
             kolicinaLabel = new System.Windows.Forms.Label();
             id_elementLabel = new System.Windows.Forms.Label();
             id_proizvodLabel1 = new System.Windows.Forms.Label();
@@ -119,10 +121,10 @@
             // uiInputElementElement
             // 
             this.uiInputElementElement.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.elementBindingSource, "id_element", true));
-            this.uiInputElementElement.Location = new System.Drawing.Point(134, 120);
+            this.uiInputElementElement.Location = new System.Drawing.Point(332, 124);
             this.uiInputElementElement.Name = "uiInputElementElement";
             this.uiInputElementElement.ReadOnly = true;
-            this.uiInputElementElement.Size = new System.Drawing.Size(189, 22);
+            this.uiInputElementElement.Size = new System.Drawing.Size(22, 22);
             this.uiInputElementElement.TabIndex = 6;
             // 
             // uiActionSpremiElement
@@ -131,7 +133,7 @@
             this.uiActionSpremiElement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionSpremiElement.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionSpremiElement.ForeColor = System.Drawing.Color.White;
-            this.uiActionSpremiElement.Location = new System.Drawing.Point(100, 172);
+            this.uiActionSpremiElement.Location = new System.Drawing.Point(134, 169);
             this.uiActionSpremiElement.Name = "uiActionSpremiElement";
             this.uiActionSpremiElement.Size = new System.Drawing.Size(112, 51);
             this.uiActionSpremiElement.TabIndex = 8;
@@ -141,7 +143,7 @@
             // 
             // uiActionOdaberiProizvod
             // 
-            this.uiActionOdaberiProizvod.Location = new System.Drawing.Point(326, 90);
+            this.uiActionOdaberiProizvod.Location = new System.Drawing.Point(299, 95);
             this.uiActionOdaberiProizvod.Margin = new System.Windows.Forms.Padding(0);
             this.uiActionOdaberiProizvod.Name = "uiActionOdaberiProizvod";
             this.uiActionOdaberiProizvod.Size = new System.Drawing.Size(30, 24);
@@ -152,10 +154,10 @@
             // 
             // uiActionOdaberiElement
             // 
-            this.uiActionOdaberiElement.Location = new System.Drawing.Point(326, 120);
+            this.uiActionOdaberiElement.Location = new System.Drawing.Point(299, 123);
             this.uiActionOdaberiElement.Margin = new System.Windows.Forms.Padding(0);
             this.uiActionOdaberiElement.Name = "uiActionOdaberiElement";
-            this.uiActionOdaberiElement.Size = new System.Drawing.Size(30, 22);
+            this.uiActionOdaberiElement.Size = new System.Drawing.Size(30, 24);
             this.uiActionOdaberiElement.TabIndex = 10;
             this.uiActionOdaberiElement.Text = "+";
             this.uiActionOdaberiElement.UseVisualStyleBackColor = true;
@@ -173,18 +175,36 @@
             // uiInputElementProizvod
             // 
             this.uiInputElementProizvod.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.elementBindingSource, "id_proizvod", true));
-            this.uiInputElementProizvod.Location = new System.Drawing.Point(134, 91);
+            this.uiInputElementProizvod.Location = new System.Drawing.Point(332, 97);
             this.uiInputElementProizvod.Name = "uiInputElementProizvod";
             this.uiInputElementProizvod.ReadOnly = true;
-            this.uiInputElementProizvod.Size = new System.Drawing.Size(189, 22);
+            this.uiInputElementProizvod.Size = new System.Drawing.Size(22, 22);
             this.uiInputElementProizvod.TabIndex = 11;
+            // 
+            // uiOutputNazivProizvod
+            // 
+            this.uiOutputNazivProizvod.Location = new System.Drawing.Point(134, 96);
+            this.uiOutputNazivProizvod.Name = "uiOutputNazivProizvod";
+            this.uiOutputNazivProizvod.ReadOnly = true;
+            this.uiOutputNazivProizvod.Size = new System.Drawing.Size(161, 22);
+            this.uiOutputNazivProizvod.TabIndex = 12;
+            // 
+            // uiOutputNazivElement
+            // 
+            this.uiOutputNazivElement.Location = new System.Drawing.Point(134, 123);
+            this.uiOutputNazivElement.Name = "uiOutputNazivElement";
+            this.uiOutputNazivElement.ReadOnly = true;
+            this.uiOutputNazivElement.Size = new System.Drawing.Size(161, 22);
+            this.uiOutputNazivElement.TabIndex = 13;
             // 
             // uiDodajUrediElement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(390, 243);
+            this.ClientSize = new System.Drawing.Size(373, 243);
+            this.Controls.Add(this.uiOutputNazivElement);
+            this.Controls.Add(this.uiOutputNazivProizvod);
             this.Controls.Add(id_proizvodLabel1);
             this.Controls.Add(this.uiInputElementProizvod);
             this.Controls.Add(this.uiActionOdaberiElement);
@@ -197,7 +217,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "uiDodajUrediElement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "uiDodajUediElement";
+            this.Text = "uiDodajUrediElement";
             this.Load += new System.EventHandler(this.uiDodajUediElement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).EndInit();
@@ -221,5 +241,7 @@
         private System.Windows.Forms.BindingSource proizvodBindingSource;
         private Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter proizvodTableAdapter;
         private System.Windows.Forms.TextBox uiInputElementProizvod;
+        private System.Windows.Forms.TextBox uiOutputNazivProizvod;
+        private System.Windows.Forms.TextBox uiOutputNazivElement;
     }
 }
