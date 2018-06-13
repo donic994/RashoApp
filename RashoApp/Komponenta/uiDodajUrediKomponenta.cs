@@ -80,5 +80,44 @@ namespace RashoApp.Komponenta
             this.Close();
             Application.OpenForms.OfType<uiKomponenta>().Single().PopuniPodacimaKomponenta();
         }
+
+        private void uiActionOdaberiUloga_Click(object sender, EventArgs e)
+        {
+            UlogaDijela.uiOdaberiUlogaDijela frm = new UlogaDijela.uiOdaberiUlogaDijela();
+            frm.ShowDialog();
+        }
+
+        private void uiActionOdaberiDio_Click(object sender, EventArgs e)
+        {
+            Djelovi.uiOdaberiDio frm = new Djelovi.uiOdaberiDio();
+            frm.ShowDialog();
+        }
+
+        private void uiActionOdaberiProizvod_Click(object sender, EventArgs e)
+        {
+            Proizvod.uiOdaberiProizvod frm = new Proizvod.uiOdaberiProizvod("komponenta");
+            frm.ShowDialog();
+        }
+
+        //Metoda za upis vrijednosti u uiInput i uiOutput iz forme uiOdaberiProizvod
+        public void PostaviVrijednostOdabranogProizvoda(string ID, string naziv)
+        {
+            uiInputKomponentaProizvod.Text = ID;
+            uiOutputProizvod.Text = naziv;
+        }
+
+        //Metoda za upis vrijednosti u uiInput i uiOutput iz forme uiOdaberiUlogaDijela
+        public void PostaviVrijednostOdabranogUlogaDijela(string ID, string naziv)
+        {
+            uiInputKomponentaUloga.Text = ID;
+            uiOutputUloga.Text = naziv;
+        }
+
+        //Metoda za upis vrijednosti u uiInput i uiOutput iz forme uiOdaberiDio
+        public void PostaviVrijednostOdabranogDjela(string ID, string naziv)
+        {
+            uiInputKomponentaDio.Text = ID;
+            uiOutputDio.Text = naziv;
+        }
     }
 }

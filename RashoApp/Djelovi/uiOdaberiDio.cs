@@ -31,5 +31,14 @@ namespace RashoApp.Djelovi
             this.dioTableAdapter.Fill(this.baza18043_DBDataSet.Dio);
 
         }
+
+        private void uiActionOdaberiDio_Click(object sender, EventArgs e)
+        {
+            string id = uiOutputDataTableDio.SelectedCells[0].Value.ToString();
+            string naziv = uiOutputDataTableDio.SelectedCells[1].Value.ToString();
+
+            Application.OpenForms.OfType<Komponenta.uiDodajUrediKomponenta>().Single().PostaviVrijednostOdabranogDjela(id, naziv);
+            this.Close();
+        }
     }
 }

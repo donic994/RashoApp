@@ -86,6 +86,12 @@
     <Compile Include="Djelovi\uiDodajUrediDio.Designer.cs">
       <DependentUpon>uiDodajUrediDio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Djelovi\uiOdaberiDio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Djelovi\uiOdaberiDio.Designer.cs">
+      <DependentUpon>uiOdaberiDio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Element\uiDodajUrediElement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,12 @@
     <Compile Include="UlogaDijela\uiDodajUrediUlogaDijela.Designer.cs">
       <DependentUpon>uiDodajUrediUlogaDijela.cs</DependentUpon>
     </Compile>
+    <Compile Include="UlogaDijela\uiOdaberiUlogaDijela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UlogaDijela\uiOdaberiUlogaDijela.Designer.cs">
+      <DependentUpon>uiOdaberiUlogaDijela.cs</DependentUpon>
+    </Compile>
     <Compile Include="UlogaDijela\uiUlogaDijela.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Djelovi\uiDodajUrediDio.resx">
       <DependentUpon>uiDodajUrediDio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Djelovi\uiOdaberiDio.resx">
+      <DependentUpon>uiOdaberiDio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Element\uiDodajUrediElement.resx">
       <DependentUpon>uiDodajUrediElement.cs</DependentUpon>
@@ -196,6 +211,9 @@
     </Compile>
     <EmbeddedResource Include="UlogaDijela\uiDodajUrediUlogaDijela.resx">
       <DependentUpon>uiDodajUrediUlogaDijela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UlogaDijela\uiOdaberiUlogaDijela.resx">
+      <DependentUpon>uiOdaberiUlogaDijela.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UlogaDijela\uiUlogaDijela.resx">
       <DependentUpon>uiUlogaDijela.cs</DependentUpon>

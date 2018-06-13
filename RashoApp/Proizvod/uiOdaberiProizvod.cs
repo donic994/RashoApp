@@ -50,6 +50,10 @@ namespace RashoApp.Proizvod
             {
                 Application.OpenForms.OfType<Element.uiDodajUrediElement>().Single().PostaviVrijednostOdabranogElementa(id, naziv);
             }
+            if(naredba == "komponenta")
+            {
+                Application.OpenForms.OfType<Komponenta.uiDodajUrediKomponenta>().Single();
+            }
             this.Close();
         }
     }

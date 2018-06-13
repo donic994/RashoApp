@@ -164,7 +164,6 @@
             this.uiInputKomponentaKolicina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "kolicina", true));
             this.uiInputKomponentaKolicina.Location = new System.Drawing.Point(120, 58);
             this.uiInputKomponentaKolicina.Name = "uiInputKomponentaKolicina";
-            this.uiInputKomponentaKolicina.ReadOnly = true;
             this.uiInputKomponentaKolicina.Size = new System.Drawing.Size(161, 22);
             this.uiInputKomponentaKolicina.TabIndex = 10;
             // 
@@ -173,7 +172,6 @@
             this.uiInputKomponentaBoja.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "boja", true));
             this.uiInputKomponentaBoja.Location = new System.Drawing.Point(120, 86);
             this.uiInputKomponentaBoja.Name = "uiInputKomponentaBoja";
-            this.uiInputKomponentaBoja.ReadOnly = true;
             this.uiInputKomponentaBoja.Size = new System.Drawing.Size(161, 22);
             this.uiInputKomponentaBoja.TabIndex = 11;
             // 
@@ -182,7 +180,6 @@
             this.uiInputKomponentaKantoranost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "kantiranost", true));
             this.uiInputKomponentaKantoranost.Location = new System.Drawing.Point(120, 114);
             this.uiInputKomponentaKantoranost.Name = "uiInputKomponentaKantoranost";
-            this.uiInputKomponentaKantoranost.ReadOnly = true;
             this.uiInputKomponentaKantoranost.Size = new System.Drawing.Size(161, 22);
             this.uiInputKomponentaKantoranost.TabIndex = 12;
             // 
@@ -234,6 +231,7 @@
             this.uiActionOdaberiUloga.TabIndex = 22;
             this.uiActionOdaberiUloga.Text = "+";
             this.uiActionOdaberiUloga.UseVisualStyleBackColor = false;
+            this.uiActionOdaberiUloga.Click += new System.EventHandler(this.uiActionOdaberiUloga_Click);
             // 
             // uiOutputDio
             // 
@@ -256,6 +254,7 @@
             this.uiActionOdaberiDio.TabIndex = 24;
             this.uiActionOdaberiDio.Text = "+";
             this.uiActionOdaberiDio.UseVisualStyleBackColor = false;
+            this.uiActionOdaberiDio.Click += new System.EventHandler(this.uiActionOdaberiDio_Click);
             // 
             // uiOutputProizvod
             // 
@@ -278,6 +277,7 @@
             this.uiActionOdaberiProizvod.TabIndex = 26;
             this.uiActionOdaberiProizvod.Text = "+";
             this.uiActionOdaberiProizvod.UseVisualStyleBackColor = false;
+            this.uiActionOdaberiProizvod.Click += new System.EventHandler(this.uiActionOdaberiProizvod_Click);
             // 
             // uiDodajUrediKomponenta
             // 

@@ -31,5 +31,14 @@ namespace RashoApp.UlogaDijela
             this.ulogaDijelaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaDijela);
 
         }
+
+        private void uiActionOdaberiUlogaDijela_Click(object sender, EventArgs e)
+        {
+            string id = uiOutputDataTableUlogaDijela.SelectedCells[0].Value.ToString();
+            string naziv = uiOutputDataTableUlogaDijela.SelectedCells[1].Value.ToString();
+
+            Application.OpenForms.OfType<Komponenta.uiDodajUrediKomponenta>().Single().PostaviVrijednostOdabranogUlogaDijela(id, naziv);
+            this.Close();
+        }
     }
 }

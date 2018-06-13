@@ -115,6 +115,7 @@
             this.uiActionOdaberiDio.TabIndex = 3;
             this.uiActionOdaberiDio.Text = "Odaberi";
             this.uiActionOdaberiDio.UseVisualStyleBackColor = false;
+            this.uiActionOdaberiDio.Click += new System.EventHandler(this.uiActionOdaberiDio_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
