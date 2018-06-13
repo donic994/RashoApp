@@ -30,23 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label kolicinaLabel;
-            System.Windows.Forms.Label id_proizvodLabel;
             System.Windows.Forms.Label id_elementLabel;
+            System.Windows.Forms.Label id_proizvodLabel1;
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
             this.elementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.elementTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ElementTableAdapter();
             this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
             this.uiInputElementKolicina = new System.Windows.Forms.TextBox();
-            this.uiInputElementProizvod = new System.Windows.Forms.ComboBox();
             this.uiInputElementElement = new System.Windows.Forms.TextBox();
             this.uiActionSpremiElement = new System.Windows.Forms.Button();
             this.uiActionOdaberiProizvod = new System.Windows.Forms.Button();
             this.uiActionOdaberiElement = new System.Windows.Forms.Button();
+            this.proizvodBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.proizvodTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
+            this.uiInputElementProizvod = new System.Windows.Forms.TextBox();
             kolicinaLabel = new System.Windows.Forms.Label();
-            id_proizvodLabel = new System.Windows.Forms.Label();
             id_elementLabel = new System.Windows.Forms.Label();
+            id_proizvodLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // kolicinaLabel
@@ -58,15 +61,6 @@
             kolicinaLabel.TabIndex = 1;
             kolicinaLabel.Text = "Količina:";
             // 
-            // id_proizvodLabel
-            // 
-            id_proizvodLabel.AutoSize = true;
-            id_proizvodLabel.Location = new System.Drawing.Point(61, 93);
-            id_proizvodLabel.Name = "id_proizvodLabel";
-            id_proizvodLabel.Size = new System.Drawing.Size(67, 17);
-            id_proizvodLabel.TabIndex = 3;
-            id_proizvodLabel.Text = "Proizvod:";
-            // 
             // id_elementLabel
             // 
             id_elementLabel.AutoSize = true;
@@ -75,6 +69,15 @@
             id_elementLabel.Size = new System.Drawing.Size(63, 17);
             id_elementLabel.TabIndex = 5;
             id_elementLabel.Text = "Element:";
+            // 
+            // id_proizvodLabel1
+            // 
+            id_proizvodLabel1.AutoSize = true;
+            id_proizvodLabel1.Location = new System.Drawing.Point(61, 96);
+            id_proizvodLabel1.Name = "id_proizvodLabel1";
+            id_proizvodLabel1.Size = new System.Drawing.Size(67, 17);
+            id_proizvodLabel1.TabIndex = 10;
+            id_proizvodLabel1.Text = "Proizvod:";
             // 
             // baza18043_DBDataSet
             // 
@@ -113,23 +116,13 @@
             this.uiInputElementKolicina.Size = new System.Drawing.Size(100, 22);
             this.uiInputElementKolicina.TabIndex = 2;
             // 
-            // uiInputElementProizvod
-            // 
-            this.uiInputElementProizvod.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.elementBindingSource, "id_proizvod", true));
-            this.uiInputElementProizvod.DisplayMember = "ID";
-            this.uiInputElementProizvod.FormattingEnabled = true;
-            this.uiInputElementProizvod.Location = new System.Drawing.Point(134, 90);
-            this.uiInputElementProizvod.Name = "uiInputElementProizvod";
-            this.uiInputElementProizvod.Size = new System.Drawing.Size(100, 24);
-            this.uiInputElementProizvod.TabIndex = 4;
-            this.uiInputElementProizvod.ValueMember = "ID";
-            // 
             // uiInputElementElement
             // 
             this.uiInputElementElement.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.elementBindingSource, "id_element", true));
             this.uiInputElementElement.Location = new System.Drawing.Point(134, 120);
             this.uiInputElementElement.Name = "uiInputElementElement";
-            this.uiInputElementElement.Size = new System.Drawing.Size(100, 22);
+            this.uiInputElementElement.ReadOnly = true;
+            this.uiInputElementElement.Size = new System.Drawing.Size(189, 22);
             this.uiInputElementElement.TabIndex = 6;
             // 
             // uiActionSpremiElement
@@ -148,7 +141,7 @@
             // 
             // uiActionOdaberiProizvod
             // 
-            this.uiActionOdaberiProizvod.Location = new System.Drawing.Point(249, 90);
+            this.uiActionOdaberiProizvod.Location = new System.Drawing.Point(326, 90);
             this.uiActionOdaberiProizvod.Margin = new System.Windows.Forms.Padding(0);
             this.uiActionOdaberiProizvod.Name = "uiActionOdaberiProizvod";
             this.uiActionOdaberiProizvod.Size = new System.Drawing.Size(30, 24);
@@ -159,7 +152,7 @@
             // 
             // uiActionOdaberiElement
             // 
-            this.uiActionOdaberiElement.Location = new System.Drawing.Point(249, 120);
+            this.uiActionOdaberiElement.Location = new System.Drawing.Point(326, 120);
             this.uiActionOdaberiElement.Margin = new System.Windows.Forms.Padding(0);
             this.uiActionOdaberiElement.Name = "uiActionOdaberiElement";
             this.uiActionOdaberiElement.Size = new System.Drawing.Size(30, 22);
@@ -168,19 +161,37 @@
             this.uiActionOdaberiElement.UseVisualStyleBackColor = true;
             this.uiActionOdaberiElement.Click += new System.EventHandler(this.uiActionOdaberiElement_Click);
             // 
+            // proizvodBindingSource
+            // 
+            this.proizvodBindingSource.DataMember = "Proizvod";
+            this.proizvodBindingSource.DataSource = this.baza18043_DBDataSet;
+            // 
+            // proizvodTableAdapter
+            // 
+            this.proizvodTableAdapter.ClearBeforeFill = true;
+            // 
+            // uiInputElementProizvod
+            // 
+            this.uiInputElementProizvod.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.elementBindingSource, "id_proizvod", true));
+            this.uiInputElementProizvod.Location = new System.Drawing.Point(134, 91);
+            this.uiInputElementProizvod.Name = "uiInputElementProizvod";
+            this.uiInputElementProizvod.ReadOnly = true;
+            this.uiInputElementProizvod.Size = new System.Drawing.Size(189, 22);
+            this.uiInputElementProizvod.TabIndex = 11;
+            // 
             // uiDodajUrediElement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(317, 243);
+            this.ClientSize = new System.Drawing.Size(390, 243);
+            this.Controls.Add(id_proizvodLabel1);
+            this.Controls.Add(this.uiInputElementProizvod);
             this.Controls.Add(this.uiActionOdaberiElement);
             this.Controls.Add(this.uiActionOdaberiProizvod);
             this.Controls.Add(this.uiActionSpremiElement);
             this.Controls.Add(id_elementLabel);
             this.Controls.Add(this.uiInputElementElement);
-            this.Controls.Add(id_proizvodLabel);
-            this.Controls.Add(this.uiInputElementProizvod);
             this.Controls.Add(kolicinaLabel);
             this.Controls.Add(this.uiInputElementKolicina);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -190,6 +201,7 @@
             this.Load += new System.EventHandler(this.uiDodajUediElement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,10 +214,12 @@
         private Baza18043_DBDataSetTableAdapters.ElementTableAdapter elementTableAdapter;
         private Baza18043_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox uiInputElementKolicina;
-        private System.Windows.Forms.ComboBox uiInputElementProizvod;
         private System.Windows.Forms.TextBox uiInputElementElement;
         private System.Windows.Forms.Button uiActionSpremiElement;
         private System.Windows.Forms.Button uiActionOdaberiProizvod;
         private System.Windows.Forms.Button uiActionOdaberiElement;
+        private System.Windows.Forms.BindingSource proizvodBindingSource;
+        private Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter proizvodTableAdapter;
+        private System.Windows.Forms.TextBox uiInputElementProizvod;
     }
 }

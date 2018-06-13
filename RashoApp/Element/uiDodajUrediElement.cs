@@ -46,11 +46,25 @@ namespace RashoApp.Element
 
         private void uiDodajUediElement_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Proizvod' table. You can move, or remove it, as needed.
+            this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
             if (kontrola == "uredi")
             {
                 // TODO: This line of code loads data into the 'baza18043_DBDataSet.Element' table. You can move, or remove it, as needed.
                 this.elementTableAdapter.FillByProizvodElement(this.baza18043_DBDataSet.Element, Proizvod, Element);
             }
+        }
+
+        private void uiActionOdaberiProizvod_Click(object sender, EventArgs e)
+        {
+            RashoApp.Proizvod.uiOdaberiProizvod frm = new RashoApp.Proizvod.uiOdaberiProizvod("proizvod");
+            frm.ShowDialog();
+        }
+
+        private void uiActionOdaberiElement_Click(object sender, EventArgs e)
+        {
+            RashoApp.Proizvod.uiOdaberiProizvod frm = new RashoApp.Proizvod.uiOdaberiProizvod("element");
+            frm.ShowDialog();
         }
 
         private void uiActionSpremiElement_Click(object sender, EventArgs e)
@@ -75,16 +89,15 @@ namespace RashoApp.Element
             Application.OpenForms.OfType<uiElement>().Single().PopuniPodacimaElement();
         }
 
-        private void uiActionOdaberiProizvod_Click(object sender, EventArgs e)
+        //Metode za unos vrijednosti odabranog proizvoda iz forme uiOdaberiProizvod
+        public void PostaviVrijednostOdabranogProizvoda(int proizvod)
         {
-            RashoApp.Proizvod.uiOdaberiProizvod frm = new RashoApp.Proizvod.uiOdaberiProizvod();
-            frm.ShowDialog();
+            uiInputElementProizvod.Text = proizvod.ToString();
         }
 
-        private void uiActionOdaberiElement_Click(object sender, EventArgs e)
+        public void PostaviVrijednostOdabranogElementa(int proizvod)
         {
-            RashoApp.Proizvod.uiOdaberiProizvod frm = new RashoApp.Proizvod.uiOdaberiProizvod();
-            frm.ShowDialog();
+            uiInputElementElement.Text = proizvod.ToString();
         }
     }
 }

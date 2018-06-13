@@ -113,6 +113,7 @@
             this.uiActionOdaberiProizvod.TabIndex = 2;
             this.uiActionOdaberiProizvod.Text = "Odaberi";
             this.uiActionOdaberiProizvod.UseVisualStyleBackColor = false;
+            this.uiActionOdaberiProizvod.Click += new System.EventHandler(this.uiActionOdaberiProizvod_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 

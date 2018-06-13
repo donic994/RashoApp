@@ -12,12 +12,17 @@ namespace RashoApp.Proizvod
 {
     public partial class uiOdaberiProizvod : Form
     {
-        public uiOdaberiProizvod()
+
+        private string naredba;
+
+        public uiOdaberiProizvod(string Naredba)
         {
             InitializeComponent();
+
+            naredba = Naredba;
         }
 
-        private void proizvodBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void SpremiPromjene()
         {
             this.Validate();
             this.proizvodBindingSource.EndEdit();
@@ -30,6 +35,21 @@ namespace RashoApp.Proizvod
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Proizvod' table. You can move, or remove it, as needed.
             this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
 
+        }
+
+        private void uiActionOdaberiProizvod_Click(object sender, EventArgs e)
+        {
+            int proizvod = int.Parse(uiOutputDataTableProizvod.SelectedCells[0].Value.ToString());
+
+            if (naredba == "proizvod")
+            {
+                Application.OpenForms.OfType<Element.uiDodajUrediElement>().Single().PostaviVrijednostOdabranogProizvoda(proizvod);
+            }
+            if(naredba == "element")
+            {
+                Application.OpenForms.OfType<Element.uiDodajUrediElement>().Single().PostaviVrijednostOdabranogElementa(proizvod);
+            }
+            this.Close();
         }
     }
 }
