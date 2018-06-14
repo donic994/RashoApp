@@ -42,6 +42,8 @@ namespace RashoApp.Proizvod
 
         private void uiDodajDjeloveUProizvod_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.PogledDjelovaPoProoizvodu' table. You can move, or remove it, as needed.
+            this.pogledDjelovaPoProoizvoduTableAdapter.FillByProizvodID(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu, ProizvodID);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Komponenta' table. You can move, or remove it, as needed.
             //this.komponentaTableAdapter.Fill(this.baza18043_DBDataSet.Komponenta);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Dio' table. You can move, or remove it, as needed.
@@ -117,10 +119,19 @@ namespace RashoApp.Proizvod
 
         private void uiActionDodaj_Click(object sender, EventArgs e)
         {
-            DodajDio();
-            int dioID = int.Parse(this.dioTableAdapter.VratiZadnjiIDDio().ToString());
-            int ulogaID = int.Parse(uiInputUlogaID.Text.ToString());
-            DodajKomponentu(ulogaID, dioID, ProizvodID);
+            if (uiInputOdabirTipaUnosaDijela.SelectedIndex == 0)
+            {
+                DodajDio();
+                int ulogaID = int.Parse(uiInputUlogaID.Text.ToString());
+                int dioID = int.Parse(uiInputDioID.Text.ToString());
+                DodajKomponentu(ulogaID, dioID, ProizvodID);
+            }
+            if (uiInputOdabirTipaUnosaDijela.SelectedIndex == 1)
+            {
+                int dioID = int.Parse(this.dioTableAdapter.VratiZadnjiIDDio().ToString());
+                int ulogaID = int.Parse(uiInputUlogaID.Text.ToString());
+                DodajKomponentu(ulogaID, dioID, ProizvodID);
+            }
         }
 
         private void DajPrijedlogDimenzija()
@@ -215,6 +226,5 @@ namespace RashoApp.Proizvod
 
             SpremiPromjene();
         }
-
     }
 }
