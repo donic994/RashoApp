@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiUlogaDijela));
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
             this.ulogaDijelaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.UlogaDijelaTableAdapter();
             this.ulogaDijelaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -175,9 +176,10 @@
             this.Controls.Add(this.uiActionUrediUlogaDijela);
             this.Controls.Add(this.uiActionDodajNoviUlogaDijela);
             this.Controls.Add(this.uiOutputTableDataUlogaDijela);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "uiUlogaDijela";
             this.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Text = "uiUlogaDijela";
+            this.Text = "Uloga dijela";
             this.Load += new System.EventHandler(this.uiUlogaDijela_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaDijelaBindingSource)).EndInit();

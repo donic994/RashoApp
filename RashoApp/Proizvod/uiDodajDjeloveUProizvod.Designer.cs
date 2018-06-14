@@ -42,6 +42,7 @@
             System.Windows.Forms.Label uiLabelKomponentaKolicina;
             System.Windows.Forms.Label uiLabelKomponentaBoja;
             System.Windows.Forms.Label uiLabelKomponentaKantiranost;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiDodajDjeloveUProizvod));
             this.uiActionDalje = new System.Windows.Forms.Button();
             this.uiInputUlogaID = new System.Windows.Forms.TextBox();
             this.ulogaDijelaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -486,7 +487,7 @@
             this.pogledDjelovaPoProoizvoduDataGridView.RowTemplate.Height = 24;
             this.pogledDjelovaPoProoizvoduDataGridView.Size = new System.Drawing.Size(539, 243);
             this.pogledDjelovaPoProoizvoduDataGridView.TabIndex = 31;
-            //
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Naziv";
@@ -597,9 +598,10 @@
             this.Controls.Add(this.pogledDjelovaPoProoizvoduDataGridView);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "uiDodajDjeloveUProizvod";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "uiDodajDjeloveUProizvod";
+            this.Text = "Dodaj dio u proizvod";
             this.Load += new System.EventHandler(this.uiDodajDjeloveUProizvod_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ulogaDijelaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();

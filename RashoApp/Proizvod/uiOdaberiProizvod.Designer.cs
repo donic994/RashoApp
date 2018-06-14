@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiOdaberiProizvod));
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
             this.proizvodBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proizvodTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
             this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
             this.uiOutputDataTableProizvod = new System.Windows.Forms.DataGridView();
-            this.uiActionOdaberiProizvod = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uiActionOdaberiProizvod = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataTableProizvod)).BeginInit();
@@ -101,20 +102,6 @@
             this.uiOutputDataTableProizvod.Size = new System.Drawing.Size(541, 386);
             this.uiOutputDataTableProizvod.TabIndex = 1;
             // 
-            // uiActionOdaberiProizvod
-            // 
-            this.uiActionOdaberiProizvod.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.uiActionOdaberiProizvod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiActionOdaberiProizvod.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.uiActionOdaberiProizvod.ForeColor = System.Drawing.Color.White;
-            this.uiActionOdaberiProizvod.Location = new System.Drawing.Point(442, 316);
-            this.uiActionOdaberiProizvod.Name = "uiActionOdaberiProizvod";
-            this.uiActionOdaberiProizvod.Size = new System.Drawing.Size(87, 40);
-            this.uiActionOdaberiProizvod.TabIndex = 2;
-            this.uiActionOdaberiProizvod.Text = "Odaberi";
-            this.uiActionOdaberiProizvod.UseVisualStyleBackColor = false;
-            this.uiActionOdaberiProizvod.Click += new System.EventHandler(this.uiActionOdaberiProizvod_Click);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
@@ -158,6 +145,20 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
+            // uiActionOdaberiProizvod
+            // 
+            this.uiActionOdaberiProizvod.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.uiActionOdaberiProizvod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionOdaberiProizvod.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiActionOdaberiProizvod.ForeColor = System.Drawing.Color.White;
+            this.uiActionOdaberiProizvod.Location = new System.Drawing.Point(442, 316);
+            this.uiActionOdaberiProizvod.Name = "uiActionOdaberiProizvod";
+            this.uiActionOdaberiProizvod.Size = new System.Drawing.Size(87, 40);
+            this.uiActionOdaberiProizvod.TabIndex = 2;
+            this.uiActionOdaberiProizvod.Text = "Odaberi";
+            this.uiActionOdaberiProizvod.UseVisualStyleBackColor = false;
+            this.uiActionOdaberiProizvod.Click += new System.EventHandler(this.uiActionOdaberiProizvod_Click);
+            // 
             // uiOdaberiProizvod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -165,9 +166,10 @@
             this.ClientSize = new System.Drawing.Size(541, 386);
             this.Controls.Add(this.uiActionOdaberiProizvod);
             this.Controls.Add(this.uiOutputDataTableProizvod);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "uiOdaberiProizvod";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "uiOdaberiProizvod";
+            this.Text = "Odaberi proizvod";
             this.Load += new System.EventHandler(this.uiOdaberiProizvod_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).EndInit();

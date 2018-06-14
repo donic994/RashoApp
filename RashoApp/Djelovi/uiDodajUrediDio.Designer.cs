@@ -35,6 +35,7 @@
             System.Windows.Forms.Label visinaLabel;
             System.Windows.Forms.Label slikaLabel;
             System.Windows.Forms.Label materijalLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiDodajUrediDio));
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
             this.dioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dioTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.DioTableAdapter();
@@ -246,6 +247,7 @@
             this.Controls.Add(this.uiInputDioNaziv);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "uiDodajUrediDio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

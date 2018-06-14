@@ -27,11 +27,13 @@ namespace RashoApp.UlogaDijela
             {
                 uiActionSpremiDio.BackColor = Color.LimeGreen;
                 this.Text = "Dodaj ulogu";
+                this.Icon = Icon.ExtractAssociatedIcon("Ikone/Dodaj.ico");
             }
             if (kontrola == "uredi")
             {
                 uiActionSpremiDio.BackColor = Color.Gold;
                 this.Text = "Uredi ulogu";
+                this.Icon = Icon.ExtractAssociatedIcon("Ikone/Uredi.ico");
             }
         }
 

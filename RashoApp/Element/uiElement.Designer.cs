@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiElement));
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
             this.elementBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.elementTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ElementTableAdapter();
@@ -198,9 +199,10 @@
             this.Controls.Add(this.uiActionUrediElement);
             this.Controls.Add(this.uiActionDodajNoviElement);
             this.Controls.Add(this.uiOutputTableDataElement);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "uiElement";
             this.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Text = "uiElement";
+            this.Text = "Element";
             this.Load += new System.EventHandler(this.uiElement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).EndInit();

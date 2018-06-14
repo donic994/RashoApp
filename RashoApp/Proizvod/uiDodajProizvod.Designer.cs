@@ -34,6 +34,7 @@
             System.Windows.Forms.Label visinaLabel;
             System.Windows.Forms.Label slikaLabel;
             System.Windows.Forms.Label nazivLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiDodajProizvod));
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
             this.proizvodBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proizvodTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
@@ -200,9 +201,10 @@
             this.Controls.Add(this.uiInputDužina);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "uiDodajProizvod";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "uiDodajProizvod";
+            this.Text = "Dodaj novi proizvod";
             this.Load += new System.EventHandler(this.uiDodajProizvod_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).EndInit();

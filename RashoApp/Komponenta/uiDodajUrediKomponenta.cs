@@ -30,11 +30,13 @@ namespace RashoApp.Komponenta
             {
                 uiActionSpremiKomponenta.BackColor = Color.LimeGreen;
                 this.Text = "Dodaj komponentu";
+                this.Icon = Icon.ExtractAssociatedIcon("Ikone/Dodaj.ico");
             }
             if (kontrola == "uredi")
             {
                 uiActionSpremiKomponenta.BackColor = Color.Gold;
                 this.Text = "Uredi komponentu";
+                this.Icon = Icon.ExtractAssociatedIcon("Ikone/Uredi.ico");
             }
         }
 

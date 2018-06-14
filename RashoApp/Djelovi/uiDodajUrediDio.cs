@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RashoApp.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,11 +26,14 @@ namespace RashoApp.Djelovi
             {
                 uiActionSpremiDio.BackColor = Color.LimeGreen;
                 this.Text = "Dodaj dio";
+                this.Icon = Icon.ExtractAssociatedIcon("Ikone/Dodaj.ico");
             }
-            if(kontrola == "uredi")
+
+            if (kontrola == "uredi")
             {
                 uiActionSpremiDio.BackColor = Color.Gold;
                 this.Text = "Uredi dio";
+                this.Icon = Icon.ExtractAssociatedIcon("Ikone/Uredi.ico");
             }
 
         }
@@ -77,18 +81,5 @@ namespace RashoApp.Djelovi
             this.tableAdapterManager.UpdateAll(this.baza18043_DBDataSet);
         }
 
-        private void ProvjeriUneseneVrijednosti()
-        {
-            if (string.IsNullOrWhiteSpace(uiInputDioNaziv.Text))
-            {
-                uiLabelUpozorenje.Text = "UNESI NAZIV";
-                uiActionSpremiDio.Enabled = false;
-            }
-            else
-            {
-                uiLabelUpozorenje.Text = "";
-                uiActionSpremiDio.Enabled = true;
-            }
-        }
     }
 }

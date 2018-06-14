@@ -28,11 +28,13 @@ namespace RashoApp.Element
             {
                 uiActionSpremiElement.BackColor = Color.LimeGreen;
                 this.Text = "Dodaj element";
+                this.Icon = Icon.ExtractAssociatedIcon("Ikone/Dodaj.ico");
             }
             if (kontrola == "uredi")
             {
                 uiActionSpremiElement.BackColor = Color.Gold;
                 this.Text = "Uredi element";
+                this.Icon = Icon.ExtractAssociatedIcon("Ikone/Uredi.ico");
             }
         }
 
