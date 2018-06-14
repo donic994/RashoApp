@@ -56,13 +56,28 @@ namespace RashoApp.Proizvod
             UlogaDijela.uiOdaberiUlogaDijela frm = new UlogaDijela.uiOdaberiUlogaDijela("proizvod");
             frm.ShowDialog();
             DajPrijedlogDimenzija();
+            uiInputOdabirTipaUnosaDijela.Visible = true;
         }
+
+        private void uiActionOdaberiPostojećiDio_Click(object sender, EventArgs e)
+        {
+            Djelovi.uiOdaberiDio frm = new Djelovi.uiOdaberiDio("proizvod");
+            frm.ShowDialog();
+        }
+
 
         public void PostaviVrijednostiOdabraneUlogeDijelova(string id, string naziv)
         {
             uiInputUlogaID.Text = id;
             uiOutputUlogaNaziv.Text = naziv;
         }
+
+        public void PostaviVrijednostiOdabranogDijela(string id, string naziv)
+        {
+            uiInputDioID.Text = id;
+            uiOutputDioNaziv.Text = naziv;
+        }
+
 
         private void uiInputOdabirTipaUnosaDijela_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -164,5 +179,7 @@ namespace RashoApp.Proizvod
 
             }
         }
+
+
     }
 }

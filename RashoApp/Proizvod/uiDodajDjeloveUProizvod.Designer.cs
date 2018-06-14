@@ -67,6 +67,7 @@
             this.uiInputKomponentaBoja = new System.Windows.Forms.TextBox();
             this.uiInputKomponentaKantiranost = new System.Windows.Forms.TextBox();
             this.uiActionDodaj = new System.Windows.Forms.Button();
+            this.uiActionOdaberiPostojećiDio = new System.Windows.Forms.Button();
             iDLabel = new System.Windows.Forms.Label();
             nazivLabel = new System.Windows.Forms.Label();
             uiLabelDioNaziv = new System.Windows.Forms.Label();
@@ -336,6 +337,7 @@
             this.uiInputOdabirTipaUnosaDijela.Name = "uiInputOdabirTipaUnosaDijela";
             this.uiInputOdabirTipaUnosaDijela.Size = new System.Drawing.Size(149, 26);
             this.uiInputOdabirTipaUnosaDijela.TabIndex = 22;
+            this.uiInputOdabirTipaUnosaDijela.Visible = false;
             this.uiInputOdabirTipaUnosaDijela.SelectedIndexChanged += new System.EventHandler(this.uiInputOdabirTipaUnosaDijela_SelectedIndexChanged);
             // 
             // uiActionOdaberiUloga
@@ -420,12 +422,28 @@
             this.uiActionDodaj.UseVisualStyleBackColor = false;
             this.uiActionDodaj.Click += new System.EventHandler(this.uiActionDodaj_Click);
             // 
+            // uiActionOdaberiPostojećiDio
+            // 
+            this.uiActionOdaberiPostojećiDio.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionOdaberiPostojećiDio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionOdaberiPostojećiDio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiActionOdaberiPostojećiDio.ForeColor = System.Drawing.Color.White;
+            this.uiActionOdaberiPostojećiDio.Location = new System.Drawing.Point(433, 57);
+            this.uiActionOdaberiPostojećiDio.Margin = new System.Windows.Forms.Padding(0);
+            this.uiActionOdaberiPostojećiDio.Name = "uiActionOdaberiPostojećiDio";
+            this.uiActionOdaberiPostojećiDio.Size = new System.Drawing.Size(30, 24);
+            this.uiActionOdaberiPostojećiDio.TabIndex = 30;
+            this.uiActionOdaberiPostojećiDio.Text = "+";
+            this.uiActionOdaberiPostojećiDio.UseVisualStyleBackColor = false;
+            this.uiActionOdaberiPostojećiDio.Click += new System.EventHandler(this.uiActionOdaberiPostojećiDio_Click);
+            // 
             // uiDodajDjeloveUProizvod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(532, 573);
+            this.Controls.Add(this.uiActionOdaberiPostojećiDio);
             this.Controls.Add(this.uiActionDodaj);
             this.Controls.Add(uiLabelKomponentaKantiranost);
             this.Controls.Add(this.uiInputKomponentaKantiranost);
@@ -498,5 +516,6 @@
         private System.Windows.Forms.TextBox uiInputKomponentaBoja;
         private System.Windows.Forms.TextBox uiInputKomponentaKantiranost;
         private System.Windows.Forms.Button uiActionDodaj;
+        private System.Windows.Forms.Button uiActionOdaberiPostojećiDio;
     }
 }

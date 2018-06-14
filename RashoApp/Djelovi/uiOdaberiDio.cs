@@ -12,9 +12,12 @@ namespace RashoApp.Djelovi
 {
     public partial class uiOdaberiDio : Form
     {
-        public uiOdaberiDio()
+        private string Kontrola;
+
+        public uiOdaberiDio(string kontrola)
         {
             InitializeComponent();
+            Kontrola = kontrola;
         }
 
         private void dioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -37,7 +40,14 @@ namespace RashoApp.Djelovi
             string id = uiOutputDataTableDio.SelectedCells[0].Value.ToString();
             string naziv = uiOutputDataTableDio.SelectedCells[1].Value.ToString();
 
-            Application.OpenForms.OfType<Komponenta.uiDodajUrediKomponenta>().Single().PostaviVrijednostOdabranogDjela(id, naziv);
+            if (Kontrola == "komponenta")
+            {
+                Application.OpenForms.OfType<Komponenta.uiDodajUrediKomponenta>().Single().PostaviVrijednostOdabranogDjela(id, naziv);
+            }
+            if(Kontrola == "proizvod")
+            {
+                Application.OpenForms.OfType<Proizvod.uiDodajDjeloveUProizvod>().Single().PostaviVrijednostiOdabranogDijela(id, naziv);
+            }
             this.Close();
         }
     }

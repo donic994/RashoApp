@@ -49,7 +49,7 @@ namespace RashoApp.Proizvod
 
             this.Close();
             Proizvod.uiDodajDjeloveUProizvod frm = new uiDodajDjeloveUProizvod(proizvodID, duzina, sirina, dubina);
-            frm.Show();
+            frm.ShowDialog();
         }
     }
 }

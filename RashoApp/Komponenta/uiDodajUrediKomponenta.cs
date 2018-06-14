@@ -89,7 +89,7 @@ namespace RashoApp.Komponenta
 
         private void uiActionOdaberiDio_Click(object sender, EventArgs e)
         {
-            Djelovi.uiOdaberiDio frm = new Djelovi.uiOdaberiDio();
+            Djelovi.uiOdaberiDio frm = new Djelovi.uiOdaberiDio("komponenta");
             frm.ShowDialog();
         }
 
