@@ -53,6 +53,51 @@
             ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // duljinaLabel
+            // 
+            duljinaLabel.AutoSize = true;
+            duljinaLabel.Location = new System.Drawing.Point(134, 98);
+            duljinaLabel.Name = "duljinaLabel";
+            duljinaLabel.Size = new System.Drawing.Size(58, 18);
+            duljinaLabel.TabIndex = 1;
+            duljinaLabel.Text = "Dužina:";
+            // 
+            // sirinaLabel
+            // 
+            sirinaLabel.AutoSize = true;
+            sirinaLabel.Location = new System.Drawing.Point(143, 129);
+            sirinaLabel.Name = "sirinaLabel";
+            sirinaLabel.Size = new System.Drawing.Size(49, 18);
+            sirinaLabel.TabIndex = 3;
+            sirinaLabel.Text = "Širina:";
+            // 
+            // visinaLabel
+            // 
+            visinaLabel.AutoSize = true;
+            visinaLabel.Location = new System.Drawing.Point(133, 161);
+            visinaLabel.Name = "visinaLabel";
+            visinaLabel.Size = new System.Drawing.Size(58, 18);
+            visinaLabel.TabIndex = 5;
+            visinaLabel.Text = "Dubina:";
+            // 
+            // slikaLabel
+            // 
+            slikaLabel.AutoSize = true;
+            slikaLabel.Location = new System.Drawing.Point(150, 192);
+            slikaLabel.Name = "slikaLabel";
+            slikaLabel.Size = new System.Drawing.Size(44, 18);
+            slikaLabel.TabIndex = 7;
+            slikaLabel.Text = "Slika:";
+            // 
+            // nazivLabel
+            // 
+            nazivLabel.AutoSize = true;
+            nazivLabel.Location = new System.Drawing.Point(144, 66);
+            nazivLabel.Name = "nazivLabel";
+            nazivLabel.Size = new System.Drawing.Size(49, 18);
+            nazivLabel.TabIndex = 9;
+            nazivLabel.Text = "Naziv:";
+            // 
             // baza18043_DBDataSet
             // 
             this.baza18043_DBDataSet.DataSetName = "Baza18043_DBDataSet";
@@ -82,15 +127,6 @@
             this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // duljinaLabel
-            // 
-            duljinaLabel.AutoSize = true;
-            duljinaLabel.Location = new System.Drawing.Point(134, 98);
-            duljinaLabel.Name = "duljinaLabel";
-            duljinaLabel.Size = new System.Drawing.Size(58, 18);
-            duljinaLabel.TabIndex = 1;
-            duljinaLabel.Text = "Dužina:";
-            // 
             // uiInputDužina
             // 
             this.uiInputDužina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "duljina", true));
@@ -98,15 +134,6 @@
             this.uiInputDužina.Name = "uiInputDužina";
             this.uiInputDužina.Size = new System.Drawing.Size(112, 24);
             this.uiInputDužina.TabIndex = 3;
-            // 
-            // sirinaLabel
-            // 
-            sirinaLabel.AutoSize = true;
-            sirinaLabel.Location = new System.Drawing.Point(143, 129);
-            sirinaLabel.Name = "sirinaLabel";
-            sirinaLabel.Size = new System.Drawing.Size(49, 18);
-            sirinaLabel.TabIndex = 3;
-            sirinaLabel.Text = "Širina:";
             // 
             // uiInputŠirina
             // 
@@ -116,15 +143,6 @@
             this.uiInputŠirina.Size = new System.Drawing.Size(112, 24);
             this.uiInputŠirina.TabIndex = 4;
             // 
-            // visinaLabel
-            // 
-            visinaLabel.AutoSize = true;
-            visinaLabel.Location = new System.Drawing.Point(133, 161);
-            visinaLabel.Name = "visinaLabel";
-            visinaLabel.Size = new System.Drawing.Size(58, 18);
-            visinaLabel.TabIndex = 5;
-            visinaLabel.Text = "Dubina:";
-            // 
             // uiInputDubina
             // 
             this.uiInputDubina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "visina", true));
@@ -133,15 +151,6 @@
             this.uiInputDubina.Size = new System.Drawing.Size(112, 24);
             this.uiInputDubina.TabIndex = 6;
             // 
-            // slikaLabel
-            // 
-            slikaLabel.AutoSize = true;
-            slikaLabel.Location = new System.Drawing.Point(150, 192);
-            slikaLabel.Name = "slikaLabel";
-            slikaLabel.Size = new System.Drawing.Size(44, 18);
-            slikaLabel.TabIndex = 7;
-            slikaLabel.Text = "Slika:";
-            // 
             // uiInputSlika
             // 
             this.uiInputSlika.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "slika", true));
@@ -149,15 +158,6 @@
             this.uiInputSlika.Name = "uiInputSlika";
             this.uiInputSlika.Size = new System.Drawing.Size(112, 24);
             this.uiInputSlika.TabIndex = 8;
-            // 
-            // nazivLabel
-            // 
-            nazivLabel.AutoSize = true;
-            nazivLabel.Location = new System.Drawing.Point(144, 66);
-            nazivLabel.Name = "nazivLabel";
-            nazivLabel.Size = new System.Drawing.Size(49, 18);
-            nazivLabel.TabIndex = 9;
-            nazivLabel.Text = "Naziv:";
             // 
             // uiInputNaziv
             // 

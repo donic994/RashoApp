@@ -64,7 +64,8 @@ namespace RashoApp.Komponenta
             }
             if (kontrola == "dodaj")
             {
-                int kolicina = int.Parse(uiInputKomponentaKolicina.Text.ToString());
+                int kolicina = 1;
+                int.TryParse(uiInputKomponentaKolicina.Text.ToString(), out kolicina);
                 string boja = uiInputKomponentaBoja.Text;
                 string kantiranost = uiInputKomponentaKantoranost.Text;
                 int uloga = int.Parse(uiInputKomponentaUloga.Text.ToString());

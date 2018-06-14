@@ -73,7 +73,8 @@ namespace RashoApp.Element
             }
             if (kontrola == "dodaj")
             {
-                int kolicina = int.Parse(uiInputElementKolicina.Text.ToString());
+                int kolicina = 1;
+                int.TryParse(uiInputElementKolicina.Text.ToString(), out kolicina);
                 int proizvod = int.Parse(uiInputElementProizvod.Text.ToString());
                 int element = int.Parse(uiInputElementElement.Text.ToString());
 

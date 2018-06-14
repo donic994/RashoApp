@@ -46,6 +46,7 @@
             this.uiInputDioMaterijal = new System.Windows.Forms.TextBox();
             this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
             this.uiActionSpremiDio = new System.Windows.Forms.Button();
+            this.uiLabelUpozorenje = new System.Windows.Forms.Label();
             nazivLabel = new System.Windows.Forms.Label();
             duljinaLabel = new System.Windows.Forms.Label();
             sirinaLabel = new System.Windows.Forms.Label();
@@ -213,12 +214,23 @@
             this.uiActionSpremiDio.UseVisualStyleBackColor = false;
             this.uiActionSpremiDio.Click += new System.EventHandler(this.uiActionSpremiDio_Click);
             // 
+            // uiLabelUpozorenje
+            // 
+            this.uiLabelUpozorenje.AutoSize = true;
+            this.uiLabelUpozorenje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiLabelUpozorenje.ForeColor = System.Drawing.Color.Red;
+            this.uiLabelUpozorenje.Location = new System.Drawing.Point(12, 286);
+            this.uiLabelUpozorenje.Name = "uiLabelUpozorenje";
+            this.uiLabelUpozorenje.Size = new System.Drawing.Size(0, 18);
+            this.uiLabelUpozorenje.TabIndex = 14;
+            // 
             // uiDodajUrediDio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(243, 286);
+            this.ClientSize = new System.Drawing.Size(243, 322);
+            this.Controls.Add(this.uiLabelUpozorenje);
             this.Controls.Add(this.uiActionSpremiDio);
             this.Controls.Add(materijalLabel);
             this.Controls.Add(this.uiInputDioMaterijal);
@@ -258,5 +270,6 @@
         private System.Windows.Forms.TextBox uiInputDioMaterijal;
         private Baza18043_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button uiActionSpremiDio;
+        private System.Windows.Forms.Label uiLabelUpozorenje;
     }
 }

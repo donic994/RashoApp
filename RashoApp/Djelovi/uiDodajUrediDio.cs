@@ -51,10 +51,12 @@ namespace RashoApp.Djelovi
             }
             if(kontrola == "dodaj")
             {
+                int duljina=0, sirina=0, visina=0;
+
                 string naziv = uiInputDioNaziv.Text;
-                int duljina = int.Parse(uiInputDioDuljina.Text.ToString());
-                int sirina = int.Parse(uiInputDioŠirina.Text.ToString());
-                int visina = int.Parse(uiInputDioVisina.Text.ToString());
+                int.TryParse(uiInputDioDuljina.Text.ToString(), out duljina);
+                int.TryParse(uiInputDioŠirina.Text.ToString(), out sirina);
+                int.TryParse(uiInputDioVisina.Text.ToString(), out visina);
                 string slika = uiInputDioSlika.Text;
                 string materijal = uiInputDioMaterijal.Text;
 
@@ -73,6 +75,20 @@ namespace RashoApp.Djelovi
             this.Validate();
             this.dioBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.baza18043_DBDataSet);
+        }
+
+        private void ProvjeriUneseneVrijednosti()
+        {
+            if (string.IsNullOrWhiteSpace(uiInputDioNaziv.Text))
+            {
+                uiLabelUpozorenje.Text = "UNESI NAZIV";
+                uiActionSpremiDio.Enabled = false;
+            }
+            else
+            {
+                uiLabelUpozorenje.Text = "";
+                uiActionSpremiDio.Enabled = true;
+            }
         }
     }
 }

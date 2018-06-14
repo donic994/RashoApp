@@ -34,10 +34,11 @@ namespace RashoApp.Proizvod
 
         private void uiActionDalje_Click(object sender, EventArgs e)
         {
+            int duzina = 0, sirina = 0, dubina = 0;
             string naziv = uiInputNaziv.Text;
-            int duzina = int.Parse(uiInputDužina.Text.ToString());
-            int sirina = int.Parse(uiInputŠirina.Text.ToString());
-            int dubina = int.Parse(uiInputDubina.Text.ToString());
+            int.TryParse(uiInputDužina.Text.ToString(), out duzina);
+            int.TryParse(uiInputŠirina.Text.ToString(), out sirina);
+            int.TryParse(uiInputDubina.Text.ToString(), out dubina);
             string slika = uiInputSlika.Text;
 
             Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
