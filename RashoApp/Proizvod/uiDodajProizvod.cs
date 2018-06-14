@@ -48,8 +48,8 @@ namespace RashoApp.Proizvod
             int proizvodID = 1;
 
             this.Close();
-            Proizvod.uiDodajDjeloveUProizvod frm = new uiDodajDjeloveUProizvod(proizvodID);
-            frm.ShowDialog();
+            Proizvod.uiDodajDjeloveUProizvod frm = new uiDodajDjeloveUProizvod(proizvodID, duzina, sirina, dubina);
+            frm.Show();
         }
     }
 }

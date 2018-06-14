@@ -31,12 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label iDLabel;
             System.Windows.Forms.Label nazivLabel;
+            System.Windows.Forms.Label uiLabelDioNaziv;
+            System.Windows.Forms.Label uiLabelDioDuljina;
+            System.Windows.Forms.Label uiLabelDioSirina;
+            System.Windows.Forms.Label uiLabelDioVisina;
+            System.Windows.Forms.Label uiLabelDioSlika;
+            System.Windows.Forms.Label uiLabelDioMaterijal;
+            System.Windows.Forms.Label iDLabel1;
             System.Windows.Forms.Label nazivLabel1;
-            System.Windows.Forms.Label duljinaLabel;
-            System.Windows.Forms.Label sirinaLabel;
-            System.Windows.Forms.Label visinaLabel;
-            System.Windows.Forms.Label slikaLabel;
-            System.Windows.Forms.Label materijalLabel;
+            System.Windows.Forms.Label uiLabelKomponentaKolicina;
+            System.Windows.Forms.Label uiLabelKomponentaBoja;
+            System.Windows.Forms.Label uiLabelKomponentaKantiranost;
             this.uiActionDalje = new System.Windows.Forms.Button();
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
             this.ulogaDijelaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -52,19 +57,32 @@
             this.uiInputDioVisina = new System.Windows.Forms.TextBox();
             this.uiInputDioSlika = new System.Windows.Forms.TextBox();
             this.uiInputDioMaterijal = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.uiInputOdabirTipaUnosaDijela = new System.Windows.Forms.ComboBox();
             this.uiActionOdaberiUloga = new System.Windows.Forms.Button();
+            this.uiInputDioID = new System.Windows.Forms.TextBox();
+            this.uiOutputDioNaziv = new System.Windows.Forms.TextBox();
+            this.komponentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.komponentaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter();
+            this.uiInputKomponentaKolicina = new System.Windows.Forms.TextBox();
+            this.uiInputKomponentaBoja = new System.Windows.Forms.TextBox();
+            this.uiInputKomponentaKantiranost = new System.Windows.Forms.TextBox();
             iDLabel = new System.Windows.Forms.Label();
             nazivLabel = new System.Windows.Forms.Label();
+            uiLabelDioNaziv = new System.Windows.Forms.Label();
+            uiLabelDioDuljina = new System.Windows.Forms.Label();
+            uiLabelDioSirina = new System.Windows.Forms.Label();
+            uiLabelDioVisina = new System.Windows.Forms.Label();
+            uiLabelDioSlika = new System.Windows.Forms.Label();
+            uiLabelDioMaterijal = new System.Windows.Forms.Label();
+            iDLabel1 = new System.Windows.Forms.Label();
             nazivLabel1 = new System.Windows.Forms.Label();
-            duljinaLabel = new System.Windows.Forms.Label();
-            sirinaLabel = new System.Windows.Forms.Label();
-            visinaLabel = new System.Windows.Forms.Label();
-            slikaLabel = new System.Windows.Forms.Label();
-            materijalLabel = new System.Windows.Forms.Label();
+            uiLabelKomponentaKolicina = new System.Windows.Forms.Label();
+            uiLabelKomponentaBoja = new System.Windows.Forms.Label();
+            uiLabelKomponentaKantiranost = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaDijelaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // iDLabel
@@ -85,59 +103,77 @@
             nazivLabel.TabIndex = 14;
             nazivLabel.Text = "Uloga:";
             // 
+            // uiLabelDioNaziv
+            // 
+            uiLabelDioNaziv.AutoSize = true;
+            uiLabelDioNaziv.Location = new System.Drawing.Point(42, 165);
+            uiLabelDioNaziv.Name = "uiLabelDioNaziv";
+            uiLabelDioNaziv.Size = new System.Drawing.Size(46, 18);
+            uiLabelDioNaziv.TabIndex = 15;
+            uiLabelDioNaziv.Text = "naziv:";
+            // 
+            // uiLabelDioDuljina
+            // 
+            uiLabelDioDuljina.AutoSize = true;
+            uiLabelDioDuljina.Location = new System.Drawing.Point(35, 195);
+            uiLabelDioDuljina.Name = "uiLabelDioDuljina";
+            uiLabelDioDuljina.Size = new System.Drawing.Size(53, 18);
+            uiLabelDioDuljina.TabIndex = 16;
+            uiLabelDioDuljina.Text = "duljina:";
+            // 
+            // uiLabelDioSirina
+            // 
+            uiLabelDioSirina.AutoSize = true;
+            uiLabelDioSirina.Location = new System.Drawing.Point(41, 225);
+            uiLabelDioSirina.Name = "uiLabelDioSirina";
+            uiLabelDioSirina.Size = new System.Drawing.Size(47, 18);
+            uiLabelDioSirina.TabIndex = 17;
+            uiLabelDioSirina.Text = "sirina:";
+            // 
+            // uiLabelDioVisina
+            // 
+            uiLabelDioVisina.AutoSize = true;
+            uiLabelDioVisina.Location = new System.Drawing.Point(39, 255);
+            uiLabelDioVisina.Name = "uiLabelDioVisina";
+            uiLabelDioVisina.Size = new System.Drawing.Size(49, 18);
+            uiLabelDioVisina.TabIndex = 18;
+            uiLabelDioVisina.Text = "visina:";
+            // 
+            // uiLabelDioSlika
+            // 
+            uiLabelDioSlika.AutoSize = true;
+            uiLabelDioSlika.Location = new System.Drawing.Point(46, 285);
+            uiLabelDioSlika.Name = "uiLabelDioSlika";
+            uiLabelDioSlika.Size = new System.Drawing.Size(42, 18);
+            uiLabelDioSlika.TabIndex = 19;
+            uiLabelDioSlika.Text = "slika:";
+            // 
+            // uiLabelDioMaterijal
+            // 
+            uiLabelDioMaterijal.AutoSize = true;
+            uiLabelDioMaterijal.Location = new System.Drawing.Point(21, 315);
+            uiLabelDioMaterijal.Name = "uiLabelDioMaterijal";
+            uiLabelDioMaterijal.Size = new System.Drawing.Size(67, 18);
+            uiLabelDioMaterijal.TabIndex = 20;
+            uiLabelDioMaterijal.Text = "materijal:";
+            // 
+            // iDLabel1
+            // 
+            iDLabel1.AutoSize = true;
+            iDLabel1.Location = new System.Drawing.Point(298, 30);
+            iDLabel1.Name = "iDLabel1";
+            iDLabel1.Size = new System.Drawing.Size(26, 18);
+            iDLabel1.TabIndex = 23;
+            iDLabel1.Text = "ID:";
+            // 
             // nazivLabel1
             // 
             nazivLabel1.AutoSize = true;
-            nazivLabel1.Location = new System.Drawing.Point(42, 165);
+            nazivLabel1.Location = new System.Drawing.Point(289, 60);
             nazivLabel1.Name = "nazivLabel1";
-            nazivLabel1.Size = new System.Drawing.Size(46, 18);
-            nazivLabel1.TabIndex = 15;
-            nazivLabel1.Text = "naziv:";
-            // 
-            // duljinaLabel
-            // 
-            duljinaLabel.AutoSize = true;
-            duljinaLabel.Location = new System.Drawing.Point(35, 195);
-            duljinaLabel.Name = "duljinaLabel";
-            duljinaLabel.Size = new System.Drawing.Size(53, 18);
-            duljinaLabel.TabIndex = 16;
-            duljinaLabel.Text = "duljina:";
-            // 
-            // sirinaLabel
-            // 
-            sirinaLabel.AutoSize = true;
-            sirinaLabel.Location = new System.Drawing.Point(41, 225);
-            sirinaLabel.Name = "sirinaLabel";
-            sirinaLabel.Size = new System.Drawing.Size(47, 18);
-            sirinaLabel.TabIndex = 17;
-            sirinaLabel.Text = "sirina:";
-            // 
-            // visinaLabel
-            // 
-            visinaLabel.AutoSize = true;
-            visinaLabel.Location = new System.Drawing.Point(39, 255);
-            visinaLabel.Name = "visinaLabel";
-            visinaLabel.Size = new System.Drawing.Size(49, 18);
-            visinaLabel.TabIndex = 18;
-            visinaLabel.Text = "visina:";
-            // 
-            // slikaLabel
-            // 
-            slikaLabel.AutoSize = true;
-            slikaLabel.Location = new System.Drawing.Point(46, 285);
-            slikaLabel.Name = "slikaLabel";
-            slikaLabel.Size = new System.Drawing.Size(42, 18);
-            slikaLabel.TabIndex = 19;
-            slikaLabel.Text = "slika:";
-            // 
-            // materijalLabel
-            // 
-            materijalLabel.AutoSize = true;
-            materijalLabel.Location = new System.Drawing.Point(21, 315);
-            materijalLabel.Name = "materijalLabel";
-            materijalLabel.Size = new System.Drawing.Size(67, 18);
-            materijalLabel.TabIndex = 20;
-            materijalLabel.Text = "materijal:";
+            nazivLabel1.Size = new System.Drawing.Size(35, 18);
+            nazivLabel1.TabIndex = 24;
+            nazivLabel1.Text = "Dio:";
             // 
             // uiActionDalje
             // 
@@ -215,6 +251,7 @@
             this.uiInputDioNaziv.Name = "uiInputDioNaziv";
             this.uiInputDioNaziv.Size = new System.Drawing.Size(100, 24);
             this.uiInputDioNaziv.TabIndex = 16;
+            this.uiInputDioNaziv.Visible = false;
             // 
             // uiInputDioDužina
             // 
@@ -223,6 +260,7 @@
             this.uiInputDioDužina.Name = "uiInputDioDužina";
             this.uiInputDioDužina.Size = new System.Drawing.Size(100, 24);
             this.uiInputDioDužina.TabIndex = 17;
+            this.uiInputDioDužina.Visible = false;
             // 
             // uiInputDioŠirina
             // 
@@ -231,6 +269,7 @@
             this.uiInputDioŠirina.Name = "uiInputDioŠirina";
             this.uiInputDioŠirina.Size = new System.Drawing.Size(100, 24);
             this.uiInputDioŠirina.TabIndex = 18;
+            this.uiInputDioŠirina.Visible = false;
             // 
             // uiInputDioVisina
             // 
@@ -239,6 +278,7 @@
             this.uiInputDioVisina.Name = "uiInputDioVisina";
             this.uiInputDioVisina.Size = new System.Drawing.Size(100, 24);
             this.uiInputDioVisina.TabIndex = 19;
+            this.uiInputDioVisina.Visible = false;
             // 
             // uiInputDioSlika
             // 
@@ -247,6 +287,7 @@
             this.uiInputDioSlika.Name = "uiInputDioSlika";
             this.uiInputDioSlika.Size = new System.Drawing.Size(100, 24);
             this.uiInputDioSlika.TabIndex = 20;
+            this.uiInputDioSlika.Visible = false;
             // 
             // uiInputDioMaterijal
             // 
@@ -255,17 +296,19 @@
             this.uiInputDioMaterijal.Name = "uiInputDioMaterijal";
             this.uiInputDioMaterijal.Size = new System.Drawing.Size(100, 24);
             this.uiInputDioMaterijal.TabIndex = 21;
+            this.uiInputDioMaterijal.Visible = false;
             // 
-            // comboBox1
+            // uiInputOdabirTipaUnosaDijela
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.uiInputOdabirTipaUnosaDijela.FormattingEnabled = true;
+            this.uiInputOdabirTipaUnosaDijela.Items.AddRange(new object[] {
             "Kreiraj novi dio",
             "Odaberi postojeći dio"});
-            this.comboBox1.Location = new System.Drawing.Point(45, 104);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 26);
-            this.comboBox1.TabIndex = 22;
+            this.uiInputOdabirTipaUnosaDijela.Location = new System.Drawing.Point(45, 104);
+            this.uiInputOdabirTipaUnosaDijela.Name = "uiInputOdabirTipaUnosaDijela";
+            this.uiInputOdabirTipaUnosaDijela.Size = new System.Drawing.Size(149, 26);
+            this.uiInputOdabirTipaUnosaDijela.TabIndex = 22;
+            this.uiInputOdabirTipaUnosaDijela.SelectedIndexChanged += new System.EventHandler(this.uiInputOdabirTipaUnosaDijela_SelectedIndexChanged);
             // 
             // uiActionOdaberiUloga
             // 
@@ -282,25 +325,115 @@
             this.uiActionOdaberiUloga.UseVisualStyleBackColor = false;
             this.uiActionOdaberiUloga.Click += new System.EventHandler(this.uiActionOdaberiUloga_Click);
             // 
+            // uiInputDioID
+            // 
+            this.uiInputDioID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dioBindingSource, "ID", true));
+            this.uiInputDioID.Location = new System.Drawing.Point(330, 27);
+            this.uiInputDioID.Name = "uiInputDioID";
+            this.uiInputDioID.ReadOnly = true;
+            this.uiInputDioID.Size = new System.Drawing.Size(100, 24);
+            this.uiInputDioID.TabIndex = 24;
+            this.uiInputDioID.Visible = false;
+            // 
+            // uiOutputDioNaziv
+            // 
+            this.uiOutputDioNaziv.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dioBindingSource, "naziv", true));
+            this.uiOutputDioNaziv.Location = new System.Drawing.Point(330, 57);
+            this.uiOutputDioNaziv.Name = "uiOutputDioNaziv";
+            this.uiOutputDioNaziv.ReadOnly = true;
+            this.uiOutputDioNaziv.Size = new System.Drawing.Size(100, 24);
+            this.uiOutputDioNaziv.TabIndex = 25;
+            this.uiOutputDioNaziv.Visible = false;
+            // 
+            // komponentaBindingSource
+            // 
+            this.komponentaBindingSource.DataMember = "Komponenta";
+            this.komponentaBindingSource.DataSource = this.baza18043_DBDataSet;
+            // 
+            // komponentaTableAdapter
+            // 
+            this.komponentaTableAdapter.ClearBeforeFill = true;
+            // 
+            // uiLabelKomponentaKolicina
+            // 
+            uiLabelKomponentaKolicina.AutoSize = true;
+            uiLabelKomponentaKolicina.Location = new System.Drawing.Point(262, 165);
+            uiLabelKomponentaKolicina.Name = "uiLabelKomponentaKolicina";
+            uiLabelKomponentaKolicina.Size = new System.Drawing.Size(62, 18);
+            uiLabelKomponentaKolicina.TabIndex = 25;
+            uiLabelKomponentaKolicina.Text = "kolicina:";
+            // 
+            // uiInputKomponentaKolicina
+            // 
+            this.uiInputKomponentaKolicina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "kolicina", true));
+            this.uiInputKomponentaKolicina.Location = new System.Drawing.Point(330, 162);
+            this.uiInputKomponentaKolicina.Name = "uiInputKomponentaKolicina";
+            this.uiInputKomponentaKolicina.Size = new System.Drawing.Size(100, 24);
+            this.uiInputKomponentaKolicina.TabIndex = 26;
+            // 
+            // uiLabelKomponentaBoja
+            // 
+            uiLabelKomponentaBoja.AutoSize = true;
+            uiLabelKomponentaBoja.Location = new System.Drawing.Point(284, 195);
+            uiLabelKomponentaBoja.Name = "uiLabelKomponentaBoja";
+            uiLabelKomponentaBoja.Size = new System.Drawing.Size(40, 18);
+            uiLabelKomponentaBoja.TabIndex = 26;
+            uiLabelKomponentaBoja.Text = "boja:";
+            // 
+            // uiInputKomponentaBoja
+            // 
+            this.uiInputKomponentaBoja.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "boja", true));
+            this.uiInputKomponentaBoja.Location = new System.Drawing.Point(330, 192);
+            this.uiInputKomponentaBoja.Name = "uiInputKomponentaBoja";
+            this.uiInputKomponentaBoja.Size = new System.Drawing.Size(100, 24);
+            this.uiInputKomponentaBoja.TabIndex = 27;
+            // 
+            // uiLabelKomponentaKantiranost
+            // 
+            uiLabelKomponentaKantiranost.AutoSize = true;
+            uiLabelKomponentaKantiranost.Location = new System.Drawing.Point(239, 225);
+            uiLabelKomponentaKantiranost.Name = "uiLabelKomponentaKantiranost";
+            uiLabelKomponentaKantiranost.Size = new System.Drawing.Size(85, 18);
+            uiLabelKomponentaKantiranost.TabIndex = 27;
+            uiLabelKomponentaKantiranost.Text = "kantiranost:";
+            // 
+            // uiInputKomponentaKantiranost
+            // 
+            this.uiInputKomponentaKantiranost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "kantiranost", true));
+            this.uiInputKomponentaKantiranost.Location = new System.Drawing.Point(330, 222);
+            this.uiInputKomponentaKantiranost.Name = "uiInputKomponentaKantiranost";
+            this.uiInputKomponentaKantiranost.Size = new System.Drawing.Size(100, 24);
+            this.uiInputKomponentaKantiranost.TabIndex = 28;
+            // 
             // uiDodajDjeloveUProizvod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(532, 373);
-            this.Controls.Add(this.uiActionOdaberiUloga);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(materijalLabel);
-            this.Controls.Add(this.uiInputDioMaterijal);
-            this.Controls.Add(slikaLabel);
-            this.Controls.Add(this.uiInputDioSlika);
-            this.Controls.Add(visinaLabel);
-            this.Controls.Add(this.uiInputDioVisina);
-            this.Controls.Add(sirinaLabel);
-            this.Controls.Add(this.uiInputDioŠirina);
-            this.Controls.Add(duljinaLabel);
-            this.Controls.Add(this.uiInputDioDužina);
+            this.Controls.Add(uiLabelKomponentaKantiranost);
+            this.Controls.Add(this.uiInputKomponentaKantiranost);
+            this.Controls.Add(uiLabelKomponentaBoja);
+            this.Controls.Add(this.uiInputKomponentaBoja);
+            this.Controls.Add(uiLabelKomponentaKolicina);
+            this.Controls.Add(this.uiInputKomponentaKolicina);
             this.Controls.Add(nazivLabel1);
+            this.Controls.Add(this.uiOutputDioNaziv);
+            this.Controls.Add(iDLabel1);
+            this.Controls.Add(this.uiInputDioID);
+            this.Controls.Add(this.uiActionOdaberiUloga);
+            this.Controls.Add(this.uiInputOdabirTipaUnosaDijela);
+            this.Controls.Add(uiLabelDioMaterijal);
+            this.Controls.Add(this.uiInputDioMaterijal);
+            this.Controls.Add(uiLabelDioSlika);
+            this.Controls.Add(this.uiInputDioSlika);
+            this.Controls.Add(uiLabelDioVisina);
+            this.Controls.Add(this.uiInputDioVisina);
+            this.Controls.Add(uiLabelDioSirina);
+            this.Controls.Add(this.uiInputDioŠirina);
+            this.Controls.Add(uiLabelDioDuljina);
+            this.Controls.Add(this.uiInputDioDužina);
+            this.Controls.Add(uiLabelDioNaziv);
             this.Controls.Add(this.uiInputDioNaziv);
             this.Controls.Add(nazivLabel);
             this.Controls.Add(this.uiOutputUlogaNaziv);
@@ -316,6 +449,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaDijelaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,7 +472,14 @@
         private System.Windows.Forms.TextBox uiInputDioVisina;
         private System.Windows.Forms.TextBox uiInputDioSlika;
         private System.Windows.Forms.TextBox uiInputDioMaterijal;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox uiInputOdabirTipaUnosaDijela;
         private System.Windows.Forms.Button uiActionOdaberiUloga;
+        private System.Windows.Forms.TextBox uiInputDioID;
+        private System.Windows.Forms.TextBox uiOutputDioNaziv;
+        private System.Windows.Forms.BindingSource komponentaBindingSource;
+        private Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter komponentaTableAdapter;
+        private System.Windows.Forms.TextBox uiInputKomponentaKolicina;
+        private System.Windows.Forms.TextBox uiInputKomponentaBoja;
+        private System.Windows.Forms.TextBox uiInputKomponentaKantiranost;
     }
 }

@@ -13,14 +13,18 @@ namespace RashoApp.Proizvod
     public partial class uiDodajDjeloveUProizvod : Form
     {
         private int ProizvodID;
+        private int Duzina;
+        private int Sirina;
+        private int Dubina;
 
-        public uiDodajDjeloveUProizvod(int proizvodID)
+        public uiDodajDjeloveUProizvod(int proizvodID, int duzina, int sirina, int dubina)
         {
             InitializeComponent();
 
             ProizvodID = proizvodID;
-
-            uiOutputUlogaNaziv.Text = ProizvodID.ToString();
+            Duzina = duzina;
+            Sirina = sirina;
+            Dubina = dubina;
         }
 
         private void SpremiPromjene()
@@ -33,6 +37,8 @@ namespace RashoApp.Proizvod
 
         private void uiDodajDjeloveUProizvod_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Komponenta' table. You can move, or remove it, as needed.
+            //this.komponentaTableAdapter.Fill(this.baza18043_DBDataSet.Komponenta);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Dio' table. You can move, or remove it, as needed.
             //this.dioTableAdapter.Fill(this.baza18043_DBDataSet.Dio);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.UlogaDijela' table. You can move, or remove it, as needed.
@@ -51,5 +57,41 @@ namespace RashoApp.Proizvod
             uiInputUlogaID.Text = id;
             uiOutputUlogaNaziv.Text = naziv;
         }
+
+        private void uiInputOdabirTipaUnosaDijela_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(uiInputOdabirTipaUnosaDijela.SelectedIndex == 0)
+            {
+                uiInputDioNaziv.Visible = true;
+                uiInputDioDužina.Visible = true;
+                uiInputDioŠirina.Visible = true;
+                uiInputDioVisina.Visible = true;
+                uiInputDioSlika.Visible = true;
+                uiInputDioMaterijal.Visible = true;
+
+                uiInputDioID.Visible = false;
+                uiOutputDioNaziv.Visible = false;                
+            }
+
+            else if (uiInputOdabirTipaUnosaDijela.SelectedIndex == 1)
+            {
+                uiInputDioNaziv.Visible = false;
+                uiInputDioDužina.Visible = false;
+                uiInputDioŠirina.Visible = false;
+                uiInputDioVisina.Visible = false;
+                uiInputDioSlika.Visible = false;
+                uiInputDioMaterijal.Visible = false;
+
+
+                uiInputDioID.Visible = true;
+                uiOutputDioNaziv.Visible = true;
+            }
+            else
+            {
+                uiActionDalje.Visible = false;
+            }
+        }
+
+      
     }
 }
