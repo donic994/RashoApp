@@ -37,13 +37,13 @@ namespace RashoApp.Proizvod
 
         private void uiActionDodajNoviProizvod_Click(object sender, EventArgs e)
         {
-
+            Proizvod.uiDodajProizvod frm = new uiDodajProizvod();
+            frm.ShowDialog();
         }
 
         private void uiActionUrediProizvod_Click(object sender, EventArgs e)
         {
-            Proizvod.uiDodajProizvod frm = new uiDodajProizvod();
-            frm.ShowDialog();
+
         }
 
         private void uiActionObrišiProizvod_Click(object sender, EventArgs e)

@@ -85,87 +85,87 @@
             // duljinaLabel
             // 
             duljinaLabel.AutoSize = true;
-            duljinaLabel.Location = new System.Drawing.Point(119, 87);
+            duljinaLabel.Location = new System.Drawing.Point(134, 98);
             duljinaLabel.Name = "duljinaLabel";
-            duljinaLabel.Size = new System.Drawing.Size(56, 17);
+            duljinaLabel.Size = new System.Drawing.Size(58, 18);
             duljinaLabel.TabIndex = 1;
             duljinaLabel.Text = "Dužina:";
             // 
             // uiInputDužina
             // 
             this.uiInputDužina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "duljina", true));
-            this.uiInputDužina.Location = new System.Drawing.Point(181, 84);
+            this.uiInputDužina.Location = new System.Drawing.Point(204, 94);
             this.uiInputDužina.Name = "uiInputDužina";
-            this.uiInputDužina.Size = new System.Drawing.Size(100, 22);
-            this.uiInputDužina.TabIndex = 2;
+            this.uiInputDužina.Size = new System.Drawing.Size(112, 24);
+            this.uiInputDužina.TabIndex = 3;
             // 
             // sirinaLabel
             // 
             sirinaLabel.AutoSize = true;
-            sirinaLabel.Location = new System.Drawing.Point(127, 115);
+            sirinaLabel.Location = new System.Drawing.Point(143, 129);
             sirinaLabel.Name = "sirinaLabel";
-            sirinaLabel.Size = new System.Drawing.Size(48, 17);
+            sirinaLabel.Size = new System.Drawing.Size(49, 18);
             sirinaLabel.TabIndex = 3;
             sirinaLabel.Text = "Širina:";
             // 
             // uiInputŠirina
             // 
             this.uiInputŠirina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "sirina", true));
-            this.uiInputŠirina.Location = new System.Drawing.Point(181, 112);
+            this.uiInputŠirina.Location = new System.Drawing.Point(204, 126);
             this.uiInputŠirina.Name = "uiInputŠirina";
-            this.uiInputŠirina.Size = new System.Drawing.Size(100, 22);
+            this.uiInputŠirina.Size = new System.Drawing.Size(112, 24);
             this.uiInputŠirina.TabIndex = 4;
             // 
             // visinaLabel
             // 
             visinaLabel.AutoSize = true;
-            visinaLabel.Location = new System.Drawing.Point(118, 143);
+            visinaLabel.Location = new System.Drawing.Point(133, 161);
             visinaLabel.Name = "visinaLabel";
-            visinaLabel.Size = new System.Drawing.Size(57, 17);
+            visinaLabel.Size = new System.Drawing.Size(58, 18);
             visinaLabel.TabIndex = 5;
             visinaLabel.Text = "Dubina:";
             // 
             // uiInputDubina
             // 
             this.uiInputDubina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "visina", true));
-            this.uiInputDubina.Location = new System.Drawing.Point(181, 140);
+            this.uiInputDubina.Location = new System.Drawing.Point(204, 158);
             this.uiInputDubina.Name = "uiInputDubina";
-            this.uiInputDubina.Size = new System.Drawing.Size(100, 22);
+            this.uiInputDubina.Size = new System.Drawing.Size(112, 24);
             this.uiInputDubina.TabIndex = 6;
             // 
             // slikaLabel
             // 
             slikaLabel.AutoSize = true;
-            slikaLabel.Location = new System.Drawing.Point(133, 171);
+            slikaLabel.Location = new System.Drawing.Point(150, 192);
             slikaLabel.Name = "slikaLabel";
-            slikaLabel.Size = new System.Drawing.Size(42, 17);
+            slikaLabel.Size = new System.Drawing.Size(44, 18);
             slikaLabel.TabIndex = 7;
             slikaLabel.Text = "Slika:";
             // 
             // uiInputSlika
             // 
             this.uiInputSlika.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "slika", true));
-            this.uiInputSlika.Location = new System.Drawing.Point(181, 168);
+            this.uiInputSlika.Location = new System.Drawing.Point(204, 189);
             this.uiInputSlika.Name = "uiInputSlika";
-            this.uiInputSlika.Size = new System.Drawing.Size(100, 22);
+            this.uiInputSlika.Size = new System.Drawing.Size(112, 24);
             this.uiInputSlika.TabIndex = 8;
             // 
             // nazivLabel
             // 
             nazivLabel.AutoSize = true;
-            nazivLabel.Location = new System.Drawing.Point(128, 59);
+            nazivLabel.Location = new System.Drawing.Point(144, 66);
             nazivLabel.Name = "nazivLabel";
-            nazivLabel.Size = new System.Drawing.Size(47, 17);
+            nazivLabel.Size = new System.Drawing.Size(49, 18);
             nazivLabel.TabIndex = 9;
             nazivLabel.Text = "Naziv:";
             // 
             // uiInputNaziv
             // 
             this.uiInputNaziv.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "naziv", true));
-            this.uiInputNaziv.Location = new System.Drawing.Point(181, 56);
+            this.uiInputNaziv.Location = new System.Drawing.Point(204, 63);
             this.uiInputNaziv.Name = "uiInputNaziv";
-            this.uiInputNaziv.Size = new System.Drawing.Size(100, 22);
-            this.uiInputNaziv.TabIndex = 10;
+            this.uiInputNaziv.Size = new System.Drawing.Size(112, 24);
+            this.uiInputNaziv.TabIndex = 2;
             // 
             // uiActionDalje
             // 
@@ -173,19 +173,20 @@
             this.uiActionDalje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionDalje.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionDalje.ForeColor = System.Drawing.Color.White;
-            this.uiActionDalje.Location = new System.Drawing.Point(392, 317);
+            this.uiActionDalje.Location = new System.Drawing.Point(385, 310);
             this.uiActionDalje.Name = "uiActionDalje";
-            this.uiActionDalje.Size = new System.Drawing.Size(120, 45);
+            this.uiActionDalje.Size = new System.Drawing.Size(135, 51);
             this.uiActionDalje.TabIndex = 11;
             this.uiActionDalje.Text = "DALJE";
             this.uiActionDalje.UseVisualStyleBackColor = false;
+            this.uiActionDalje.Click += new System.EventHandler(this.uiActionDalje_Click);
             // 
             // uiDodajProizvod
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(522, 373);
+            this.ClientSize = new System.Drawing.Size(532, 373);
             this.Controls.Add(this.uiActionDalje);
             this.Controls.Add(nazivLabel);
             this.Controls.Add(this.uiInputNaziv);
@@ -197,6 +198,7 @@
             this.Controls.Add(this.uiInputŠirina);
             this.Controls.Add(duljinaLabel);
             this.Controls.Add(this.uiInputDužina);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "uiDodajProizvod";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

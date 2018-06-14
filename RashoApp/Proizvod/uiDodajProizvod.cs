@@ -17,7 +17,7 @@ namespace RashoApp.Proizvod
             InitializeComponent();
         }
 
-        private void proizvodBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void SpremiPromjene()
         {
             this.Validate();
             this.proizvodBindingSource.EndEdit();
@@ -28,8 +28,22 @@ namespace RashoApp.Proizvod
         private void uiDodajProizvod_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Proizvod' table. You can move, or remove it, as needed.
-            this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
+            //this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
 
+        }
+
+        private void uiActionDalje_Click(object sender, EventArgs e)
+        {
+            string naziv = uiInputNaziv.Text;
+            int duzina = int.Parse(uiInputDužina.Text.ToString());
+            int sirina = int.Parse(uiInputŠirina.Text.ToString());
+            int dubina = int.Parse(uiInputDubina.Text.ToString());
+            string slika = uiInputSlika.Text;
+
+            Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
+            noviDioTableAdapter.Insert(duzina, sirina, dubina, slika, naziv);
+
+            SpremiPromjene();
         }
     }
 }
