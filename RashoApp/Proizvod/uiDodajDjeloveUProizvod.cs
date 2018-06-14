@@ -123,7 +123,7 @@ namespace RashoApp.Proizvod
             {
                 DodajDio();
                 int ulogaID = int.Parse(uiInputUlogaID.Text.ToString());
-                int dioID = int.Parse(uiInputDioID.Text.ToString());
+                int dioID = int.Parse(this.dioTableAdapter.VratiZadnjiIDDio().ToString());
                 DodajKomponentu(ulogaID, dioID, ProizvodID);
             }
             if (uiInputOdabirTipaUnosaDijela.SelectedIndex == 1)
@@ -132,6 +132,7 @@ namespace RashoApp.Proizvod
                 int ulogaID = int.Parse(uiInputUlogaID.Text.ToString());
                 DodajKomponentu(ulogaID, dioID, ProizvodID);
             }
+            PopuniTablicu();
         }
 
         private void DajPrijedlogDimenzija()
@@ -145,6 +146,9 @@ namespace RashoApp.Proizvod
                         uiInputDioŠirina.Text = Sirina.ToString();
                         uiInputDioDebljina.Text = standardnaDebljinaDaske.ToString();
                         uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
+                        uiInputKomponentaKolicina.Text = "1";
+                        uiInputKomponentaBoja.Text = "Bijela";
+                        uiInputKomponentaKantiranost.Text = "Po širini i dužini";
                         break;
                     }
                 case "Bocna stranica":
@@ -154,7 +158,10 @@ namespace RashoApp.Proizvod
                         uiInputDioŠirina.Text = Dubina.ToString();
                         uiInputDioDebljina.Text = standardnaDebljinaDaske.ToString();
                         uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
-                        break;
+                        uiInputKomponentaKolicina.Text = "2";
+                        uiInputKomponentaBoja.Text = "Bijela";
+                        uiInputKomponentaKantiranost.Text = "Po širini i dužini";
+                        break;                        
                     }
                 case "Poledina":
                     {
@@ -163,6 +170,9 @@ namespace RashoApp.Proizvod
                         uiInputDioŠirina.Text = Sirina.ToString();
                         uiInputDioDebljina.Text = standardnaDebljinaPoledine.ToString();
                         uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
+                        uiInputKomponentaKolicina.Text = "1";
+                        uiInputKomponentaBoja.Text = "Bijela";
+                        uiInputKomponentaKantiranost.Text = " ";                        
                         break;
                     }
                 case "Polica":
@@ -172,6 +182,9 @@ namespace RashoApp.Proizvod
                         uiInputDioŠirina.Text = Sirina.ToString();
                         uiInputDioDebljina.Text = standardnaDebljinaDaske.ToString();
                         uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
+                        uiInputKomponentaKolicina.Text = "1";
+                        uiInputKomponentaBoja.Text = "Bijela";
+                        uiInputKomponentaKantiranost.Text = "Po širini jednostrano";
                         break;
                     }
                 case "Gornja/donja stranica":
@@ -181,6 +194,9 @@ namespace RashoApp.Proizvod
                         uiInputDioŠirina.Text = Sirina.ToString();
                         uiInputDioDebljina.Text = standardnaDebljinaDaske.ToString();
                         uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
+                        uiInputKomponentaKolicina.Text = "2";
+                        uiInputKomponentaBoja.Text = "Bijela";
+                        uiInputKomponentaKantiranost.Text = "Po širini i dužini";
                         break;
                     }
                 case "Prednja/zadnja stranica":
@@ -190,6 +206,9 @@ namespace RashoApp.Proizvod
                         uiInputDioŠirina.Text = Sirina.ToString();
                         uiInputDioDebljina.Text = standardnaDebljinaDaske.ToString();
                         uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
+                        uiInputKomponentaKolicina.Text = "2";
+                        uiInputKomponentaBoja.Text = "Bijela";
+                        uiInputKomponentaKantiranost.Text = "Po širini i dužini";
                         break;
                     }
 
@@ -225,6 +244,11 @@ namespace RashoApp.Proizvod
             noviKomponentaTableAdapter.Insert(kolicina, boja, kantiranost, uloga, dio, proizvod);
 
             SpremiPromjene();
+        }
+
+        public void PopuniTablicu()
+        {
+            this.pogledDjelovaPoProoizvoduTableAdapter.FillByProizvodID(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu, ProizvodID);
         }
     }
 }
