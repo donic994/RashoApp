@@ -44,6 +44,12 @@ namespace RashoApp.Proizvod
             noviDioTableAdapter.Insert(duzina, sirina, dubina, slika, naziv);
 
             SpremiPromjene();
+
+            int proizvodID = 1;
+
+            this.Close();
+            Proizvod.uiDodajDjeloveUProizvod frm = new uiDodajDjeloveUProizvod(proizvodID);
+            frm.ShowDialog();
         }
     }
 }

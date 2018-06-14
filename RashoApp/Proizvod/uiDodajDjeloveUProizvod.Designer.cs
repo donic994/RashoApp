@@ -53,6 +53,7 @@
             this.uiInputDioSlika = new System.Windows.Forms.TextBox();
             this.uiInputDioMaterijal = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.uiActionOdaberiUloga = new System.Windows.Forms.Button();
             iDLabel = new System.Windows.Forms.Label();
             nazivLabel = new System.Windows.Forms.Label();
             nazivLabel1 = new System.Windows.Forms.Label();
@@ -78,11 +79,11 @@
             // nazivLabel
             // 
             nazivLabel.AutoSize = true;
-            nazivLabel.Location = new System.Drawing.Point(42, 60);
+            nazivLabel.Location = new System.Drawing.Point(37, 59);
             nazivLabel.Name = "nazivLabel";
-            nazivLabel.Size = new System.Drawing.Size(46, 18);
+            nazivLabel.Size = new System.Drawing.Size(51, 18);
             nazivLabel.TabIndex = 14;
-            nazivLabel.Text = "naziv:";
+            nazivLabel.Text = "Uloga:";
             // 
             // nazivLabel1
             // 
@@ -266,12 +267,28 @@
             this.comboBox1.Size = new System.Drawing.Size(149, 26);
             this.comboBox1.TabIndex = 22;
             // 
+            // uiActionOdaberiUloga
+            // 
+            this.uiActionOdaberiUloga.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionOdaberiUloga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionOdaberiUloga.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiActionOdaberiUloga.ForeColor = System.Drawing.Color.White;
+            this.uiActionOdaberiUloga.Location = new System.Drawing.Point(197, 57);
+            this.uiActionOdaberiUloga.Margin = new System.Windows.Forms.Padding(0);
+            this.uiActionOdaberiUloga.Name = "uiActionOdaberiUloga";
+            this.uiActionOdaberiUloga.Size = new System.Drawing.Size(30, 24);
+            this.uiActionOdaberiUloga.TabIndex = 23;
+            this.uiActionOdaberiUloga.Text = "+";
+            this.uiActionOdaberiUloga.UseVisualStyleBackColor = false;
+            this.uiActionOdaberiUloga.Click += new System.EventHandler(this.uiActionOdaberiUloga_Click);
+            // 
             // uiDodajDjeloveUProizvod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(593, 381);
+            this.ClientSize = new System.Drawing.Size(532, 373);
+            this.Controls.Add(this.uiActionOdaberiUloga);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(materijalLabel);
             this.Controls.Add(this.uiInputDioMaterijal);
@@ -322,5 +339,6 @@
         private System.Windows.Forms.TextBox uiInputDioSlika;
         private System.Windows.Forms.TextBox uiInputDioMaterijal;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button uiActionOdaberiUloga;
     }
 }

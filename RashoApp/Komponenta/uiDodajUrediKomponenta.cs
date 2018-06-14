@@ -83,7 +83,7 @@ namespace RashoApp.Komponenta
 
         private void uiActionOdaberiUloga_Click(object sender, EventArgs e)
         {
-            UlogaDijela.uiOdaberiUlogaDijela frm = new UlogaDijela.uiOdaberiUlogaDijela();
+            UlogaDijela.uiOdaberiUlogaDijela frm = new UlogaDijela.uiOdaberiUlogaDijela("komponenta");
             frm.ShowDialog();
         }
 

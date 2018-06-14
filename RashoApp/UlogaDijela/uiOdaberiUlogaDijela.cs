@@ -12,9 +12,11 @@ namespace RashoApp.UlogaDijela
 {
     public partial class uiOdaberiUlogaDijela : Form
     {
-        public uiOdaberiUlogaDijela()
+        string Kontrola;
+        public uiOdaberiUlogaDijela(string kontrola)
         {
             InitializeComponent();
+            Kontrola = kontrola;
         }
 
         private void ulogaDijelaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -37,7 +39,16 @@ namespace RashoApp.UlogaDijela
             string id = uiOutputDataTableUlogaDijela.SelectedCells[0].Value.ToString();
             string naziv = uiOutputDataTableUlogaDijela.SelectedCells[1].Value.ToString();
 
-            Application.OpenForms.OfType<Komponenta.uiDodajUrediKomponenta>().Single().PostaviVrijednostOdabranogUlogaDijela(id, naziv);
+            if (Kontrola == "komponenta")
+            {
+                Application.OpenForms.OfType<Komponenta.uiDodajUrediKomponenta>().Single().PostaviVrijednostOdabranogUlogaDijela(id, naziv);
+            }
+            if(Kontrola == "proizvod")
+            {
+
+                Application.OpenForms.OfType<Proizvod.uiDodajDjeloveUProizvod>().Single().PostaviVrijednostiOdabraneUlogeDijelova(id, naziv);
+
+            }
             this.Close();
         }
     }
