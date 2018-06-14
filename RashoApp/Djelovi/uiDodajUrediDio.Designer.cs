@@ -48,6 +48,7 @@
             this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
             this.uiActionSpremiDio = new System.Windows.Forms.Button();
             this.uiLabelUpozorenje = new System.Windows.Forms.Label();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             nazivLabel = new System.Windows.Forms.Label();
             duljinaLabel = new System.Windows.Forms.Label();
             sirinaLabel = new System.Windows.Forms.Label();
@@ -257,6 +258,30 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+
+            //
+            //HelpProvider
+            //
+            this.helpProvider1.SetShowHelp(this.uiInputDioNaziv, true);
+            this.helpProvider1.SetHelpString(this.uiInputDioNaziv, "Unesite naziv novog dijela");
+
+            this.helpProvider1.SetShowHelp(this.uiInputDioDuljina, true);
+            this.helpProvider1.SetHelpString(this.uiInputDioDuljina, "Unesite duljinu u mm");
+
+            this.helpProvider1.SetShowHelp(this.uiInputDioŠirina, true);
+            this.helpProvider1.SetHelpString(this.uiInputDioŠirina, "Unesite širinu u mm");
+
+            this.helpProvider1.SetShowHelp(this.uiInputDioVisina, true);
+            this.helpProvider1.SetHelpString(this.uiInputDioVisina, "Unesite debljinu u mm");
+
+            this.helpProvider1.SetShowHelp(this.uiInputDioSlika, true);
+            this.helpProvider1.SetHelpString(this.uiInputDioSlika, "Odaberite sliku");
+
+            this.helpProvider1.SetShowHelp(this.uiInputDioMaterijal, true);
+            this.helpProvider1.SetHelpString(this.uiInputDioMaterijal, "Unesite materijal");
+
+
+
         }
 
         #endregion
@@ -273,5 +298,6 @@
         private Baza18043_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button uiActionSpremiDio;
         private System.Windows.Forms.Label uiLabelUpozorenje;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
