@@ -34,7 +34,7 @@
             System.Windows.Forms.Label uiLabelDioNaziv;
             System.Windows.Forms.Label uiLabelDioDuljina;
             System.Windows.Forms.Label uiLabelDioSirina;
-            System.Windows.Forms.Label uiLabelDioVisina;
+            System.Windows.Forms.Label uiLabelDioDebljina;
             System.Windows.Forms.Label uiLabelDioSlika;
             System.Windows.Forms.Label uiLabelDioMaterijal;
             System.Windows.Forms.Label iDLabel1;
@@ -54,7 +54,7 @@
             this.uiInputDioNaziv = new System.Windows.Forms.TextBox();
             this.uiInputDioDužina = new System.Windows.Forms.TextBox();
             this.uiInputDioŠirina = new System.Windows.Forms.TextBox();
-            this.uiInputDioVisina = new System.Windows.Forms.TextBox();
+            this.uiInputDioDebljina = new System.Windows.Forms.TextBox();
             this.uiInputDioSlika = new System.Windows.Forms.TextBox();
             this.uiInputDioMaterijal = new System.Windows.Forms.TextBox();
             this.uiInputOdabirTipaUnosaDijela = new System.Windows.Forms.ComboBox();
@@ -66,12 +66,13 @@
             this.uiInputKomponentaKolicina = new System.Windows.Forms.TextBox();
             this.uiInputKomponentaBoja = new System.Windows.Forms.TextBox();
             this.uiInputKomponentaKantiranost = new System.Windows.Forms.TextBox();
+            this.uiActionDodaj = new System.Windows.Forms.Button();
             iDLabel = new System.Windows.Forms.Label();
             nazivLabel = new System.Windows.Forms.Label();
             uiLabelDioNaziv = new System.Windows.Forms.Label();
             uiLabelDioDuljina = new System.Windows.Forms.Label();
             uiLabelDioSirina = new System.Windows.Forms.Label();
-            uiLabelDioVisina = new System.Windows.Forms.Label();
+            uiLabelDioDebljina = new System.Windows.Forms.Label();
             uiLabelDioSlika = new System.Windows.Forms.Label();
             uiLabelDioMaterijal = new System.Windows.Forms.Label();
             iDLabel1 = new System.Windows.Forms.Label();
@@ -130,14 +131,14 @@
             uiLabelDioSirina.TabIndex = 17;
             uiLabelDioSirina.Text = "sirina:";
             // 
-            // uiLabelDioVisina
+            // uiLabelDioDebljina
             // 
-            uiLabelDioVisina.AutoSize = true;
-            uiLabelDioVisina.Location = new System.Drawing.Point(39, 255);
-            uiLabelDioVisina.Name = "uiLabelDioVisina";
-            uiLabelDioVisina.Size = new System.Drawing.Size(49, 18);
-            uiLabelDioVisina.TabIndex = 18;
-            uiLabelDioVisina.Text = "visina:";
+            uiLabelDioDebljina.AutoSize = true;
+            uiLabelDioDebljina.Location = new System.Drawing.Point(24, 255);
+            uiLabelDioDebljina.Name = "uiLabelDioDebljina";
+            uiLabelDioDebljina.Size = new System.Drawing.Size(64, 18);
+            uiLabelDioDebljina.TabIndex = 18;
+            uiLabelDioDebljina.Text = "Debljina:";
             // 
             // uiLabelDioSlika
             // 
@@ -175,13 +176,40 @@
             nazivLabel1.TabIndex = 24;
             nazivLabel1.Text = "Dio:";
             // 
+            // uiLabelKomponentaKolicina
+            // 
+            uiLabelKomponentaKolicina.AutoSize = true;
+            uiLabelKomponentaKolicina.Location = new System.Drawing.Point(262, 165);
+            uiLabelKomponentaKolicina.Name = "uiLabelKomponentaKolicina";
+            uiLabelKomponentaKolicina.Size = new System.Drawing.Size(62, 18);
+            uiLabelKomponentaKolicina.TabIndex = 25;
+            uiLabelKomponentaKolicina.Text = "kolicina:";
+            // 
+            // uiLabelKomponentaBoja
+            // 
+            uiLabelKomponentaBoja.AutoSize = true;
+            uiLabelKomponentaBoja.Location = new System.Drawing.Point(284, 195);
+            uiLabelKomponentaBoja.Name = "uiLabelKomponentaBoja";
+            uiLabelKomponentaBoja.Size = new System.Drawing.Size(40, 18);
+            uiLabelKomponentaBoja.TabIndex = 26;
+            uiLabelKomponentaBoja.Text = "boja:";
+            // 
+            // uiLabelKomponentaKantiranost
+            // 
+            uiLabelKomponentaKantiranost.AutoSize = true;
+            uiLabelKomponentaKantiranost.Location = new System.Drawing.Point(239, 225);
+            uiLabelKomponentaKantiranost.Name = "uiLabelKomponentaKantiranost";
+            uiLabelKomponentaKantiranost.Size = new System.Drawing.Size(85, 18);
+            uiLabelKomponentaKantiranost.TabIndex = 27;
+            uiLabelKomponentaKantiranost.Text = "kantiranost:";
+            // 
             // uiActionDalje
             // 
             this.uiActionDalje.BackColor = System.Drawing.Color.DarkTurquoise;
             this.uiActionDalje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionDalje.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionDalje.ForeColor = System.Drawing.Color.White;
-            this.uiActionDalje.Location = new System.Drawing.Point(385, 310);
+            this.uiActionDalje.Location = new System.Drawing.Point(385, 510);
             this.uiActionDalje.Name = "uiActionDalje";
             this.uiActionDalje.Size = new System.Drawing.Size(135, 51);
             this.uiActionDalje.TabIndex = 12;
@@ -271,14 +299,14 @@
             this.uiInputDioŠirina.TabIndex = 18;
             this.uiInputDioŠirina.Visible = false;
             // 
-            // uiInputDioVisina
+            // uiInputDioDebljina
             // 
-            this.uiInputDioVisina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dioBindingSource, "visina", true));
-            this.uiInputDioVisina.Location = new System.Drawing.Point(94, 252);
-            this.uiInputDioVisina.Name = "uiInputDioVisina";
-            this.uiInputDioVisina.Size = new System.Drawing.Size(100, 24);
-            this.uiInputDioVisina.TabIndex = 19;
-            this.uiInputDioVisina.Visible = false;
+            this.uiInputDioDebljina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dioBindingSource, "visina", true));
+            this.uiInputDioDebljina.Location = new System.Drawing.Point(94, 252);
+            this.uiInputDioDebljina.Name = "uiInputDioDebljina";
+            this.uiInputDioDebljina.Size = new System.Drawing.Size(100, 24);
+            this.uiInputDioDebljina.TabIndex = 19;
+            this.uiInputDioDebljina.Visible = false;
             // 
             // uiInputDioSlika
             // 
@@ -354,15 +382,6 @@
             // 
             this.komponentaTableAdapter.ClearBeforeFill = true;
             // 
-            // uiLabelKomponentaKolicina
-            // 
-            uiLabelKomponentaKolicina.AutoSize = true;
-            uiLabelKomponentaKolicina.Location = new System.Drawing.Point(262, 165);
-            uiLabelKomponentaKolicina.Name = "uiLabelKomponentaKolicina";
-            uiLabelKomponentaKolicina.Size = new System.Drawing.Size(62, 18);
-            uiLabelKomponentaKolicina.TabIndex = 25;
-            uiLabelKomponentaKolicina.Text = "kolicina:";
-            // 
             // uiInputKomponentaKolicina
             // 
             this.uiInputKomponentaKolicina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "kolicina", true));
@@ -370,15 +389,6 @@
             this.uiInputKomponentaKolicina.Name = "uiInputKomponentaKolicina";
             this.uiInputKomponentaKolicina.Size = new System.Drawing.Size(100, 24);
             this.uiInputKomponentaKolicina.TabIndex = 26;
-            // 
-            // uiLabelKomponentaBoja
-            // 
-            uiLabelKomponentaBoja.AutoSize = true;
-            uiLabelKomponentaBoja.Location = new System.Drawing.Point(284, 195);
-            uiLabelKomponentaBoja.Name = "uiLabelKomponentaBoja";
-            uiLabelKomponentaBoja.Size = new System.Drawing.Size(40, 18);
-            uiLabelKomponentaBoja.TabIndex = 26;
-            uiLabelKomponentaBoja.Text = "boja:";
             // 
             // uiInputKomponentaBoja
             // 
@@ -388,15 +398,6 @@
             this.uiInputKomponentaBoja.Size = new System.Drawing.Size(100, 24);
             this.uiInputKomponentaBoja.TabIndex = 27;
             // 
-            // uiLabelKomponentaKantiranost
-            // 
-            uiLabelKomponentaKantiranost.AutoSize = true;
-            uiLabelKomponentaKantiranost.Location = new System.Drawing.Point(239, 225);
-            uiLabelKomponentaKantiranost.Name = "uiLabelKomponentaKantiranost";
-            uiLabelKomponentaKantiranost.Size = new System.Drawing.Size(85, 18);
-            uiLabelKomponentaKantiranost.TabIndex = 27;
-            uiLabelKomponentaKantiranost.Text = "kantiranost:";
-            // 
             // uiInputKomponentaKantiranost
             // 
             this.uiInputKomponentaKantiranost.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.komponentaBindingSource, "kantiranost", true));
@@ -405,12 +406,27 @@
             this.uiInputKomponentaKantiranost.Size = new System.Drawing.Size(100, 24);
             this.uiInputKomponentaKantiranost.TabIndex = 28;
             // 
+            // uiActionDodaj
+            // 
+            this.uiActionDodaj.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionDodaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiActionDodaj.ForeColor = System.Drawing.Color.White;
+            this.uiActionDodaj.Location = new System.Drawing.Point(385, 282);
+            this.uiActionDodaj.Name = "uiActionDodaj";
+            this.uiActionDodaj.Size = new System.Drawing.Size(135, 51);
+            this.uiActionDodaj.TabIndex = 29;
+            this.uiActionDodaj.Text = "DODAJ";
+            this.uiActionDodaj.UseVisualStyleBackColor = false;
+            this.uiActionDodaj.Click += new System.EventHandler(this.uiActionDodaj_Click);
+            // 
             // uiDodajDjeloveUProizvod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(532, 373);
+            this.ClientSize = new System.Drawing.Size(532, 573);
+            this.Controls.Add(this.uiActionDodaj);
             this.Controls.Add(uiLabelKomponentaKantiranost);
             this.Controls.Add(this.uiInputKomponentaKantiranost);
             this.Controls.Add(uiLabelKomponentaBoja);
@@ -427,8 +443,8 @@
             this.Controls.Add(this.uiInputDioMaterijal);
             this.Controls.Add(uiLabelDioSlika);
             this.Controls.Add(this.uiInputDioSlika);
-            this.Controls.Add(uiLabelDioVisina);
-            this.Controls.Add(this.uiInputDioVisina);
+            this.Controls.Add(uiLabelDioDebljina);
+            this.Controls.Add(this.uiInputDioDebljina);
             this.Controls.Add(uiLabelDioSirina);
             this.Controls.Add(this.uiInputDioŠirina);
             this.Controls.Add(uiLabelDioDuljina);
@@ -469,7 +485,7 @@
         private System.Windows.Forms.TextBox uiInputDioNaziv;
         private System.Windows.Forms.TextBox uiInputDioDužina;
         private System.Windows.Forms.TextBox uiInputDioŠirina;
-        private System.Windows.Forms.TextBox uiInputDioVisina;
+        private System.Windows.Forms.TextBox uiInputDioDebljina;
         private System.Windows.Forms.TextBox uiInputDioSlika;
         private System.Windows.Forms.TextBox uiInputDioMaterijal;
         private System.Windows.Forms.ComboBox uiInputOdabirTipaUnosaDijela;
@@ -481,5 +497,6 @@
         private System.Windows.Forms.TextBox uiInputKomponentaKolicina;
         private System.Windows.Forms.TextBox uiInputKomponentaBoja;
         private System.Windows.Forms.TextBox uiInputKomponentaKantiranost;
+        private System.Windows.Forms.Button uiActionDodaj;
     }
 }

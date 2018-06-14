@@ -17,6 +17,11 @@ namespace RashoApp.Proizvod
         private int Sirina;
         private int Dubina;
 
+        private int standardnaDebljinaDaske = 15;
+        private int standardnaDebljinaPoledine = 6;
+        private string prijedlogZaNazivDaska = "Daska";
+        private string prijeglodZaMaterijalDaska = "Iver";
+
         public uiDodajDjeloveUProizvod(int proizvodID, int duzina, int sirina, int dubina)
         {
             InitializeComponent();
@@ -50,6 +55,7 @@ namespace RashoApp.Proizvod
         {
             UlogaDijela.uiOdaberiUlogaDijela frm = new UlogaDijela.uiOdaberiUlogaDijela("proizvod");
             frm.ShowDialog();
+            DajPrijedlogDimenzija();
         }
 
         public void PostaviVrijednostiOdabraneUlogeDijelova(string id, string naziv)
@@ -65,7 +71,7 @@ namespace RashoApp.Proizvod
                 uiInputDioNaziv.Visible = true;
                 uiInputDioDužina.Visible = true;
                 uiInputDioŠirina.Visible = true;
-                uiInputDioVisina.Visible = true;
+                uiInputDioDebljina.Visible = true;
                 uiInputDioSlika.Visible = true;
                 uiInputDioMaterijal.Visible = true;
 
@@ -78,7 +84,7 @@ namespace RashoApp.Proizvod
                 uiInputDioNaziv.Visible = false;
                 uiInputDioDužina.Visible = false;
                 uiInputDioŠirina.Visible = false;
-                uiInputDioVisina.Visible = false;
+                uiInputDioDebljina.Visible = false;
                 uiInputDioSlika.Visible = false;
                 uiInputDioMaterijal.Visible = false;
 
@@ -92,6 +98,71 @@ namespace RashoApp.Proizvod
             }
         }
 
-      
+        private void uiActionDodaj_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DajPrijedlogDimenzija()
+        {
+            switch (uiOutputUlogaNaziv.Text)
+            {
+                case "Vrata":
+                    {
+                        uiInputDioNaziv.Text = prijedlogZaNazivDaska;
+                        uiInputDioDužina.Text = Duzina.ToString();
+                        uiInputDioŠirina.Text = Sirina.ToString();
+                        uiInputDioDebljina.Text = standardnaDebljinaDaske.ToString();
+                        uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
+                        break;
+                    }
+                case "Bocna stranica":
+                    {
+                        uiInputDioNaziv.Text = prijedlogZaNazivDaska;
+                        uiInputDioDužina.Text = Duzina.ToString();
+                        uiInputDioŠirina.Text = Dubina.ToString();
+                        uiInputDioDebljina.Text = standardnaDebljinaDaske.ToString();
+                        uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
+                        break;
+                    }
+                case "Poledina":
+                    {
+                        uiInputDioNaziv.Text = prijedlogZaNazivDaska;
+                        uiInputDioDužina.Text = Duzina.ToString();
+                        uiInputDioŠirina.Text = Sirina.ToString();
+                        uiInputDioDebljina.Text = standardnaDebljinaPoledine.ToString();
+                        uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
+                        break;
+                    }
+                case "Polica":
+                    {
+                        uiInputDioNaziv.Text = prijedlogZaNazivDaska;
+                        uiInputDioDužina.Text = Dubina.ToString();
+                        uiInputDioŠirina.Text = Sirina.ToString();
+                        uiInputDioDebljina.Text = standardnaDebljinaDaske.ToString();
+                        uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
+                        break;
+                    }
+                case "Gornja/donja stranica":
+                    {
+                        uiInputDioNaziv.Text = prijedlogZaNazivDaska;
+                        uiInputDioDužina.Text = Dubina.ToString();
+                        uiInputDioŠirina.Text = Sirina.ToString();
+                        uiInputDioDebljina.Text = standardnaDebljinaDaske.ToString();
+                        uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
+                        break;
+                    }
+                case "Prednja/zadnja stranica":
+                    {
+                        uiInputDioNaziv.Text = prijedlogZaNazivDaska;
+                        uiInputDioDužina.Text = Duzina.ToString();
+                        uiInputDioŠirina.Text = Sirina.ToString();
+                        uiInputDioDebljina.Text = standardnaDebljinaDaske.ToString();
+                        uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
+                        break;
+                    }
+
+            }
+        }
     }
 }
