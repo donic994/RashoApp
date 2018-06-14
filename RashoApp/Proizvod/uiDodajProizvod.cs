@@ -45,7 +45,7 @@ namespace RashoApp.Proizvod
 
             SpremiPromjene();
 
-            int proizvodID = 1;
+            int proizvodID = int.Parse(this.proizvodTableAdapter.VratiZadnjiIDProizvoda().ToString());
 
             this.Close();
             Proizvod.uiDodajDjeloveUProizvod frm = new uiDodajDjeloveUProizvod(proizvodID, duzina, sirina, dubina);

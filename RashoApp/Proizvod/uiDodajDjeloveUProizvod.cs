@@ -30,6 +30,7 @@ namespace RashoApp.Proizvod
             Duzina = duzina;
             Sirina = sirina;
             Dubina = dubina;
+            uiInputUlogaID.Text = ProizvodID.ToString();
         }
 
         private void SpremiPromjene()
@@ -91,7 +92,8 @@ namespace RashoApp.Proizvod
                 uiInputDioMaterijal.Visible = true;
 
                 uiInputDioID.Visible = false;
-                uiOutputDioNaziv.Visible = false;                
+                uiOutputDioNaziv.Visible = false;
+                uiActionOdaberiPostojećiDio.Visible = false;               
             }
 
             else if (uiInputOdabirTipaUnosaDijela.SelectedIndex == 1)
@@ -106,6 +108,7 @@ namespace RashoApp.Proizvod
 
                 uiInputDioID.Visible = true;
                 uiOutputDioNaziv.Visible = true;
+                uiActionOdaberiPostojećiDio.Visible = false;
             }
             else
             {
@@ -115,7 +118,13 @@ namespace RashoApp.Proizvod
 
         private void uiActionDodaj_Click(object sender, EventArgs e)
         {
-
+            if(uiInputOdabirTipaUnosaDijela.SelectedIndex == 0)
+            {
+                DodajDio();
+                int dioID = int.Parse(this.dioTableAdapter.VratiZadnjiIDDio().ToString());
+                int ulogaID = int.Parse(uiInputUlogaID.ToString());
+                DodajKomponentu(ulogaID, dioID, ProizvodID);
+            }
         }
 
         private void DajPrijedlogDimenzija()
@@ -180,6 +189,36 @@ namespace RashoApp.Proizvod
             }
         }
 
+        private void DodajDio()
+        {
+            string naziv = uiInputDioNaziv.Text;
+            int duljina = int.Parse(uiInputDioDužina.Text.ToString());
+            int sirina = int.Parse(uiInputDioŠirina.Text.ToString());
+            int visina = int.Parse(uiInputDioDebljina.Text.ToString());
+            string slika = uiInputDioSlika.Text;
+            string materijal = uiInputDioMaterijal.Text;
+
+            Baza18043_DBDataSetTableAdapters.DioTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.DioTableAdapter();
+            noviDioTableAdapter.Insert(naziv, duljina, sirina, visina, slika, materijal);
+
+            SpremiPromjene();
+        }
+
+        private void DodajKomponentu(int ulogaID, int dioID, int proizvodID)
+        {
+
+            int kolicina = int.Parse(uiInputKomponentaKolicina.Text.ToString());
+            string boja = uiInputKomponentaBoja.Text;
+            string kantiranost = uiInputKomponentaKantiranost.Text;
+            int uloga = ulogaID;
+            int dio = dioID;
+            int proizvod = proizvodID;
+
+            Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter noviKomponentaTableAdapter = new Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter();
+            noviKomponentaTableAdapter.Insert(kolicina, boja, kantiranost, uloga, dio, proizvod);
+
+            SpremiPromjene();
+        }
 
     }
 }

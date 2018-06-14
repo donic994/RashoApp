@@ -435,6 +435,7 @@
             this.uiActionOdaberiPostojećiDio.TabIndex = 30;
             this.uiActionOdaberiPostojećiDio.Text = "+";
             this.uiActionOdaberiPostojećiDio.UseVisualStyleBackColor = false;
+            this.uiActionOdaberiPostojećiDio.Visible = false;
             this.uiActionOdaberiPostojećiDio.Click += new System.EventHandler(this.uiActionOdaberiPostojećiDio_Click);
             // 
             // uiDodajDjeloveUProizvod
