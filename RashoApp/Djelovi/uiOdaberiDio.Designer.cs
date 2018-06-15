@@ -35,6 +35,7 @@
             this.dioTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.DioTableAdapter();
             this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
             this.uiOutputDataTableDio = new System.Windows.Forms.DataGridView();
+            this.uiActionOdaberiDio = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +43,6 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uiActionOdaberiDio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataTableDio)).BeginInit();
@@ -104,6 +104,20 @@
             this.uiOutputDataTableDio.Size = new System.Drawing.Size(476, 375);
             this.uiOutputDataTableDio.TabIndex = 1;
             // 
+            // uiActionOdaberiDio
+            // 
+            this.uiActionOdaberiDio.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.uiActionOdaberiDio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionOdaberiDio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiActionOdaberiDio.ForeColor = System.Drawing.Color.White;
+            this.uiActionOdaberiDio.Location = new System.Drawing.Point(377, 305);
+            this.uiActionOdaberiDio.Name = "uiActionOdaberiDio";
+            this.uiActionOdaberiDio.Size = new System.Drawing.Size(87, 40);
+            this.uiActionOdaberiDio.TabIndex = 3;
+            this.uiActionOdaberiDio.Text = "Odaberi";
+            this.uiActionOdaberiDio.UseVisualStyleBackColor = false;
+            this.uiActionOdaberiDio.Click += new System.EventHandler(this.uiActionOdaberiDio_Click);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
@@ -136,7 +150,7 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "visina";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Visina";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Debljina";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
@@ -153,20 +167,7 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Slika";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // uiActionOdaberiDio
-            // 
-            this.uiActionOdaberiDio.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.uiActionOdaberiDio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uiActionOdaberiDio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.uiActionOdaberiDio.ForeColor = System.Drawing.Color.White;
-            this.uiActionOdaberiDio.Location = new System.Drawing.Point(377, 305);
-            this.uiActionOdaberiDio.Name = "uiActionOdaberiDio";
-            this.uiActionOdaberiDio.Size = new System.Drawing.Size(87, 40);
-            this.uiActionOdaberiDio.TabIndex = 3;
-            this.uiActionOdaberiDio.Text = "Odaberi";
-            this.uiActionOdaberiDio.UseVisualStyleBackColor = false;
-            this.uiActionOdaberiDio.Click += new System.EventHandler(this.uiActionOdaberiDio_Click);
+            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // uiOdaberiDio
             // 

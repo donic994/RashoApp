@@ -17,8 +17,8 @@ namespace RashoApp.Proizvod
         private int Sirina;
         private int Dubina;
 
-        private int standardnaDebljinaDaske = 15;
-        private int standardnaDebljinaPoledine = 6;
+        private int standardnaDebljinaDaske = 18;
+        private int standardnaDebljinaPoledine = 3;
         private string prijedlogZaNazivDaska = "Daska";
         private string prijeglodZaMaterijalDaska = "Iver";
 
@@ -163,13 +163,25 @@ namespace RashoApp.Proizvod
                 case "Vrata":
                     {
                         uiInputDioNaziv.Text = prijedlogZaNazivDaska;
-                        uiInputDioDužina.Text = Duzina.ToString();
-                        uiInputDioŠirina.Text = Sirina.ToString();
+                        uiInputDioDužina.Text = (Duzina - 10).ToString();
+                        uiInputDioŠirina.Text = (Sirina - 3).ToString();
                         uiInputDioDebljina.Text = standardnaDebljinaDaske.ToString();
                         uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
                         uiInputKomponentaKolicina.Text = "1";
                         uiInputKomponentaBoja.Text = "Bijela";
-                        uiInputKomponentaKantiranost.Text = "Po širini i dužini";
+                        uiInputKomponentaKantiranost.Text = "2D 2K";
+                        break;
+                    }
+                case "Vrata x2":
+                    {
+                        uiInputDioNaziv.Text = prijedlogZaNazivDaska;
+                        uiInputDioDužina.Text = (Duzina - 10).ToString();
+                        uiInputDioŠirina.Text = (Sirina - 6).ToString();
+                        uiInputDioDebljina.Text = standardnaDebljinaDaske.ToString();
+                        uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
+                        uiInputKomponentaKolicina.Text = "2";
+                        uiInputKomponentaBoja.Text = "Bijela";
+                        uiInputKomponentaKantiranost.Text = "2D 2K";
                         break;
                     }
                 case "Bocna stranica":
@@ -181,8 +193,8 @@ namespace RashoApp.Proizvod
                         uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
                         uiInputKomponentaKolicina.Text = "2";
                         uiInputKomponentaBoja.Text = "Bijela";
-                        uiInputKomponentaKantiranost.Text = "Po širini i dužini";
-                        break;                        
+                        uiInputKomponentaKantiranost.Text = "1D 1K";
+                        break;
                     }
                 case "Poledina":
                     {
@@ -193,31 +205,31 @@ namespace RashoApp.Proizvod
                         uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
                         uiInputKomponentaKolicina.Text = "1";
                         uiInputKomponentaBoja.Text = "Bijela";
-                        uiInputKomponentaKantiranost.Text = " ";                        
+                        uiInputKomponentaKantiranost.Text = " ";
                         break;
                     }
                 case "Polica":
                     {
                         uiInputDioNaziv.Text = prijedlogZaNazivDaska;
-                        uiInputDioDužina.Text = Dubina.ToString();
-                        uiInputDioŠirina.Text = Sirina.ToString();
+                        uiInputDioDužina.Text = (Dubina - 20).ToString();
+                        uiInputDioŠirina.Text = (Sirina - (standardnaDebljinaDaske * 2) - 1).ToString();
                         uiInputDioDebljina.Text = standardnaDebljinaDaske.ToString();
                         uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
                         uiInputKomponentaKolicina.Text = "1";
                         uiInputKomponentaBoja.Text = "Bijela";
-                        uiInputKomponentaKantiranost.Text = "Po širini jednostrano";
+                        uiInputKomponentaKantiranost.Text = "1D";
                         break;
                     }
                 case "Gornja/donja stranica":
                     {
                         uiInputDioNaziv.Text = prijedlogZaNazivDaska;
                         uiInputDioDužina.Text = Dubina.ToString();
-                        uiInputDioŠirina.Text = Sirina.ToString();
+                        uiInputDioŠirina.Text = (Sirina - (standardnaDebljinaDaske * 2)).ToString();
                         uiInputDioDebljina.Text = standardnaDebljinaDaske.ToString();
                         uiInputDioMaterijal.Text = prijeglodZaMaterijalDaska;
                         uiInputKomponentaKolicina.Text = "2";
                         uiInputKomponentaBoja.Text = "Bijela";
-                        uiInputKomponentaKantiranost.Text = "Po širini i dužini";
+                        uiInputKomponentaKantiranost.Text = "1D";
                         break;
                     }
                 case "Prednja/zadnja stranica":
@@ -232,7 +244,54 @@ namespace RashoApp.Proizvod
                         uiInputKomponentaKantiranost.Text = "Po širini i dužini";
                         break;
                     }
-
+                case "Nogice":
+                    {
+                        uiInputDioNaziv.Text = prijedlogZaNazivDaska;
+                        uiInputDioDužina.Text = "100";
+                        uiInputDioŠirina.Text = "0";
+                        uiInputDioDebljina.Text = "0";
+                        uiInputDioMaterijal.Text = "PVC";
+                        uiInputKomponentaKolicina.Text = "4";
+                        uiInputKomponentaBoja.Text = "Crna";
+                        uiInputKomponentaKantiranost.Text = " ";
+                        break;
+                    }
+                case "Vijak":
+                    {
+                        uiInputDioNaziv.Text = prijedlogZaNazivDaska;
+                        uiInputDioDužina.Text = "60";
+                        uiInputDioŠirina.Text = "0";
+                        uiInputDioDebljina.Text = "5";
+                        uiInputDioMaterijal.Text = "Metal";
+                        uiInputKomponentaKolicina.Text = "16";
+                        uiInputKomponentaBoja.Text = " ";
+                        uiInputKomponentaKantiranost.Text = " ";
+                        break;
+                    }
+                case "Vodilice ladica":
+                    {
+                        uiInputDioNaziv.Text = prijedlogZaNazivDaska;
+                        uiInputDioDužina.Text = "500";
+                        uiInputDioŠirina.Text = "10";
+                        uiInputDioDebljina.Text = "5";
+                        uiInputDioMaterijal.Text = "Metal";
+                        uiInputKomponentaKolicina.Text = "4";
+                        uiInputKomponentaBoja.Text = " ";
+                        uiInputKomponentaKantiranost.Text = " ";
+                        break;
+                    }
+                case "Ruckica":
+                    {
+                        uiInputDioNaziv.Text = prijedlogZaNazivDaska;
+                        uiInputDioDužina.Text = "500";
+                        uiInputDioŠirina.Text = "0";
+                        uiInputDioDebljina.Text = " ";
+                        uiInputDioMaterijal.Text = "Metal";
+                        uiInputKomponentaKolicina.Text = "4";
+                        uiInputKomponentaBoja.Text = " ";
+                        uiInputKomponentaKantiranost.Text = " ";
+                        break;
+                    }
             }
         }
 
@@ -274,7 +333,7 @@ namespace RashoApp.Proizvod
 
         private void uiActionDalje_Click(object sender, EventArgs e)
         {
-            Element.uiDodajUrediElement frm = new Element.uiDodajUrediElement(ProizvodID, 0, "dodaj");
+            Proizvod.uiDodajElementUProizvod frm = new Proizvod.uiDodajElementUProizvod(ProizvodID);
             frm.ShowDialog();
         }
     }

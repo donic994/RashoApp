@@ -38,7 +38,7 @@ namespace RashoApp.Proizvod
 
         private void uiActionOdaberiElement_Click(object sender, EventArgs e)
         {
-            RashoApp.Proizvod.uiDodajElementUProizvod frm = new RashoApp.Proizvod.uiDodajElementUProizvod(ProizvodID);
+            RashoApp.Proizvod.uiOdaberiProizvod frm = new RashoApp.Proizvod.uiOdaberiProizvod("proizvodElement");
             frm.ShowDialog();
         }
 
@@ -52,6 +52,7 @@ namespace RashoApp.Proizvod
             noviElementTableAdapter.Insert(kolicina, ProizvodID, element);
 
             SpremiPromjene();
+            PopuniTablicu();
         }
 
 
@@ -64,6 +65,11 @@ namespace RashoApp.Proizvod
         private void uiActionSpremiElement_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void PopuniTablicu()
+        {
+            this.elementTableAdapter.FillByIdProizvoda(this.baza18043_DBDataSet.Element, ProizvodID);
         }
     }
 }

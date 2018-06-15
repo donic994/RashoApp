@@ -31,7 +31,6 @@ namespace RashoApp.Proizvod
             this.Validate();
             this.proizvodBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.baza18043_DBDataSet);
-
         }
 
 
@@ -40,7 +39,7 @@ namespace RashoApp.Proizvod
             Proizvod.uiDodajProizvod frm = new uiDodajProizvod();
             frm.ShowDialog();
             //PictureBox pb = new PictureBox();
-            //pb.Load(path
+            //pb.Load(path)
         }
 
         private void uiActionUrediProizvod_Click(object sender, EventArgs e)
@@ -86,7 +85,7 @@ namespace RashoApp.Proizvod
                 this.elementTableAdapter.FillByIdProizvoda(this.baza18043_DBDataSet.Element, idProizvoda);
             }
 
-            this.pogledDjelovaPoProoizvoduTableAdapter.FillByIDElementProizvod(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu, idProizvoda);
+            this.pogledDjelovaPoProoizvoduTableAdapter.FillByProizvodID(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu, idProizvoda);
         }
         
         private void uiOutputTableDataElement_SelectionChanged(object sender, EventArgs e)

@@ -146,7 +146,7 @@
             this.uiActionDalje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionDalje.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionDalje.ForeColor = System.Drawing.Color.White;
-            this.uiActionDalje.Location = new System.Drawing.Point(385, 519);
+            this.uiActionDalje.Location = new System.Drawing.Point(393, 282);
             this.uiActionDalje.Name = "uiActionDalje";
             this.uiActionDalje.Size = new System.Drawing.Size(135, 51);
             this.uiActionDalje.TabIndex = 12;
@@ -324,7 +324,7 @@
             this.uiActionDodaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionDodaj.ForeColor = System.Drawing.Color.White;
-            this.uiActionDodaj.Location = new System.Drawing.Point(385, 282);
+            this.uiActionDodaj.Location = new System.Drawing.Point(240, 282);
             this.uiActionDodaj.Name = "uiActionDodaj";
             this.uiActionDodaj.Size = new System.Drawing.Size(135, 51);
             this.uiActionDodaj.TabIndex = 29;
@@ -487,6 +487,7 @@
             this.uiLabelDioNaziv.Size = new System.Drawing.Size(49, 18);
             this.uiLabelDioNaziv.TabIndex = 32;
             this.uiLabelDioNaziv.Text = "Naziv:";
+            this.uiLabelDioNaziv.Visible = false;
             // 
             // uiLabelDioDuzina
             // 
@@ -496,6 +497,7 @@
             this.uiLabelDioDuzina.Size = new System.Drawing.Size(58, 18);
             this.uiLabelDioDuzina.TabIndex = 33;
             this.uiLabelDioDuzina.Text = "Dužina:";
+            this.uiLabelDioDuzina.Visible = false;
             // 
             // uiLabelDioSirina
             // 
@@ -505,6 +507,7 @@
             this.uiLabelDioSirina.Size = new System.Drawing.Size(49, 18);
             this.uiLabelDioSirina.TabIndex = 34;
             this.uiLabelDioSirina.Text = "Širina:";
+            this.uiLabelDioSirina.Visible = false;
             // 
             // uiLabelDioDebljina
             // 
@@ -514,6 +517,7 @@
             this.uiLabelDioDebljina.Size = new System.Drawing.Size(64, 18);
             this.uiLabelDioDebljina.TabIndex = 35;
             this.uiLabelDioDebljina.Text = "Debljina:";
+            this.uiLabelDioDebljina.Visible = false;
             // 
             // uiLabelDioSlika
             // 
@@ -523,6 +527,7 @@
             this.uiLabelDioSlika.Size = new System.Drawing.Size(44, 18);
             this.uiLabelDioSlika.TabIndex = 36;
             this.uiLabelDioSlika.Text = "Slika:";
+            this.uiLabelDioSlika.Visible = false;
             // 
             // uiLabelDioMaterijal
             // 
@@ -532,6 +537,7 @@
             this.uiLabelDioMaterijal.Size = new System.Drawing.Size(67, 18);
             this.uiLabelDioMaterijal.TabIndex = 37;
             this.uiLabelDioMaterijal.Text = "Materijal:";
+            this.uiLabelDioMaterijal.Visible = false;
             // 
             // uiLabelOdabraniDioNaziv
             // 
@@ -541,6 +547,7 @@
             this.uiLabelOdabraniDioNaziv.Size = new System.Drawing.Size(49, 18);
             this.uiLabelOdabraniDioNaziv.TabIndex = 38;
             this.uiLabelOdabraniDioNaziv.Text = "Naziv:";
+            this.uiLabelOdabraniDioNaziv.Visible = false;
             // 
             // uiLabelOdabraniDioID
             // 
@@ -550,6 +557,7 @@
             this.uiLabelOdabraniDioID.Size = new System.Drawing.Size(26, 18);
             this.uiLabelOdabraniDioID.TabIndex = 39;
             this.uiLabelOdabraniDioID.Text = "ID:";
+            this.uiLabelOdabraniDioID.Visible = false;
             // 
             // uiDodajDjeloveUProizvod
             // 

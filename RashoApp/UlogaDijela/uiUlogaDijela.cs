@@ -21,6 +21,7 @@ namespace RashoApp.UlogaDijela
         {
             this.Validate();
             this.ulogaDijelaBindingSource.EndEdit();
+            this.komponentaBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.baza18043_DBDataSet);
 
         }
@@ -49,13 +50,14 @@ namespace RashoApp.UlogaDijela
             if (MessageBox.Show("Jeste li sigurni da želite obrisati ovu ulogu?", "Obrisati ulogu dijela", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
                 int id = int.Parse(uiOutputTableDataUlogaDijela.SelectedCells[0].Value.ToString());
+
                 uiOutputTableDataUlogaDijela.Rows.RemoveAt(uiOutputTableDataUlogaDijela.CurrentRow.Index);
 
                 this.ulogaDijelaTableAdapter.DeleteUlogaByID(id);
                 this.komponentaTableAdapter.DeleteByUlogaDijela(id);
-            }
 
-            SpremiPromjene();
+                SpremiPromjene();
+            }
         }
 
         public void PopuniPodacimaUlogaDijela()
