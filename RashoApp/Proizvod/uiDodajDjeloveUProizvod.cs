@@ -84,6 +84,7 @@ namespace RashoApp.Proizvod
 
         private void uiInputOdabirTipaUnosaDijela_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             if(uiInputOdabirTipaUnosaDijela.SelectedIndex == 0)
             {
                 uiInputDioNaziv.Visible = true;
@@ -93,9 +94,18 @@ namespace RashoApp.Proizvod
                 uiInputDioSlika.Visible = true;
                 uiInputDioMaterijal.Visible = true;
 
+                uiLabelDioNaziv.Visible = true;
+                uiLabelDioDuzina.Visible = true;
+                uiLabelDioSirina.Visible = true;
+                uiLabelDioDebljina.Visible = true;
+                uiLabelDioSlika.Visible = true;
+                uiLabelDioMaterijal.Visible = true;
+
                 uiInputDioID.Visible = false;
                 uiOutputDioNaziv.Visible = false;
-                uiActionOdaberiPostojećiDio.Visible = false;               
+                uiActionOdaberiPostojećiDio.Visible = false;
+                uiLabelOdabraniDioID.Visible = false;
+                uiLabelOdabraniDioNaziv.Visible = false;          
             }
 
             else if (uiInputOdabirTipaUnosaDijela.SelectedIndex == 1)
@@ -107,10 +117,19 @@ namespace RashoApp.Proizvod
                 uiInputDioSlika.Visible = false;
                 uiInputDioMaterijal.Visible = false;
 
+                uiLabelDioNaziv.Visible = false;
+                uiLabelDioDuzina.Visible = false;
+                uiLabelDioSirina.Visible = false;
+                uiLabelDioDebljina.Visible = false;
+                uiLabelDioSlika.Visible = false;
+                uiLabelDioMaterijal.Visible = false;
+
 
                 uiInputDioID.Visible = true;
                 uiOutputDioNaziv.Visible = true;
                 uiActionOdaberiPostojećiDio.Visible = true;
+                uiLabelOdabraniDioID.Visible = true;
+                uiLabelOdabraniDioNaziv.Visible = true;
             }
             else
             {
@@ -120,6 +139,7 @@ namespace RashoApp.Proizvod
 
         private void uiActionDodaj_Click(object sender, EventArgs e)
         {
+            
             if (uiInputOdabirTipaUnosaDijela.SelectedIndex == 0)
             {
                 DodajDio();

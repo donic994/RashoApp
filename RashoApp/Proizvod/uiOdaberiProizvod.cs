@@ -52,7 +52,7 @@ namespace RashoApp.Proizvod
             }
             if(naredba == "komponenta")
             {
-                Application.OpenForms.OfType<Komponenta.uiDodajUrediKomponenta>().Single();
+                Application.OpenForms.OfType<Komponenta.uiDodajUrediKomponenta>().Single().PostaviVrijednostOdabranogProizvoda(id, naziv);
             }
             this.Close();
         }

@@ -31,14 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label iDLabel;
             System.Windows.Forms.Label nazivLabel;
-            System.Windows.Forms.Label uiLabelDioNaziv;
-            System.Windows.Forms.Label uiLabelDioDuljina;
-            System.Windows.Forms.Label uiLabelDioSirina;
-            System.Windows.Forms.Label uiLabelDioDebljina;
-            System.Windows.Forms.Label uiLabelDioSlika;
-            System.Windows.Forms.Label uiLabelDioMaterijal;
-            System.Windows.Forms.Label iDLabel1;
-            System.Windows.Forms.Label nazivLabel1;
             System.Windows.Forms.Label uiLabelKomponentaKolicina;
             System.Windows.Forms.Label uiLabelKomponentaBoja;
             System.Windows.Forms.Label uiLabelKomponentaKantiranost;
@@ -82,16 +74,16 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uiLabelDioNaziv = new System.Windows.Forms.Label();
+            this.uiLabelDioDuzina = new System.Windows.Forms.Label();
+            this.uiLabelDioSirina = new System.Windows.Forms.Label();
+            this.uiLabelDioDebljina = new System.Windows.Forms.Label();
+            this.uiLabelDioSlika = new System.Windows.Forms.Label();
+            this.uiLabelDioMaterijal = new System.Windows.Forms.Label();
+            this.uiLabelOdabraniDioNaziv = new System.Windows.Forms.Label();
+            this.uiLabelOdabraniDioID = new System.Windows.Forms.Label();
             iDLabel = new System.Windows.Forms.Label();
             nazivLabel = new System.Windows.Forms.Label();
-            uiLabelDioNaziv = new System.Windows.Forms.Label();
-            uiLabelDioDuljina = new System.Windows.Forms.Label();
-            uiLabelDioSirina = new System.Windows.Forms.Label();
-            uiLabelDioDebljina = new System.Windows.Forms.Label();
-            uiLabelDioSlika = new System.Windows.Forms.Label();
-            uiLabelDioMaterijal = new System.Windows.Forms.Label();
-            iDLabel1 = new System.Windows.Forms.Label();
-            nazivLabel1 = new System.Windows.Forms.Label();
             uiLabelKomponentaKolicina = new System.Windows.Forms.Label();
             uiLabelKomponentaBoja = new System.Windows.Forms.Label();
             uiLabelKomponentaKantiranost = new System.Windows.Forms.Label();
@@ -121,104 +113,32 @@
             nazivLabel.TabIndex = 14;
             nazivLabel.Text = "Uloga:";
             // 
-            // uiLabelDioNaziv
-            // 
-            uiLabelDioNaziv.AutoSize = true;
-            uiLabelDioNaziv.Location = new System.Drawing.Point(42, 165);
-            uiLabelDioNaziv.Name = "uiLabelDioNaziv";
-            uiLabelDioNaziv.Size = new System.Drawing.Size(46, 18);
-            uiLabelDioNaziv.TabIndex = 15;
-            uiLabelDioNaziv.Text = "naziv:";
-            // 
-            // uiLabelDioDuljina
-            // 
-            uiLabelDioDuljina.AutoSize = true;
-            uiLabelDioDuljina.Location = new System.Drawing.Point(35, 195);
-            uiLabelDioDuljina.Name = "uiLabelDioDuljina";
-            uiLabelDioDuljina.Size = new System.Drawing.Size(53, 18);
-            uiLabelDioDuljina.TabIndex = 16;
-            uiLabelDioDuljina.Text = "duljina:";
-            // 
-            // uiLabelDioSirina
-            // 
-            uiLabelDioSirina.AutoSize = true;
-            uiLabelDioSirina.Location = new System.Drawing.Point(41, 225);
-            uiLabelDioSirina.Name = "uiLabelDioSirina";
-            uiLabelDioSirina.Size = new System.Drawing.Size(47, 18);
-            uiLabelDioSirina.TabIndex = 17;
-            uiLabelDioSirina.Text = "sirina:";
-            // 
-            // uiLabelDioDebljina
-            // 
-            uiLabelDioDebljina.AutoSize = true;
-            uiLabelDioDebljina.Location = new System.Drawing.Point(24, 255);
-            uiLabelDioDebljina.Name = "uiLabelDioDebljina";
-            uiLabelDioDebljina.Size = new System.Drawing.Size(64, 18);
-            uiLabelDioDebljina.TabIndex = 18;
-            uiLabelDioDebljina.Text = "Debljina:";
-            // 
-            // uiLabelDioSlika
-            // 
-            uiLabelDioSlika.AutoSize = true;
-            uiLabelDioSlika.Location = new System.Drawing.Point(46, 285);
-            uiLabelDioSlika.Name = "uiLabelDioSlika";
-            uiLabelDioSlika.Size = new System.Drawing.Size(42, 18);
-            uiLabelDioSlika.TabIndex = 19;
-            uiLabelDioSlika.Text = "slika:";
-            // 
-            // uiLabelDioMaterijal
-            // 
-            uiLabelDioMaterijal.AutoSize = true;
-            uiLabelDioMaterijal.Location = new System.Drawing.Point(21, 315);
-            uiLabelDioMaterijal.Name = "uiLabelDioMaterijal";
-            uiLabelDioMaterijal.Size = new System.Drawing.Size(67, 18);
-            uiLabelDioMaterijal.TabIndex = 20;
-            uiLabelDioMaterijal.Text = "materijal:";
-            // 
-            // iDLabel1
-            // 
-            iDLabel1.AutoSize = true;
-            iDLabel1.Location = new System.Drawing.Point(298, 30);
-            iDLabel1.Name = "iDLabel1";
-            iDLabel1.Size = new System.Drawing.Size(26, 18);
-            iDLabel1.TabIndex = 23;
-            iDLabel1.Text = "ID:";
-            // 
-            // nazivLabel1
-            // 
-            nazivLabel1.AutoSize = true;
-            nazivLabel1.Location = new System.Drawing.Point(289, 60);
-            nazivLabel1.Name = "nazivLabel1";
-            nazivLabel1.Size = new System.Drawing.Size(35, 18);
-            nazivLabel1.TabIndex = 24;
-            nazivLabel1.Text = "Dio:";
-            // 
             // uiLabelKomponentaKolicina
             // 
             uiLabelKomponentaKolicina.AutoSize = true;
-            uiLabelKomponentaKolicina.Location = new System.Drawing.Point(262, 165);
+            uiLabelKomponentaKolicina.Location = new System.Drawing.Point(260, 165);
             uiLabelKomponentaKolicina.Name = "uiLabelKomponentaKolicina";
-            uiLabelKomponentaKolicina.Size = new System.Drawing.Size(62, 18);
+            uiLabelKomponentaKolicina.Size = new System.Drawing.Size(64, 18);
             uiLabelKomponentaKolicina.TabIndex = 25;
-            uiLabelKomponentaKolicina.Text = "kolicina:";
+            uiLabelKomponentaKolicina.Text = "Količina:";
             // 
             // uiLabelKomponentaBoja
             // 
             uiLabelKomponentaBoja.AutoSize = true;
-            uiLabelKomponentaBoja.Location = new System.Drawing.Point(284, 195);
+            uiLabelKomponentaBoja.Location = new System.Drawing.Point(282, 195);
             uiLabelKomponentaBoja.Name = "uiLabelKomponentaBoja";
-            uiLabelKomponentaBoja.Size = new System.Drawing.Size(40, 18);
+            uiLabelKomponentaBoja.Size = new System.Drawing.Size(42, 18);
             uiLabelKomponentaBoja.TabIndex = 26;
-            uiLabelKomponentaBoja.Text = "boja:";
+            uiLabelKomponentaBoja.Text = "Boja:";
             // 
             // uiLabelKomponentaKantiranost
             // 
             uiLabelKomponentaKantiranost.AutoSize = true;
-            uiLabelKomponentaKantiranost.Location = new System.Drawing.Point(239, 225);
+            uiLabelKomponentaKantiranost.Location = new System.Drawing.Point(237, 225);
             uiLabelKomponentaKantiranost.Name = "uiLabelKomponentaKantiranost";
-            uiLabelKomponentaKantiranost.Size = new System.Drawing.Size(85, 18);
+            uiLabelKomponentaKantiranost.Size = new System.Drawing.Size(87, 18);
             uiLabelKomponentaKantiranost.TabIndex = 27;
-            uiLabelKomponentaKantiranost.Text = "kantiranost:";
+            uiLabelKomponentaKantiranost.Text = "Kantiranost:";
             // 
             // uiActionDalje
             // 
@@ -558,12 +478,92 @@
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
+            // uiLabelDioNaziv
+            // 
+            this.uiLabelDioNaziv.AutoSize = true;
+            this.uiLabelDioNaziv.Location = new System.Drawing.Point(39, 165);
+            this.uiLabelDioNaziv.Name = "uiLabelDioNaziv";
+            this.uiLabelDioNaziv.Size = new System.Drawing.Size(49, 18);
+            this.uiLabelDioNaziv.TabIndex = 32;
+            this.uiLabelDioNaziv.Text = "Naziv:";
+            // 
+            // uiLabelDioDuzina
+            // 
+            this.uiLabelDioDuzina.AutoSize = true;
+            this.uiLabelDioDuzina.Location = new System.Drawing.Point(30, 195);
+            this.uiLabelDioDuzina.Name = "uiLabelDioDuzina";
+            this.uiLabelDioDuzina.Size = new System.Drawing.Size(58, 18);
+            this.uiLabelDioDuzina.TabIndex = 33;
+            this.uiLabelDioDuzina.Text = "Dužina:";
+            // 
+            // uiLabelDioSirina
+            // 
+            this.uiLabelDioSirina.AutoSize = true;
+            this.uiLabelDioSirina.Location = new System.Drawing.Point(39, 225);
+            this.uiLabelDioSirina.Name = "uiLabelDioSirina";
+            this.uiLabelDioSirina.Size = new System.Drawing.Size(49, 18);
+            this.uiLabelDioSirina.TabIndex = 34;
+            this.uiLabelDioSirina.Text = "Širina:";
+            // 
+            // uiLabelDioDebljina
+            // 
+            this.uiLabelDioDebljina.AutoSize = true;
+            this.uiLabelDioDebljina.Location = new System.Drawing.Point(24, 255);
+            this.uiLabelDioDebljina.Name = "uiLabelDioDebljina";
+            this.uiLabelDioDebljina.Size = new System.Drawing.Size(64, 18);
+            this.uiLabelDioDebljina.TabIndex = 35;
+            this.uiLabelDioDebljina.Text = "Debljina:";
+            // 
+            // uiLabelDioSlika
+            // 
+            this.uiLabelDioSlika.AutoSize = true;
+            this.uiLabelDioSlika.Location = new System.Drawing.Point(44, 285);
+            this.uiLabelDioSlika.Name = "uiLabelDioSlika";
+            this.uiLabelDioSlika.Size = new System.Drawing.Size(44, 18);
+            this.uiLabelDioSlika.TabIndex = 36;
+            this.uiLabelDioSlika.Text = "Slika:";
+            // 
+            // uiLabelDioMaterijal
+            // 
+            this.uiLabelDioMaterijal.AutoSize = true;
+            this.uiLabelDioMaterijal.Location = new System.Drawing.Point(21, 315);
+            this.uiLabelDioMaterijal.Name = "uiLabelDioMaterijal";
+            this.uiLabelDioMaterijal.Size = new System.Drawing.Size(67, 18);
+            this.uiLabelDioMaterijal.TabIndex = 37;
+            this.uiLabelDioMaterijal.Text = "Materijal:";
+            // 
+            // uiLabelOdabraniDioNaziv
+            // 
+            this.uiLabelOdabraniDioNaziv.AutoSize = true;
+            this.uiLabelOdabraniDioNaziv.Location = new System.Drawing.Point(275, 60);
+            this.uiLabelOdabraniDioNaziv.Name = "uiLabelOdabraniDioNaziv";
+            this.uiLabelOdabraniDioNaziv.Size = new System.Drawing.Size(49, 18);
+            this.uiLabelOdabraniDioNaziv.TabIndex = 38;
+            this.uiLabelOdabraniDioNaziv.Text = "Naziv:";
+            // 
+            // uiLabelOdabraniDioID
+            // 
+            this.uiLabelOdabraniDioID.AutoSize = true;
+            this.uiLabelOdabraniDioID.Location = new System.Drawing.Point(298, 30);
+            this.uiLabelOdabraniDioID.Name = "uiLabelOdabraniDioID";
+            this.uiLabelOdabraniDioID.Size = new System.Drawing.Size(26, 18);
+            this.uiLabelOdabraniDioID.TabIndex = 39;
+            this.uiLabelOdabraniDioID.Text = "ID:";
+            // 
             // uiDodajDjeloveUProizvod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(540, 582);
+            this.Controls.Add(this.uiLabelOdabraniDioID);
+            this.Controls.Add(this.uiLabelOdabraniDioNaziv);
+            this.Controls.Add(this.uiLabelDioMaterijal);
+            this.Controls.Add(this.uiLabelDioSlika);
+            this.Controls.Add(this.uiLabelDioDebljina);
+            this.Controls.Add(this.uiLabelDioSirina);
+            this.Controls.Add(this.uiLabelDioDuzina);
+            this.Controls.Add(this.uiLabelDioNaziv);
             this.Controls.Add(this.uiActionOdaberiPostojećiDio);
             this.Controls.Add(this.uiActionDodaj);
             this.Controls.Add(uiLabelKomponentaKantiranost);
@@ -572,23 +572,15 @@
             this.Controls.Add(this.uiInputKomponentaBoja);
             this.Controls.Add(uiLabelKomponentaKolicina);
             this.Controls.Add(this.uiInputKomponentaKolicina);
-            this.Controls.Add(nazivLabel1);
             this.Controls.Add(this.uiOutputDioNaziv);
-            this.Controls.Add(iDLabel1);
             this.Controls.Add(this.uiInputDioID);
             this.Controls.Add(this.uiActionOdaberiUloga);
             this.Controls.Add(this.uiInputOdabirTipaUnosaDijela);
-            this.Controls.Add(uiLabelDioMaterijal);
             this.Controls.Add(this.uiInputDioMaterijal);
-            this.Controls.Add(uiLabelDioSlika);
             this.Controls.Add(this.uiInputDioSlika);
-            this.Controls.Add(uiLabelDioDebljina);
             this.Controls.Add(this.uiInputDioDebljina);
-            this.Controls.Add(uiLabelDioSirina);
             this.Controls.Add(this.uiInputDioŠirina);
-            this.Controls.Add(uiLabelDioDuljina);
             this.Controls.Add(this.uiInputDioDužina);
-            this.Controls.Add(uiLabelDioNaziv);
             this.Controls.Add(this.uiInputDioNaziv);
             this.Controls.Add(nazivLabel);
             this.Controls.Add(this.uiOutputUlogaNaziv);
@@ -655,5 +647,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.Label uiLabelDioNaziv;
+        private System.Windows.Forms.Label uiLabelDioDuzina;
+        private System.Windows.Forms.Label uiLabelDioSirina;
+        private System.Windows.Forms.Label uiLabelDioDebljina;
+        private System.Windows.Forms.Label uiLabelDioSlika;
+        private System.Windows.Forms.Label uiLabelDioMaterijal;
+        private System.Windows.Forms.Label uiLabelOdabraniDioNaziv;
+        private System.Windows.Forms.Label uiLabelOdabraniDioID;
     }
 }

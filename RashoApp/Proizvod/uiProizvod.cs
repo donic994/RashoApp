@@ -39,6 +39,8 @@ namespace RashoApp.Proizvod
         {
             Proizvod.uiDodajProizvod frm = new uiDodajProizvod();
             frm.ShowDialog();
+            //PictureBox pb = new PictureBox();
+            //pb.Load(path
         }
 
         private void uiActionUrediProizvod_Click(object sender, EventArgs e)
@@ -50,10 +52,10 @@ namespace RashoApp.Proizvod
         {
             if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj proizvoid?", "Obrisati proizvod", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
-                uiOutputDataProizvod.Rows.RemoveAt(uiOutputDataProizvod.CurrentRow.Index);
-
                 idProizvoda = int.Parse(uiOutputDataProizvod.SelectedCells[0].Value.ToString());
 
+                uiOutputDataProizvod.Rows.RemoveAt(uiOutputDataProizvod.CurrentRow.Index);
+                
                 this.elementTableAdapter.DeleteByProizvod(idProizvoda);
                 this.komponentaTableAdapter.DeleteByProizvod(idProizvoda);
                 this.proizvodTableAdapter.DeleteByID(idProizvoda);
@@ -74,8 +76,15 @@ namespace RashoApp.Proizvod
 
         private void uiOutputDataProizvod_SelectionChanged(object sender, EventArgs e)
         {
-            idProizvoda = int.Parse(uiOutputDataProizvod.SelectedCells[0].Value.ToString());
-            this.elementTableAdapter.FillByIdProizvoda(this.baza18043_DBDataSet.Element, idProizvoda);
+            if (uiOutputDataProizvod.SelectedCells.Count == 0)
+            {
+                idProizvoda = 0;
+            }
+            else
+            {
+                idProizvoda = int.Parse(uiOutputDataProizvod.SelectedCells[0].Value.ToString());
+                this.elementTableAdapter.FillByIdProizvoda(this.baza18043_DBDataSet.Element, idProizvoda);
+            }
 
             this.pogledDjelovaPoProoizvoduTableAdapter.FillByIDElementProizvod(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu, idProizvoda);
         }
