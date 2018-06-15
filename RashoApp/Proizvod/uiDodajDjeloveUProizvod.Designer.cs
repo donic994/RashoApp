@@ -152,6 +152,7 @@
             this.uiActionDalje.TabIndex = 12;
             this.uiActionDalje.Text = "DALJE";
             this.uiActionDalje.UseVisualStyleBackColor = false;
+            this.uiActionDalje.Click += new System.EventHandler(this.uiActionDalje_Click);
             // 
             // uiInputUlogaID
             // 

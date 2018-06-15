@@ -132,6 +132,12 @@
     <Compile Include="Proizvod\uiDodajDjeloveUProizvod.Designer.cs">
       <DependentUpon>uiDodajDjeloveUProizvod.cs</DependentUpon>
     </Compile>
+    <Compile Include="Proizvod\uiDodajElementUProizvod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proizvod\uiDodajElementUProizvod.Designer.cs">
+      <DependentUpon>uiDodajElementUProizvod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Proizvod\uiDodajProizvod.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Proizvod\uiDodajDjeloveUProizvod.resx">
       <DependentUpon>uiDodajDjeloveUProizvod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proizvod\uiDodajElementUProizvod.resx">
+      <DependentUpon>uiDodajElementUProizvod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proizvod\uiDodajProizvod.resx">
       <DependentUpon>uiDodajProizvod.cs</DependentUpon>

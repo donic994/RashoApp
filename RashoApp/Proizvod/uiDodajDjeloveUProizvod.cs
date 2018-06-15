@@ -271,5 +271,11 @@ namespace RashoApp.Proizvod
         {
             this.pogledDjelovaPoProoizvoduTableAdapter.FillByProizvodID(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu, ProizvodID);
         }
+
+        private void uiActionDalje_Click(object sender, EventArgs e)
+        {
+            Element.uiDodajUrediElement frm = new Element.uiDodajUrediElement(ProizvodID, 0, "dodaj");
+            frm.ShowDialog();
+        }
     }
 }
