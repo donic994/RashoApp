@@ -45,14 +45,21 @@ namespace RashoApp.Proizvod
             int.TryParse(uiInputDubina.Text.ToString(), out dubina);
             string slika = uiInputSlika.Text;
 
+            if (!String.IsNullOrWhiteSpace(slika))
+            {
+                //Dodaj sliku u lokalni direktorij(Slike)
+                destinacijaSpremanja = "F:\\DoNiC\\FOI\\8 semestar\\PI\\Projekt2018\\RashoApp\\RashoApp\\bin\\Debug\\Slike\\Slika" + naziv + ".png";
 
-            //Dodaj sliku u lokalni direktorij(Slike)
-            destinacijaSpremanja = "F:\\DoNiC\\FOI\\8 semestar\\PI\\Projekt2018\\RashoApp\\RashoApp\\bin\\Debug\\Slike\\Slika" + naziv + ".png";
-            File.Copy(destinacijaČitanja.ToString(), destinacijaSpremanja);
-            //
+                File.Copy(destinacijaČitanja.ToString(), destinacijaSpremanja);
+                //
 
-            Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
-            noviDioTableAdapter.Insert(duzina, sirina, dubina, destinacijaSpremanja, naziv);
+                Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
+                noviDioTableAdapter.Insert(duzina, sirina, dubina, destinacijaSpremanja, naziv);
+            }else
+            {
+                Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
+                noviDioTableAdapter.Insert(duzina, sirina, dubina, slika, naziv);
+            }
 
             SpremiPromjene();
 
@@ -79,5 +86,69 @@ namespace RashoApp.Proizvod
                 čitaj.Dispose();
             }
         }
+
+        private void uiInputDužina_Leave(object sender, EventArgs e)
+        {
+            int ispis;
+            if (!int.TryParse(uiInputDužina.Text, out ispis) || uiInputDužina.Text == null)
+            {
+                MessageBox.Show("Unesite brojčanu vrijednost u Dužina!");
+                uiInputDužina.Text = "";
+                uiInputDužina.Focus();
+                uiActionDalje.Enabled = false;
+            }
+            else
+            {
+                uiActionDalje.Enabled = true;
+            }
+        }
+
+        private void uiInputNaziv_Leave(object sender, EventArgs e)
+        { 
+            if (uiInputNaziv.Text == null)
+            {
+                MessageBox.Show("Unesite vrijednost u Naziv!");
+                uiInputNaziv.Text = "";
+                uiInputNaziv.Focus();
+                uiActionDalje.Enabled = false;
+            }
+            else
+            {
+                uiActionDalje.Enabled = true;
+            }
+        }
+
+        private void uiInputŠirina_Leave(object sender, EventArgs e)
+        {
+            int ispis;
+            if(!int.TryParse(uiInputŠirina.Text, out ispis) || uiInputŠirina.Text == null)
+            {
+                MessageBox.Show("Unesite brojčanu vrijednost u Širina!");
+                uiInputŠirina.Text = "";
+                uiInputŠirina.Focus();
+                uiActionDalje.Enabled = false;
+            }
+            else
+            {
+                uiActionDalje.Enabled = true;
+            }
+        }
+
+        private void uiInputDubina_Leave(object sender, EventArgs e)
+        {
+            int ispis;
+            if (!int.TryParse(uiInputDubina.Text, out ispis) || uiInputDubina.Text == null)
+            {
+                MessageBox.Show("Unesite brojčanu vrijednost u Dubina!");
+                uiInputDubina.Text = "";
+                uiInputDubina.Focus();
+                uiActionDalje.Enabled = false;
+            }
+            else
+            {
+                uiActionDalje.Enabled = true;
+            }
+        }      
     }
 }
+
