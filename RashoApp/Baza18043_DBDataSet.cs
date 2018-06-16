@@ -6,3 +6,10 @@
     {
     }
 }
+
+namespace RashoApp.Baza18043_DBDataSetTableAdapters {
+    
+    
+    public partial class KomponentaTableAdapter {
+    }
+}

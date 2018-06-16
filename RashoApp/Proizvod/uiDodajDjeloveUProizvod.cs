@@ -36,6 +36,7 @@ namespace RashoApp.Proizvod
         {
             this.Validate();
             this.ulogaDijelaBindingSource.EndEdit();
+            this.komponentaBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.baza18043_DBDataSet);
 
         }
@@ -68,7 +69,6 @@ namespace RashoApp.Proizvod
             frm.ShowDialog();
         }
 
-
         public void PostaviVrijednostiOdabraneUlogeDijelova(string id, string naziv)
         {
             uiInputUlogaID.Text = id;
@@ -80,7 +80,6 @@ namespace RashoApp.Proizvod
             uiInputDioID.Text = id;
             uiOutputDioNaziv.Text = naziv;
         }
-
 
         private void uiInputOdabirTipaUnosaDijela_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -135,26 +134,7 @@ namespace RashoApp.Proizvod
             {
                 uiActionDalje.Visible = false;
             }
-        }
-
-        private void uiActionDodaj_Click(object sender, EventArgs e)
-        {
-            
-            if (uiInputOdabirTipaUnosaDijela.SelectedIndex == 0)
-            {
-                DodajDio();
-                int ulogaID = int.Parse(uiInputUlogaID.Text.ToString());
-                int dioID = int.Parse(this.dioTableAdapter.VratiZadnjiIDDio().ToString());
-                DodajKomponentu(ulogaID, dioID, ProizvodID);
-            }
-            if (uiInputOdabirTipaUnosaDijela.SelectedIndex == 1)
-            {
-                int dioID = int.Parse(this.dioTableAdapter.VratiZadnjiIDDio().ToString());
-                int ulogaID = int.Parse(uiInputUlogaID.Text.ToString());
-                DodajKomponentu(ulogaID, dioID, ProizvodID);
-            }
-            PopuniTablicu();
-        }
+        } 
 
         private void DajPrijedlogDimenzija()
         {
@@ -296,7 +276,7 @@ namespace RashoApp.Proizvod
         }
 
         private void DodajDio()
-        {
+        {            
                 string naziv = uiInputDioNaziv.Text;
                 int duljina = int.Parse(uiInputDioDužina.Text.ToString());
                 int sirina = int.Parse(uiInputDioŠirina.Text.ToString());
@@ -331,10 +311,45 @@ namespace RashoApp.Proizvod
             this.pogledDjelovaPoProoizvoduTableAdapter.FillByProizvodID(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu, ProizvodID);
         }
 
+        private void uiActionDodaj_Click(object sender, EventArgs e)
+        {
+
+            if (uiInputOdabirTipaUnosaDijela.SelectedIndex == 0)
+            {
+                DodajDio();
+                int ulogaID = int.Parse(uiInputUlogaID.Text.ToString());
+                int dioID = int.Parse(this.dioTableAdapter.VratiZadnjiIDDio().ToString());
+                DodajKomponentu(ulogaID, dioID, ProizvodID);
+            }
+
+            if (uiInputOdabirTipaUnosaDijela.SelectedIndex == 1)
+            {
+                int dioID = int.Parse(uiInputDioID.Text.ToString());
+                int ulogaID = int.Parse(uiInputUlogaID.Text.ToString());
+                DodajKomponentu(ulogaID, dioID, ProizvodID);
+            }
+            PopuniTablicu();
+        }
+
         private void uiActionDalje_Click(object sender, EventArgs e)
         {
             Proizvod.uiDodajElementUProizvod frm = new Proizvod.uiDodajElementUProizvod(ProizvodID);
             frm.ShowDialog();
+            this.Close();
+        }
+
+        private void uiActionObrišiDio_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj dio iz proizvoda?", "Obrisati dio", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                int dioID = int.Parse(uiOutputDataTableDioUProizvodu.SelectedCells[0].Value.ToString());
+                int ulogaID = int.Parse(uiOutputDataTableDioUProizvodu.SelectedCells[1].Value.ToString());
+                this.komponentaTableAdapter.DeleteByUlogaDioProizvod(ulogaID, dioID, ProizvodID);
+
+                uiOutputDataTableDioUProizvodu.Rows.RemoveAt(uiOutputDataTableDioUProizvodu.CurrentRow.Index);
+            }
+            SpremiPromjene();
+            PopuniTablicu();
         }
     }
 }

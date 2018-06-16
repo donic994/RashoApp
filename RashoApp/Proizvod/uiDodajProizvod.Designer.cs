@@ -57,7 +57,7 @@
             // duljinaLabel
             // 
             duljinaLabel.AutoSize = true;
-            duljinaLabel.Location = new System.Drawing.Point(134, 98);
+            duljinaLabel.Location = new System.Drawing.Point(32, 58);
             duljinaLabel.Name = "duljinaLabel";
             duljinaLabel.Size = new System.Drawing.Size(58, 18);
             duljinaLabel.TabIndex = 1;
@@ -66,7 +66,7 @@
             // sirinaLabel
             // 
             sirinaLabel.AutoSize = true;
-            sirinaLabel.Location = new System.Drawing.Point(143, 129);
+            sirinaLabel.Location = new System.Drawing.Point(41, 89);
             sirinaLabel.Name = "sirinaLabel";
             sirinaLabel.Size = new System.Drawing.Size(49, 18);
             sirinaLabel.TabIndex = 3;
@@ -75,7 +75,7 @@
             // visinaLabel
             // 
             visinaLabel.AutoSize = true;
-            visinaLabel.Location = new System.Drawing.Point(133, 161);
+            visinaLabel.Location = new System.Drawing.Point(31, 121);
             visinaLabel.Name = "visinaLabel";
             visinaLabel.Size = new System.Drawing.Size(58, 18);
             visinaLabel.TabIndex = 5;
@@ -84,7 +84,7 @@
             // slikaLabel
             // 
             slikaLabel.AutoSize = true;
-            slikaLabel.Location = new System.Drawing.Point(150, 192);
+            slikaLabel.Location = new System.Drawing.Point(48, 152);
             slikaLabel.Name = "slikaLabel";
             slikaLabel.Size = new System.Drawing.Size(44, 18);
             slikaLabel.TabIndex = 7;
@@ -93,7 +93,7 @@
             // nazivLabel
             // 
             nazivLabel.AutoSize = true;
-            nazivLabel.Location = new System.Drawing.Point(144, 66);
+            nazivLabel.Location = new System.Drawing.Point(42, 26);
             nazivLabel.Name = "nazivLabel";
             nazivLabel.Size = new System.Drawing.Size(49, 18);
             nazivLabel.TabIndex = 9;
@@ -131,7 +131,7 @@
             // uiInputDužina
             // 
             this.uiInputDužina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "duljina", true));
-            this.uiInputDužina.Location = new System.Drawing.Point(204, 94);
+            this.uiInputDužina.Location = new System.Drawing.Point(102, 54);
             this.uiInputDužina.Name = "uiInputDužina";
             this.uiInputDužina.Size = new System.Drawing.Size(112, 24);
             this.uiInputDužina.TabIndex = 3;
@@ -139,7 +139,7 @@
             // uiInputŠirina
             // 
             this.uiInputŠirina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "sirina", true));
-            this.uiInputŠirina.Location = new System.Drawing.Point(204, 126);
+            this.uiInputŠirina.Location = new System.Drawing.Point(102, 86);
             this.uiInputŠirina.Name = "uiInputŠirina";
             this.uiInputŠirina.Size = new System.Drawing.Size(112, 24);
             this.uiInputŠirina.TabIndex = 4;
@@ -147,7 +147,7 @@
             // uiInputDubina
             // 
             this.uiInputDubina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "visina", true));
-            this.uiInputDubina.Location = new System.Drawing.Point(204, 158);
+            this.uiInputDubina.Location = new System.Drawing.Point(102, 118);
             this.uiInputDubina.Name = "uiInputDubina";
             this.uiInputDubina.Size = new System.Drawing.Size(112, 24);
             this.uiInputDubina.TabIndex = 6;
@@ -155,7 +155,7 @@
             // uiInputSlika
             // 
             this.uiInputSlika.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "slika", true));
-            this.uiInputSlika.Location = new System.Drawing.Point(204, 189);
+            this.uiInputSlika.Location = new System.Drawing.Point(102, 149);
             this.uiInputSlika.Name = "uiInputSlika";
             this.uiInputSlika.Size = new System.Drawing.Size(112, 24);
             this.uiInputSlika.TabIndex = 8;
@@ -163,7 +163,7 @@
             // uiInputNaziv
             // 
             this.uiInputNaziv.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "naziv", true));
-            this.uiInputNaziv.Location = new System.Drawing.Point(204, 63);
+            this.uiInputNaziv.Location = new System.Drawing.Point(102, 23);
             this.uiInputNaziv.Name = "uiInputNaziv";
             this.uiInputNaziv.Size = new System.Drawing.Size(112, 24);
             this.uiInputNaziv.TabIndex = 2;
@@ -174,7 +174,7 @@
             this.uiActionDalje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionDalje.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionDalje.ForeColor = System.Drawing.Color.White;
-            this.uiActionDalje.Location = new System.Drawing.Point(385, 310);
+            this.uiActionDalje.Location = new System.Drawing.Point(79, 224);
             this.uiActionDalje.Name = "uiActionDalje";
             this.uiActionDalje.Size = new System.Drawing.Size(135, 51);
             this.uiActionDalje.TabIndex = 11;
@@ -187,7 +187,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(532, 373);
+            this.ClientSize = new System.Drawing.Size(280, 316);
             this.Controls.Add(this.uiActionDalje);
             this.Controls.Add(nazivLabel);
             this.Controls.Add(this.uiInputNaziv);

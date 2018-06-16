@@ -3945,6 +3945,10 @@ namespace RashoApp {
             
             private global::System.Data.DataColumn columnKantiranost;
             
+            private global::System.Data.DataColumn columnDioID;
+            
+            private global::System.Data.DataColumn columnUlogaID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public PogledDjelovaPoProoizvoduDataTable() {
@@ -4060,6 +4064,22 @@ namespace RashoApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DioIDColumn {
+                get {
+                    return this.columnDioID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn UlogaIDColumn {
+                get {
+                    return this.columnUlogaID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4095,7 +4115,7 @@ namespace RashoApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public PogledDjelovaPoProoizvoduRow AddPogledDjelovaPoProoizvoduRow(string Naziv, double Duljina, double Širina, double Visina, string Slika, string Materijal, string Uloga, int Količina, string Boja, string Kantiranost) {
+            public PogledDjelovaPoProoizvoduRow AddPogledDjelovaPoProoizvoduRow(string Naziv, double Duljina, double Širina, double Visina, string Slika, string Materijal, string Uloga, int Količina, string Boja, string Kantiranost, int DioID, int UlogaID) {
                 PogledDjelovaPoProoizvoduRow rowPogledDjelovaPoProoizvoduRow = ((PogledDjelovaPoProoizvoduRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Naziv,
@@ -4107,7 +4127,9 @@ namespace RashoApp {
                         Uloga,
                         Količina,
                         Boja,
-                        Kantiranost};
+                        Kantiranost,
+                        DioID,
+                        UlogaID};
                 rowPogledDjelovaPoProoizvoduRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPogledDjelovaPoProoizvoduRow);
                 return rowPogledDjelovaPoProoizvoduRow;
@@ -4140,6 +4162,8 @@ namespace RashoApp {
                 this.columnKoličina = base.Columns["Količina"];
                 this.columnBoja = base.Columns["Boja"];
                 this.columnKantiranost = base.Columns["Kantiranost"];
+                this.columnDioID = base.Columns["DioID"];
+                this.columnUlogaID = base.Columns["UlogaID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4165,6 +4189,10 @@ namespace RashoApp {
                 base.Columns.Add(this.columnBoja);
                 this.columnKantiranost = new global::System.Data.DataColumn("Kantiranost", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnKantiranost);
+                this.columnDioID = new global::System.Data.DataColumn("DioID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDioID);
+                this.columnUlogaID = new global::System.Data.DataColumn("UlogaID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUlogaID);
                 this.columnNaziv.AllowDBNull = false;
                 this.columnNaziv.MaxLength = 50;
                 this.columnDuljina.AllowDBNull = false;
@@ -4178,6 +4206,8 @@ namespace RashoApp {
                 this.columnKoličina.AllowDBNull = false;
                 this.columnBoja.MaxLength = 30;
                 this.columnKantiranost.MaxLength = 30;
+                this.columnDioID.AllowDBNull = false;
+                this.columnUlogaID.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5475,6 +5505,28 @@ namespace RashoApp {
                 }
                 set {
                     this[this.tablePogledDjelovaPoProoizvodu.KantiranostColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int DioID {
+                get {
+                    return ((int)(this[this.tablePogledDjelovaPoProoizvodu.DioIDColumn]));
+                }
+                set {
+                    this[this.tablePogledDjelovaPoProoizvodu.DioIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int UlogaID {
+                get {
+                    return ((int)(this[this.tablePogledDjelovaPoProoizvodu.UlogaIDColumn]));
+                }
+                set {
+                    this[this.tablePogledDjelovaPoProoizvodu.UlogaIDColumn] = value;
                 }
             }
             
@@ -7370,7 +7422,7 @@ SELECT kolicina, boja, kantiranost, id_uloga, id_dio, id_proizvod FROM Komponent
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[6];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT kolicina, boja, kantiranost, id_uloga, id_dio, id_proizvod FROM dbo.Kompon" +
@@ -7393,12 +7445,20 @@ SELECT kolicina, boja, kantiranost, id_uloga, id_dio, id_proizvod FROM Komponent
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDUloga", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_uloga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT kolicina, boja, kantiranost, id_uloga, id_dio, id_proizvod FROM dbo.Kompon" +
-                "enta WHERE id_uloga= @uloga AND id_dio=@dio AND id_proizvod = @proizvod";
+            this._commandCollection[4].CommandText = "DELETE FROM [dbo].[Komponenta] WHERE id_uloga = @uloga AND id_dio=@dio AND id_pro" +
+                "izvod=@proizvod";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@uloga", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_uloga", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dio", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_dio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@proizvod", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_proizvod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@uloga", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_uloga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dio", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_dio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@proizvod", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_proizvod", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT kolicina, boja, kantiranost, id_uloga, id_dio, id_proizvod FROM dbo.Kompon" +
+                "enta WHERE id_uloga= @uloga AND id_dio=@dio AND id_proizvod = @proizvod";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@uloga", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_uloga", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dio", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_dio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@proizvod", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_proizvod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7430,7 +7490,7 @@ SELECT kolicina, boja, kantiranost, id_uloga, id_dio, id_proizvod FROM Komponent
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByDioUlogaProizvod(Baza18043_DBDataSet.KomponentaDataTable dataTable, int uloga, int dio, int proizvod) {
-            this.Adapter.SelectCommand = this.CommandCollection[4];
+            this.Adapter.SelectCommand = this.CommandCollection[5];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(uloga));
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(dio));
             this.Adapter.SelectCommand.Parameters[2].Value = ((int)(proizvod));
@@ -7446,7 +7506,7 @@ SELECT kolicina, boja, kantiranost, id_uloga, id_dio, id_proizvod FROM Komponent
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual Baza18043_DBDataSet.KomponentaDataTable GetDataByDioUlogaProizvod(int uloga, int dio, int proizvod) {
-            this.Adapter.SelectCommand = this.CommandCollection[4];
+            this.Adapter.SelectCommand = this.CommandCollection[5];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(uloga));
             this.Adapter.SelectCommand.Parameters[1].Value = ((int)(dio));
             this.Adapter.SelectCommand.Parameters[2].Value = ((int)(proizvod));
@@ -7682,6 +7742,32 @@ SELECT kolicina, boja, kantiranost, id_uloga, id_dio, id_proizvod FROM Komponent
         public virtual int DeleteByUlogaDijela(int IDUloga) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             command.Parameters[0].Value = ((int)(IDUloga));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteByUlogaDioProizvod(int uloga, int dio, int proizvod) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
+            command.Parameters[0].Value = ((int)(uloga));
+            command.Parameters[1].Value = ((int)(dio));
+            command.Parameters[2].Value = ((int)(proizvod));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10149,6 +10235,8 @@ SELECT kolicina, id_dio, id_narudzba FROM StavkaNarudzbe WHERE (id_dio = @id_dio
             tableMapping.ColumnMappings.Add("Količina", "Količina");
             tableMapping.ColumnMappings.Add("Boja", "Boja");
             tableMapping.ColumnMappings.Add("Kantiranost", "Kantiranost");
+            tableMapping.ColumnMappings.Add("DioID", "DioID");
+            tableMapping.ColumnMappings.Add("UlogaID", "UlogaID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -10165,8 +10253,8 @@ SELECT kolicina, id_dio, id_narudzba FROM StavkaNarudzbe WHERE (id_dio = @id_dio
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Naziv, Duljina, Širina, Visina, Slika, Materijal, Uloga, Količina, Boja, K" +
-                "antiranost FROM PogledDjelovaPoProoizvodu";
+            this._commandCollection[0].CommandText = "SELECT naziv, duljina, Širina, visina, slika, materijal, Uloga, Količina, boja, k" +
+                "antiranost, DioID, UlogaID FROM PogledDjelovaPoProoizvodu";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -10183,8 +10271,9 @@ WHERE        (k.id_proizvod IN
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_proizvod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT Naziv, Duljina, Širina, Visina, Slika, Materijal, Uloga, Količina, Boja, K" +
-                "antiranost\r\nFROM     PogledDjelovaPoProoizvodu\r\nWHERE  (Proizvod = @ID)";
+            this._commandCollection[2].CommandText = "SELECT naziv, duljina, Širina, visina, slika, materijal, Uloga, Količina, boja, k" +
+                "antiranost, DioID, UlogaID FROM PogledDjelovaPoProoizvodu WHERE (Proizvod = @ID)" +
+                "";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Proizvod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

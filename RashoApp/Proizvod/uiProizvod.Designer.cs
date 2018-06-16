@@ -31,48 +31,50 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiProizvod));
             this.uiOutputDataProizvod = new System.Windows.Forms.DataGridView();
-            this.proizvodBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
             this.uiActionObrišiProizvod = new System.Windows.Forms.Button();
             this.uiActionUrediProizvod = new System.Windows.Forms.Button();
             this.uiActionDodajNoviProizvod = new System.Windows.Forms.Button();
             this.uiOutputTableDataPogledDjelovaPoProoizvodu = new System.Windows.Forms.DataGridView();
-            this.pogledDjelovaPoProoizvoduBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uiOutputTableDataElement = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.proizvodBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.elementBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proizvodTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
-            this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
-            this.elementTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ElementTableAdapter();
-            this.pogledDjelovaPoProoizvoduTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.PogledDjelovaPoProoizvoduTableAdapter();
-            this.komponentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.komponentaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proizvodTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
+            this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
+            this.elementTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ElementTableAdapter();
+            this.komponentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.komponentaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter();
+            this.pogledDjelovaPoProoizvoduBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pogledDjelovaPoProoizvoduTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.PogledDjelovaPoProoizvoduTableAdapter();
+            this.dioIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ulogaIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duljinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.širinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.visinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.količinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materijalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ulogaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bojaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kantiranost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.slikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataProizvod)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataPogledDjelovaPoProoizvodu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataElement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataPogledDjelovaPoProoizvodu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pogledDjelovaPoProoizvoduBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataElement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pogledDjelovaPoProoizvoduBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // uiOutputDataProizvod
@@ -102,16 +104,6 @@
             this.uiOutputDataProizvod.Size = new System.Drawing.Size(882, 170);
             this.uiOutputDataProizvod.TabIndex = 1;
             this.uiOutputDataProizvod.SelectionChanged += new System.EventHandler(this.uiOutputDataProizvod_SelectionChanged);
-            // 
-            // proizvodBindingSource
-            // 
-            this.proizvodBindingSource.DataMember = "Proizvod";
-            this.proizvodBindingSource.DataSource = this.baza18043_DBDataSet;
-            // 
-            // baza18043_DBDataSet
-            // 
-            this.baza18043_DBDataSet.DataSetName = "Baza18043_DBDataSet";
-            this.baza18043_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // uiActionObrišiProizvod
             // 
@@ -165,16 +157,18 @@
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.BackgroundColor = System.Drawing.Color.White;
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
+            this.dioIDDataGridViewTextBoxColumn,
+            this.ulogaIDDataGridViewTextBoxColumn,
+            this.nazivDataGridViewTextBoxColumn,
+            this.duljinaDataGridViewTextBoxColumn,
+            this.širinaDataGridViewTextBoxColumn,
+            this.visinaDataGridViewTextBoxColumn,
+            this.količinaDataGridViewTextBoxColumn,
+            this.materijalDataGridViewTextBoxColumn,
+            this.ulogaDataGridViewTextBoxColumn,
+            this.bojaDataGridViewTextBoxColumn,
             this.Kantiranost,
-            this.dataGridViewTextBoxColumn14});
+            this.slikaDataGridViewTextBoxColumn});
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.DataSource = this.pogledDjelovaPoProoizvoduBindingSource;
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.Location = new System.Drawing.Point(0, 365);
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.MultiSelect = false;
@@ -185,11 +179,6 @@
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.Size = new System.Drawing.Size(882, 318);
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.TabIndex = 12;
-            // 
-            // pogledDjelovaPoProoizvoduBindingSource
-            // 
-            this.pogledDjelovaPoProoizvoduBindingSource.DataMember = "PogledDjelovaPoProoizvodu";
-            this.pogledDjelovaPoProoizvoduBindingSource.DataSource = this.baza18043_DBDataSet;
             // 
             // uiOutputTableDataElement
             // 
@@ -229,6 +218,16 @@
             this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn8.ValueMember = "ID";
             // 
+            // proizvodBindingSource
+            // 
+            this.proizvodBindingSource.DataMember = "Proizvod";
+            this.proizvodBindingSource.DataSource = this.baza18043_DBDataSet;
+            // 
+            // baza18043_DBDataSet
+            // 
+            this.baza18043_DBDataSet.DataSetName = "Baza18043_DBDataSet";
+            this.baza18043_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "id_element";
@@ -253,42 +252,6 @@
             // 
             this.elementBindingSource.DataMember = "Element";
             this.elementBindingSource.DataSource = this.baza18043_DBDataSet;
-            // 
-            // proizvodTableAdapter
-            // 
-            this.proizvodTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DioTableAdapter = null;
-            this.tableAdapterManager.DobavljacTableAdapter = null;
-            this.tableAdapterManager.ElementTableAdapter = null;
-            this.tableAdapterManager.KomponentaTableAdapter = null;
-            this.tableAdapterManager.KorisnikTableAdapter = null;
-            this.tableAdapterManager.NarudzbaTableAdapter = null;
-            this.tableAdapterManager.ProizvodTableAdapter = this.proizvodTableAdapter;
-            this.tableAdapterManager.StavkaNarudzbeTableAdapter = null;
-            this.tableAdapterManager.UlogaDijelaTableAdapter = null;
-            this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // elementTableAdapter
-            // 
-            this.elementTableAdapter.ClearBeforeFill = true;
-            // 
-            // pogledDjelovaPoProoizvoduTableAdapter
-            // 
-            this.pogledDjelovaPoProoizvoduTableAdapter.ClearBeforeFill = true;
-            // 
-            // komponentaBindingSource
-            // 
-            this.komponentaBindingSource.DataMember = "Komponenta";
-            this.komponentaBindingSource.DataSource = this.baza18043_DBDataSet;
-            // 
-            // komponentaTableAdapter
-            // 
-            this.komponentaTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -333,61 +296,118 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn10
+            // proizvodTableAdapter
             // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Naziv";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Naziv";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.proizvodTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn11
+            // tableAdapterManager
             // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Duljina";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Duljina";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.DioTableAdapter = null;
+            this.tableAdapterManager.DobavljacTableAdapter = null;
+            this.tableAdapterManager.ElementTableAdapter = null;
+            this.tableAdapterManager.KomponentaTableAdapter = null;
+            this.tableAdapterManager.KorisnikTableAdapter = null;
+            this.tableAdapterManager.NarudzbaTableAdapter = null;
+            this.tableAdapterManager.ProizvodTableAdapter = this.proizvodTableAdapter;
+            this.tableAdapterManager.StavkaNarudzbeTableAdapter = null;
+            this.tableAdapterManager.UlogaDijelaTableAdapter = null;
+            this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // dataGridViewTextBoxColumn12
+            // elementTableAdapter
             // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Širina";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Širina";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.elementTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn13
+            // komponentaBindingSource
             // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Visina";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Debljina";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.komponentaBindingSource.DataMember = "Komponenta";
+            this.komponentaBindingSource.DataSource = this.baza18043_DBDataSet;
             // 
-            // dataGridViewTextBoxColumn15
+            // komponentaTableAdapter
             // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "Materijal";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Materijal";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.komponentaTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn16
+            // pogledDjelovaPoProoizvoduBindingSource
             // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "Uloga";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Uloga";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.pogledDjelovaPoProoizvoduBindingSource.DataMember = "PogledDjelovaPoProoizvodu";
+            this.pogledDjelovaPoProoizvoduBindingSource.DataSource = this.baza18043_DBDataSet;
             // 
-            // dataGridViewTextBoxColumn17
+            // pogledDjelovaPoProoizvoduTableAdapter
             // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Količina";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Količina";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.pogledDjelovaPoProoizvoduTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn18
+            // dioIDDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "Boja";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Boja";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dioIDDataGridViewTextBoxColumn.DataPropertyName = "DioID";
+            this.dioIDDataGridViewTextBoxColumn.HeaderText = "DioID";
+            this.dioIDDataGridViewTextBoxColumn.Name = "dioIDDataGridViewTextBoxColumn";
+            this.dioIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dioIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // ulogaIDDataGridViewTextBoxColumn
+            // 
+            this.ulogaIDDataGridViewTextBoxColumn.DataPropertyName = "UlogaID";
+            this.ulogaIDDataGridViewTextBoxColumn.HeaderText = "UlogaID";
+            this.ulogaIDDataGridViewTextBoxColumn.Name = "ulogaIDDataGridViewTextBoxColumn";
+            this.ulogaIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ulogaIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "Naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // duljinaDataGridViewTextBoxColumn
+            // 
+            this.duljinaDataGridViewTextBoxColumn.DataPropertyName = "Duljina";
+            this.duljinaDataGridViewTextBoxColumn.HeaderText = "Duljina";
+            this.duljinaDataGridViewTextBoxColumn.Name = "duljinaDataGridViewTextBoxColumn";
+            this.duljinaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // širinaDataGridViewTextBoxColumn
+            // 
+            this.širinaDataGridViewTextBoxColumn.DataPropertyName = "Širina";
+            this.širinaDataGridViewTextBoxColumn.HeaderText = "Širina";
+            this.širinaDataGridViewTextBoxColumn.Name = "širinaDataGridViewTextBoxColumn";
+            this.širinaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // visinaDataGridViewTextBoxColumn
+            // 
+            this.visinaDataGridViewTextBoxColumn.DataPropertyName = "Visina";
+            this.visinaDataGridViewTextBoxColumn.HeaderText = "Visina";
+            this.visinaDataGridViewTextBoxColumn.Name = "visinaDataGridViewTextBoxColumn";
+            this.visinaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // količinaDataGridViewTextBoxColumn
+            // 
+            this.količinaDataGridViewTextBoxColumn.DataPropertyName = "Količina";
+            this.količinaDataGridViewTextBoxColumn.HeaderText = "Količina";
+            this.količinaDataGridViewTextBoxColumn.Name = "količinaDataGridViewTextBoxColumn";
+            this.količinaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // materijalDataGridViewTextBoxColumn
+            // 
+            this.materijalDataGridViewTextBoxColumn.DataPropertyName = "Materijal";
+            this.materijalDataGridViewTextBoxColumn.HeaderText = "Materijal";
+            this.materijalDataGridViewTextBoxColumn.Name = "materijalDataGridViewTextBoxColumn";
+            this.materijalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ulogaDataGridViewTextBoxColumn
+            // 
+            this.ulogaDataGridViewTextBoxColumn.DataPropertyName = "Uloga";
+            this.ulogaDataGridViewTextBoxColumn.HeaderText = "Uloga";
+            this.ulogaDataGridViewTextBoxColumn.Name = "ulogaDataGridViewTextBoxColumn";
+            this.ulogaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bojaDataGridViewTextBoxColumn
+            // 
+            this.bojaDataGridViewTextBoxColumn.DataPropertyName = "Boja";
+            this.bojaDataGridViewTextBoxColumn.HeaderText = "Boja";
+            this.bojaDataGridViewTextBoxColumn.Name = "bojaDataGridViewTextBoxColumn";
+            this.bojaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Kantiranost
             // 
@@ -396,12 +416,12 @@
             this.Kantiranost.Name = "Kantiranost";
             this.Kantiranost.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn14
+            // slikaDataGridViewTextBoxColumn
             // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Slika";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Slika";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.slikaDataGridViewTextBoxColumn.DataPropertyName = "Slika";
+            this.slikaDataGridViewTextBoxColumn.HeaderText = "Slika";
+            this.slikaDataGridViewTextBoxColumn.Name = "slikaDataGridViewTextBoxColumn";
+            this.slikaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // uiProizvod
             // 
@@ -421,13 +441,13 @@
             this.Load += new System.EventHandler(this.uiProizvod_Load);
             this.SizeChanged += new System.EventHandler(this.uiProizvod_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataProizvod)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataPogledDjelovaPoProoizvodu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataElement)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataPogledDjelovaPoProoizvodu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pogledDjelovaPoProoizvoduBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataElement)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.komponentaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pogledDjelovaPoProoizvoduBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,8 +464,6 @@
         private System.Windows.Forms.Button uiActionDodajNoviProizvod;
         private System.Windows.Forms.BindingSource elementBindingSource;
         private Baza18043_DBDataSetTableAdapters.ElementTableAdapter elementTableAdapter;
-        private System.Windows.Forms.BindingSource pogledDjelovaPoProoizvoduBindingSource;
-        private Baza18043_DBDataSetTableAdapters.PogledDjelovaPoProoizvoduTableAdapter pogledDjelovaPoProoizvoduTableAdapter;
         private System.Windows.Forms.DataGridView uiOutputTableDataPogledDjelovaPoProoizvodu;
         private System.Windows.Forms.DataGridView uiOutputTableDataElement;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn8;
@@ -459,15 +477,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.BindingSource pogledDjelovaPoProoizvoduBindingSource;
+        private Baza18043_DBDataSetTableAdapters.PogledDjelovaPoProoizvoduTableAdapter pogledDjelovaPoProoizvoduTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dioIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ulogaIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duljinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn širinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn visinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn količinaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn materijalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ulogaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bojaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Kantiranost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn slikaDataGridViewTextBoxColumn;
     }
 }

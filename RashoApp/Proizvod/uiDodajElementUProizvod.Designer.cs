@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label id_elementLabel;
             System.Windows.Forms.Label kolicinaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiDodajElementUProizvod));
             this.uiOutputNazivElement = new System.Windows.Forms.TextBox();
             this.uiActionOdaberiElement = new System.Windows.Forms.Button();
             this.uiActionSpremiElement = new System.Windows.Forms.Button();
@@ -51,6 +52,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputDataTableElement)).BeginInit();
             this.SuspendLayout();
+            // 
+            // id_elementLabel
+            // 
+            id_elementLabel.AutoSize = true;
+            id_elementLabel.Location = new System.Drawing.Point(17, 55);
+            id_elementLabel.Name = "id_elementLabel";
+            id_elementLabel.Size = new System.Drawing.Size(63, 17);
+            id_elementLabel.TabIndex = 16;
+            id_elementLabel.Text = "Element:";
+            // 
+            // kolicinaLabel
+            // 
+            kolicinaLabel.AutoSize = true;
+            kolicinaLabel.Location = new System.Drawing.Point(19, 30);
+            kolicinaLabel.Name = "kolicinaLabel";
+            kolicinaLabel.Size = new System.Drawing.Size(61, 17);
+            kolicinaLabel.TabIndex = 14;
+            kolicinaLabel.Text = "Količina:";
             // 
             // uiOutputNazivElement
             // 
@@ -81,22 +100,13 @@
             this.uiActionSpremiElement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionSpremiElement.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionSpremiElement.ForeColor = System.Drawing.Color.White;
-            this.uiActionSpremiElement.Location = new System.Drawing.Point(346, 121);
+            this.uiActionSpremiElement.Location = new System.Drawing.Point(357, 69);
             this.uiActionSpremiElement.Name = "uiActionSpremiElement";
             this.uiActionSpremiElement.Size = new System.Drawing.Size(112, 51);
             this.uiActionSpremiElement.TabIndex = 18;
             this.uiActionSpremiElement.Text = "Spremi";
             this.uiActionSpremiElement.UseVisualStyleBackColor = false;
             this.uiActionSpremiElement.Click += new System.EventHandler(this.uiActionSpremiElement_Click);
-            // 
-            // id_elementLabel
-            // 
-            id_elementLabel.AutoSize = true;
-            id_elementLabel.Location = new System.Drawing.Point(17, 55);
-            id_elementLabel.Name = "id_elementLabel";
-            id_elementLabel.Size = new System.Drawing.Size(63, 17);
-            id_elementLabel.TabIndex = 16;
-            id_elementLabel.Text = "Element:";
             // 
             // uiInputElementElement
             // 
@@ -105,15 +115,6 @@
             this.uiInputElementElement.ReadOnly = true;
             this.uiInputElementElement.Size = new System.Drawing.Size(22, 22);
             this.uiInputElementElement.TabIndex = 17;
-            // 
-            // kolicinaLabel
-            // 
-            kolicinaLabel.AutoSize = true;
-            kolicinaLabel.Location = new System.Drawing.Point(19, 30);
-            kolicinaLabel.Name = "kolicinaLabel";
-            kolicinaLabel.Size = new System.Drawing.Size(61, 17);
-            kolicinaLabel.TabIndex = 14;
-            kolicinaLabel.Text = "Količina:";
             // 
             // uiInputElementKolicina
             // 
@@ -128,7 +129,7 @@
             this.uiActionDalje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionDalje.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionDalje.ForeColor = System.Drawing.Color.White;
-            this.uiActionDalje.Location = new System.Drawing.Point(346, 30);
+            this.uiActionDalje.Location = new System.Drawing.Point(357, 12);
             this.uiActionDalje.Name = "uiActionDalje";
             this.uiActionDalje.Size = new System.Drawing.Size(112, 51);
             this.uiActionDalje.TabIndex = 25;
@@ -169,6 +170,8 @@
             // 
             this.uiOutputDataTableElement.AllowUserToAddRows = false;
             this.uiOutputDataTableElement.AllowUserToDeleteRows = false;
+            this.uiOutputDataTableElement.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiOutputDataTableElement.AutoGenerateColumns = false;
             this.uiOutputDataTableElement.BackgroundColor = System.Drawing.Color.White;
             this.uiOutputDataTableElement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -177,14 +180,15 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.uiOutputDataTableElement.DataSource = this.elementBindingSource;
-            this.uiOutputDataTableElement.Location = new System.Drawing.Point(0, 121);
+            this.uiOutputDataTableElement.Location = new System.Drawing.Point(0, 126);
             this.uiOutputDataTableElement.Name = "uiOutputDataTableElement";
             this.uiOutputDataTableElement.ReadOnly = true;
             this.uiOutputDataTableElement.RowHeadersVisible = false;
             this.uiOutputDataTableElement.RowTemplate.Height = 24;
             this.uiOutputDataTableElement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputDataTableElement.Size = new System.Drawing.Size(318, 220);
+            this.uiOutputDataTableElement.Size = new System.Drawing.Size(483, 215);
             this.uiOutputDataTableElement.TabIndex = 26;
+            this.uiOutputDataTableElement.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uiOutputDataTableElement_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -211,6 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(481, 342);
             this.Controls.Add(this.uiOutputDataTableElement);
             this.Controls.Add(this.uiActionDalje);
@@ -221,8 +226,11 @@
             this.Controls.Add(this.uiInputElementElement);
             this.Controls.Add(kolicinaLabel);
             this.Controls.Add(this.uiInputElementKolicina);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "uiDodajElementUProizvod";
-            this.Text = "uiDodajElementUProizvod";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Dodaj element u proizvod";
             this.Load += new System.EventHandler(this.uiDodajElementUProizvod_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.elementBindingSource)).EndInit();

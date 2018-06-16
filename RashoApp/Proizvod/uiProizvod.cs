@@ -12,7 +12,7 @@ namespace RashoApp.Proizvod
 {
     public partial class uiProizvod : Form
     {
-        int idProizvoda = 0;
+        int idProizvoda = 0, duzina=0, sirina = 0, dubina = 0;
 
         public uiProizvod()
         {
@@ -21,6 +21,8 @@ namespace RashoApp.Proizvod
 
         private void uiProizvod_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.PogledDjelovaPoProoizvodu' table. You can move, or remove it, as needed.
+            this.pogledDjelovaPoProoizvoduTableAdapter.Fill(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Proizvod' table. You can move, or remove it, as needed.
             this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
 
@@ -29,6 +31,8 @@ namespace RashoApp.Proizvod
         private void SpremiPromjene()
         {
             this.Validate();
+            this.komponentaBindingSource.EndEdit();
+            this.elementBindingSource.EndEdit();
             this.proizvodBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.baza18043_DBDataSet);
         }
@@ -44,7 +48,13 @@ namespace RashoApp.Proizvod
 
         private void uiActionUrediProizvod_Click(object sender, EventArgs e)
         {
+            idProizvoda = int.Parse(uiOutputDataProizvod.SelectedCells[0].Value.ToString());
+            duzina = int.Parse(uiOutputDataProizvod.SelectedCells[2].Value.ToString());
+            sirina = int.Parse(uiOutputDataProizvod.SelectedCells[3].Value.ToString());
+            dubina = int.Parse(uiOutputDataProizvod.SelectedCells[4].Value.ToString());
 
+            Proizvod.uiDodajDjeloveUProizvod frm = new uiDodajDjeloveUProizvod(idProizvoda, duzina, sirina, dubina);
+            frm.ShowDialog();
         }
 
         private void uiActionObrišiProizvod_Click(object sender, EventArgs e)
@@ -53,13 +63,14 @@ namespace RashoApp.Proizvod
             {
                 idProizvoda = int.Parse(uiOutputDataProizvod.SelectedCells[0].Value.ToString());
 
-                uiOutputDataProizvod.Rows.RemoveAt(uiOutputDataProizvod.CurrentRow.Index);
-                
                 this.elementTableAdapter.DeleteByProizvod(idProizvoda);
                 this.komponentaTableAdapter.DeleteByProizvod(idProizvoda);
                 this.proizvodTableAdapter.DeleteByID(idProizvoda);
+
+                uiOutputDataProizvod.Rows.RemoveAt(uiOutputDataProizvod.CurrentRow.Index);
             }
            SpremiPromjene();
+           this.Refresh();
         }
 
         private void uiProizvod_SizeChanged(object sender, EventArgs e)
@@ -75,17 +86,18 @@ namespace RashoApp.Proizvod
 
         private void uiOutputDataProizvod_SelectionChanged(object sender, EventArgs e)
         {
-            if (uiOutputDataProizvod.SelectedCells.Count == 0)
+            if (uiOutputDataProizvod.SelectedRows.Count == 0)
             {
-                idProizvoda = 0;
+                uiOutputDataProizvod.Rows[0].Selected = true;
+                idProizvoda = int.Parse(uiOutputDataProizvod.SelectedCells[0].Value.ToString());
             }
             else
             {
                 idProizvoda = int.Parse(uiOutputDataProizvod.SelectedCells[0].Value.ToString());
-                this.elementTableAdapter.FillByIdProizvoda(this.baza18043_DBDataSet.Element, idProizvoda);
             }
+                this.elementTableAdapter.FillByIdProizvoda(this.baza18043_DBDataSet.Element, idProizvoda);
 
-            this.pogledDjelovaPoProoizvoduTableAdapter.FillByProizvodID(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu, idProizvoda);
+                this.pogledDjelovaPoProoizvoduTableAdapter.FillByProizvodID(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu, idProizvoda);
         }
         
         private void uiOutputTableDataElement_SelectionChanged(object sender, EventArgs e)

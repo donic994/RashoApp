@@ -71,5 +71,10 @@ namespace RashoApp.Proizvod
         {
             this.elementTableAdapter.FillByIdProizvoda(this.baza18043_DBDataSet.Element, ProizvodID);
         }
+
+        private void uiOutputDataTableElement_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
