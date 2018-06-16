@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,25 @@ namespace RashoApp.Proizvod
             this.Close();
             Proizvod.uiDodajDjeloveUProizvod frm = new uiDodajDjeloveUProizvod(proizvodID, duzina, sirina, dubina);
             frm.ShowDialog();
+        }
+
+        private void uiActionOdaberiSliku_Click(object sender, EventArgs e)
+        {
+            
+            OpenFileDialog openFileDialogOdaberiSliku = new OpenFileDialog();
+            openFileDialogOdaberiSliku.Title = "Odaberi sliku";
+            openFileDialogOdaberiSliku.Filter = "Picture files (*.png, *.jpg, *.jpeg) | *.png; *.jpg; *.jpeg";
+
+            if (openFileDialogOdaberiSliku.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string filePath = openFileDialogOdaberiSliku.FileName;
+
+                uiInputSlika.Text = filePath;
+            }
+
+
+            //PictureBox pb = new PictureBox();
+            //pb.Load(path)
         }
     }
 }

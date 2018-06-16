@@ -42,8 +42,6 @@ namespace RashoApp.Proizvod
         {
             Proizvod.uiDodajProizvod frm = new uiDodajProizvod();
             frm.ShowDialog();
-            //PictureBox pb = new PictureBox();
-            //pb.Load(path)
         }
 
         private void uiActionUrediProizvod_Click(object sender, EventArgs e)

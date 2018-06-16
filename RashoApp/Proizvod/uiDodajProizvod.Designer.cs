@@ -45,6 +45,8 @@
             this.uiInputSlika = new System.Windows.Forms.TextBox();
             this.uiInputNaziv = new System.Windows.Forms.TextBox();
             this.uiActionDalje = new System.Windows.Forms.Button();
+            this.uiActionOdaberiSliku = new System.Windows.Forms.Button();
+            this.openFileDialogOdaberiSliku = new System.Windows.Forms.OpenFileDialog();
             duljinaLabel = new System.Windows.Forms.Label();
             sirinaLabel = new System.Windows.Forms.Label();
             visinaLabel = new System.Windows.Forms.Label();
@@ -182,12 +184,32 @@
             this.uiActionDalje.UseVisualStyleBackColor = false;
             this.uiActionDalje.Click += new System.EventHandler(this.uiActionDalje_Click);
             // 
+            // uiActionOdaberiSliku
+            // 
+            this.uiActionOdaberiSliku.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionOdaberiSliku.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionOdaberiSliku.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiActionOdaberiSliku.ForeColor = System.Drawing.Color.White;
+            this.uiActionOdaberiSliku.Location = new System.Drawing.Point(217, 149);
+            this.uiActionOdaberiSliku.Margin = new System.Windows.Forms.Padding(0);
+            this.uiActionOdaberiSliku.Name = "uiActionOdaberiSliku";
+            this.uiActionOdaberiSliku.Size = new System.Drawing.Size(30, 24);
+            this.uiActionOdaberiSliku.TabIndex = 22;
+            this.uiActionOdaberiSliku.Text = "+";
+            this.uiActionOdaberiSliku.UseVisualStyleBackColor = false;
+            this.uiActionOdaberiSliku.Click += new System.EventHandler(this.uiActionOdaberiSliku_Click);
+            // 
+            // openFileDialogOdaberiSliku
+            // 
+            this.openFileDialogOdaberiSliku.FileName = "openFileDialogOdaberiSliku";
+            // 
             // uiDodajProizvod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(280, 316);
+            this.Controls.Add(this.uiActionOdaberiSliku);
             this.Controls.Add(this.uiActionDalje);
             this.Controls.Add(nazivLabel);
             this.Controls.Add(this.uiInputNaziv);
@@ -225,5 +247,7 @@
         private System.Windows.Forms.TextBox uiInputSlika;
         private System.Windows.Forms.TextBox uiInputNaziv;
         private System.Windows.Forms.Button uiActionDalje;
+        private System.Windows.Forms.Button uiActionOdaberiSliku;
+        private System.Windows.Forms.OpenFileDialog openFileDialogOdaberiSliku;
     }
 }
