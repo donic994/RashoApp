@@ -13,6 +13,9 @@ namespace RashoApp.Proizvod
 {
     public partial class uiDodajProizvod : Form
     {
+        private string destinacijaČitanja;
+        private string destinacijaSpremanja = "";
+
         public uiDodajProizvod()
         {
             InitializeComponent();
@@ -42,12 +45,22 @@ namespace RashoApp.Proizvod
             int.TryParse(uiInputDubina.Text.ToString(), out dubina);
             string slika = uiInputSlika.Text;
 
+
+            //Dodaj sliku u lokalni direktorij(Slike)
+            destinacijaSpremanja = "F:\\DoNiC\\FOI\\8 semestar\\PI\\Projekt2018\\RashoApp\\RashoApp\\bin\\Debug\\Slike\\Slika" + naziv + ".jpg";
+
+            //Stream spremi = new Stream(File.Copy(destinacijaČitanja.ToString(), destinacijaSpremanja));
+            File.Copy(destinacijaČitanja.ToString(), destinacijaSpremanja);
+            //
+
             Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
-            noviDioTableAdapter.Insert(duzina, sirina, dubina, slika, naziv);
+            noviDioTableAdapter.Insert(duzina, sirina, dubina, destinacijaSpremanja, naziv);
 
             SpremiPromjene();
 
             int proizvodID = int.Parse(this.proizvodTableAdapter.VratiZadnjiIDProizvoda().ToString());
+
+
 
             this.Close();
             Proizvod.uiDodajDjeloveUProizvod frm = new uiDodajDjeloveUProizvod(proizvodID, duzina, sirina, dubina);
@@ -63,14 +76,12 @@ namespace RashoApp.Proizvod
 
             if (openFileDialogOdaberiSliku.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                string filePath = openFileDialogOdaberiSliku.FileName;
+                destinacijaČitanja = openFileDialogOdaberiSliku.FileName;
+                StreamReader čitaj = new StreamReader(File.OpenRead(openFileDialogOdaberiSliku.FileName));
 
-                uiInputSlika.Text = filePath;
+                uiInputSlika.Text = destinacijaČitanja;
+                čitaj.Dispose();
             }
-
-
-            //PictureBox pb = new PictureBox();
-            //pb.Load(path)
         }
     }
 }
