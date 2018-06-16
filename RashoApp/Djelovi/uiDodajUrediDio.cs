@@ -80,6 +80,5 @@ namespace RashoApp.Djelovi
             this.dioBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.baza18043_DBDataSet);
         }
-
     }
 }

@@ -72,7 +72,7 @@
             // duljinaLabel
             // 
             duljinaLabel.AutoSize = true;
-            duljinaLabel.Location = new System.Drawing.Point(33, 58);
+            duljinaLabel.Location = new System.Drawing.Point(35, 57);
             duljinaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             duljinaLabel.Name = "duljinaLabel";
             duljinaLabel.Size = new System.Drawing.Size(56, 18);
@@ -82,7 +82,7 @@
             // sirinaLabel
             // 
             sirinaLabel.AutoSize = true;
-            sirinaLabel.Location = new System.Drawing.Point(41, 89);
+            sirinaLabel.Location = new System.Drawing.Point(42, 89);
             sirinaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             sirinaLabel.Name = "sirinaLabel";
             sirinaLabel.Size = new System.Drawing.Size(49, 18);
@@ -92,7 +92,7 @@
             // visinaLabel
             // 
             visinaLabel.AutoSize = true;
-            visinaLabel.Location = new System.Drawing.Point(39, 121);
+            visinaLabel.Location = new System.Drawing.Point(41, 120);
             visinaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             visinaLabel.Name = "visinaLabel";
             visinaLabel.Size = new System.Drawing.Size(51, 18);
@@ -112,7 +112,7 @@
             // materijalLabel
             // 
             materijalLabel.AutoSize = true;
-            materijalLabel.Location = new System.Drawing.Point(20, 184);
+            materijalLabel.Location = new System.Drawing.Point(24, 183);
             materijalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             materijalLabel.Name = "materijalLabel";
             materijalLabel.Size = new System.Drawing.Size(67, 18);
@@ -136,54 +136,67 @@
             // uiInputDioNaziv
             // 
             this.uiInputDioNaziv.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dioBindingSource, "naziv", true));
+            this.helpProvider1.SetHelpString(this.uiInputDioNaziv, "Unesite naziv novog dijela");
             this.uiInputDioNaziv.Location = new System.Drawing.Point(99, 23);
             this.uiInputDioNaziv.Margin = new System.Windows.Forms.Padding(4);
             this.uiInputDioNaziv.Name = "uiInputDioNaziv";
+            this.helpProvider1.SetShowHelp(this.uiInputDioNaziv, true);
             this.uiInputDioNaziv.Size = new System.Drawing.Size(112, 24);
             this.uiInputDioNaziv.TabIndex = 1;
             // 
             // uiInputDioDuljina
             // 
             this.uiInputDioDuljina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dioBindingSource, "duljina", true));
+            this.helpProvider1.SetHelpString(this.uiInputDioDuljina, "Unesite duljinu u mm");
             this.uiInputDioDuljina.Location = new System.Drawing.Point(99, 54);
             this.uiInputDioDuljina.Margin = new System.Windows.Forms.Padding(4);
             this.uiInputDioDuljina.Name = "uiInputDioDuljina";
+            this.helpProvider1.SetShowHelp(this.uiInputDioDuljina, true);
             this.uiInputDioDuljina.Size = new System.Drawing.Size(112, 24);
             this.uiInputDioDuljina.TabIndex = 2;
             // 
             // uiInputDioŠirina
             // 
             this.uiInputDioŠirina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dioBindingSource, "sirina", true));
+            this.helpProvider1.SetHelpString(this.uiInputDioŠirina, "Unesite širinu u mm");
             this.uiInputDioŠirina.Location = new System.Drawing.Point(99, 86);
             this.uiInputDioŠirina.Margin = new System.Windows.Forms.Padding(4);
             this.uiInputDioŠirina.Name = "uiInputDioŠirina";
+            this.helpProvider1.SetShowHelp(this.uiInputDioŠirina, true);
             this.uiInputDioŠirina.Size = new System.Drawing.Size(112, 24);
             this.uiInputDioŠirina.TabIndex = 3;
             // 
             // uiInputDioVisina
             // 
             this.uiInputDioVisina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dioBindingSource, "visina", true));
+            this.helpProvider1.SetHelpString(this.uiInputDioVisina, "Unesite debljinu u mm");
             this.uiInputDioVisina.Location = new System.Drawing.Point(99, 117);
             this.uiInputDioVisina.Margin = new System.Windows.Forms.Padding(4);
             this.uiInputDioVisina.Name = "uiInputDioVisina";
+            this.helpProvider1.SetShowHelp(this.uiInputDioVisina, true);
             this.uiInputDioVisina.Size = new System.Drawing.Size(112, 24);
             this.uiInputDioVisina.TabIndex = 4;
             // 
             // uiInputDioSlika
             // 
             this.uiInputDioSlika.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dioBindingSource, "slika", true));
+            this.helpProvider1.SetHelpString(this.uiInputDioSlika, "Odaberite sliku");
             this.uiInputDioSlika.Location = new System.Drawing.Point(99, 149);
             this.uiInputDioSlika.Margin = new System.Windows.Forms.Padding(4);
             this.uiInputDioSlika.Name = "uiInputDioSlika";
+            this.uiInputDioSlika.ReadOnly = true;
+            this.helpProvider1.SetShowHelp(this.uiInputDioSlika, true);
             this.uiInputDioSlika.Size = new System.Drawing.Size(112, 24);
             this.uiInputDioSlika.TabIndex = 5;
             // 
             // uiInputDioMaterijal
             // 
             this.uiInputDioMaterijal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dioBindingSource, "materijal", true));
+            this.helpProvider1.SetHelpString(this.uiInputDioMaterijal, "Unesite materijal");
             this.uiInputDioMaterijal.Location = new System.Drawing.Point(99, 180);
             this.uiInputDioMaterijal.Margin = new System.Windows.Forms.Padding(4);
             this.uiInputDioMaterijal.Name = "uiInputDioMaterijal";
+            this.helpProvider1.SetShowHelp(this.uiInputDioMaterijal, true);
             this.uiInputDioMaterijal.Size = new System.Drawing.Size(112, 24);
             this.uiInputDioMaterijal.TabIndex = 6;
             // 
@@ -257,30 +270,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
-
-            //
-            //HelpProvider
-            //
-            this.helpProvider1.SetShowHelp(this.uiInputDioNaziv, true);
-            this.helpProvider1.SetHelpString(this.uiInputDioNaziv, "Unesite naziv novog dijela");
-
-            this.helpProvider1.SetShowHelp(this.uiInputDioDuljina, true);
-            this.helpProvider1.SetHelpString(this.uiInputDioDuljina, "Unesite duljinu u mm");
-
-            this.helpProvider1.SetShowHelp(this.uiInputDioŠirina, true);
-            this.helpProvider1.SetHelpString(this.uiInputDioŠirina, "Unesite širinu u mm");
-
-            this.helpProvider1.SetShowHelp(this.uiInputDioVisina, true);
-            this.helpProvider1.SetHelpString(this.uiInputDioVisina, "Unesite debljinu u mm");
-
-            this.helpProvider1.SetShowHelp(this.uiInputDioSlika, true);
-            this.helpProvider1.SetHelpString(this.uiInputDioSlika, "Odaberite sliku");
-
-            this.helpProvider1.SetShowHelp(this.uiInputDioMaterijal, true);
-            this.helpProvider1.SetHelpString(this.uiInputDioMaterijal, "Unesite materijal");
-
-
 
         }
 

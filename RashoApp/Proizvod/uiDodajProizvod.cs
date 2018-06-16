@@ -48,8 +48,6 @@ namespace RashoApp.Proizvod
 
             //Dodaj sliku u lokalni direktorij(Slike)
             destinacijaSpremanja = "F:\\DoNiC\\FOI\\8 semestar\\PI\\Projekt2018\\RashoApp\\RashoApp\\bin\\Debug\\Slike\\Slika" + naziv + ".png";
-
-            //Stream spremi = new Stream(File.Copy(destinacijaČitanja.ToString(), destinacijaSpremanja));
             File.Copy(destinacijaČitanja.ToString(), destinacijaSpremanja);
             //
 

@@ -32,7 +32,15 @@ namespace RashoApp
 
         private void uiActionDodajNoviDio_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(uiOutputTableDataDio.SelectedCells[0].Value.ToString());
+            int id = 0;
+            if(uiOutputTableDataDio.SelectedCells.Count == 0)
+            {
+                id = 0;
+            }
+            else
+            {
+                id = int.Parse(uiOutputTableDataDio.SelectedCells[0].Value.ToString());
+            }
             Djelovi.uiDodajUrediDio frm = new Djelovi.uiDodajUrediDio(id, "dodaj");
             frm.ShowDialog();
         }

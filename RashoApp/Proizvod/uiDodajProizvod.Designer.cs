@@ -52,8 +52,6 @@
             visinaLabel = new System.Windows.Forms.Label();
             slikaLabel = new System.Windows.Forms.Label();
             nazivLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // duljinaLabel
@@ -100,16 +98,6 @@
             nazivLabel.Size = new System.Drawing.Size(49, 18);
             nazivLabel.TabIndex = 9;
             nazivLabel.Text = "Naziv:";
-            // 
-            // baza18043_DBDataSet
-            // 
-            this.baza18043_DBDataSet.DataSetName = "Baza18043_DBDataSet";
-            this.baza18043_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // proizvodBindingSource
-            // 
-            this.proizvodBindingSource.DataMember = "Proizvod";
-            this.proizvodBindingSource.DataSource = this.baza18043_DBDataSet;
             // 
             // proizvodTableAdapter
             // 
@@ -228,8 +216,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj novi proizvod";
             this.Load += new System.EventHandler(this.uiDodajProizvod_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proizvodBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
