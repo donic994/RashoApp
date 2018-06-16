@@ -55,6 +55,22 @@ namespace RashoApp.Proizvod
             PopuniTablicu();
         }
 
+        private void uiActionSpremiElement_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms.OfType<Proizvod.uiProizvod>().Single().PopuniTablicu();
+            this.Close();
+        }
+
+        private void uiActionObrišiElement_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj element iz proizvoda?", "Obrisati dio", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            {
+                uiOutputDataTableElement.Rows.RemoveAt(uiOutputDataTableElement.CurrentRow.Index);
+            }
+            SpremiPromjene();
+            PopuniTablicu();
+
+        }
 
         public void PostaviVrijednostOdabranogElementa(string ID, string naziv)
         {
@@ -62,19 +78,13 @@ namespace RashoApp.Proizvod
             uiOutputNazivElement.Text = naziv;
         }
 
-        private void uiActionSpremiElement_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
 
         private void PopuniTablicu()
         {
             this.elementTableAdapter.FillByIdProizvoda(this.baza18043_DBDataSet.Element, ProizvodID);
         }
 
-        private void uiOutputDataTableElement_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
     }
 }

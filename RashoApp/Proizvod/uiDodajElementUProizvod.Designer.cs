@@ -46,6 +46,7 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.uiActionObrišiElement = new System.Windows.Forms.Button();
             id_elementLabel = new System.Windows.Forms.Label();
             kolicinaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
@@ -100,9 +101,9 @@
             this.uiActionSpremiElement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionSpremiElement.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionSpremiElement.ForeColor = System.Drawing.Color.White;
-            this.uiActionSpremiElement.Location = new System.Drawing.Point(357, 69);
+            this.uiActionSpremiElement.Location = new System.Drawing.Point(445, 12);
             this.uiActionSpremiElement.Name = "uiActionSpremiElement";
-            this.uiActionSpremiElement.Size = new System.Drawing.Size(112, 51);
+            this.uiActionSpremiElement.Size = new System.Drawing.Size(112, 108);
             this.uiActionSpremiElement.TabIndex = 18;
             this.uiActionSpremiElement.Text = "Spremi";
             this.uiActionSpremiElement.UseVisualStyleBackColor = false;
@@ -129,7 +130,7 @@
             this.uiActionDalje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionDalje.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionDalje.ForeColor = System.Drawing.Color.White;
-            this.uiActionDalje.Location = new System.Drawing.Point(357, 12);
+            this.uiActionDalje.Location = new System.Drawing.Point(327, 12);
             this.uiActionDalje.Name = "uiActionDalje";
             this.uiActionDalje.Size = new System.Drawing.Size(112, 51);
             this.uiActionDalje.TabIndex = 25;
@@ -173,6 +174,7 @@
             this.uiOutputDataTableElement.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiOutputDataTableElement.AutoGenerateColumns = false;
+            this.uiOutputDataTableElement.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.uiOutputDataTableElement.BackgroundColor = System.Drawing.Color.White;
             this.uiOutputDataTableElement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uiOutputDataTableElement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -186,9 +188,8 @@
             this.uiOutputDataTableElement.RowHeadersVisible = false;
             this.uiOutputDataTableElement.RowTemplate.Height = 24;
             this.uiOutputDataTableElement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputDataTableElement.Size = new System.Drawing.Size(483, 215);
+            this.uiOutputDataTableElement.Size = new System.Drawing.Size(577, 215);
             this.uiOutputDataTableElement.TabIndex = 26;
-            this.uiOutputDataTableElement.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uiOutputDataTableElement_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -211,12 +212,27 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
+            // uiActionObrišiElement
+            // 
+            this.uiActionObrišiElement.BackColor = System.Drawing.Color.Crimson;
+            this.uiActionObrišiElement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionObrišiElement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiActionObrišiElement.ForeColor = System.Drawing.Color.White;
+            this.uiActionObrišiElement.Location = new System.Drawing.Point(327, 69);
+            this.uiActionObrišiElement.Name = "uiActionObrišiElement";
+            this.uiActionObrišiElement.Size = new System.Drawing.Size(112, 51);
+            this.uiActionObrišiElement.TabIndex = 41;
+            this.uiActionObrišiElement.Text = "OBRIŠI";
+            this.uiActionObrišiElement.UseVisualStyleBackColor = false;
+            this.uiActionObrišiElement.Click += new System.EventHandler(this.uiActionObrišiElement_Click);
+            // 
             // uiDodajElementUProizvod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(481, 342);
+            this.ClientSize = new System.Drawing.Size(575, 342);
+            this.Controls.Add(this.uiActionObrišiElement);
             this.Controls.Add(this.uiOutputDataTableElement);
             this.Controls.Add(this.uiActionDalje);
             this.Controls.Add(this.uiOutputNazivElement);
@@ -256,5 +272,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Button uiActionObrišiElement;
     }
 }

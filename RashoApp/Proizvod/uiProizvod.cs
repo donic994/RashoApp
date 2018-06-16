@@ -94,15 +94,20 @@ namespace RashoApp.Proizvod
             else
             {
                 idProizvoda = int.Parse(uiOutputDataProizvod.SelectedCells[0].Value.ToString());
-            }
-                this.elementTableAdapter.FillByIdProizvoda(this.baza18043_DBDataSet.Element, idProizvoda);
 
+                this.elementTableAdapter.FillByIdProizvoda(this.baza18043_DBDataSet.Element, idProizvoda);
                 this.pogledDjelovaPoProoizvoduTableAdapter.FillByProizvodID(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu, idProizvoda);
+            }
         }
-        
+
         private void uiOutputTableDataElement_SelectionChanged(object sender, EventArgs e)
         {
             //this.pogledDjelovaPoProoizvoduTableAdapter.FillByIDElementProizvod(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu, idProizvoda);
+        }
+
+        public void PopuniTablicu()
+        {
+            this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
         }
         
     }
