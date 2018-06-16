@@ -24,7 +24,7 @@ namespace RashoApp.Proizvod
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.PogledDjelovaPoProoizvodu' table. You can move, or remove it, as needed.
             this.pogledDjelovaPoProoizvoduTableAdapter.Fill(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Proizvod' table. You can move, or remove it, as needed.
-            this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
+            PopuniTablicu();
 
         }
 
@@ -106,7 +106,21 @@ namespace RashoApp.Proizvod
         public void PopuniTablicu()
         {
             this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
-        }
-        
+
+            for (int i = 0; i < uiOutputDataProizvod.Rows.Count; i++)
+            {
+                if(uiOutputDataProizvod.Rows[i].Cells[5].Value.ToString() == "")
+                {
+                    uiOutputDataProizvod.Rows[i].Cells[6].Value = null;
+                }
+                else
+                {
+                    Bitmap img;
+                    img = new Bitmap(uiOutputDataProizvod.Rows[i].Cells[5].Value.ToString());
+                    uiOutputDataProizvod.Rows[i].Cells[6].Value = img;
+                }
+
+            }
+        }        
     }
 }

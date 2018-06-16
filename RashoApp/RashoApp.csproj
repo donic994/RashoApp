@@ -238,6 +238,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UlogaDijela\uiDodajUrediUlogaDijela.resx">
       <DependentUpon>uiDodajUrediUlogaDijela.cs</DependentUpon>
@@ -292,6 +293,7 @@
     <Content Include="Ikone\Dodaj.ico" />
     <Content Include="Ikone\Logo.ico" />
     <Content Include="Ikone\Uredi.ico" />
+    <None Include="Resources\Dijagram aktivnosti - prijava.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
