@@ -54,7 +54,7 @@ namespace RashoApp
 
         private void uiActionObrišiDio_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj dio?", "Obrisati dio", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes)
+            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj dio?", "Obrisati dio", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
 
                 int id = int.Parse(uiOutputTableDataDio.SelectedCells[0].Value.ToString());

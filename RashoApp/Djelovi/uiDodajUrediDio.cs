@@ -1,12 +1,6 @@
-﻿using RashoApp.Properties;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RashoApp.Djelovi
@@ -52,26 +46,57 @@ namespace RashoApp.Djelovi
             if(kontrola == "uredi")
             {
                 SpremiPromjene();
+
+                this.Close();
+                Application.OpenForms.OfType<uiDjelovi>().Single().PopuniPodacimaDio();
             }
-            if(kontrola == "dodaj")
+            if (kontrola == "dodaj")
             {
-                int duljina=0, sirina=0, visina=0;
+                int duljina = 0, sirina = 0, visina = 0;
+                string naziv = null, slika = null, materijal = null;
 
-                string naziv = uiInputDioNaziv.Text;
-                int.TryParse(uiInputDioDuljina.Text.ToString(), out duljina);
-                int.TryParse(uiInputDioŠirina.Text.ToString(), out sirina);
-                int.TryParse(uiInputDioVisina.Text.ToString(), out visina);
-                string slika = uiInputDioSlika.Text;
-                string materijal = uiInputDioMaterijal.Text;
+                if (uiInputDioNaziv.Text == null)
+                {
+                    MessageBox.Show("Unesite vrijednost u Naziv!");
+                    uiInputDioNaziv.Text = "";
+                    uiInputDioNaziv.Focus();
+                }
+                else if (!int.TryParse(uiInputDioDuljina.Text, out duljina) || uiInputDioDuljina.Text == null)
+                {
+                    MessageBox.Show("Unesite brojčanu vrijednost u Dužina!");
+                    uiInputDioDuljina.Text = "";
+                    uiInputDioDuljina.Focus();
+                }
+                else if (!int.TryParse(uiInputDioŠirina.Text, out sirina) || uiInputDioŠirina.Text == null)
+                {
+                    MessageBox.Show("Unesite brojčanu vrijednost u Širina!");
+                    uiInputDioŠirina.Text = "";
+                    uiInputDioŠirina.Focus();
+                }
+                else if (!int.TryParse(uiInputDioVisina.Text, out visina) || uiInputDioVisina.Text == null)
+                {
+                    MessageBox.Show("Unesite brojčanu vrijednost u Dubina!");
+                    uiInputDioVisina.Text = "";
+                    uiInputDioVisina.Focus();
+                }
+                else if (uiInputDioMaterijal.Text == null)
+                {
+                    MessageBox.Show("Unesite vrijednost u Materijal!");
+                    uiInputDioMaterijal.Text = "";
+                    uiInputDioMaterijal.Focus();
+                }
+                else
+                { 
 
-                Baza18043_DBDataSetTableAdapters.DioTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.DioTableAdapter();
-                noviDioTableAdapter.Insert(naziv, duljina, sirina, visina, slika, materijal);
+                    Baza18043_DBDataSetTableAdapters.DioTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.DioTableAdapter();
+                    noviDioTableAdapter.Insert(naziv, duljina, sirina, visina, slika, materijal);
 
-                SpremiPromjene();
+                    SpremiPromjene();
+
+                    this.Close();
+                    Application.OpenForms.OfType<uiDjelovi>().Single().PopuniPodacimaDio();
+                }
             }     
-                        
-            this.Close();
-            Application.OpenForms.OfType<uiDjelovi>().Single().PopuniPodacimaDio();
         }
 
         private void SpremiPromjene()

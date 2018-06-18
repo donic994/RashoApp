@@ -33,7 +33,6 @@
             System.Windows.Forms.Label duljinaLabel;
             System.Windows.Forms.Label sirinaLabel;
             System.Windows.Forms.Label visinaLabel;
-            System.Windows.Forms.Label slikaLabel;
             System.Windows.Forms.Label materijalLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiDodajUrediDio));
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
@@ -43,17 +42,14 @@
             this.uiInputDioDuljina = new System.Windows.Forms.TextBox();
             this.uiInputDioŠirina = new System.Windows.Forms.TextBox();
             this.uiInputDioVisina = new System.Windows.Forms.TextBox();
-            this.uiInputDioSlika = new System.Windows.Forms.TextBox();
             this.uiInputDioMaterijal = new System.Windows.Forms.TextBox();
             this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
             this.uiActionSpremiDio = new System.Windows.Forms.Button();
-            this.uiLabelUpozorenje = new System.Windows.Forms.Label();
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             nazivLabel = new System.Windows.Forms.Label();
             duljinaLabel = new System.Windows.Forms.Label();
             sirinaLabel = new System.Windows.Forms.Label();
             visinaLabel = new System.Windows.Forms.Label();
-            slikaLabel = new System.Windows.Forms.Label();
             materijalLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dioBindingSource)).BeginInit();
@@ -72,12 +68,12 @@
             // duljinaLabel
             // 
             duljinaLabel.AutoSize = true;
-            duljinaLabel.Location = new System.Drawing.Point(35, 57);
+            duljinaLabel.Location = new System.Drawing.Point(33, 57);
             duljinaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             duljinaLabel.Name = "duljinaLabel";
-            duljinaLabel.Size = new System.Drawing.Size(56, 18);
+            duljinaLabel.Size = new System.Drawing.Size(58, 18);
             duljinaLabel.TabIndex = 12;
-            duljinaLabel.Text = "Duljina:";
+            duljinaLabel.Text = "Dužina:";
             // 
             // sirinaLabel
             // 
@@ -92,27 +88,17 @@
             // visinaLabel
             // 
             visinaLabel.AutoSize = true;
-            visinaLabel.Location = new System.Drawing.Point(41, 120);
+            visinaLabel.Location = new System.Drawing.Point(27, 120);
             visinaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             visinaLabel.Name = "visinaLabel";
-            visinaLabel.Size = new System.Drawing.Size(51, 18);
+            visinaLabel.Size = new System.Drawing.Size(64, 18);
             visinaLabel.TabIndex = 10;
-            visinaLabel.Text = "Visina:";
-            // 
-            // slikaLabel
-            // 
-            slikaLabel.AutoSize = true;
-            slikaLabel.Location = new System.Drawing.Point(48, 152);
-            slikaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            slikaLabel.Name = "slikaLabel";
-            slikaLabel.Size = new System.Drawing.Size(44, 18);
-            slikaLabel.TabIndex = 9;
-            slikaLabel.Text = "Slika:";
+            visinaLabel.Text = "Debljina:";
             // 
             // materijalLabel
             // 
             materijalLabel.AutoSize = true;
-            materijalLabel.Location = new System.Drawing.Point(24, 183);
+            materijalLabel.Location = new System.Drawing.Point(24, 152);
             materijalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             materijalLabel.Name = "materijalLabel";
             materijalLabel.Size = new System.Drawing.Size(67, 18);
@@ -177,23 +163,11 @@
             this.uiInputDioVisina.Size = new System.Drawing.Size(112, 24);
             this.uiInputDioVisina.TabIndex = 4;
             // 
-            // uiInputDioSlika
-            // 
-            this.uiInputDioSlika.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dioBindingSource, "slika", true));
-            this.helpProvider1.SetHelpString(this.uiInputDioSlika, "Odaberite sliku");
-            this.uiInputDioSlika.Location = new System.Drawing.Point(99, 149);
-            this.uiInputDioSlika.Margin = new System.Windows.Forms.Padding(4);
-            this.uiInputDioSlika.Name = "uiInputDioSlika";
-            this.uiInputDioSlika.ReadOnly = true;
-            this.helpProvider1.SetShowHelp(this.uiInputDioSlika, true);
-            this.uiInputDioSlika.Size = new System.Drawing.Size(112, 24);
-            this.uiInputDioSlika.TabIndex = 5;
-            // 
             // uiInputDioMaterijal
             // 
             this.uiInputDioMaterijal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dioBindingSource, "materijal", true));
             this.helpProvider1.SetHelpString(this.uiInputDioMaterijal, "Unesite materijal");
-            this.uiInputDioMaterijal.Location = new System.Drawing.Point(99, 180);
+            this.uiInputDioMaterijal.Location = new System.Drawing.Point(99, 149);
             this.uiInputDioMaterijal.Margin = new System.Windows.Forms.Padding(4);
             this.uiInputDioMaterijal.Name = "uiInputDioMaterijal";
             this.helpProvider1.SetShowHelp(this.uiInputDioMaterijal, true);
@@ -221,7 +195,7 @@
             this.uiActionSpremiDio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionSpremiDio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionSpremiDio.ForeColor = System.Drawing.Color.White;
-            this.uiActionSpremiDio.Location = new System.Drawing.Point(64, 224);
+            this.uiActionSpremiDio.Location = new System.Drawing.Point(70, 198);
             this.uiActionSpremiDio.Name = "uiActionSpremiDio";
             this.uiActionSpremiDio.Size = new System.Drawing.Size(112, 51);
             this.uiActionSpremiDio.TabIndex = 7;
@@ -229,28 +203,15 @@
             this.uiActionSpremiDio.UseVisualStyleBackColor = false;
             this.uiActionSpremiDio.Click += new System.EventHandler(this.uiActionSpremiDio_Click);
             // 
-            // uiLabelUpozorenje
-            // 
-            this.uiLabelUpozorenje.AutoSize = true;
-            this.uiLabelUpozorenje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.uiLabelUpozorenje.ForeColor = System.Drawing.Color.Red;
-            this.uiLabelUpozorenje.Location = new System.Drawing.Point(12, 286);
-            this.uiLabelUpozorenje.Name = "uiLabelUpozorenje";
-            this.uiLabelUpozorenje.Size = new System.Drawing.Size(0, 18);
-            this.uiLabelUpozorenje.TabIndex = 14;
-            // 
             // uiDodajUrediDio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(243, 322);
-            this.Controls.Add(this.uiLabelUpozorenje);
+            this.ClientSize = new System.Drawing.Size(243, 261);
             this.Controls.Add(this.uiActionSpremiDio);
             this.Controls.Add(materijalLabel);
             this.Controls.Add(this.uiInputDioMaterijal);
-            this.Controls.Add(slikaLabel);
-            this.Controls.Add(this.uiInputDioSlika);
             this.Controls.Add(visinaLabel);
             this.Controls.Add(this.uiInputDioVisina);
             this.Controls.Add(sirinaLabel);
@@ -282,11 +243,9 @@
         private System.Windows.Forms.TextBox uiInputDioDuljina;
         private System.Windows.Forms.TextBox uiInputDioŠirina;
         private System.Windows.Forms.TextBox uiInputDioVisina;
-        private System.Windows.Forms.TextBox uiInputDioSlika;
         private System.Windows.Forms.TextBox uiInputDioMaterijal;
         private Baza18043_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button uiActionSpremiDio;
-        private System.Windows.Forms.Label uiLabelUpozorenje;
         private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

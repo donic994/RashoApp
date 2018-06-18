@@ -179,7 +179,7 @@
             // duljinaDataGridViewTextBoxColumn
             // 
             this.duljinaDataGridViewTextBoxColumn.DataPropertyName = "duljina";
-            this.duljinaDataGridViewTextBoxColumn.HeaderText = "Duljina";
+            this.duljinaDataGridViewTextBoxColumn.HeaderText = "Dužina";
             this.duljinaDataGridViewTextBoxColumn.Name = "duljinaDataGridViewTextBoxColumn";
             this.duljinaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -193,7 +193,7 @@
             // visinaDataGridViewTextBoxColumn
             // 
             this.visinaDataGridViewTextBoxColumn.DataPropertyName = "visina";
-            this.visinaDataGridViewTextBoxColumn.HeaderText = "Visina";
+            this.visinaDataGridViewTextBoxColumn.HeaderText = "Debljina";
             this.visinaDataGridViewTextBoxColumn.Name = "visinaDataGridViewTextBoxColumn";
             this.visinaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -211,6 +211,7 @@
             this.slikaDataGridViewTextBoxColumn.Name = "slikaDataGridViewTextBoxColumn";
             this.slikaDataGridViewTextBoxColumn.ReadOnly = true;
             this.slikaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.slikaDataGridViewTextBoxColumn.Visible = false;
             // 
             // uiDjelovi
             // 
