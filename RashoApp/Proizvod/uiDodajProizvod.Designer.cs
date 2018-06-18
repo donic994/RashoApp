@@ -45,6 +45,7 @@
             this.proizvodTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
             this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             duljinaLabel = new System.Windows.Forms.Label();
             sirinaLabel = new System.Windows.Forms.Label();
             visinaLabel = new System.Windows.Forms.Label();
@@ -56,7 +57,7 @@
             // duljinaLabel
             // 
             duljinaLabel.AutoSize = true;
-            duljinaLabel.Location = new System.Drawing.Point(32, 58);
+            duljinaLabel.Location = new System.Drawing.Point(38, 57);
             duljinaLabel.Name = "duljinaLabel";
             duljinaLabel.Size = new System.Drawing.Size(58, 18);
             duljinaLabel.TabIndex = 1;
@@ -65,7 +66,7 @@
             // sirinaLabel
             // 
             sirinaLabel.AutoSize = true;
-            sirinaLabel.Location = new System.Drawing.Point(41, 89);
+            sirinaLabel.Location = new System.Drawing.Point(47, 89);
             sirinaLabel.Name = "sirinaLabel";
             sirinaLabel.Size = new System.Drawing.Size(49, 18);
             sirinaLabel.TabIndex = 3;
@@ -74,7 +75,7 @@
             // visinaLabel
             // 
             visinaLabel.AutoSize = true;
-            visinaLabel.Location = new System.Drawing.Point(31, 121);
+            visinaLabel.Location = new System.Drawing.Point(38, 121);
             visinaLabel.Name = "visinaLabel";
             visinaLabel.Size = new System.Drawing.Size(58, 18);
             visinaLabel.TabIndex = 5;
@@ -83,7 +84,7 @@
             // slikaLabel
             // 
             slikaLabel.AutoSize = true;
-            slikaLabel.Location = new System.Drawing.Point(48, 152);
+            slikaLabel.Location = new System.Drawing.Point(52, 151);
             slikaLabel.Name = "slikaLabel";
             slikaLabel.Size = new System.Drawing.Size(44, 18);
             slikaLabel.TabIndex = 7;
@@ -92,7 +93,7 @@
             // nazivLabel
             // 
             nazivLabel.AutoSize = true;
-            nazivLabel.Location = new System.Drawing.Point(42, 26);
+            nazivLabel.Location = new System.Drawing.Point(47, 26);
             nazivLabel.Name = "nazivLabel";
             nazivLabel.Size = new System.Drawing.Size(49, 18);
             nazivLabel.TabIndex = 9;
@@ -104,6 +105,8 @@
             this.uiInputDužina.Name = "uiInputDužina";
             this.uiInputDužina.Size = new System.Drawing.Size(112, 24);
             this.uiInputDužina.TabIndex = 3;
+            this.helpProvider1.SetHelpString(this.uiInputDužina, "Unesite dužinu u mm");
+            this.helpProvider1.SetShowHelp(this.uiInputDužina, true);
             // 
             // uiInputŠirina
             // 
@@ -111,6 +114,8 @@
             this.uiInputŠirina.Name = "uiInputŠirina";
             this.uiInputŠirina.Size = new System.Drawing.Size(112, 24);
             this.uiInputŠirina.TabIndex = 4;
+            this.helpProvider1.SetHelpString(this.uiInputŠirina, "Unesite širinu u mm");
+            this.helpProvider1.SetShowHelp(this.uiInputŠirina, true);
             // 
             // uiInputDubina
             // 
@@ -118,13 +123,18 @@
             this.uiInputDubina.Name = "uiInputDubina";
             this.uiInputDubina.Size = new System.Drawing.Size(112, 24);
             this.uiInputDubina.TabIndex = 6;
+            this.helpProvider1.SetHelpString(this.uiInputDubina, "Unesite dubinu u mm");
+            this.helpProvider1.SetShowHelp(this.uiInputDubina, true);
             // 
             // uiInputSlika
             // 
             this.uiInputSlika.Location = new System.Drawing.Point(102, 149);
             this.uiInputSlika.Name = "uiInputSlika";
+            this.uiInputSlika.ReadOnly = true;
             this.uiInputSlika.Size = new System.Drawing.Size(112, 24);
             this.uiInputSlika.TabIndex = 8;
+            this.helpProvider1.SetHelpString(this.uiInputSlika, "Odaberite sliku klikom na gumb +");
+            this.helpProvider1.SetShowHelp(this.uiInputSlika, true);
             // 
             // uiInputNaziv
             // 
@@ -132,6 +142,8 @@
             this.uiInputNaziv.Name = "uiInputNaziv";
             this.uiInputNaziv.Size = new System.Drawing.Size(112, 24);
             this.uiInputNaziv.TabIndex = 2;
+            this.helpProvider1.SetHelpString(this.uiInputNaziv, "Unesite naziv proizvoda");
+            this.helpProvider1.SetShowHelp(this.uiInputNaziv, true);
             // 
             // uiActionDalje
             // 
@@ -233,5 +245,6 @@
         private Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter proizvodTableAdapter;
         private Baza18043_DBDataSet baza18043_DBDataSet;
         private Baza18043_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

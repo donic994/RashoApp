@@ -24,7 +24,7 @@ namespace RashoApp.Proizvod
         private void SpremiPromjene()
         {
             this.Validate();
-        //    this.proizvodBindingSource.EndEdit();
+        //  this.proizvodBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.baza18043_DBDataSet);
 
         }
@@ -40,34 +40,49 @@ namespace RashoApp.Proizvod
         {
             int duzina = 0, sirina = 0, dubina = 0;
             string naziv = uiInputNaziv.Text;
-            int.TryParse(uiInputDužina.Text.ToString(), out duzina);
-            int.TryParse(uiInputŠirina.Text.ToString(), out sirina);
-            int.TryParse(uiInputDubina.Text.ToString(), out dubina);
+            //int.TryParse(uiInputDužina.Text.ToString(), out duzina);
+            //int.TryParse(uiInputŠirina.Text.ToString(), out sirina);
+            // int.TryParse(uiInputDubina.Text.ToString(), out dubina);
             string slika = uiInputSlika.Text;
 
-            if (!String.IsNullOrWhiteSpace(slika))
-            {
-                //Dodaj sliku u lokalni direktorij(Slike)
-                destinacijaSpremanja = "F:\\DoNiC\\FOI\\8 semestar\\PI\\Projekt2018\\RashoApp\\RashoApp\\bin\\Debug\\Slike\\Slika" + naziv + ".png";
 
-                File.Copy(destinacijaČitanja.ToString(), destinacijaSpremanja);
-                //
+           
 
-                Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
-                noviDioTableAdapter.Insert(duzina, sirina, dubina, destinacijaSpremanja, naziv);
-            }else
+            if (uiInputNaziv.Text == null)
             {
-                Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
-                noviDioTableAdapter.Insert(duzina, sirina, dubina, slika, naziv);
+                MessageBox.Show("Unesite vrijednost u Naziv!");
+                uiInputNaziv.Text = "";
+                uiInputNaziv.Focus();
             }
+            else if (!int.TryParse(uiInputDužina.Text, out duzina) || uiInputDužina.Text == null)
+            {
+                MessageBox.Show("Unesite brojčanu vrijednost u Dužina!");
+                uiInputDužina.Text = "";
+                uiInputDužina.Focus();
+            }
+            else if (!int.TryParse(uiInputŠirina.Text, out sirina) || uiInputŠirina.Text == null)
+            {
+                MessageBox.Show("Unesite brojčanu vrijednost u Širina!");
+                uiInputŠirina.Text = "";
+                uiInputŠirina.Focus();
+            }
+            else if (!int.TryParse(uiInputDubina.Text, out dubina) || uiInputDubina.Text == null)
+            {
+                MessageBox.Show("Unesite brojčanu vrijednost u Dubina!");
+                uiInputDubina.Text = "";
+                uiInputDubina.Focus();
+            }
+            else {
 
-            SpremiPromjene();
+                ProvjeriUnosSlike(slika, duzina, sirina, dubina, naziv);
+                SpremiPromjene();
 
-            int proizvodID = int.Parse(this.proizvodTableAdapter.VratiZadnjiIDProizvoda().ToString());
+                int proizvodID = int.Parse(this.proizvodTableAdapter.VratiZadnjiIDProizvoda().ToString());
 
-            this.Close();
-            Proizvod.uiDodajDjeloveUProizvod frm = new uiDodajDjeloveUProizvod(proizvodID, duzina, sirina, dubina);
-            frm.ShowDialog();
+                this.Close();
+                Proizvod.uiDodajDjeloveUProizvod frm = new uiDodajDjeloveUProizvod(proizvodID, duzina, sirina, dubina);
+                frm.ShowDialog();
+            }
         }
 
         private void uiActionOdaberiSliku_Click(object sender, EventArgs e)
@@ -87,68 +102,25 @@ namespace RashoApp.Proizvod
             }
         }
 
-        private void uiInputDužina_Leave(object sender, EventArgs e)
+        private void ProvjeriUnosSlike(string slika, int duzina, int sirina, int dubina, string naziv)
         {
-            int ispis;
-            if (!int.TryParse(uiInputDužina.Text, out ispis) || uiInputDužina.Text == null)
+            if (!String.IsNullOrWhiteSpace(slika))
             {
-                MessageBox.Show("Unesite brojčanu vrijednost u Dužina!");
-                uiInputDužina.Text = "";
-                uiInputDužina.Focus();
-                uiActionDalje.Enabled = false;
+                //Dodaj sliku u lokalni direktorij(Slike)
+                destinacijaSpremanja = "F:\\DoNiC\\FOI\\8 semestar\\PI\\Projekt2018\\RashoApp\\RashoApp\\bin\\Debug\\Slike\\Slika" + naziv + ".png";
+
+                File.Copy(destinacijaČitanja.ToString(), destinacijaSpremanja);
+                //
+
+                Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
+                noviDioTableAdapter.Insert(duzina, sirina, dubina, destinacijaSpremanja, naziv);
             }
             else
             {
-                uiActionDalje.Enabled = true;
+                Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
+                noviDioTableAdapter.Insert(duzina, sirina, dubina, slika, naziv);
+            }
             }
         }
-
-        private void uiInputNaziv_Leave(object sender, EventArgs e)
-        { 
-            if (uiInputNaziv.Text == null)
-            {
-                MessageBox.Show("Unesite vrijednost u Naziv!");
-                uiInputNaziv.Text = "";
-                uiInputNaziv.Focus();
-                uiActionDalje.Enabled = false;
-            }
-            else
-            {
-                uiActionDalje.Enabled = true;
-            }
-        }
-
-        private void uiInputŠirina_Leave(object sender, EventArgs e)
-        {
-            int ispis;
-            if(!int.TryParse(uiInputŠirina.Text, out ispis) || uiInputŠirina.Text == null)
-            {
-                MessageBox.Show("Unesite brojčanu vrijednost u Širina!");
-                uiInputŠirina.Text = "";
-                uiInputŠirina.Focus();
-                uiActionDalje.Enabled = false;
-            }
-            else
-            {
-                uiActionDalje.Enabled = true;
-            }
-        }
-
-        private void uiInputDubina_Leave(object sender, EventArgs e)
-        {
-            int ispis;
-            if (!int.TryParse(uiInputDubina.Text, out ispis) || uiInputDubina.Text == null)
-            {
-                MessageBox.Show("Unesite brojčanu vrijednost u Dubina!");
-                uiInputDubina.Text = "";
-                uiInputDubina.Focus();
-                uiActionDalje.Enabled = false;
-            }
-            else
-            {
-                uiActionDalje.Enabled = true;
-            }
-        }      
-    }
 }
 
