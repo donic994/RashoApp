@@ -48,15 +48,26 @@ namespace RashoApp.Element
 
         private void uiActionUrediDio_Click(object sender, EventArgs e)
         {
-            int proizvod = int.Parse(uiOutputTableDataElement.SelectedCells[1].Value.ToString());
-            int element = int.Parse(uiOutputTableDataElement.SelectedCells[2].Value.ToString());
-            Element.uiDodajUrediElement frm = new Element.uiDodajUrediElement(proizvod, element, "uredi");
-            frm.ShowDialog();
+            if(uiOutputTableDataElement.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite element koji želite urediti!");
+            }
+            else
+            {
+                int proizvod = int.Parse(uiOutputTableDataElement.SelectedCells[1].Value.ToString());
+                int element = int.Parse(uiOutputTableDataElement.SelectedCells[2].Value.ToString());
+                Element.uiDodajUrediElement frm = new Element.uiDodajUrediElement(proizvod, element, "uredi");
+                frm.ShowDialog();
+            }
         }
 
         private void uiActionObrišiDio_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj element?", "Obrisati element", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            if (uiOutputTableDataElement.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite element koji želite obrisati!");
+            }
+            else if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj element?", "Obrisati element", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
                 uiOutputTableDataElement.Rows.RemoveAt(uiOutputTableDataElement.CurrentRow.Index);
             }

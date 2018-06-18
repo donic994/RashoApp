@@ -47,14 +47,25 @@ namespace RashoApp
 
         private void uiActionUrediDio_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(uiOutputTableDataDio.SelectedCells[0].Value.ToString());
-            Djelovi.uiDodajUrediDio frm = new Djelovi.uiDodajUrediDio(id, "uredi");
-            frm.ShowDialog();
+            if (uiOutputTableDataDio.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite dio koji želite urediti!");
+            }
+            else
+            {
+                int id = int.Parse(uiOutputTableDataDio.SelectedCells[0].Value.ToString());
+                Djelovi.uiDodajUrediDio frm = new Djelovi.uiDodajUrediDio(id, "uredi");
+                frm.ShowDialog();
+            }
         }
 
         private void uiActionObrišiDio_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj dio?", "Obrisati dio", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            if (uiOutputTableDataDio.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite dio koji želite obrisati!");
+            }
+            else if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj dio?", "Obrisati dio", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
 
                 int id = int.Parse(uiOutputTableDataDio.SelectedCells[0].Value.ToString());

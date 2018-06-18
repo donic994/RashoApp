@@ -44,6 +44,7 @@
             this.uiInputElementProizvod = new System.Windows.Forms.TextBox();
             this.uiOutputNazivProizvod = new System.Windows.Forms.TextBox();
             this.uiOutputNazivElement = new System.Windows.Forms.TextBox();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             kolicinaLabel = new System.Windows.Forms.Label();
             id_elementLabel = new System.Windows.Forms.Label();
             id_proizvodLabel1 = new System.Windows.Forms.Label();
@@ -114,6 +115,8 @@
             this.uiInputElementKolicina.Name = "uiInputElementKolicina";
             this.uiInputElementKolicina.Size = new System.Drawing.Size(100, 22);
             this.uiInputElementKolicina.TabIndex = 2;
+            this.helpProvider1.SetHelpString(this.uiInputElementKolicina, "Unesite količinu elementa u proizvodu");
+            this.helpProvider1.SetShowHelp(this.uiInputElementKolicina, true);
             // 
             // uiInputElementElement
             // 
@@ -123,6 +126,8 @@
             this.uiInputElementElement.ReadOnly = true;
             this.uiInputElementElement.Size = new System.Drawing.Size(22, 22);
             this.uiInputElementElement.TabIndex = 6;
+            this.helpProvider1.SetHelpString(this.uiInputElementElement, "Odaberite element klikom na +");
+            this.helpProvider1.SetShowHelp(this.uiInputElementElement, true);
             // 
             // uiActionSpremiElement
             // 
@@ -176,6 +181,8 @@
             this.uiInputElementProizvod.ReadOnly = true;
             this.uiInputElementProizvod.Size = new System.Drawing.Size(22, 22);
             this.uiInputElementProizvod.TabIndex = 11;
+            this.helpProvider1.SetHelpString(this.uiOutputNazivProizvod, "Odaberite proizvod klikom na +");
+            this.helpProvider1.SetShowHelp(this.uiOutputNazivProizvod, true);
             // 
             // uiOutputNazivProizvod
             // 
@@ -184,6 +191,8 @@
             this.uiOutputNazivProizvod.ReadOnly = true;
             this.uiOutputNazivProizvod.Size = new System.Drawing.Size(161, 22);
             this.uiOutputNazivProizvod.TabIndex = 12;
+            this.helpProvider1.SetHelpString(this.uiOutputNazivProizvod, "Odaberite proizvod klikom na +");
+            this.helpProvider1.SetShowHelp(this.uiOutputNazivProizvod, true);
             // 
             // uiOutputNazivElement
             // 
@@ -192,6 +201,8 @@
             this.uiOutputNazivElement.ReadOnly = true;
             this.uiOutputNazivElement.Size = new System.Drawing.Size(161, 22);
             this.uiOutputNazivElement.TabIndex = 13;
+            this.helpProvider1.SetHelpString(this.uiOutputNazivElement, "Odaberite element klikom na +");
+            this.helpProvider1.SetShowHelp(this.uiOutputNazivElement, true);
             // 
             // uiDodajUrediElement
             // 
@@ -236,5 +247,6 @@
         private System.Windows.Forms.TextBox uiInputElementProizvod;
         private System.Windows.Forms.TextBox uiOutputNazivProizvod;
         private System.Windows.Forms.TextBox uiOutputNazivElement;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }

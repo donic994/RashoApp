@@ -72,22 +72,46 @@ namespace RashoApp.Element
             if (kontrola == "uredi")
             {
                 SpremiPromjene();
+
+                this.Close();
+                Application.OpenForms.OfType<uiElement>().Single().PopuniPodacimaElement();
             }
             if (kontrola == "dodaj")
             {
-                int kolicina = 1;
-                int.TryParse(uiInputElementKolicina.Text.ToString(), out kolicina);
-                int proizvod = int.Parse(uiInputElementProizvod.Text.ToString());
-                int element = int.Parse(uiInputElementElement.Text.ToString());
+                int kolicina = 1, proizvod = 0, element= 0;
+                //int.TryParse(uiInputElementKolicina.Text.ToString(), out kolicina);
+                //int proizvod = int.Parse(uiInputElementProizvod.Text.ToString());
+                //int element = int.Parse(uiInputElementElement.Text.ToString());
 
-                Baza18043_DBDataSetTableAdapters.ElementTableAdapter noviElementTableAdapter = new Baza18043_DBDataSetTableAdapters.ElementTableAdapter();
-                noviElementTableAdapter.Insert(kolicina, proizvod, element);
+                if (!int.TryParse(uiInputElementKolicina.Text, out kolicina) || uiInputElementKolicina.Text == null)
+                {
+                    MessageBox.Show("Unesite brojčanu vrijednost u Količina!");
+                    uiInputElementKolicina.Text = "";
+                    uiInputElementKolicina.Focus();
+                }
+                else if (!int.TryParse(uiInputElementProizvod.Text, out proizvod) || uiInputElementProizvod.Text == null)
+                {
+                    MessageBox.Show("Odaberite proizvod klikom na gumb +!");
+                    uiInputElementProizvod.Text = "";
+                    uiInputElementProizvod.Focus();
+                }
+                else if (!int.TryParse(uiInputElementElement.Text, out element) || uiInputElementElement.Text == null)
+                {
+                    MessageBox.Show("Odaberite element klikom na gumb +!");
+                    uiInputElementElement.Text = "";
+                    uiInputElementElement.Focus();
+                }
+                else
+                {
+                    Baza18043_DBDataSetTableAdapters.ElementTableAdapter noviElementTableAdapter = new Baza18043_DBDataSetTableAdapters.ElementTableAdapter();
+                    noviElementTableAdapter.Insert(kolicina, proizvod, element);
 
-                SpremiPromjene();
+                    SpremiPromjene();
+
+                    this.Close();
+                    Application.OpenForms.OfType<uiElement>().Single().PopuniPodacimaElement();
+                }
             }
-
-            this.Close();
-            Application.OpenForms.OfType<uiElement>().Single().PopuniPodacimaElement();
         }
 
         //Metode za unos vrijednosti odabranog proizvoda iz forme uiOdaberiProizvod

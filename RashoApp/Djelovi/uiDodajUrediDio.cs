@@ -53,9 +53,9 @@ namespace RashoApp.Djelovi
             if (kontrola == "dodaj")
             {
                 int duljina = 0, sirina = 0, visina = 0;
-                string naziv = null, slika = null, materijal = null;
+                string naziv = null, slika = "", materijal = null;
 
-                if (uiInputDioNaziv.Text == null)
+                if (String.IsNullOrWhiteSpace(uiInputDioNaziv.Text))
                 {
                     MessageBox.Show("Unesite vrijednost u Naziv!");
                     uiInputDioNaziv.Text = "";
@@ -79,15 +79,16 @@ namespace RashoApp.Djelovi
                     uiInputDioVisina.Text = "";
                     uiInputDioVisina.Focus();
                 }
-                else if (uiInputDioMaterijal.Text == null)
+                else if (String.IsNullOrWhiteSpace(uiInputDioMaterijal.Text))
                 {
                     MessageBox.Show("Unesite vrijednost u Materijal!");
                     uiInputDioMaterijal.Text = "";
                     uiInputDioMaterijal.Focus();
                 }
                 else
-                { 
-
+                {
+                    naziv = uiInputDioNaziv.Text;
+                    materijal = uiInputDioMaterijal.Text;
                     Baza18043_DBDataSetTableAdapters.DioTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.DioTableAdapter();
                     noviDioTableAdapter.Insert(naziv, duljina, sirina, visina, slika, materijal);
 
