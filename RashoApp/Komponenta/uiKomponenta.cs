@@ -53,16 +53,27 @@ namespace RashoApp.Komponenta
 
         private void uiActionUrediKomponenta_Click(object sender, EventArgs e)
         {
-            int dio = int.Parse(uiOutputTableDataKoponenta.SelectedCells[0].Value.ToString());
-            int uloga = int.Parse(uiOutputTableDataKoponenta.SelectedCells[2].Value.ToString());
-            int proizvod = int.Parse(uiOutputTableDataKoponenta.SelectedCells[5].Value.ToString());
-            Komponenta.uiDodajUrediKomponenta frm = new Komponenta.uiDodajUrediKomponenta(dio, uloga, proizvod, "uredi");
-            frm.ShowDialog();
+            if (uiOutputTableDataKoponenta.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite komponentu koju želite urediti");
+            }
+            else
+            {
+                int dio = int.Parse(uiOutputTableDataKoponenta.SelectedCells[0].Value.ToString());
+                int uloga = int.Parse(uiOutputTableDataKoponenta.SelectedCells[2].Value.ToString());
+                int proizvod = int.Parse(uiOutputTableDataKoponenta.SelectedCells[5].Value.ToString());
+                Komponenta.uiDodajUrediKomponenta frm = new Komponenta.uiDodajUrediKomponenta(dio, uloga, proizvod, "uredi");
+                frm.ShowDialog();
+            }
         }
 
         private void uiActionObrišiKomponenta_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovu komponentu?", "Obrisati komponentu", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            if (uiOutputTableDataKoponenta.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite komponentu koju želite obrisati");
+            }
+            else if (MessageBox.Show("Jeste li sigurni da želite obrisati ovu komponentu?", "Obrisati komponentu", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
                 uiOutputTableDataKoponenta.Rows.RemoveAt(uiOutputTableDataKoponenta.CurrentRow.Index);
             }

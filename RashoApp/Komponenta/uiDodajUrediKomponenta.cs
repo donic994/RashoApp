@@ -63,25 +63,69 @@ namespace RashoApp.Komponenta
             if (kontrola == "uredi")
             {
                 SpremiPromjene();
+                this.Close();
+                Application.OpenForms.OfType<uiKomponenta>().Single().PopuniPodacimaKomponenta();
             }
             if (kontrola == "dodaj")
             {
-                int kolicina = 1;
-                int.TryParse(uiInputKomponentaKolicina.Text.ToString(), out kolicina);
-                string boja = uiInputKomponentaBoja.Text;
-                string kantiranost = uiInputKomponentaKantoranost.Text;
-                int uloga = int.Parse(uiInputKomponentaUloga.Text.ToString());
-                int dio = int.Parse(uiInputKomponentaDio.Text.ToString());
-                int proizvod = int.Parse(uiInputKomponentaProizvod.Text.ToString());
+                int kolicina = 1, uloga = 0, dio = 0, proizvod = 0;
+                string boja = "", kantiranost = "";
+                //int.TryParse(uiInputKomponentaKolicina.Text.ToString(), out kolicina);
+                //int uloga = int.Parse(uiInputKomponentaUloga.Text.ToString());
+                //int dio = int.Parse(uiInputKomponentaDio.Text.ToString());
+                //int proizvod = int.Parse(uiInputKomponentaProizvod.Text.ToString());
 
-                Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter noviKomponentaTableAdapter = new Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter();
-                noviKomponentaTableAdapter.Insert(kolicina, boja, kantiranost, uloga, dio, proizvod);
 
-                SpremiPromjene();
+                if (String.IsNullOrWhiteSpace(uiInputKomponentaBoja.Text))
+                {
+                    MessageBox.Show("Unesite vrijednost u Boja!");
+                    uiInputKomponentaBoja.Text = "";
+                    uiInputKomponentaBoja.Focus();
+                }
+                else if (!int.TryParse(uiInputKomponentaKolicina.Text, out kolicina) || uiInputKomponentaKolicina.Text == null)
+                {
+                    MessageBox.Show("Unesite brojčanu vrijednost u Količina!");
+                    uiInputKomponentaKolicina.Text = "";
+                    uiInputKomponentaKolicina.Focus();
+                }
+                else if (!int.TryParse(uiInputKomponentaDio.Text, out dio) || uiInputKomponentaDio.Text == null)
+                {
+                    MessageBox.Show("Odaberite dio klikom na +!");
+                    uiInputKomponentaDio.Text = "";
+                    uiInputKomponentaDio.Focus();
+                }
+                else if (!int.TryParse(uiInputKomponentaUloga.Text, out uloga) || uiInputKomponentaUloga.Text == null)
+                {
+                    MessageBox.Show("Odaberite ulogu dijela klikom na +!");
+                    uiInputKomponentaUloga.Text = "";
+                    uiInputKomponentaUloga.Focus();
+                }
+                else if (!int.TryParse(uiInputKomponentaProizvod.Text, out proizvod) || uiInputKomponentaProizvod.Text == null)
+                {
+                    MessageBox.Show("Odaberite proizvod klikom na +!");
+                    uiInputKomponentaProizvod.Text = "";
+                    uiInputKomponentaProizvod.Focus();
+                }
+                else if (String.IsNullOrWhiteSpace(uiInputKomponentaKantoranost.Text))
+                {
+                    MessageBox.Show("Unesite vrijednost u Kantiranost!");
+                    uiInputKomponentaKantoranost.Text = "";
+                    uiInputKomponentaKantoranost.Focus();
+                }
+                else
+                {
+                    kantiranost = uiInputKomponentaKantoranost.Text;
+                    boja = uiInputKomponentaBoja.Text;
+                    Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter noviKomponentaTableAdapter = new Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter();
+                    noviKomponentaTableAdapter.Insert(kolicina, boja, kantiranost, uloga, dio, proizvod);
+
+                    SpremiPromjene();
+                    this.Close();
+                    Application.OpenForms.OfType<uiKomponenta>().Single().PopuniPodacimaKomponenta();
+                }
             }
 
-            this.Close();
-            Application.OpenForms.OfType<uiKomponenta>().Single().PopuniPodacimaKomponenta();
+
         }
 
         private void uiActionOdaberiUloga_Click(object sender, EventArgs e)
