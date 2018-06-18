@@ -144,7 +144,6 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.DioTableAdapter = null;
             this.tableAdapterManager.DobavljacTableAdapter = null;
             this.tableAdapterManager.ElementTableAdapter = null;
@@ -153,7 +152,7 @@
             this.tableAdapterManager.NarudzbaTableAdapter = null;
             this.tableAdapterManager.ProizvodTableAdapter = null;
             this.tableAdapterManager.StavkaNarudzbeTableAdapter = null;
-            this.tableAdapterManager.UlogaDijelaTableAdapter = null;
+            this.tableAdapterManager.UlogaDijelaTableAdapter = this.ulogaDijelaTableAdapter;
             this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 

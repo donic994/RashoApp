@@ -24,7 +24,7 @@ namespace RashoApp.Proizvod
         private void SpremiPromjene()
         {
             this.Validate();
-            this.proizvodBindingSource.EndEdit();
+        //    this.proizvodBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.baza18043_DBDataSet);
 
         }

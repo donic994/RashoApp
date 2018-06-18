@@ -53,7 +53,6 @@ namespace RashoApp.UlogaDijela
 
                 uiOutputTableDataUlogaDijela.Rows.RemoveAt(uiOutputTableDataUlogaDijela.CurrentRow.Index);
 
-                this.ulogaDijelaTableAdapter.DeleteUlogaByID(id);
                 this.komponentaTableAdapter.DeleteByUlogaDijela(id);
 
                 SpremiPromjene();

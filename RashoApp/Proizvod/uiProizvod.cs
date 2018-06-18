@@ -63,7 +63,6 @@ namespace RashoApp.Proizvod
 
                 this.elementTableAdapter.DeleteByProizvod(idProizvoda);
                 this.komponentaTableAdapter.DeleteByProizvod(idProizvoda);
-                this.proizvodTableAdapter.DeleteByID(idProizvoda);
 
                 uiOutputDataProizvod.Rows.RemoveAt(uiOutputDataProizvod.CurrentRow.Index);
             }
@@ -105,6 +104,7 @@ namespace RashoApp.Proizvod
 
         public void PopuniTablicu()
         {
+            uiOutputDataProizvod.SelectionChanged -= uiOutputDataProizvod_SelectionChanged;
             this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
 
             for (int i = 0; i < uiOutputDataProizvod.Rows.Count; i++)
@@ -121,6 +121,7 @@ namespace RashoApp.Proizvod
                 }
 
             }
+            uiOutputDataProizvod.SelectionChanged += uiOutputDataProizvod_SelectionChanged;
         }        
     }
 }

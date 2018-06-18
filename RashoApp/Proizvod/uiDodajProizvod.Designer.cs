@@ -28,17 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label duljinaLabel;
             System.Windows.Forms.Label sirinaLabel;
             System.Windows.Forms.Label visinaLabel;
             System.Windows.Forms.Label slikaLabel;
             System.Windows.Forms.Label nazivLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uiDodajProizvod));
-            this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
-            this.proizvodBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proizvodTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
-            this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
             this.uiInputDužina = new System.Windows.Forms.TextBox();
             this.uiInputŠirina = new System.Windows.Forms.TextBox();
             this.uiInputDubina = new System.Windows.Forms.TextBox();
@@ -47,11 +42,15 @@
             this.uiActionDalje = new System.Windows.Forms.Button();
             this.uiActionOdaberiSliku = new System.Windows.Forms.Button();
             this.openFileDialogOdaberiSliku = new System.Windows.Forms.OpenFileDialog();
+            this.proizvodTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter();
+            this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
+            this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
             duljinaLabel = new System.Windows.Forms.Label();
             sirinaLabel = new System.Windows.Forms.Label();
             visinaLabel = new System.Windows.Forms.Label();
             slikaLabel = new System.Windows.Forms.Label();
             nazivLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // duljinaLabel
@@ -99,28 +98,8 @@
             nazivLabel.TabIndex = 9;
             nazivLabel.Text = "Naziv:";
             // 
-            // proizvodTableAdapter
-            // 
-            this.proizvodTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DioTableAdapter = null;
-            this.tableAdapterManager.DobavljacTableAdapter = null;
-            this.tableAdapterManager.ElementTableAdapter = null;
-            this.tableAdapterManager.KomponentaTableAdapter = null;
-            this.tableAdapterManager.KorisnikTableAdapter = null;
-            this.tableAdapterManager.NarudzbaTableAdapter = null;
-            this.tableAdapterManager.ProizvodTableAdapter = this.proizvodTableAdapter;
-            this.tableAdapterManager.StavkaNarudzbeTableAdapter = null;
-            this.tableAdapterManager.UlogaDijelaTableAdapter = null;
-            this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // uiInputDužina
             // 
-            this.uiInputDužina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "duljina", true));
             this.uiInputDužina.Location = new System.Drawing.Point(102, 54);
             this.uiInputDužina.Name = "uiInputDužina";
             this.uiInputDužina.Size = new System.Drawing.Size(112, 24);
@@ -128,7 +107,6 @@
             // 
             // uiInputŠirina
             // 
-            this.uiInputŠirina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "sirina", true));
             this.uiInputŠirina.Location = new System.Drawing.Point(102, 86);
             this.uiInputŠirina.Name = "uiInputŠirina";
             this.uiInputŠirina.Size = new System.Drawing.Size(112, 24);
@@ -136,7 +114,6 @@
             // 
             // uiInputDubina
             // 
-            this.uiInputDubina.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "visina", true));
             this.uiInputDubina.Location = new System.Drawing.Point(102, 118);
             this.uiInputDubina.Name = "uiInputDubina";
             this.uiInputDubina.Size = new System.Drawing.Size(112, 24);
@@ -144,7 +121,6 @@
             // 
             // uiInputSlika
             // 
-            this.uiInputSlika.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "slika", true));
             this.uiInputSlika.Location = new System.Drawing.Point(102, 149);
             this.uiInputSlika.Name = "uiInputSlika";
             this.uiInputSlika.Size = new System.Drawing.Size(112, 24);
@@ -152,7 +128,6 @@
             // 
             // uiInputNaziv
             // 
-            this.uiInputNaziv.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.proizvodBindingSource, "naziv", true));
             this.uiInputNaziv.Location = new System.Drawing.Point(102, 23);
             this.uiInputNaziv.Name = "uiInputNaziv";
             this.uiInputNaziv.Size = new System.Drawing.Size(112, 24);
@@ -191,6 +166,30 @@
             // 
             this.openFileDialogOdaberiSliku.FileName = "openFileDialogOdaberiSliku";
             // 
+            // proizvodTableAdapter
+            // 
+            this.proizvodTableAdapter.ClearBeforeFill = true;
+            // 
+            // baza18043_DBDataSet
+            // 
+            this.baza18043_DBDataSet.DataSetName = "Baza18043_DBDataSet";
+            this.baza18043_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.DioTableAdapter = null;
+            this.tableAdapterManager.DobavljacTableAdapter = null;
+            this.tableAdapterManager.ElementTableAdapter = null;
+            this.tableAdapterManager.KomponentaTableAdapter = null;
+            this.tableAdapterManager.KorisnikTableAdapter = null;
+            this.tableAdapterManager.NarudzbaTableAdapter = null;
+            this.tableAdapterManager.ProizvodTableAdapter = this.proizvodTableAdapter;
+            this.tableAdapterManager.StavkaNarudzbeTableAdapter = null;
+            this.tableAdapterManager.UlogaDijelaTableAdapter = null;
+            this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // uiDodajProizvod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -216,17 +215,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj novi proizvod";
             this.Load += new System.EventHandler(this.uiDodajProizvod_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Baza18043_DBDataSet baza18043_DBDataSet;
-        private System.Windows.Forms.BindingSource proizvodBindingSource;
-        private Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter proizvodTableAdapter;
-        private Baza18043_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox uiInputDužina;
         private System.Windows.Forms.TextBox uiInputŠirina;
         private System.Windows.Forms.TextBox uiInputDubina;
@@ -235,5 +230,8 @@
         private System.Windows.Forms.Button uiActionDalje;
         private System.Windows.Forms.Button uiActionOdaberiSliku;
         private System.Windows.Forms.OpenFileDialog openFileDialogOdaberiSliku;
+        private Baza18043_DBDataSetTableAdapters.ProizvodTableAdapter proizvodTableAdapter;
+        private Baza18043_DBDataSet baza18043_DBDataSet;
+        private Baza18043_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
