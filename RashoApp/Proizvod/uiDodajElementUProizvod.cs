@@ -31,6 +31,8 @@ namespace RashoApp.Proizvod
 
         private void uiDodajElementUProizvod_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Proizvod' table. You can move, or remove it, as needed.
+            this.proizvodTableAdapter.Fill(this.baza18043_DBDataSet.Proizvod);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Element' table. You can move, or remove it, as needed.
             this.elementTableAdapter.FillByIdProizvoda(this.baza18043_DBDataSet.Element, ProizvodID);
 
@@ -63,7 +65,11 @@ namespace RashoApp.Proizvod
 
         private void uiActionObrišiElement_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj element iz proizvoda?", "Obrisati dio", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            if (uiOutputDataTableElement.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite element koji želite itbrisati iz proizvoda");
+            }
+            else if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj element iz proizvoda?", "Obrisati dio", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
                 uiOutputDataTableElement.Rows.RemoveAt(uiOutputDataTableElement.CurrentRow.Index);
             }
@@ -77,9 +83,7 @@ namespace RashoApp.Proizvod
             uiInputElementElement.Text = ID;
             uiOutputNazivElement.Text = naziv;
         }
-
-
-
+        
         private void PopuniTablicu()
         {
             this.elementTableAdapter.FillByIdProizvoda(this.baza18043_DBDataSet.Element, ProizvodID);
