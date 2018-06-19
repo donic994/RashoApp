@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -46,18 +47,29 @@ namespace RashoApp.Proizvod
 
         private void uiActionUrediProizvod_Click(object sender, EventArgs e)
         {
-            idProizvoda = int.Parse(uiOutputDataProizvod.SelectedCells[0].Value.ToString());
-            duzina = int.Parse(uiOutputDataProizvod.SelectedCells[2].Value.ToString());
-            sirina = int.Parse(uiOutputDataProizvod.SelectedCells[3].Value.ToString());
-            dubina = int.Parse(uiOutputDataProizvod.SelectedCells[4].Value.ToString());
+            if (uiOutputDataProizvod.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite proizvod koji želite urediti");
+            }
+            else
+            {
+                idProizvoda = int.Parse(uiOutputDataProizvod.SelectedCells[0].Value.ToString());
+                duzina = int.Parse(uiOutputDataProizvod.SelectedCells[2].Value.ToString());
+                sirina = int.Parse(uiOutputDataProizvod.SelectedCells[3].Value.ToString());
+                dubina = int.Parse(uiOutputDataProizvod.SelectedCells[4].Value.ToString());
 
-            Proizvod.uiDodajDjeloveUProizvod frm = new uiDodajDjeloveUProizvod(idProizvoda, duzina, sirina, dubina);
-            frm.ShowDialog();
+                Proizvod.uiDodajDjeloveUProizvod frm = new uiDodajDjeloveUProizvod(idProizvoda, duzina, sirina, dubina);
+                frm.ShowDialog();
+            }
         }
 
         private void uiActionObrišiProizvod_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj proizvoid?", "Obrisati proizvod", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            if (uiOutputDataProizvod.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite proizvod koji želite urediti");
+            }
+            else if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj proizvoid?", "Obrisati proizvod", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
                 idProizvoda = int.Parse(uiOutputDataProizvod.SelectedCells[0].Value.ToString());
 
@@ -79,6 +91,14 @@ namespace RashoApp.Proizvod
             uiOutputDataProizvod.Location = new Point(10, 0);
             uiOutputTableDataElement.Location = new Point(10, (this.Height / 3));
             uiOutputTableDataPogledDjelovaPoProoizvodu.Location = new Point(10, (this.Height / 3)*2);
+        }
+
+        private void uiOutputDataProizvod_DoubleClick(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrWhiteSpace(uiOutputDataProizvod.SelectedCells[5].Value.ToString()))
+            {
+                Process.Start(uiOutputDataProizvod.SelectedCells[5].Value.ToString());
+            }
         }
 
         private void uiOutputDataProizvod_SelectionChanged(object sender, EventArgs e)

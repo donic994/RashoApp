@@ -45,7 +45,6 @@
             this.uiInputDioDužina = new System.Windows.Forms.TextBox();
             this.uiInputDioŠirina = new System.Windows.Forms.TextBox();
             this.uiInputDioDebljina = new System.Windows.Forms.TextBox();
-            this.uiInputDioSlika = new System.Windows.Forms.TextBox();
             this.uiInputDioMaterijal = new System.Windows.Forms.TextBox();
             this.uiInputOdabirTipaUnosaDijela = new System.Windows.Forms.ComboBox();
             this.uiActionOdaberiUloga = new System.Windows.Forms.Button();
@@ -62,6 +61,16 @@
             this.dioTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.DioTableAdapter();
             this.komponentaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter();
             this.uiOutputDataTableDioUProizvodu = new System.Windows.Forms.DataGridView();
+            this.pogledDjelovaPoProoizvoduBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uiLabelDioNaziv = new System.Windows.Forms.Label();
+            this.uiLabelDioDuzina = new System.Windows.Forms.Label();
+            this.uiLabelDioSirina = new System.Windows.Forms.Label();
+            this.uiLabelDioDebljina = new System.Windows.Forms.Label();
+            this.uiLabelDioMaterijal = new System.Windows.Forms.Label();
+            this.uiLabelOdabraniDioNaziv = new System.Windows.Forms.Label();
+            this.uiLabelOdabraniDioID = new System.Windows.Forms.Label();
+            this.uiActionObrišiDio = new System.Windows.Forms.Button();
+            this.pogledDjelovaPoProoizvoduTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.PogledDjelovaPoProoizvoduTableAdapter();
             this.dioIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ulogaIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,17 +83,6 @@
             this.bojaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ulogaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.slikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pogledDjelovaPoProoizvoduBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uiLabelDioNaziv = new System.Windows.Forms.Label();
-            this.uiLabelDioDuzina = new System.Windows.Forms.Label();
-            this.uiLabelDioSirina = new System.Windows.Forms.Label();
-            this.uiLabelDioDebljina = new System.Windows.Forms.Label();
-            this.uiLabelDioSlika = new System.Windows.Forms.Label();
-            this.uiLabelDioMaterijal = new System.Windows.Forms.Label();
-            this.uiLabelOdabraniDioNaziv = new System.Windows.Forms.Label();
-            this.uiLabelOdabraniDioID = new System.Windows.Forms.Label();
-            this.uiActionObrišiDio = new System.Windows.Forms.Button();
-            this.pogledDjelovaPoProoizvoduTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.PogledDjelovaPoProoizvoduTableAdapter();
             iDLabel = new System.Windows.Forms.Label();
             nazivLabel = new System.Windows.Forms.Label();
             uiLabelKomponentaKolicina = new System.Windows.Forms.Label();
@@ -149,7 +147,7 @@
             this.uiActionDalje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionDalje.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionDalje.ForeColor = System.Drawing.Color.White;
-            this.uiActionDalje.Location = new System.Drawing.Point(522, 282);
+            this.uiActionDalje.Location = new System.Drawing.Point(521, 255);
             this.uiActionDalje.Name = "uiActionDalje";
             this.uiActionDalje.Size = new System.Drawing.Size(135, 51);
             this.uiActionDalje.TabIndex = 12;
@@ -226,19 +224,10 @@
             this.uiInputDioDebljina.TabIndex = 19;
             this.uiInputDioDebljina.Visible = false;
             // 
-            // uiInputDioSlika
-            // 
-            this.uiInputDioSlika.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dioBindingSource, "slika", true));
-            this.uiInputDioSlika.Location = new System.Drawing.Point(94, 282);
-            this.uiInputDioSlika.Name = "uiInputDioSlika";
-            this.uiInputDioSlika.Size = new System.Drawing.Size(100, 24);
-            this.uiInputDioSlika.TabIndex = 20;
-            this.uiInputDioSlika.Visible = false;
-            // 
             // uiInputDioMaterijal
             // 
             this.uiInputDioMaterijal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dioBindingSource, "materijal", true));
-            this.uiInputDioMaterijal.Location = new System.Drawing.Point(94, 312);
+            this.uiInputDioMaterijal.Location = new System.Drawing.Point(94, 282);
             this.uiInputDioMaterijal.Name = "uiInputDioMaterijal";
             this.uiInputDioMaterijal.Size = new System.Drawing.Size(100, 24);
             this.uiInputDioMaterijal.TabIndex = 21;
@@ -327,7 +316,7 @@
             this.uiActionDodaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionDodaj.ForeColor = System.Drawing.Color.White;
-            this.uiActionDodaj.Location = new System.Drawing.Point(240, 282);
+            this.uiActionDodaj.Location = new System.Drawing.Point(239, 255);
             this.uiActionDodaj.Name = "uiActionDodaj";
             this.uiActionDodaj.Size = new System.Drawing.Size(135, 51);
             this.uiActionDodaj.TabIndex = 29;
@@ -401,100 +390,14 @@
             this.ulogaDataGridViewTextBoxColumn,
             this.slikaDataGridViewTextBoxColumn});
             this.uiOutputDataTableDioUProizvodu.DataSource = this.pogledDjelovaPoProoizvoduBindingSource;
-            this.uiOutputDataTableDioUProizvodu.Location = new System.Drawing.Point(0, 342);
+            this.uiOutputDataTableDioUProizvodu.Location = new System.Drawing.Point(0, 325);
             this.uiOutputDataTableDioUProizvodu.Name = "uiOutputDataTableDioUProizvodu";
             this.uiOutputDataTableDioUProizvodu.ReadOnly = true;
             this.uiOutputDataTableDioUProizvodu.RowHeadersVisible = false;
             this.uiOutputDataTableDioUProizvodu.RowTemplate.Height = 24;
             this.uiOutputDataTableDioUProizvodu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputDataTableDioUProizvodu.Size = new System.Drawing.Size(667, 243);
+            this.uiOutputDataTableDioUProizvodu.Size = new System.Drawing.Size(667, 260);
             this.uiOutputDataTableDioUProizvodu.TabIndex = 31;
-            // 
-            // dioIDDataGridViewTextBoxColumn
-            // 
-            this.dioIDDataGridViewTextBoxColumn.DataPropertyName = "DioID";
-            this.dioIDDataGridViewTextBoxColumn.HeaderText = "DioID";
-            this.dioIDDataGridViewTextBoxColumn.Name = "dioIDDataGridViewTextBoxColumn";
-            this.dioIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dioIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // ulogaIDDataGridViewTextBoxColumn
-            // 
-            this.ulogaIDDataGridViewTextBoxColumn.DataPropertyName = "UlogaID";
-            this.ulogaIDDataGridViewTextBoxColumn.HeaderText = "UlogaID";
-            this.ulogaIDDataGridViewTextBoxColumn.Name = "ulogaIDDataGridViewTextBoxColumn";
-            this.ulogaIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ulogaIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nazivDataGridViewTextBoxColumn
-            // 
-            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "Naziv";
-            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
-            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
-            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // duljinaDataGridViewTextBoxColumn
-            // 
-            this.duljinaDataGridViewTextBoxColumn.DataPropertyName = "Duljina";
-            this.duljinaDataGridViewTextBoxColumn.HeaderText = "Duljina";
-            this.duljinaDataGridViewTextBoxColumn.Name = "duljinaDataGridViewTextBoxColumn";
-            this.duljinaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // širinaDataGridViewTextBoxColumn
-            // 
-            this.širinaDataGridViewTextBoxColumn.DataPropertyName = "Širina";
-            this.širinaDataGridViewTextBoxColumn.HeaderText = "Širina";
-            this.širinaDataGridViewTextBoxColumn.Name = "širinaDataGridViewTextBoxColumn";
-            this.širinaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // visinaDataGridViewTextBoxColumn
-            // 
-            this.visinaDataGridViewTextBoxColumn.DataPropertyName = "Visina";
-            this.visinaDataGridViewTextBoxColumn.HeaderText = "Visina";
-            this.visinaDataGridViewTextBoxColumn.Name = "visinaDataGridViewTextBoxColumn";
-            this.visinaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // količinaDataGridViewTextBoxColumn
-            // 
-            this.količinaDataGridViewTextBoxColumn.DataPropertyName = "Količina";
-            this.količinaDataGridViewTextBoxColumn.HeaderText = "Količina";
-            this.količinaDataGridViewTextBoxColumn.Name = "količinaDataGridViewTextBoxColumn";
-            this.količinaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // materijalDataGridViewTextBoxColumn
-            // 
-            this.materijalDataGridViewTextBoxColumn.DataPropertyName = "Materijal";
-            this.materijalDataGridViewTextBoxColumn.HeaderText = "Materijal";
-            this.materijalDataGridViewTextBoxColumn.Name = "materijalDataGridViewTextBoxColumn";
-            this.materijalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // kantiranostDataGridViewTextBoxColumn
-            // 
-            this.kantiranostDataGridViewTextBoxColumn.DataPropertyName = "Kantiranost";
-            this.kantiranostDataGridViewTextBoxColumn.HeaderText = "Kantiranost";
-            this.kantiranostDataGridViewTextBoxColumn.Name = "kantiranostDataGridViewTextBoxColumn";
-            this.kantiranostDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bojaDataGridViewTextBoxColumn
-            // 
-            this.bojaDataGridViewTextBoxColumn.DataPropertyName = "Boja";
-            this.bojaDataGridViewTextBoxColumn.HeaderText = "Boja";
-            this.bojaDataGridViewTextBoxColumn.Name = "bojaDataGridViewTextBoxColumn";
-            this.bojaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ulogaDataGridViewTextBoxColumn
-            // 
-            this.ulogaDataGridViewTextBoxColumn.DataPropertyName = "Uloga";
-            this.ulogaDataGridViewTextBoxColumn.HeaderText = "Uloga";
-            this.ulogaDataGridViewTextBoxColumn.Name = "ulogaDataGridViewTextBoxColumn";
-            this.ulogaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // slikaDataGridViewTextBoxColumn
-            // 
-            this.slikaDataGridViewTextBoxColumn.DataPropertyName = "Slika";
-            this.slikaDataGridViewTextBoxColumn.HeaderText = "Slika";
-            this.slikaDataGridViewTextBoxColumn.Name = "slikaDataGridViewTextBoxColumn";
-            this.slikaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // pogledDjelovaPoProoizvoduBindingSource
             // 
@@ -541,20 +444,10 @@
             this.uiLabelDioDebljina.Text = "Debljina:";
             this.uiLabelDioDebljina.Visible = false;
             // 
-            // uiLabelDioSlika
-            // 
-            this.uiLabelDioSlika.AutoSize = true;
-            this.uiLabelDioSlika.Location = new System.Drawing.Point(44, 285);
-            this.uiLabelDioSlika.Name = "uiLabelDioSlika";
-            this.uiLabelDioSlika.Size = new System.Drawing.Size(44, 18);
-            this.uiLabelDioSlika.TabIndex = 36;
-            this.uiLabelDioSlika.Text = "Slika:";
-            this.uiLabelDioSlika.Visible = false;
-            // 
             // uiLabelDioMaterijal
             // 
             this.uiLabelDioMaterijal.AutoSize = true;
-            this.uiLabelDioMaterijal.Location = new System.Drawing.Point(21, 315);
+            this.uiLabelDioMaterijal.Location = new System.Drawing.Point(21, 285);
             this.uiLabelDioMaterijal.Name = "uiLabelDioMaterijal";
             this.uiLabelDioMaterijal.Size = new System.Drawing.Size(67, 18);
             this.uiLabelDioMaterijal.TabIndex = 37;
@@ -564,7 +457,7 @@
             // uiLabelOdabraniDioNaziv
             // 
             this.uiLabelOdabraniDioNaziv.AutoSize = true;
-            this.uiLabelOdabraniDioNaziv.Location = new System.Drawing.Point(275, 60);
+            this.uiLabelOdabraniDioNaziv.Location = new System.Drawing.Point(275, 59);
             this.uiLabelOdabraniDioNaziv.Name = "uiLabelOdabraniDioNaziv";
             this.uiLabelOdabraniDioNaziv.Size = new System.Drawing.Size(49, 18);
             this.uiLabelOdabraniDioNaziv.TabIndex = 38;
@@ -587,7 +480,7 @@
             this.uiActionObrišiDio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionObrišiDio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiActionObrišiDio.ForeColor = System.Drawing.Color.White;
-            this.uiActionObrišiDio.Location = new System.Drawing.Point(381, 282);
+            this.uiActionObrišiDio.Location = new System.Drawing.Point(380, 255);
             this.uiActionObrišiDio.Name = "uiActionObrišiDio";
             this.uiActionObrišiDio.Size = new System.Drawing.Size(135, 51);
             this.uiActionObrišiDio.TabIndex = 40;
@@ -599,6 +492,93 @@
             // 
             this.pogledDjelovaPoProoizvoduTableAdapter.ClearBeforeFill = true;
             // 
+            // dioIDDataGridViewTextBoxColumn
+            // 
+            this.dioIDDataGridViewTextBoxColumn.DataPropertyName = "DioID";
+            this.dioIDDataGridViewTextBoxColumn.HeaderText = "DioID";
+            this.dioIDDataGridViewTextBoxColumn.Name = "dioIDDataGridViewTextBoxColumn";
+            this.dioIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dioIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // ulogaIDDataGridViewTextBoxColumn
+            // 
+            this.ulogaIDDataGridViewTextBoxColumn.DataPropertyName = "UlogaID";
+            this.ulogaIDDataGridViewTextBoxColumn.HeaderText = "UlogaID";
+            this.ulogaIDDataGridViewTextBoxColumn.Name = "ulogaIDDataGridViewTextBoxColumn";
+            this.ulogaIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ulogaIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "Naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "Naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // duljinaDataGridViewTextBoxColumn
+            // 
+            this.duljinaDataGridViewTextBoxColumn.DataPropertyName = "Duljina";
+            this.duljinaDataGridViewTextBoxColumn.HeaderText = "Dužina";
+            this.duljinaDataGridViewTextBoxColumn.Name = "duljinaDataGridViewTextBoxColumn";
+            this.duljinaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // širinaDataGridViewTextBoxColumn
+            // 
+            this.širinaDataGridViewTextBoxColumn.DataPropertyName = "Širina";
+            this.širinaDataGridViewTextBoxColumn.HeaderText = "Širina";
+            this.širinaDataGridViewTextBoxColumn.Name = "širinaDataGridViewTextBoxColumn";
+            this.širinaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // visinaDataGridViewTextBoxColumn
+            // 
+            this.visinaDataGridViewTextBoxColumn.DataPropertyName = "Visina";
+            this.visinaDataGridViewTextBoxColumn.HeaderText = "Debljina";
+            this.visinaDataGridViewTextBoxColumn.Name = "visinaDataGridViewTextBoxColumn";
+            this.visinaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // količinaDataGridViewTextBoxColumn
+            // 
+            this.količinaDataGridViewTextBoxColumn.DataPropertyName = "Količina";
+            this.količinaDataGridViewTextBoxColumn.HeaderText = "Količina";
+            this.količinaDataGridViewTextBoxColumn.Name = "količinaDataGridViewTextBoxColumn";
+            this.količinaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // materijalDataGridViewTextBoxColumn
+            // 
+            this.materijalDataGridViewTextBoxColumn.DataPropertyName = "Materijal";
+            this.materijalDataGridViewTextBoxColumn.HeaderText = "Materijal";
+            this.materijalDataGridViewTextBoxColumn.Name = "materijalDataGridViewTextBoxColumn";
+            this.materijalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kantiranostDataGridViewTextBoxColumn
+            // 
+            this.kantiranostDataGridViewTextBoxColumn.DataPropertyName = "Kantiranost";
+            this.kantiranostDataGridViewTextBoxColumn.HeaderText = "Kantiranost";
+            this.kantiranostDataGridViewTextBoxColumn.Name = "kantiranostDataGridViewTextBoxColumn";
+            this.kantiranostDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bojaDataGridViewTextBoxColumn
+            // 
+            this.bojaDataGridViewTextBoxColumn.DataPropertyName = "Boja";
+            this.bojaDataGridViewTextBoxColumn.HeaderText = "Boja";
+            this.bojaDataGridViewTextBoxColumn.Name = "bojaDataGridViewTextBoxColumn";
+            this.bojaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ulogaDataGridViewTextBoxColumn
+            // 
+            this.ulogaDataGridViewTextBoxColumn.DataPropertyName = "Uloga";
+            this.ulogaDataGridViewTextBoxColumn.HeaderText = "Uloga";
+            this.ulogaDataGridViewTextBoxColumn.Name = "ulogaDataGridViewTextBoxColumn";
+            this.ulogaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // slikaDataGridViewTextBoxColumn
+            // 
+            this.slikaDataGridViewTextBoxColumn.DataPropertyName = "Slika";
+            this.slikaDataGridViewTextBoxColumn.HeaderText = "Slika";
+            this.slikaDataGridViewTextBoxColumn.Name = "slikaDataGridViewTextBoxColumn";
+            this.slikaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.slikaDataGridViewTextBoxColumn.Visible = false;
+            // 
             // uiDodajDjeloveUProizvod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -609,7 +589,6 @@
             this.Controls.Add(this.uiLabelOdabraniDioID);
             this.Controls.Add(this.uiLabelOdabraniDioNaziv);
             this.Controls.Add(this.uiLabelDioMaterijal);
-            this.Controls.Add(this.uiLabelDioSlika);
             this.Controls.Add(this.uiLabelDioDebljina);
             this.Controls.Add(this.uiLabelDioSirina);
             this.Controls.Add(this.uiLabelDioDuzina);
@@ -627,7 +606,6 @@
             this.Controls.Add(this.uiActionOdaberiUloga);
             this.Controls.Add(this.uiInputOdabirTipaUnosaDijela);
             this.Controls.Add(this.uiInputDioMaterijal);
-            this.Controls.Add(this.uiInputDioSlika);
             this.Controls.Add(this.uiInputDioDebljina);
             this.Controls.Add(this.uiInputDioŠirina);
             this.Controls.Add(this.uiInputDioDužina);
@@ -671,7 +649,6 @@
         private System.Windows.Forms.TextBox uiInputDioDužina;
         private System.Windows.Forms.TextBox uiInputDioŠirina;
         private System.Windows.Forms.TextBox uiInputDioDebljina;
-        private System.Windows.Forms.TextBox uiInputDioSlika;
         private System.Windows.Forms.TextBox uiInputDioMaterijal;
         private System.Windows.Forms.ComboBox uiInputOdabirTipaUnosaDijela;
         private System.Windows.Forms.Button uiActionOdaberiUloga;
@@ -689,7 +666,6 @@
         private System.Windows.Forms.Label uiLabelDioDuzina;
         private System.Windows.Forms.Label uiLabelDioSirina;
         private System.Windows.Forms.Label uiLabelDioDebljina;
-        private System.Windows.Forms.Label uiLabelDioSlika;
         private System.Windows.Forms.Label uiLabelDioMaterijal;
         private System.Windows.Forms.Label uiLabelOdabraniDioNaziv;
         private System.Windows.Forms.Label uiLabelOdabraniDioID;

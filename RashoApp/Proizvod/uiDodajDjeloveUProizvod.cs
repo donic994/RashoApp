@@ -90,14 +90,12 @@ namespace RashoApp.Proizvod
                 uiInputDioDužina.Visible = true;
                 uiInputDioŠirina.Visible = true;
                 uiInputDioDebljina.Visible = true;
-                uiInputDioSlika.Visible = true;
                 uiInputDioMaterijal.Visible = true;
 
                 uiLabelDioNaziv.Visible = true;
                 uiLabelDioDuzina.Visible = true;
                 uiLabelDioSirina.Visible = true;
                 uiLabelDioDebljina.Visible = true;
-                uiLabelDioSlika.Visible = true;
                 uiLabelDioMaterijal.Visible = true;
 
                 uiInputDioID.Visible = false;
@@ -113,14 +111,12 @@ namespace RashoApp.Proizvod
                 uiInputDioDužina.Visible = false;
                 uiInputDioŠirina.Visible = false;
                 uiInputDioDebljina.Visible = false;
-                uiInputDioSlika.Visible = false;
                 uiInputDioMaterijal.Visible = false;
 
                 uiLabelDioNaziv.Visible = false;
                 uiLabelDioDuzina.Visible = false;
                 uiLabelDioSirina.Visible = false;
                 uiLabelDioDebljina.Visible = false;
-                uiLabelDioSlika.Visible = false;
                 uiLabelDioMaterijal.Visible = false;
 
 
@@ -281,7 +277,7 @@ namespace RashoApp.Proizvod
                 int duljina = int.Parse(uiInputDioDužina.Text.ToString());
                 int sirina = int.Parse(uiInputDioŠirina.Text.ToString());
                 int visina = int.Parse(uiInputDioDebljina.Text.ToString());
-                string slika = uiInputDioSlika.Text;
+                string slika = "";
                 string materijal = uiInputDioMaterijal.Text;
 
                 Baza18043_DBDataSetTableAdapters.DioTableAdapter noviDioTableAdapter = new Baza18043_DBDataSetTableAdapters.DioTableAdapter();
@@ -340,7 +336,11 @@ namespace RashoApp.Proizvod
 
         private void uiActionObrišiDio_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj dio iz proizvoda?", "Obrisati dio", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            if(uiOutputDataTableDioUProizvodu.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite dio koji želite izbrisati iz prizvoda!");
+            }
+            else if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj dio iz proizvoda?", "Obrisati dio", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
                 int dioID = int.Parse(uiOutputDataTableDioUProizvodu.SelectedCells[0].Value.ToString());
                 int ulogaID = int.Parse(uiOutputDataTableDioUProizvodu.SelectedCells[1].Value.ToString());
