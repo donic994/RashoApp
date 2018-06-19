@@ -40,14 +40,25 @@ namespace RashoApp.UlogaDijela
 
         private void uiActionUrediUlogaDijela_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(uiOutputTableDataUlogaDijela.SelectedCells[0].Value.ToString());
-            UlogaDijela.uiDodajUrediUlogaDijela frm = new UlogaDijela.uiDodajUrediUlogaDijela(id, "uredi");
-            frm.ShowDialog();
+            if (uiOutputTableDataUlogaDijela.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite ulogu dijela koju želite urediti");
+            }
+            else
+            {
+                int id = int.Parse(uiOutputTableDataUlogaDijela.SelectedCells[0].Value.ToString());
+                UlogaDijela.uiDodajUrediUlogaDijela frm = new UlogaDijela.uiDodajUrediUlogaDijela(id, "uredi");
+                frm.ShowDialog();
+            }
         }
 
         private void uiActionObrišiUlogaDijela_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Jeste li sigurni da želite obrisati ovu ulogu?", "Obrisati ulogu dijela", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+            if (uiOutputTableDataUlogaDijela.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Odaberite ulogu dijela koju želite obrisati");
+            }
+            else if (MessageBox.Show("Jeste li sigurni da želite obrisati ovu ulogu?", "Obrisati ulogu dijela", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
                 int id = int.Parse(uiOutputTableDataUlogaDijela.SelectedCells[0].Value.ToString());
 

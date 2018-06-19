@@ -59,20 +59,30 @@ namespace RashoApp.UlogaDijela
             if (kontrola == "uredi")
             {
                 SpremiPromjene();
+                this.Close();
+                Application.OpenForms.OfType<uiUlogaDijela>().Single().PopuniPodacimaUlogaDijela();
             }
             if (kontrola == "dodaj")
             {
-                string naziv = nazivTextBox.Text;
+                string naziv = "";
 
+                if (String.IsNullOrWhiteSpace(uiInputNaziv.Text))
+                {
+                    MessageBox.Show("Unesite vrijednost u Naziv!");
+                    uiInputNaziv.Text = "";
+                    uiInputNaziv.Focus();
+                }
+                else
+                {
+                    naziv = uiInputNaziv.Text;
+                    Baza18043_DBDataSetTableAdapters.UlogaDijelaTableAdapter noviUlogaDijelaTableAdapter = new Baza18043_DBDataSetTableAdapters.UlogaDijelaTableAdapter();
+                    noviUlogaDijelaTableAdapter.Insert(naziv);
 
-                Baza18043_DBDataSetTableAdapters.UlogaDijelaTableAdapter noviUlogaDijelaTableAdapter = new Baza18043_DBDataSetTableAdapters.UlogaDijelaTableAdapter();
-                noviUlogaDijelaTableAdapter.Insert(naziv);
-
-                SpremiPromjene();
+                    SpremiPromjene();
+                    this.Close();
+                    Application.OpenForms.OfType<uiUlogaDijela>().Single().PopuniPodacimaUlogaDijela();
+                }
             }
-
-            this.Close();
-            Application.OpenForms.OfType<uiUlogaDijela>().Single().PopuniPodacimaUlogaDijela();
         }
     }
 }

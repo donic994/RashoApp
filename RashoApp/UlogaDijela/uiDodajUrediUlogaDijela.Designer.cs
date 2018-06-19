@@ -33,9 +33,10 @@
             this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
             this.ulogaDijelaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ulogaDijelaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.UlogaDijelaTableAdapter();
-            this.nazivTextBox = new System.Windows.Forms.TextBox();
+            this.uiInputNaziv = new System.Windows.Forms.TextBox();
             this.uiActionSpremiDio = new System.Windows.Forms.Button();
             this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             nazivLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaDijelaBindingSource)).BeginInit();
@@ -64,13 +65,15 @@
             // 
             this.ulogaDijelaTableAdapter.ClearBeforeFill = true;
             // 
-            // nazivTextBox
+            // uiInputNaziv
             // 
-            this.nazivTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ulogaDijelaBindingSource, "naziv", true));
-            this.nazivTextBox.Location = new System.Drawing.Point(115, 52);
-            this.nazivTextBox.Name = "nazivTextBox";
-            this.nazivTextBox.Size = new System.Drawing.Size(100, 22);
-            this.nazivTextBox.TabIndex = 4;
+            this.uiInputNaziv.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ulogaDijelaBindingSource, "naziv", true));
+            this.uiInputNaziv.Location = new System.Drawing.Point(115, 52);
+            this.uiInputNaziv.Name = "uiInputNaziv";
+            this.uiInputNaziv.Size = new System.Drawing.Size(100, 22);
+            this.uiInputNaziv.TabIndex = 4;
+            this.helpProvider1.SetHelpString(this.uiInputNaziv, "Unesite naziv uloge dijela");
+            this.helpProvider1.SetShowHelp(this.uiInputNaziv, true);
             // 
             // uiActionSpremiDio
             // 
@@ -109,7 +112,7 @@
             this.ClientSize = new System.Drawing.Size(306, 199);
             this.Controls.Add(this.uiActionSpremiDio);
             this.Controls.Add(nazivLabel);
-            this.Controls.Add(this.nazivTextBox);
+            this.Controls.Add(this.uiInputNaziv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "uiDodajUrediUlogaDijela";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -127,8 +130,9 @@
         private Baza18043_DBDataSet baza18043_DBDataSet;
         private System.Windows.Forms.BindingSource ulogaDijelaBindingSource;
         private Baza18043_DBDataSetTableAdapters.UlogaDijelaTableAdapter ulogaDijelaTableAdapter;
-        private System.Windows.Forms.TextBox nazivTextBox;
+        private System.Windows.Forms.TextBox uiInputNaziv;
         private System.Windows.Forms.Button uiActionSpremiDio;
         private Baza18043_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
