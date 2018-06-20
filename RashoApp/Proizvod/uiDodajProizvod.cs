@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -107,7 +108,12 @@ namespace RashoApp.Proizvod
             if (!String.IsNullOrWhiteSpace(slika))
             {
                 //Dodaj sliku u lokalni direktorij(Slike)
-                destinacijaSpremanja = "F:\\DoNiC\\FOI\\8 semestar\\PI\\Projekt2018\\RashoApp\\RashoApp\\bin\\Debug\\Slike\\Slika" + naziv + ".png";
+                string exeFile = (new System.Uri(Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
+                string exeDir = Path.GetDirectoryName(exeFile);
+                destinacijaSpremanja = Uri.UnescapeDataString(Path.Combine(exeDir, "Slike\\Slika" + naziv + ".png"));
+
+
+
 
                 File.Copy(destinacijaČitanja.ToString(), destinacijaSpremanja);
                 //
