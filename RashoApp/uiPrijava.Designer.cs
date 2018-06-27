@@ -34,6 +34,7 @@
             this.uiInputKorisničkoIme = new System.Windows.Forms.TextBox();
             this.uiAkcijaPrijaviSe = new System.Windows.Forms.Button();
             this.HelpPrijava = new System.Windows.Forms.HelpProvider();
+            this.uiOznakaGreškaUPrijavi = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // uiOznakaLozinka
@@ -85,11 +86,21 @@
             // 
             this.HelpPrijava.HelpNamespace = "C:\\Users\\filip\\Desktop\\help.html";
             // 
+            // uiOznakaGreškaUPrijavi
+            // 
+            this.uiOznakaGreškaUPrijavi.AutoSize = true;
+            this.uiOznakaGreškaUPrijavi.ForeColor = System.Drawing.Color.Red;
+            this.uiOznakaGreškaUPrijavi.Location = new System.Drawing.Point(213, 99);
+            this.uiOznakaGreškaUPrijavi.Name = "uiOznakaGreškaUPrijavi";
+            this.uiOznakaGreškaUPrijavi.Size = new System.Drawing.Size(0, 13);
+            this.uiOznakaGreškaUPrijavi.TabIndex = 12;
+            // 
             // uiPrijava
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 182);
+            this.Controls.Add(this.uiOznakaGreškaUPrijavi);
             this.Controls.Add(this.uiAkcijaPrijaviSe);
             this.Controls.Add(this.uiOznakaLozinka);
             this.Controls.Add(this.uiOznakaKorisničkoIme);
@@ -114,5 +125,6 @@
         private System.Windows.Forms.TextBox uiInputKorisničkoIme;
         private System.Windows.Forms.Button uiAkcijaPrijaviSe;
         private System.Windows.Forms.HelpProvider HelpPrijava;
+        private System.Windows.Forms.Label uiOznakaGreškaUPrijavi;
     }
 }
