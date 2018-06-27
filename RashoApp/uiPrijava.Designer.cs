@@ -40,7 +40,7 @@
             // 
             this.uiOznakaLozinka.AutoSize = true;
             this.uiOznakaLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.uiOznakaLozinka.Location = new System.Drawing.Point(62, 64);
+            this.uiOznakaLozinka.Location = new System.Drawing.Point(139, 72);
             this.uiOznakaLozinka.Name = "uiOznakaLozinka";
             this.uiOznakaLozinka.Size = new System.Drawing.Size(68, 20);
             this.uiOznakaLozinka.TabIndex = 10;
@@ -50,7 +50,7 @@
             // 
             this.uiOznakaKorisničkoIme.AutoSize = true;
             this.uiOznakaKorisničkoIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.uiOznakaKorisničkoIme.Location = new System.Drawing.Point(16, 38);
+            this.uiOznakaKorisničkoIme.Location = new System.Drawing.Point(93, 46);
             this.uiOznakaKorisničkoIme.Name = "uiOznakaKorisničkoIme";
             this.uiOznakaKorisničkoIme.Size = new System.Drawing.Size(114, 20);
             this.uiOznakaKorisničkoIme.TabIndex = 9;
@@ -58,27 +58,28 @@
             // 
             // uiInputLozinka
             // 
-            this.uiInputLozinka.Location = new System.Drawing.Point(136, 64);
+            this.uiInputLozinka.Location = new System.Drawing.Point(213, 72);
             this.uiInputLozinka.Name = "uiInputLozinka";
-            this.uiInputLozinka.Size = new System.Drawing.Size(100, 20);
+            this.uiInputLozinka.Size = new System.Drawing.Size(188, 20);
             this.uiInputLozinka.TabIndex = 7;
             // 
             // uiInputKorisničkoIme
             // 
-            this.uiInputKorisničkoIme.Location = new System.Drawing.Point(136, 38);
+            this.uiInputKorisničkoIme.Location = new System.Drawing.Point(213, 46);
             this.uiInputKorisničkoIme.Name = "uiInputKorisničkoIme";
-            this.uiInputKorisničkoIme.Size = new System.Drawing.Size(100, 20);
+            this.uiInputKorisničkoIme.Size = new System.Drawing.Size(188, 20);
             this.uiInputKorisničkoIme.TabIndex = 6;
             // 
             // uiAkcijaPrijaviSe
             // 
             this.uiAkcijaPrijaviSe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.uiAkcijaPrijaviSe.Location = new System.Drawing.Point(97, 106);
+            this.uiAkcijaPrijaviSe.Location = new System.Drawing.Point(298, 121);
             this.uiAkcijaPrijaviSe.Name = "uiAkcijaPrijaviSe";
-            this.uiAkcijaPrijaviSe.Size = new System.Drawing.Size(103, 42);
+            this.uiAkcijaPrijaviSe.Size = new System.Drawing.Size(103, 30);
             this.uiAkcijaPrijaviSe.TabIndex = 11;
             this.uiAkcijaPrijaviSe.Text = "Prijavi se";
             this.uiAkcijaPrijaviSe.UseVisualStyleBackColor = true;
+            this.uiAkcijaPrijaviSe.Click += new System.EventHandler(this.uiAkcijaPrijaviSe_Click);
             // 
             // HelpPrijava
             // 
@@ -88,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 169);
+            this.ClientSize = new System.Drawing.Size(511, 182);
             this.Controls.Add(this.uiAkcijaPrijaviSe);
             this.Controls.Add(this.uiOznakaLozinka);
             this.Controls.Add(this.uiOznakaKorisničkoIme);
