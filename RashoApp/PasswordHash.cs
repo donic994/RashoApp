@@ -20,10 +20,6 @@ namespace RashoApp
         private const int numberOfIterations = 10000;
         private const int saltLength = 16;
 
-        public PasswordHash()
-        {
-            
-        }
         public string Hash(string password, byte[] salt)
         {
             Rfc2898DeriveBytes pbkdf2 = new Rfc2898DeriveBytes(password, salt, numberOfIterations);
