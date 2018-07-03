@@ -12,9 +12,12 @@ namespace RashoApp
 {
     public partial class uiGlavniIzbornik : Form
     {
-        public uiGlavniIzbornik()
+        public int ulogaPrijavljenogKorisnika { get; set; }
+
+        public uiGlavniIzbornik(int ulogaKorisnika)
         {
             InitializeComponent();
+            ulogaPrijavljenogKorisnika = ulogaKorisnika;
 
             PopuniOdUiDjelovi();
             PopuniOdUiElement();

@@ -35,7 +35,7 @@ namespace RashoApp
                 isValid = phObj.Verify(uiInputLozinka.Text, korisnik[0].lozinka);
                 if (isValid) {
                     this.Hide();
-                    uiGlavniIzbornik glavnaForma = new uiGlavniIzbornik();
+                    uiGlavniIzbornik glavnaForma = new uiGlavniIzbornik(korisnik[0].id_uloga);
                     glavnaForma.ShowDialog();
 
                     uiInputKorisničkoIme.Text = "";
