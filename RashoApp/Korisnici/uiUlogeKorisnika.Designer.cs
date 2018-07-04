@@ -105,7 +105,7 @@
             // 
             // uiActionDodaj
             // 
-            this.uiActionDodaj.Location = new System.Drawing.Point(316, 343);
+            this.uiActionDodaj.Location = new System.Drawing.Point(12, 341);
             this.uiActionDodaj.Name = "uiActionDodaj";
             this.uiActionDodaj.Size = new System.Drawing.Size(75, 23);
             this.uiActionDodaj.TabIndex = 2;
@@ -115,7 +115,7 @@
             // 
             // uiActionUredi
             // 
-            this.uiActionUredi.Location = new System.Drawing.Point(397, 343);
+            this.uiActionUredi.Location = new System.Drawing.Point(93, 341);
             this.uiActionUredi.Name = "uiActionUredi";
             this.uiActionUredi.Size = new System.Drawing.Size(75, 23);
             this.uiActionUredi.TabIndex = 3;
@@ -125,7 +125,7 @@
             // 
             // uiActionObriši
             // 
-            this.uiActionObriši.Location = new System.Drawing.Point(478, 343);
+            this.uiActionObriši.Location = new System.Drawing.Point(174, 341);
             this.uiActionObriši.Name = "uiActionObriši";
             this.uiActionObriši.Size = new System.Drawing.Size(75, 23);
             this.uiActionObriši.TabIndex = 4;
@@ -143,7 +143,7 @@
             this.Controls.Add(this.uiActionDodaj);
             this.Controls.Add(this.uiOutputTableDataUlogaKorisnika);
             this.Name = "uiUlogeKorisnika";
-            this.Text = "uiUlogeKorisnika";
+            this.Text = "Uloge korisnika";
             this.Load += new System.EventHandler(this.uiUlogeKorisnika_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).EndInit();

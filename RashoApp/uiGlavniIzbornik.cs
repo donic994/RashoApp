@@ -24,6 +24,7 @@ namespace RashoApp
             PopuniOdUiKomponenta();
             PopuniOdUiProizvod();
             PopuniOdUiUlogaDijela();
+            PopuniOdUiUlogeKorisnika();
         }
 
         private void uiTabControl_DrawItem(object sender, DrawItemEventArgs e)
@@ -75,6 +76,15 @@ namespace RashoApp
             _stringFlags.Alignment = StringAlignment.Center;
             _stringFlags.LineAlignment = StringAlignment.Center;
             g.DrawString(tabPage.Text, _tabFont, textBrush, tabBounds, new StringFormat(_stringFlags));                    
+        }
+
+        private void PopuniOdUiUlogeKorisnika() {
+            Korisnici.uiUlogeKorisnika frm = new RashoApp.Korisnici.uiUlogeKorisnika();
+            frm.TopLevel = false;
+            frm.Visible = true;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            uiTabKorisniciUlogeKorisnika.Controls.Add(frm);
         }
 
         private void PopuniOdUiDjelovi()

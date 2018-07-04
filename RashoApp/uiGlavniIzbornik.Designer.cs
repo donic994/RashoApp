@@ -43,11 +43,16 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Dnevnik = new System.Windows.Forms.TabPage();
             this.Korisnici = new System.Windows.Forms.TabPage();
+            this.uiTabControlKorisnici = new System.Windows.Forms.TabControl();
+            this.uiTabKorisniciUlogeKorisnika = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.uiTabControl.SuspendLayout();
             this.Proizvodi.SuspendLayout();
             this.uiTabControlProizvodi.SuspendLayout();
             this.Narudžbe.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.Korisnici.SuspendLayout();
+            this.uiTabControlKorisnici.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiTabControl
@@ -68,7 +73,7 @@
             this.uiTabControl.Name = "uiTabControl";
             this.uiTabControl.Padding = new System.Drawing.Point(0, 0);
             this.uiTabControl.SelectedIndex = 0;
-            this.uiTabControl.Size = new System.Drawing.Size(1072, 606);
+            this.uiTabControl.Size = new System.Drawing.Size(804, 492);
             this.uiTabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl.TabIndex = 0;
             this.uiTabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.uiTabControl_DrawItem);
@@ -83,7 +88,7 @@
             this.Proizvodi.Location = new System.Drawing.Point(124, 4);
             this.Proizvodi.Margin = new System.Windows.Forms.Padding(0);
             this.Proizvodi.Name = "Proizvodi";
-            this.Proizvodi.Size = new System.Drawing.Size(944, 598);
+            this.Proizvodi.Size = new System.Drawing.Size(676, 484);
             this.Proizvodi.TabIndex = 0;
             this.Proizvodi.Text = "Proizvodi";
             // 
@@ -102,7 +107,7 @@
             this.uiTabControlProizvodi.Name = "uiTabControlProizvodi";
             this.uiTabControlProizvodi.Padding = new System.Drawing.Point(0, 0);
             this.uiTabControlProizvodi.SelectedIndex = 0;
-            this.uiTabControlProizvodi.Size = new System.Drawing.Size(942, 596);
+            this.uiTabControlProizvodi.Size = new System.Drawing.Size(674, 482);
             this.uiTabControlProizvodi.TabIndex = 0;
             // 
             // uiTabProizvodiDio
@@ -112,7 +117,7 @@
             this.uiTabProizvodiDio.Location = new System.Drawing.Point(4, 44);
             this.uiTabProizvodiDio.Margin = new System.Windows.Forms.Padding(0);
             this.uiTabProizvodiDio.Name = "uiTabProizvodiDio";
-            this.uiTabProizvodiDio.Size = new System.Drawing.Size(934, 548);
+            this.uiTabProizvodiDio.Size = new System.Drawing.Size(666, 434);
             this.uiTabProizvodiDio.TabIndex = 0;
             this.uiTabProizvodiDio.Text = "Dio";
             this.uiTabProizvodiDio.UseVisualStyleBackColor = true;
@@ -123,7 +128,7 @@
             this.uiTabProizvodiElement.Location = new System.Drawing.Point(4, 44);
             this.uiTabProizvodiElement.Margin = new System.Windows.Forms.Padding(0);
             this.uiTabProizvodiElement.Name = "uiTabProizvodiElement";
-            this.uiTabProizvodiElement.Size = new System.Drawing.Size(934, 548);
+            this.uiTabProizvodiElement.Size = new System.Drawing.Size(666, 434);
             this.uiTabProizvodiElement.TabIndex = 1;
             this.uiTabProizvodiElement.Text = "Element";
             this.uiTabProizvodiElement.UseVisualStyleBackColor = true;
@@ -134,7 +139,7 @@
             this.uiTabProizvodiKomponenta.Location = new System.Drawing.Point(4, 44);
             this.uiTabProizvodiKomponenta.Margin = new System.Windows.Forms.Padding(0);
             this.uiTabProizvodiKomponenta.Name = "uiTabProizvodiKomponenta";
-            this.uiTabProizvodiKomponenta.Size = new System.Drawing.Size(934, 548);
+            this.uiTabProizvodiKomponenta.Size = new System.Drawing.Size(666, 434);
             this.uiTabProizvodiKomponenta.TabIndex = 2;
             this.uiTabProizvodiKomponenta.Text = "Komponenta";
             this.uiTabProizvodiKomponenta.UseVisualStyleBackColor = true;
@@ -145,7 +150,7 @@
             this.uiTabProizvodiProizvod.Location = new System.Drawing.Point(4, 44);
             this.uiTabProizvodiProizvod.Margin = new System.Windows.Forms.Padding(0);
             this.uiTabProizvodiProizvod.Name = "uiTabProizvodiProizvod";
-            this.uiTabProizvodiProizvod.Size = new System.Drawing.Size(934, 548);
+            this.uiTabProizvodiProizvod.Size = new System.Drawing.Size(666, 434);
             this.uiTabProizvodiProizvod.TabIndex = 3;
             this.uiTabProizvodiProizvod.Text = "Proizvod";
             this.uiTabProizvodiProizvod.UseVisualStyleBackColor = true;
@@ -156,7 +161,7 @@
             this.uiTabProizvodiUlogaDijela.Location = new System.Drawing.Point(4, 44);
             this.uiTabProizvodiUlogaDijela.Margin = new System.Windows.Forms.Padding(0);
             this.uiTabProizvodiUlogaDijela.Name = "uiTabProizvodiUlogaDijela";
-            this.uiTabProizvodiUlogaDijela.Size = new System.Drawing.Size(934, 548);
+            this.uiTabProizvodiUlogaDijela.Size = new System.Drawing.Size(666, 434);
             this.uiTabProizvodiUlogaDijela.TabIndex = 4;
             this.uiTabProizvodiUlogaDijela.Text = "Uloga dijela";
             this.uiTabProizvodiUlogaDijela.UseVisualStyleBackColor = true;
@@ -169,7 +174,7 @@
             this.Narudžbe.Location = new System.Drawing.Point(124, 4);
             this.Narudžbe.Margin = new System.Windows.Forms.Padding(0);
             this.Narudžbe.Name = "Narudžbe";
-            this.Narudžbe.Size = new System.Drawing.Size(944, 598);
+            this.Narudžbe.Size = new System.Drawing.Size(676, 484);
             this.Narudžbe.TabIndex = 1;
             this.Narudžbe.Text = "Narudžbe";
             // 
@@ -183,25 +188,27 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(0, 0);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(944, 598);
+            this.tabControl1.Size = new System.Drawing.Size(676, 484);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(936, 565);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Size = new System.Drawing.Size(668, 455);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(936, 565);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Size = new System.Drawing.Size(700, 457);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -212,30 +219,63 @@
             this.Dnevnik.Location = new System.Drawing.Point(124, 4);
             this.Dnevnik.Margin = new System.Windows.Forms.Padding(0);
             this.Dnevnik.Name = "Dnevnik";
-            this.Dnevnik.Size = new System.Drawing.Size(944, 598);
+            this.Dnevnik.Size = new System.Drawing.Size(676, 484);
             this.Dnevnik.TabIndex = 2;
             this.Dnevnik.Text = "Dnevnik";
             // 
             // Korisnici
             // 
             this.Korisnici.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(150)))), ((int)(((byte)(68)))));
+            this.Korisnici.Controls.Add(this.uiTabControlKorisnici);
             this.Korisnici.Location = new System.Drawing.Point(124, 4);
             this.Korisnici.Margin = new System.Windows.Forms.Padding(0);
             this.Korisnici.Name = "Korisnici";
-            this.Korisnici.Size = new System.Drawing.Size(944, 598);
+            this.Korisnici.Size = new System.Drawing.Size(676, 484);
             this.Korisnici.TabIndex = 3;
             this.Korisnici.Text = "Korisnici";
             // 
+            // uiTabControlKorisnici
+            // 
+            this.uiTabControlKorisnici.Controls.Add(this.uiTabKorisniciUlogeKorisnika);
+            this.uiTabControlKorisnici.Controls.Add(this.tabPage4);
+            this.uiTabControlKorisnici.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiTabControlKorisnici.Location = new System.Drawing.Point(0, 0);
+            this.uiTabControlKorisnici.Name = "uiTabControlKorisnici";
+            this.uiTabControlKorisnici.SelectedIndex = 0;
+            this.uiTabControlKorisnici.Size = new System.Drawing.Size(676, 484);
+            this.uiTabControlKorisnici.TabIndex = 0;
+            // 
+            // uiTabKorisniciUlogeKorisnika
+            // 
+            this.uiTabKorisniciUlogeKorisnika.Location = new System.Drawing.Point(4, 25);
+            this.uiTabKorisniciUlogeKorisnika.Name = "uiTabKorisniciUlogeKorisnika";
+            this.uiTabKorisniciUlogeKorisnika.Padding = new System.Windows.Forms.Padding(3);
+            this.uiTabKorisniciUlogeKorisnika.Size = new System.Drawing.Size(668, 455);
+            this.uiTabKorisniciUlogeKorisnika.TabIndex = 0;
+            this.uiTabKorisniciUlogeKorisnika.Text = "Uloge";
+            this.uiTabKorisniciUlogeKorisnika.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(668, 451);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // uiGlavniIzbornik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1072, 606);
+            this.ClientSize = new System.Drawing.Size(804, 492);
             this.Controls.Add(this.uiTabControl);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(750, 300);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(566, 251);
             this.Name = "uiGlavniIzbornik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "uiGlavniIzbornik";
@@ -245,6 +285,8 @@
             this.uiTabControlProizvodi.ResumeLayout(false);
             this.Narudžbe.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.Korisnici.ResumeLayout(false);
+            this.uiTabControlKorisnici.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -264,5 +306,8 @@
         private System.Windows.Forms.TabPage uiTabProizvodiKomponenta;
         private System.Windows.Forms.TabPage uiTabProizvodiProizvod;
         private System.Windows.Forms.TabPage uiTabProizvodiUlogaDijela;
+        private System.Windows.Forms.TabControl uiTabControlKorisnici;
+        private System.Windows.Forms.TabPage uiTabKorisniciUlogeKorisnika;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }
