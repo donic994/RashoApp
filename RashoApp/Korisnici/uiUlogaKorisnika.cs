@@ -34,9 +34,14 @@ namespace RashoApp.Korisnici {
             }
         }
 
-        private void uiActionDodaj_Click(object sender, EventArgs e) {
+        private void uiActionPrihvati_Click(object sender, EventArgs e) {
             if (ulogaID > 0) {
-                ulogaTableAdapter.UpdateRow(uiInputNaziv.Text, uiInputOpis.Text, ulogaID);
+                try { 
+                    ulogaTableAdapter.UpdateRow(uiInputNaziv.Text, uiInputOpis.Text, ulogaID);
+                    Close();
+                } catch (Exception) {
+                    uiOznakaGreška.Text = "Greška: Promjene nisu spremljene.";
+                }
             } else if (uiInputNaziv.Text.Length > 0) {
                 try {
                     ulogaTableAdapter.InsertRow(uiInputNaziv.Text, uiInputOpis.Text);

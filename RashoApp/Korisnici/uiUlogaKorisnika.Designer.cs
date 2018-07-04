@@ -26,7 +26,7 @@
             this.uiInputID = new System.Windows.Forms.TextBox();
             this.uiInputNaziv = new System.Windows.Forms.TextBox();
             this.uiInputOpis = new System.Windows.Forms.TextBox();
-            this.uiActionDodaj = new System.Windows.Forms.Button();
+            this.uiActionPrihvati = new System.Windows.Forms.Button();
             this.uiActionPoništi = new System.Windows.Forms.Button();
             this.uiOznakaID = new System.Windows.Forms.Label();
             this.uiOznakaNaziv = new System.Windows.Forms.Label();
@@ -57,15 +57,15 @@
             this.uiInputOpis.Size = new System.Drawing.Size(170, 45);
             this.uiInputOpis.TabIndex = 2;
             // 
-            // uiActionDodaj
+            // uiActionPrihvati
             // 
-            this.uiActionDodaj.Location = new System.Drawing.Point(162, 148);
-            this.uiActionDodaj.Name = "uiActionDodaj";
-            this.uiActionDodaj.Size = new System.Drawing.Size(75, 23);
-            this.uiActionDodaj.TabIndex = 3;
-            this.uiActionDodaj.Text = "Dodaj";
-            this.uiActionDodaj.UseVisualStyleBackColor = true;
-            this.uiActionDodaj.Click += new System.EventHandler(this.uiActionDodaj_Click);
+            this.uiActionPrihvati.Location = new System.Drawing.Point(162, 148);
+            this.uiActionPrihvati.Name = "uiActionPrihvati";
+            this.uiActionPrihvati.Size = new System.Drawing.Size(75, 23);
+            this.uiActionPrihvati.TabIndex = 3;
+            this.uiActionPrihvati.Text = "Prihvati";
+            this.uiActionPrihvati.UseVisualStyleBackColor = true;
+            this.uiActionPrihvati.Click += new System.EventHandler(this.uiActionPrihvati_Click);
             // 
             // uiActionPoništi
             // 
@@ -123,7 +123,7 @@
             this.Controls.Add(this.uiOznakaNaziv);
             this.Controls.Add(this.uiOznakaID);
             this.Controls.Add(this.uiActionPoništi);
-            this.Controls.Add(this.uiActionDodaj);
+            this.Controls.Add(this.uiActionPrihvati);
             this.Controls.Add(this.uiInputOpis);
             this.Controls.Add(this.uiInputNaziv);
             this.Controls.Add(this.uiInputID);
@@ -139,7 +139,7 @@
         private System.Windows.Forms.TextBox uiInputID;
         private System.Windows.Forms.TextBox uiInputNaziv;
         private System.Windows.Forms.TextBox uiInputOpis;
-        private System.Windows.Forms.Button uiActionDodaj;
+        private System.Windows.Forms.Button uiActionPrihvati;
         private System.Windows.Forms.Button uiActionPoništi;
         private System.Windows.Forms.Label uiOznakaID;
         private System.Windows.Forms.Label uiOznakaNaziv;
