@@ -61,6 +61,7 @@
             // 
             this.uiInputLozinka.Location = new System.Drawing.Point(213, 72);
             this.uiInputLozinka.Name = "uiInputLozinka";
+            this.uiInputLozinka.PasswordChar = '•';
             this.uiInputLozinka.Size = new System.Drawing.Size(188, 20);
             this.uiInputLozinka.TabIndex = 7;
             // 
