@@ -8,6 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// U formi uiKorisnik moguća je izmjena postojećih korisnika (prosljeđen ID korisnika) i kreiranje novih (nije prosljeđen ID korisnika).
+/// Konstruktor prima jedan parametar, ID korisnika. Korisnik se dohvati iz baze i podaci se automatski popune za njega. Nakon promjene podataka
+/// klikom na gumb uiActionPrihvati, promjene se spremaju u bazu i forma se zatvara.
+/// U slučaju da parametar nije prosljeđen, aplikacija prepoznaje da je riječ o kreiranju novog korisnika te klikom na gumb uiActionPrihvati,
+/// novi korisnik se unosi u bazu.
+/// </summary>
+
 namespace RashoApp.Korisnici {
 
     public partial class uiKorisnik : Form {
