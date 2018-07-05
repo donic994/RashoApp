@@ -117,6 +117,30 @@
     <Compile Include="Komponenta\uiKomponenta.Designer.cs">
       <DependentUpon>uiKomponenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Korisnici\uiKorisnici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\uiKorisnici.Designer.cs">
+      <DependentUpon>uiKorisnici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\uiKorisnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\uiKorisnik.Designer.cs">
+      <DependentUpon>uiKorisnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\uiUlogaKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\uiUlogaKorisnika.Designer.cs">
+      <DependentUpon>uiUlogaKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\uiUlogeKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\uiUlogeKorisnika.Designer.cs">
+      <DependentUpon>uiUlogeKorisnika.cs</DependentUpon>
+    </Compile>
     <Compile Include="PasswordHash.cs" />
     <Compile Include="PopisBoja.cs" />
     <Compile Include="Djelovi\uiDjelovi.cs">
@@ -208,6 +232,18 @@
     <EmbeddedResource Include="Komponenta\uiKomponenta.resx">
       <DependentUpon>uiKomponenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\uiKorisnici.resx">
+      <DependentUpon>uiKorisnici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\uiKorisnik.resx">
+      <DependentUpon>uiKorisnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\uiUlogaKorisnika.resx">
+      <DependentUpon>uiUlogaKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\uiUlogeKorisnika.resx">
+      <DependentUpon>uiUlogeKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Proizvod\uiDodajDjeloveUProizvod.resx">
       <DependentUpon>uiDodajDjeloveUProizvod.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,6 +330,7 @@
     <Content Include="Ikone\Logo.ico" />
     <Content Include="Ikone\Uredi.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
