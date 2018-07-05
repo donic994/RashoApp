@@ -45,7 +45,7 @@
             this.Korisnici = new System.Windows.Forms.TabPage();
             this.uiTabControlKorisnici = new System.Windows.Forms.TabControl();
             this.uiTabKorisniciUlogeKorisnika = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.uiTabKorisniciKorisnici = new System.Windows.Forms.TabPage();
             this.uiTabControl.SuspendLayout();
             this.Proizvodi.SuspendLayout();
             this.uiTabControlProizvodi.SuspendLayout();
@@ -194,9 +194,9 @@
             // tabPage1
             // 
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(668, 455);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
@@ -205,10 +205,10 @@
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage2.Size = new System.Drawing.Size(700, 457);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Size = new System.Drawing.Size(668, 455);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -237,7 +237,7 @@
             // uiTabControlKorisnici
             // 
             this.uiTabControlKorisnici.Controls.Add(this.uiTabKorisniciUlogeKorisnika);
-            this.uiTabControlKorisnici.Controls.Add(this.tabPage4);
+            this.uiTabControlKorisnici.Controls.Add(this.uiTabKorisniciKorisnici);
             this.uiTabControlKorisnici.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiTabControlKorisnici.Location = new System.Drawing.Point(0, 0);
             this.uiTabControlKorisnici.Name = "uiTabControlKorisnici";
@@ -255,15 +255,15 @@
             this.uiTabKorisniciUlogeKorisnika.Text = "Uloge";
             this.uiTabKorisniciUlogeKorisnika.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // uiTabKorisniciKorisnici
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(668, 451);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.uiTabKorisniciKorisnici.Location = new System.Drawing.Point(4, 25);
+            this.uiTabKorisniciKorisnici.Name = "uiTabKorisniciKorisnici";
+            this.uiTabKorisniciKorisnici.Padding = new System.Windows.Forms.Padding(3);
+            this.uiTabKorisniciKorisnici.Size = new System.Drawing.Size(668, 455);
+            this.uiTabKorisniciKorisnici.TabIndex = 1;
+            this.uiTabKorisniciKorisnici.Text = "Korisnici";
+            this.uiTabKorisniciKorisnici.UseVisualStyleBackColor = true;
             // 
             // uiGlavniIzbornik
             // 
@@ -274,7 +274,7 @@
             this.Controls.Add(this.uiTabControl);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(566, 251);
             this.Name = "uiGlavniIzbornik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -308,6 +308,6 @@
         private System.Windows.Forms.TabPage uiTabProizvodiUlogaDijela;
         private System.Windows.Forms.TabControl uiTabControlKorisnici;
         private System.Windows.Forms.TabPage uiTabKorisniciUlogeKorisnika;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage uiTabKorisniciKorisnici;
     }
 }
