@@ -82,7 +82,7 @@
             this.uiOutputTableDataUlogaKorisnika.Location = new System.Drawing.Point(0, 0);
             this.uiOutputTableDataUlogaKorisnika.Name = "uiOutputTableDataUlogaKorisnika";
             this.uiOutputTableDataUlogaKorisnika.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputTableDataUlogaKorisnika.Size = new System.Drawing.Size(566, 309);
+            this.uiOutputTableDataUlogaKorisnika.Size = new System.Drawing.Size(566, 310);
             this.uiOutputTableDataUlogaKorisnika.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1

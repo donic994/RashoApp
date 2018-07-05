@@ -28,9 +28,8 @@
             this.korisnikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.korisnikTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.KorisnikTableAdapter();
             this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
-            this.uiOutputTableDataKorisnici = new System.Windows.Forms.DataGridView();
-            this.ulogaKorisnikaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ulogaKorisnikaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter();
+            this.uiOutputTableDataKorisnici = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +38,7 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.ulogaKorisnikaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uiActionDodaj = new System.Windows.Forms.Button();
             this.uiActionUredi = new System.Windows.Forms.Button();
             this.uiActionObriši = new System.Windows.Forms.Button();
@@ -77,6 +77,10 @@
             this.tableAdapterManager.UlogaKorisnikaTableAdapter = this.ulogaKorisnikaTableAdapter;
             this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // ulogaKorisnikaTableAdapter
+            // 
+            this.ulogaKorisnikaTableAdapter.ClearBeforeFill = true;
+            // 
             // uiOutputTableDataKorisnici
             // 
             this.uiOutputTableDataKorisnici.AutoGenerateColumns = false;
@@ -95,17 +99,8 @@
             this.uiOutputTableDataKorisnici.Location = new System.Drawing.Point(0, 0);
             this.uiOutputTableDataKorisnici.Name = "uiOutputTableDataKorisnici";
             this.uiOutputTableDataKorisnici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputTableDataKorisnici.Size = new System.Drawing.Size(872, 331);
+            this.uiOutputTableDataKorisnici.Size = new System.Drawing.Size(872, 310);
             this.uiOutputTableDataKorisnici.TabIndex = 1;
-            // 
-            // ulogaKorisnikaBindingSource
-            // 
-            this.ulogaKorisnikaBindingSource.DataMember = "UlogaKorisnika";
-            this.ulogaKorisnikaBindingSource.DataSource = this.baza18043_DBDataSet;
-            // 
-            // ulogaKorisnikaTableAdapter
-            // 
-            this.ulogaKorisnikaTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -162,9 +157,14 @@
             this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewTextBoxColumn9.ValueMember = "ID";
             // 
+            // ulogaKorisnikaBindingSource
+            // 
+            this.ulogaKorisnikaBindingSource.DataMember = "UlogaKorisnika";
+            this.ulogaKorisnikaBindingSource.DataSource = this.baza18043_DBDataSet;
+            // 
             // uiActionDodaj
             // 
-            this.uiActionDodaj.Location = new System.Drawing.Point(12, 357);
+            this.uiActionDodaj.Location = new System.Drawing.Point(12, 342);
             this.uiActionDodaj.Name = "uiActionDodaj";
             this.uiActionDodaj.Size = new System.Drawing.Size(75, 23);
             this.uiActionDodaj.TabIndex = 2;
@@ -174,7 +174,7 @@
             // 
             // uiActionUredi
             // 
-            this.uiActionUredi.Location = new System.Drawing.Point(123, 357);
+            this.uiActionUredi.Location = new System.Drawing.Point(93, 342);
             this.uiActionUredi.Name = "uiActionUredi";
             this.uiActionUredi.Size = new System.Drawing.Size(75, 23);
             this.uiActionUredi.TabIndex = 3;
@@ -184,7 +184,7 @@
             // 
             // uiActionObriši
             // 
-            this.uiActionObriši.Location = new System.Drawing.Point(228, 357);
+            this.uiActionObriši.Location = new System.Drawing.Point(174, 342);
             this.uiActionObriši.Name = "uiActionObriši";
             this.uiActionObriši.Size = new System.Drawing.Size(75, 23);
             this.uiActionObriši.TabIndex = 4;
@@ -196,7 +196,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 410);
+            this.ClientSize = new System.Drawing.Size(872, 385);
             this.Controls.Add(this.uiActionObriši);
             this.Controls.Add(this.uiActionUredi);
             this.Controls.Add(this.uiActionDodaj);
