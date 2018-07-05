@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace RashoApp
 {
@@ -16,8 +17,15 @@ namespace RashoApp
 
         public uiGlavniIzbornik(int ulogaKorisnika)
         {
-            InitializeComponent();
             ulogaPrijavljenogKorisnika = ulogaKorisnika;
+            InitializeComponent();
+
+            // ako nije admin
+            Debug.WriteLine("uloga:" + ulogaKorisnika);
+            if (ulogaKorisnika != 1) {
+                uiTabControl.TabPages.RemoveAt(3);
+                uiTabControl.TabPages.RemoveAt(2);
+            }
 
             PopuniOdUiDjelovi();
             PopuniOdUiElement();
