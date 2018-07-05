@@ -8,6 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Na formi uiKorisnici vidimo popis svih korisnika u bazi i njihove podatke. Odabirom na korisnika i pritiskom na jedan od gumbova
+/// (uiActionDodaj, uiActionUredi, uiActionObriši) možemo upravljati odabranim korisnikom.
+/// Klikom na gumb Dodaj, otvara se forma uiKorisnik u kojoj upisujemo podatke. Klikom na gumb Uredi, otvara se ista forma sa već popunitim podacima iz baze.
+/// Klikom na gumb Obriši, briše se korisnik iz baze. Nakon svake od navedenih akcija, tablica se ažurira.
+/// </summary>
+
 namespace RashoApp.Korisnici {
     public partial class uiKorisnici : Form {
         public uiKorisnici() {
