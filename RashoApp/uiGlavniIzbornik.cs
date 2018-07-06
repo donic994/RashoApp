@@ -7,20 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace RashoApp
 {
     public partial class uiGlavniIzbornik : Form
     {
-        public uiGlavniIzbornik()
+        public int ulogaPrijavljenogKorisnika { get; set; }
+
+        public uiGlavniIzbornik(int ulogaKorisnika)
         {
+            ulogaPrijavljenogKorisnika = ulogaKorisnika;
             InitializeComponent();
+
+            // ako nije admin
+            Debug.WriteLine("uloga:" + ulogaKorisnika);
+            if (ulogaKorisnika != 1) {
+                uiTabControl.TabPages.RemoveAt(3);
+                uiTabControl.TabPages.RemoveAt(2);
+            }
 
             PopuniOdUiDjelovi();
             PopuniOdUiElement();
             PopuniOdUiKomponenta();
             PopuniOdUiProizvod();
             PopuniOdUiUlogaDijela();
+            PopuniOdUiUlogeKorisnika();
+            PopuniOdUiKorisnici();
         }
 
         private void uiTabControl_DrawItem(object sender, DrawItemEventArgs e)
@@ -72,6 +85,23 @@ namespace RashoApp
             _stringFlags.Alignment = StringAlignment.Center;
             _stringFlags.LineAlignment = StringAlignment.Center;
             g.DrawString(tabPage.Text, _tabFont, textBrush, tabBounds, new StringFormat(_stringFlags));                    
+        }
+
+        private void PopuniOdUiUlogeKorisnika() {
+            Korisnici.uiUlogeKorisnika frm = new RashoApp.Korisnici.uiUlogeKorisnika();
+            frm.TopLevel = false;
+            frm.Visible = true;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            uiTabKorisniciUlogeKorisnika.Controls.Add(frm);
+        }
+        private void PopuniOdUiKorisnici() {
+            Korisnici.uiKorisnici frm = new RashoApp.Korisnici.uiKorisnici();
+            frm.TopLevel = false;
+            frm.Visible = true;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            uiTabKorisniciKorisnici.Controls.Add(frm);
         }
 
         private void PopuniOdUiDjelovi()

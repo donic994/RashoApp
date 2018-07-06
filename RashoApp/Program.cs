@@ -16,7 +16,7 @@ namespace RashoApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new uiGlavniIzbornik());
+            Application.Run(new uiPrijava());
         }
     }
 }

@@ -52,12 +52,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -119,6 +117,31 @@
     <Compile Include="Komponenta\uiKomponenta.Designer.cs">
       <DependentUpon>uiKomponenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Korisnici\uiKorisnici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\uiKorisnici.Designer.cs">
+      <DependentUpon>uiKorisnici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\uiKorisnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\uiKorisnik.Designer.cs">
+      <DependentUpon>uiKorisnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\uiUlogaKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\uiUlogaKorisnika.Designer.cs">
+      <DependentUpon>uiUlogaKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Korisnici\uiUlogeKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Korisnici\uiUlogeKorisnika.Designer.cs">
+      <DependentUpon>uiUlogeKorisnika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordHash.cs" />
     <Compile Include="PopisBoja.cs" />
     <Compile Include="Djelovi\uiDjelovi.cs">
       <SubType>Form</SubType>
@@ -209,6 +232,18 @@
     <EmbeddedResource Include="Komponenta\uiKomponenta.resx">
       <DependentUpon>uiKomponenta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\uiKorisnici.resx">
+      <DependentUpon>uiKorisnici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\uiKorisnik.resx">
+      <DependentUpon>uiKorisnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\uiUlogaKorisnika.resx">
+      <DependentUpon>uiUlogaKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Korisnici\uiUlogeKorisnika.resx">
+      <DependentUpon>uiUlogeKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Proizvod\uiDodajDjeloveUProizvod.resx">
       <DependentUpon>uiDodajDjeloveUProizvod.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +295,7 @@
     <None Include="Baza18043_DBDataSet.xss">
       <DependentUpon>Baza18043_DBDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

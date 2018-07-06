@@ -34,12 +34,6 @@
             this.uiActionUrediDio = new System.Windows.Forms.Button();
             this.uiActionObrišiDio = new System.Windows.Forms.Button();
             this.uiOutputTableDataDio = new System.Windows.Forms.DataGridView();
-            this.dioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
-            this.dioTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.DioTableAdapter();
-            this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
-            this.komponentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.komponentaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duljinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +41,12 @@
             this.visinaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materijalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.slikaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baza18043_DBDataSet = new RashoApp.Baza18043_DBDataSet();
+            this.dioTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.DioTableAdapter();
+            this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
+            this.komponentaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.komponentaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.KomponentaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataDio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
@@ -59,9 +59,10 @@
             this.uiActionDodajNoviDio.BackColor = System.Drawing.Color.LimeGreen;
             this.uiActionDodajNoviDio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionDodajNoviDio.ForeColor = System.Drawing.Color.White;
-            this.uiActionDodajNoviDio.Location = new System.Drawing.Point(436, 443);
+            this.uiActionDodajNoviDio.Location = new System.Drawing.Point(327, 360);
+            this.uiActionDodajNoviDio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uiActionDodajNoviDio.Name = "uiActionDodajNoviDio";
-            this.uiActionDodajNoviDio.Size = new System.Drawing.Size(97, 39);
+            this.uiActionDodajNoviDio.Size = new System.Drawing.Size(73, 32);
             this.uiActionDodajNoviDio.TabIndex = 1;
             this.uiActionDodajNoviDio.Text = "Dodaj";
             this.uiActionDodajNoviDio.UseVisualStyleBackColor = false;
@@ -73,9 +74,10 @@
             this.uiActionUrediDio.BackColor = System.Drawing.Color.Gold;
             this.uiActionUrediDio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionUrediDio.ForeColor = System.Drawing.Color.White;
-            this.uiActionUrediDio.Location = new System.Drawing.Point(563, 443);
+            this.uiActionUrediDio.Location = new System.Drawing.Point(422, 360);
+            this.uiActionUrediDio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uiActionUrediDio.Name = "uiActionUrediDio";
-            this.uiActionUrediDio.Size = new System.Drawing.Size(97, 39);
+            this.uiActionUrediDio.Size = new System.Drawing.Size(73, 32);
             this.uiActionUrediDio.TabIndex = 2;
             this.uiActionUrediDio.Text = "Uredi";
             this.uiActionUrediDio.UseVisualStyleBackColor = false;
@@ -87,9 +89,10 @@
             this.uiActionObrišiDio.BackColor = System.Drawing.Color.Crimson;
             this.uiActionObrišiDio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionObrišiDio.ForeColor = System.Drawing.Color.White;
-            this.uiActionObrišiDio.Location = new System.Drawing.Point(693, 443);
+            this.uiActionObrišiDio.Location = new System.Drawing.Point(520, 360);
+            this.uiActionObrišiDio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uiActionObrišiDio.Name = "uiActionObrišiDio";
-            this.uiActionObrišiDio.Size = new System.Drawing.Size(97, 39);
+            this.uiActionObrišiDio.Size = new System.Drawing.Size(73, 32);
             this.uiActionObrišiDio.TabIndex = 3;
             this.uiActionObrišiDio.Text = "Obriši";
             this.uiActionObrišiDio.UseVisualStyleBackColor = false;
@@ -113,53 +116,16 @@
             this.slikaDataGridViewTextBoxColumn});
             this.uiOutputTableDataDio.DataSource = this.dioBindingSource;
             this.uiOutputTableDataDio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uiOutputTableDataDio.Location = new System.Drawing.Point(10, 0);
+            this.uiOutputTableDataDio.Location = new System.Drawing.Point(8, 0);
+            this.uiOutputTableDataDio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uiOutputTableDataDio.MultiSelect = false;
             this.uiOutputTableDataDio.Name = "uiOutputTableDataDio";
             this.uiOutputTableDataDio.ReadOnly = true;
             this.uiOutputTableDataDio.RowHeadersVisible = false;
             this.uiOutputTableDataDio.RowTemplate.Height = 24;
             this.uiOutputTableDataDio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputTableDataDio.Size = new System.Drawing.Size(792, 508);
+            this.uiOutputTableDataDio.Size = new System.Drawing.Size(594, 413);
             this.uiOutputTableDataDio.TabIndex = 3;
-            // 
-            // dioBindingSource
-            // 
-            this.dioBindingSource.DataMember = "Dio";
-            this.dioBindingSource.DataSource = this.baza18043_DBDataSet;
-            // 
-            // baza18043_DBDataSet
-            // 
-            this.baza18043_DBDataSet.DataSetName = "Baza18043_DBDataSet";
-            this.baza18043_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dioTableAdapter
-            // 
-            this.dioTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DioTableAdapter = this.dioTableAdapter;
-            this.tableAdapterManager.DobavljacTableAdapter = null;
-            this.tableAdapterManager.ElementTableAdapter = null;
-            this.tableAdapterManager.KomponentaTableAdapter = null;
-            this.tableAdapterManager.KorisnikTableAdapter = null;
-            this.tableAdapterManager.NarudzbaTableAdapter = null;
-            this.tableAdapterManager.ProizvodTableAdapter = null;
-            this.tableAdapterManager.StavkaNarudzbeTableAdapter = null;
-            this.tableAdapterManager.UlogaDijelaTableAdapter = null;
-            this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // komponentaBindingSource
-            // 
-            this.komponentaBindingSource.DataMember = "Komponenta";
-            this.komponentaBindingSource.DataSource = this.baza18043_DBDataSet;
-            // 
-            // komponentaTableAdapter
-            // 
-            this.komponentaTableAdapter.ClearBeforeFill = true;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -213,19 +179,58 @@
             this.slikaDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.slikaDataGridViewTextBoxColumn.Visible = false;
             // 
+            // dioBindingSource
+            // 
+            this.dioBindingSource.DataMember = "Dio";
+            this.dioBindingSource.DataSource = this.baza18043_DBDataSet;
+            // 
+            // baza18043_DBDataSet
+            // 
+            this.baza18043_DBDataSet.DataSetName = "Baza18043_DBDataSet";
+            this.baza18043_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dioTableAdapter
+            // 
+            this.dioTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.DioTableAdapter = this.dioTableAdapter;
+            this.tableAdapterManager.DobavljacTableAdapter = null;
+            this.tableAdapterManager.ElementTableAdapter = null;
+            this.tableAdapterManager.KomponentaTableAdapter = null;
+            this.tableAdapterManager.KorisnikTableAdapter = null;
+            this.tableAdapterManager.NarudzbaTableAdapter = null;
+            this.tableAdapterManager.ProizvodTableAdapter = null;
+            this.tableAdapterManager.StavkaNarudzbeTableAdapter = null;
+            this.tableAdapterManager.UlogaDijelaTableAdapter = null;
+            this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // komponentaBindingSource
+            // 
+            this.komponentaBindingSource.DataMember = "Komponenta";
+            this.komponentaBindingSource.DataSource = this.baza18043_DBDataSet;
+            // 
+            // komponentaTableAdapter
+            // 
+            this.komponentaTableAdapter.ClearBeforeFill = true;
+            // 
             // uiDjelovi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(802, 508);
+            this.ClientSize = new System.Drawing.Size(602, 413);
             this.Controls.Add(this.uiActionObrišiDio);
             this.Controls.Add(this.uiActionUrediDio);
             this.Controls.Add(this.uiActionDodajNoviDio);
             this.Controls.Add(this.uiOutputTableDataDio);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "uiDjelovi";
-            this.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.Text = "Djelovi";
             this.Load += new System.EventHandler(this.uiDjelovi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataDio)).EndInit();
