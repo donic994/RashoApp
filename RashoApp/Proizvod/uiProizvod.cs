@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -72,7 +73,7 @@ namespace RashoApp.Proizvod
             else if (MessageBox.Show("Jeste li sigurni da želite obrisati ovaj proizvoid?", "Obrisati proizvod", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
                 idProizvoda = int.Parse(uiOutputDataProizvod.SelectedCells[0].Value.ToString());
-
+               
                 this.elementTableAdapter.DeleteByProizvod(idProizvoda);
                 this.komponentaTableAdapter.DeleteByProizvod(idProizvoda);
 

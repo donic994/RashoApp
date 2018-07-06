@@ -351,5 +351,6 @@ namespace RashoApp.Proizvod
             SpremiPromjene();
             PopuniTablicu();
         }
+
     }
 }

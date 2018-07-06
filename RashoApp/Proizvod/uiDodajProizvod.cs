@@ -112,9 +112,6 @@ namespace RashoApp.Proizvod
                 string exeDir = Path.GetDirectoryName(exeFile);
                 destinacijaSpremanja = Uri.UnescapeDataString(Path.Combine(exeDir, "Slike\\Slika" + naziv + ".png"));
 
-
-
-
                 File.Copy(destinacijaČitanja.ToString(), destinacijaSpremanja);
                 //
 

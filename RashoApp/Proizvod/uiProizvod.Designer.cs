@@ -104,7 +104,7 @@
             this.uiOutputDataProizvod.RowTemplate.Height = 24;
             this.uiOutputDataProizvod.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.uiOutputDataProizvod.Size = new System.Drawing.Size(882, 170);
-            this.uiOutputDataProizvod.TabIndex = 1;          
+            this.uiOutputDataProizvod.TabIndex = 1;
             this.uiOutputDataProizvod.SelectionChanged += new System.EventHandler(this.uiOutputDataProizvod_SelectionChanged);
             this.uiOutputDataProizvod.DoubleClick += new System.EventHandler(this.uiOutputDataProizvod_DoubleClick);
             // 
