@@ -34,6 +34,8 @@ namespace RashoApp
             PopuniOdUiUlogaDijela();
             PopuniOdUiUlogeKorisnika();
             PopuniOdUiKorisnici();
+
+            PrilagodiVisinuTabova();
         }
 
         private void uiTabControl_DrawItem(object sender, DrawItemEventArgs e)
@@ -95,6 +97,7 @@ namespace RashoApp
             frm.Dock = DockStyle.Fill;
             uiTabKorisniciUlogeKorisnika.Controls.Add(frm);
         }
+
         private void PopuniOdUiKorisnici() {
             Korisnici.uiKorisnici frm = new RashoApp.Korisnici.uiKorisnici();
             frm.TopLevel = false;
@@ -156,7 +159,23 @@ namespace RashoApp
 
         private void uiGlavniIzbornik_SizeChanged(object sender, EventArgs e)
         {
-            uiTabControl.ItemSize = new System.Drawing.Size((this.Height / uiTabControl.TabCount)-11, 120);
+            PrilagodiVisinuTabova();
+        }
+
+        private void PrilagodiVisinuTabova()
+        {
+            if (!(WindowState == FormWindowState.Minimized))
+            {
+                if (uiTabControl.TabCount == 4)
+                {
+                    uiTabControl.ItemSize = new System.Drawing.Size((this.Height / uiTabControl.TabCount) - 11, 120);
+                }
+                if (uiTabControl.TabCount == 2)
+                {
+                    uiTabControl.ItemSize = new System.Drawing.Size((this.Height / uiTabControl.TabCount) - 22, 120);
+                }
+            }
+
         }
     }
 }

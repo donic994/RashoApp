@@ -103,7 +103,7 @@
             this.uiOutputDataProizvod.RowHeadersVisible = false;
             this.uiOutputDataProizvod.RowTemplate.Height = 24;
             this.uiOutputDataProizvod.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputDataProizvod.Size = new System.Drawing.Size(882, 170);
+            this.uiOutputDataProizvod.Size = new System.Drawing.Size(870, 170);
             this.uiOutputDataProizvod.TabIndex = 1;
             this.uiOutputDataProizvod.SelectionChanged += new System.EventHandler(this.uiOutputDataProizvod_SelectionChanged);
             this.uiOutputDataProizvod.DoubleClick += new System.EventHandler(this.uiOutputDataProizvod_DoubleClick);
@@ -240,7 +240,7 @@
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.RowHeadersVisible = false;
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.RowTemplate.Height = 24;
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputTableDataPogledDjelovaPoProoizvodu.Size = new System.Drawing.Size(882, 318);
+            this.uiOutputTableDataPogledDjelovaPoProoizvodu.Size = new System.Drawing.Size(870, 318);
             this.uiOutputTableDataPogledDjelovaPoProoizvodu.TabIndex = 12;
             // 
             // dioIDDataGridViewTextBoxColumn
@@ -355,7 +355,7 @@
             this.uiOutputTableDataElement.RowHeadersVisible = false;
             this.uiOutputTableDataElement.RowTemplate.Height = 24;
             this.uiOutputTableDataElement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.uiOutputTableDataElement.Size = new System.Drawing.Size(882, 171);
+            this.uiOutputTableDataElement.Size = new System.Drawing.Size(870, 171);
             this.uiOutputTableDataElement.TabIndex = 12;
             this.uiOutputTableDataElement.SelectionChanged += new System.EventHandler(this.uiOutputTableDataElement_SelectionChanged);
             // 
