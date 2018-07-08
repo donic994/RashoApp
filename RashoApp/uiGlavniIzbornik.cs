@@ -24,6 +24,9 @@ namespace RashoApp
             Debug.WriteLine("uloga:" + ulogaKorisnika);
             if (ulogaKorisnika != 1) {
                 uiTabControl.TabPages.RemoveAt(3);
+                uiTabControlProizvodi.TabPages.Remove(uiTabProizvodiElement);
+                uiTabControlProizvodi.TabPages.Remove(uiTabProizvodiKomponenta);
+                uiTabControlProizvodi.TabPages.Remove(uiTabProizvodiUlogaDijela);
             }
 
             PopuniOdUiDjelovi();
