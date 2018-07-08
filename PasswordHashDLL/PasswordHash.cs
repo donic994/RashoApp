@@ -12,27 +12,23 @@ using System.Security.Cryptography;
 /// proizvoljne duljine i verificiranje lozinke
 /// </summary>
 
-namespace RashoApp
-{
-    class PasswordHash
-    {
+namespace PasswordHashDLL {
+    public class PasswordHash {
         private const int passwordHashLength = 20;
         private const int numberOfIterations = 10000;
         private const int saltLength = 16;
 
-        public string Hash(string password, byte[] salt)
-        {
+        public string Hash(string password, byte[] salt) {
             Rfc2898DeriveBytes pbkdf2 = new Rfc2898DeriveBytes(password, salt, numberOfIterations);
             byte[] passwordHash = pbkdf2.GetBytes(passwordHashLength);
 
-            byte[] hashBytes = new byte[passwordHashLength+saltLength];
+            byte[] hashBytes = new byte[passwordHashLength + saltLength];
             Array.Copy(salt, 0, hashBytes, 0, saltLength);
             Array.Copy(passwordHash, 0, hashBytes, saltLength, passwordHashLength);
 
             return Convert.ToBase64String(hashBytes);
         }
-        public bool Verify(string enteredPassword, string savedPasswordHash)
-        {
+        public bool Verify(string enteredPassword, string savedPasswordHash) {
             byte[] hashBytes = Convert.FromBase64String(savedPasswordHash);
 
             byte[] salt = new byte[saltLength];
@@ -46,8 +42,7 @@ namespace RashoApp
                     return false;
             return true;
         }
-        public byte[] GenerateSalt(int length=saltLength)
-        {
+        public byte[] GenerateSalt(int length = saltLength) {
             byte[] salt = new byte[length];
             RNGCryptoServiceProvider rngCSP = new RNGCryptoServiceProvider();
             rngCSP.GetBytes(salt);
@@ -55,3 +50,4 @@ namespace RashoApp
         }
     }
 }
+

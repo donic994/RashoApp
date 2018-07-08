@@ -57,6 +57,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="PasswordHashDLL">
+      <HintPath>..\PasswordHashDLL.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -141,7 +144,6 @@
     <Compile Include="Korisnici\uiUlogeKorisnika.Designer.cs">
       <DependentUpon>uiUlogeKorisnika.cs</DependentUpon>
     </Compile>
-    <Compile Include="PasswordHash.cs" />
     <Compile Include="PopisBoja.cs" />
     <Compile Include="Djelovi\uiDjelovi.cs">
       <SubType>Form</SubType>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PasswordHashDLL;
 
 /// <summary>
 /// Klasa uiPrijava otvara se pri pokretanju aplikacije. Sadrži dva tekstualna polja u koja se redom unose korisničko ime i lozinka.

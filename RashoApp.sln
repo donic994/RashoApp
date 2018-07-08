@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RashoApp", "RashoApp\RashoApp.csproj", "{7A741A18-88C7-4524-86BB-B5881500C4BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordHashDLL", "PasswordHashDLL\PasswordHashDLL.csproj", "{81F3D212-90E9-4FB2-80D3-B7D5638A918F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{7A741A18-88C7-4524-86BB-B5881500C4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A741A18-88C7-4524-86BB-B5881500C4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A741A18-88C7-4524-86BB-B5881500C4BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81F3D212-90E9-4FB2-80D3-B7D5638A918F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81F3D212-90E9-4FB2-80D3-B7D5638A918F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81F3D212-90E9-4FB2-80D3-B7D5638A918F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81F3D212-90E9-4FB2-80D3-B7D5638A918F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF06C587-3B93-4900-AC33-AC1CC25677E5}
 	EndGlobalSection
 EndGlobal

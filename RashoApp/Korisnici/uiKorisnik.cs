@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PasswordHashDLL;
 
 /// <summary>
 /// U formi uiKorisnik moguća je izmjena postojećih korisnika (prosljeđen ID korisnika) i kreiranje novih (nije prosljeđen ID korisnika).
