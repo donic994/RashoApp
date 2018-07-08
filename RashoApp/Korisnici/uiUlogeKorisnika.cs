@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 /// <summary>
 /// U formi uiUlogeKorisnika korisnik ima pregled svih korisnika u bazi te mogućnost dodavanja, brisanja i ažuriranja istih.
-/// Prilikom klika na gumb uiActionDodaj ili uiActionUredi, otvara se forma uiUlogaKorisnika gdje korisnik napravi promjene.
+/// Prilikom klika na gumb uiActionDodaj ili uiActionUredi, otvara se forma UIUlogaKorisnika gdje korisnik napravi promjene.
 /// Klikom na gumb uiActionObriši, korisnik se briše iz baze.
 /// Pregled korisnika se ažurira nakon bilo koje promjene.
 /// </summary>
@@ -36,14 +36,14 @@ namespace RashoApp.Korisnici {
         }
 
         private void uiActionDodaj_Click(object sender, EventArgs e) {
-            uiUlogaKorisnika frm = new uiUlogaKorisnika();
+            UIUlogaKorisnika frm = new UIUlogaKorisnika();
             frm.ShowDialog();
             this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
         }
 
         private void uiActionUredi_Click(object sender, EventArgs e) {
             int id = int.Parse(uiOutputTableDataUlogaKorisnika.CurrentRow.Cells[0].Value.ToString());
-            uiUlogaKorisnika frm = new uiUlogaKorisnika(id);
+            UIUlogaKorisnika frm = new UIUlogaKorisnika(id);
             frm.ShowDialog();
             this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
         }

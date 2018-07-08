@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /// <summary>
-/// uiUlogaKorisnika služi za dodavanje ili izmjenu već postojećih uloga korisnika
+/// UIUlogaKorisnika služi za dodavanje ili izmjenu već postojećih uloga korisnika
 /// Konstruktor prima jedan parametar koji označava ID uloge (default je -1; označava da korisnik nije odabrao već postojeću ulogu nego se kreira nova)
 /// U slučaju da je prenesen ID konstruktoru, automatski će se popuniti polja podacima iz baze te nakon klika na gumb uiActionPrihvati, ažurirat će se uloga u bazi.
 /// U slučaju da nije prenesen ID uloge, tada program prepoznaje da korisnik unosi novu ulogu i nakon prihvaćanja, dodaje se nova uloga u bazu.
@@ -17,12 +17,12 @@ using System.Windows.Forms;
 
 namespace RashoApp.Korisnici {
 
-    public partial class uiUlogaKorisnika : Form {
+    public partial class UIUlogaKorisnika : Form {
 
         private int ulogaID;
         private Baza18043_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter ulogaTableAdapter;
 
-        public uiUlogaKorisnika(int ulogaID=-1) {
+        public UIUlogaKorisnika(int ulogaID=-1) {
             InitializeComponent();
             ulogaTableAdapter = new Baza18043_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter();
             this.ulogaID = ulogaID;
