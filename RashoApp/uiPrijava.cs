@@ -17,11 +17,11 @@ using System.Windows.Forms;
 
 namespace RashoApp
 {
-    public partial class uiPrijava : Form
+    public partial class UIPrijava : Form
     {
         Baza18043_DBDataSetTableAdapters.KorisnikTableAdapter korisnikTableAdapter;
 
-        public uiPrijava() {
+        public UIPrijava() {
             InitializeComponent();
             korisnikTableAdapter = new Baza18043_DBDataSetTableAdapters.KorisnikTableAdapter();
         }

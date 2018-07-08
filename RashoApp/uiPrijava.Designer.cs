@@ -1,6 +1,6 @@
 ﻿namespace RashoApp
 {
-    partial class uiPrijava
+    partial class UIPrijava
     {
         /// <summary>
         /// Required designer variable.
