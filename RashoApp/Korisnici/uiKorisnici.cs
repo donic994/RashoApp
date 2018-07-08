@@ -37,13 +37,13 @@ namespace RashoApp.Korisnici {
         }
 
         private void uiActionDodaj_Click(object sender, EventArgs e) {
-            uiKorisnik frm = new uiKorisnik();
+            UIKorisnik frm = new UIKorisnik();
             frm.ShowDialog();
             this.korisnikTableAdapter.Fill(this.baza18043_DBDataSet.Korisnik);
         }
 
         private void uiActionUredi_Click(object sender, EventArgs e) {
-            uiKorisnik frm = new uiKorisnik(int.Parse(uiOutputTableDataKorisnici.CurrentRow.Cells[0].Value.ToString()));
+            UIKorisnik frm = new UIKorisnik(int.Parse(uiOutputTableDataKorisnici.CurrentRow.Cells[0].Value.ToString()));
             frm.ShowDialog();
             this.korisnikTableAdapter.Fill(this.baza18043_DBDataSet.Korisnik);
         }

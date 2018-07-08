@@ -1,5 +1,5 @@
 ﻿namespace RashoApp.Korisnici {
-    partial class uiKorisnik {
+    partial class UIKorisnik {
         /// <summary>
         /// Required designer variable.
         /// </summary>

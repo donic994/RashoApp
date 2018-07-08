@@ -18,11 +18,11 @@ using System.Windows.Forms;
 
 namespace RashoApp.Korisnici {
 
-    public partial class uiKorisnik : Form {
+    public partial class UIKorisnik : Form {
 
         private int korisnikID;
 
-        public uiKorisnik(int korisnikID=-1) {
+        public UIKorisnik(int korisnikID=-1) {
             InitializeComponent();
 
             this.korisnikID = korisnikID;
