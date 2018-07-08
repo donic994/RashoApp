@@ -1,5 +1,5 @@
 ﻿namespace RashoApp.Korisnici {
-    partial class uiUlogeKorisnika {
+    partial class UIUlogeKorisnika {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -134,7 +134,7 @@
             this.uiActionObriši.UseVisualStyleBackColor = true;
             this.uiActionObriši.Click += new System.EventHandler(this.uiActionObriši_Click);
             // 
-            // uiUlogeKorisnika
+            // UIUlogeKorisnika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

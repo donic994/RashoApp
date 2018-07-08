@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /// <summary>
-/// U formi uiUlogeKorisnika korisnik ima pregled svih korisnika u bazi te mogućnost dodavanja, brisanja i ažuriranja istih.
+/// U formi UIUlogeKorisnika korisnik ima pregled svih korisnika u bazi te mogućnost dodavanja, brisanja i ažuriranja istih.
 /// Prilikom klika na gumb uiActionDodaj ili uiActionUredi, otvara se forma UIUlogaKorisnika gdje korisnik napravi promjene.
 /// Klikom na gumb uiActionObriši, korisnik se briše iz baze.
 /// Pregled korisnika se ažurira nakon bilo koje promjene.
 /// </summary>
 
 namespace RashoApp.Korisnici {
-    public partial class uiUlogeKorisnika : Form {
+    public partial class UIUlogeKorisnika : Form {
 
-        public uiUlogeKorisnika() {
+        public UIUlogeKorisnika() {
             InitializeComponent();
         }
 

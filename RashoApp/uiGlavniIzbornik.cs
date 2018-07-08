@@ -89,7 +89,7 @@ namespace RashoApp
         }
 
         private void PopuniOdUiUlogeKorisnika() {
-            Korisnici.uiUlogeKorisnika frm = new RashoApp.Korisnici.uiUlogeKorisnika();
+            Korisnici.UIUlogeKorisnika frm = new RashoApp.Korisnici.UIUlogeKorisnika();
             frm.TopLevel = false;
             frm.Visible = true;
             frm.FormBorderStyle = FormBorderStyle.None;
