@@ -169,9 +169,9 @@ namespace RashoApp
                 {
                     uiTabControl.ItemSize = new System.Drawing.Size((this.Height / uiTabControl.TabCount) - 11, 120);
                 }
-                if (uiTabControl.TabCount == 2)
+                if (uiTabControl.TabCount == 3)
                 {
-                    uiTabControl.ItemSize = new System.Drawing.Size((this.Height / uiTabControl.TabCount) - 22, 120);
+                    uiTabControl.ItemSize = new System.Drawing.Size((this.Height / uiTabControl.TabCount) - 15, 120);
                 }
             }
 
