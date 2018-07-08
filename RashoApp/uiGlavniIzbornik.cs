@@ -98,7 +98,7 @@ namespace RashoApp
         }
 
         private void PopuniOdUiKorisnici() {
-            Korisnici.uiKorisnici frm = new RashoApp.Korisnici.uiKorisnici();
+            Korisnici.UIKorisnici frm = new RashoApp.Korisnici.UIKorisnici();
             frm.TopLevel = false;
             frm.Visible = true;
             frm.FormBorderStyle = FormBorderStyle.None;

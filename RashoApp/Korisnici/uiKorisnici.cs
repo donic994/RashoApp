@@ -16,8 +16,8 @@ using System.Windows.Forms;
 /// </summary>
 
 namespace RashoApp.Korisnici {
-    public partial class uiKorisnici : Form {
-        public uiKorisnici() {
+    public partial class UIKorisnici : Form {
+        public UIKorisnici() {
             InitializeComponent();
         }
 
