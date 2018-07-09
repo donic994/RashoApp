@@ -135,6 +135,7 @@
             // 
             this.uiInputLozinka.Location = new System.Drawing.Point(234, 200);
             this.uiInputLozinka.Name = "uiInputLozinka";
+            this.uiInputLozinka.PasswordChar = '•';
             this.uiInputLozinka.Size = new System.Drawing.Size(125, 20);
             this.uiInputLozinka.TabIndex = 6;
             // 
@@ -244,22 +245,30 @@
             // 
             // uiActionPrihvati
             // 
+            this.uiActionPrihvati.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionPrihvati.FlatAppearance.BorderSize = 0;
+            this.uiActionPrihvati.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionPrihvati.ForeColor = System.Drawing.Color.White;
             this.uiActionPrihvati.Location = new System.Drawing.Point(139, 308);
             this.uiActionPrihvati.Name = "uiActionPrihvati";
             this.uiActionPrihvati.Size = new System.Drawing.Size(75, 23);
             this.uiActionPrihvati.TabIndex = 19;
             this.uiActionPrihvati.Text = "Prihvati";
-            this.uiActionPrihvati.UseVisualStyleBackColor = true;
+            this.uiActionPrihvati.UseVisualStyleBackColor = false;
             this.uiActionPrihvati.Click += new System.EventHandler(this.uiActionPrihvati_Click);
             // 
             // uiActionPoništi
             // 
+            this.uiActionPoništi.BackColor = System.Drawing.Color.Crimson;
+            this.uiActionPoništi.FlatAppearance.BorderSize = 0;
+            this.uiActionPoništi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionPoništi.ForeColor = System.Drawing.Color.White;
             this.uiActionPoništi.Location = new System.Drawing.Point(257, 308);
             this.uiActionPoništi.Name = "uiActionPoništi";
             this.uiActionPoništi.Size = new System.Drawing.Size(75, 23);
             this.uiActionPoništi.TabIndex = 20;
             this.uiActionPoništi.Text = "Poništi";
-            this.uiActionPoništi.UseVisualStyleBackColor = true;
+            this.uiActionPoništi.UseVisualStyleBackColor = false;
             this.uiActionPoništi.Click += new System.EventHandler(this.uiActionPoništi_Click);
             // 
             // ulogaKorisnikaTableAdapter
@@ -280,7 +289,7 @@
             this.uiOznakaGreška.Size = new System.Drawing.Size(0, 13);
             this.uiOznakaGreška.TabIndex = 21;
             // 
-            // uiKorisnik
+            // UIKorisnik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -306,7 +315,7 @@
             this.Controls.Add(this.uiInputPrezime);
             this.Controls.Add(this.uiInputIme);
             this.Controls.Add(this.uiInputID);
-            this.Name = "uiKorisnik";
+            this.Name = "UIKorisnik";
             this.Text = "Korisnik";
             this.Load += new System.EventHandler(this.uiKorisnik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();

@@ -74,13 +74,16 @@
             // 
             // uiAkcijaPrijaviSe
             // 
+            this.uiAkcijaPrijaviSe.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiAkcijaPrijaviSe.FlatAppearance.BorderSize = 0;
+            this.uiAkcijaPrijaviSe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiAkcijaPrijaviSe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.uiAkcijaPrijaviSe.Location = new System.Drawing.Point(298, 121);
             this.uiAkcijaPrijaviSe.Name = "uiAkcijaPrijaviSe";
             this.uiAkcijaPrijaviSe.Size = new System.Drawing.Size(103, 30);
             this.uiAkcijaPrijaviSe.TabIndex = 11;
             this.uiAkcijaPrijaviSe.Text = "Prijavi se";
-            this.uiAkcijaPrijaviSe.UseVisualStyleBackColor = true;
+            this.uiAkcijaPrijaviSe.UseVisualStyleBackColor = false;
             this.uiAkcijaPrijaviSe.Click += new System.EventHandler(this.uiAkcijaPrijaviSe_Click);
             // 
             // HelpPrijava
@@ -96,7 +99,7 @@
             this.uiOznakaGreškaUPrijavi.Size = new System.Drawing.Size(0, 13);
             this.uiOznakaGreškaUPrijavi.TabIndex = 12;
             // 
-            // uiPrijava
+            // UIPrijava
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -111,7 +114,7 @@
             this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "uiPrijava";
+            this.Name = "UIPrijava";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
             this.ResumeLayout(false);

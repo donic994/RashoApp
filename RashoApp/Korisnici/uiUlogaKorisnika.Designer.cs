@@ -59,22 +59,30 @@
             // 
             // uiActionPrihvati
             // 
+            this.uiActionPrihvati.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionPrihvati.FlatAppearance.BorderSize = 0;
+            this.uiActionPrihvati.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionPrihvati.ForeColor = System.Drawing.Color.White;
             this.uiActionPrihvati.Location = new System.Drawing.Point(162, 148);
             this.uiActionPrihvati.Name = "uiActionPrihvati";
             this.uiActionPrihvati.Size = new System.Drawing.Size(75, 23);
             this.uiActionPrihvati.TabIndex = 3;
             this.uiActionPrihvati.Text = "Prihvati";
-            this.uiActionPrihvati.UseVisualStyleBackColor = true;
+            this.uiActionPrihvati.UseVisualStyleBackColor = false;
             this.uiActionPrihvati.Click += new System.EventHandler(this.uiActionPrihvati_Click);
             // 
             // uiActionPoništi
             // 
+            this.uiActionPoništi.BackColor = System.Drawing.Color.Crimson;
+            this.uiActionPoništi.FlatAppearance.BorderSize = 0;
+            this.uiActionPoništi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionPoništi.ForeColor = System.Drawing.Color.White;
             this.uiActionPoništi.Location = new System.Drawing.Point(257, 147);
             this.uiActionPoništi.Name = "uiActionPoništi";
             this.uiActionPoništi.Size = new System.Drawing.Size(75, 23);
             this.uiActionPoništi.TabIndex = 4;
             this.uiActionPoništi.Text = "Poništi";
-            this.uiActionPoništi.UseVisualStyleBackColor = true;
+            this.uiActionPoništi.UseVisualStyleBackColor = false;
             this.uiActionPoništi.Click += new System.EventHandler(this.uiActionPoništi_Click);
             // 
             // uiOznakaID
@@ -127,7 +135,7 @@
             this.Controls.Add(this.uiInputOpis);
             this.Controls.Add(this.uiInputNaziv);
             this.Controls.Add(this.uiInputID);
-            this.Name = "uiUlogaKorisnika";
+            this.Name = "UIUlogaKorisnika";
             this.Text = "Uloga korisnika";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -164,35 +164,47 @@
             // 
             // uiActionDodaj
             // 
+            this.uiActionDodaj.BackColor = System.Drawing.Color.LimeGreen;
+            this.uiActionDodaj.FlatAppearance.BorderSize = 0;
+            this.uiActionDodaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionDodaj.ForeColor = System.Drawing.Color.White;
             this.uiActionDodaj.Location = new System.Drawing.Point(12, 342);
             this.uiActionDodaj.Name = "uiActionDodaj";
             this.uiActionDodaj.Size = new System.Drawing.Size(75, 23);
             this.uiActionDodaj.TabIndex = 2;
             this.uiActionDodaj.Text = "Dodaj";
-            this.uiActionDodaj.UseVisualStyleBackColor = true;
+            this.uiActionDodaj.UseVisualStyleBackColor = false;
             this.uiActionDodaj.Click += new System.EventHandler(this.uiActionDodaj_Click);
             // 
             // uiActionUredi
             // 
+            this.uiActionUredi.BackColor = System.Drawing.Color.Gold;
+            this.uiActionUredi.FlatAppearance.BorderSize = 0;
+            this.uiActionUredi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionUredi.ForeColor = System.Drawing.Color.White;
             this.uiActionUredi.Location = new System.Drawing.Point(93, 342);
             this.uiActionUredi.Name = "uiActionUredi";
             this.uiActionUredi.Size = new System.Drawing.Size(75, 23);
             this.uiActionUredi.TabIndex = 3;
             this.uiActionUredi.Text = "Uredi";
-            this.uiActionUredi.UseVisualStyleBackColor = true;
+            this.uiActionUredi.UseVisualStyleBackColor = false;
             this.uiActionUredi.Click += new System.EventHandler(this.uiActionUredi_Click);
             // 
             // uiActionObriši
             // 
+            this.uiActionObriši.BackColor = System.Drawing.Color.Crimson;
+            this.uiActionObriši.FlatAppearance.BorderSize = 0;
+            this.uiActionObriši.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiActionObriši.ForeColor = System.Drawing.Color.White;
             this.uiActionObriši.Location = new System.Drawing.Point(174, 342);
             this.uiActionObriši.Name = "uiActionObriši";
             this.uiActionObriši.Size = new System.Drawing.Size(75, 23);
             this.uiActionObriši.TabIndex = 4;
             this.uiActionObriši.Text = "Obriši";
-            this.uiActionObriši.UseVisualStyleBackColor = true;
+            this.uiActionObriši.UseVisualStyleBackColor = false;
             this.uiActionObriši.Click += new System.EventHandler(this.uiActionObriši_Click);
             // 
-            // uiKorisnici
+            // UIKorisnici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -201,7 +213,7 @@
             this.Controls.Add(this.uiActionUredi);
             this.Controls.Add(this.uiActionDodaj);
             this.Controls.Add(this.uiOutputTableDataKorisnici);
-            this.Name = "uiKorisnici";
+            this.Name = "UIKorisnici";
             this.Text = "Korisnici";
             this.Load += new System.EventHandler(this.uiKorisnici_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
