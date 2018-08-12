@@ -51,11 +51,15 @@ namespace RashoApp.Korisnici {
         // Briše označenog korisnika iz baze
         private void uiActionObriši_Click(object sender, EventArgs e) {
 
-            // TODO Onemogućiti brisanje zadnjeg admina
-
             int idKorisnika = int.Parse(uiOutputTableDataKorisnici.CurrentRow.Cells[0].Value.ToString());
-            korisnikTableAdapter.DeleteRow(idKorisnika);
-            this.korisnikTableAdapter.Fill(this.baza18043_DBDataSet.Korisnik);
+
+            if (idKorisnika != LoginInfo.UserID) {
+                korisnikTableAdapter.DeleteRow(idKorisnika);
+                this.korisnikTableAdapter.Fill(this.baza18043_DBDataSet.Korisnik);
+            } else {
+                uiOznakaGreška.Text = "Nemoguće obrisati trenutno prijavljenog korisnika.";
+            }
+
         }
     }
 }

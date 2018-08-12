@@ -35,6 +35,10 @@ namespace RashoApp {
             PrilagodiVisinuTabova();
         }
 
+        ~uiGlavniIzbornik() {
+            LoginInfo.CloseSession();
+        }
+
         private void uiTabControl_DrawItem(object sender, DrawItemEventArgs e) {
             Graphics g = e.Graphics;
             Brush textBrush;

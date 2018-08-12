@@ -42,6 +42,7 @@
             this.uiActionDodaj = new System.Windows.Forms.Button();
             this.uiActionUredi = new System.Windows.Forms.Button();
             this.uiActionObriši = new System.Windows.Forms.Button();
+            this.uiOznakaGreška = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataKorisnici)).BeginInit();
@@ -204,11 +205,21 @@
             this.uiActionObriši.UseVisualStyleBackColor = false;
             this.uiActionObriši.Click += new System.EventHandler(this.uiActionObriši_Click);
             // 
+            // uiOznakaGreška
+            // 
+            this.uiOznakaGreška.AutoSize = true;
+            this.uiOznakaGreška.ForeColor = System.Drawing.Color.Red;
+            this.uiOznakaGreška.Location = new System.Drawing.Point(12, 317);
+            this.uiOznakaGreška.Name = "uiOznakaGreška";
+            this.uiOznakaGreška.Size = new System.Drawing.Size(0, 13);
+            this.uiOznakaGreška.TabIndex = 5;
+            // 
             // UIKorisnici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 385);
+            this.Controls.Add(this.uiOznakaGreška);
             this.Controls.Add(this.uiActionObriši);
             this.Controls.Add(this.uiActionUredi);
             this.Controls.Add(this.uiActionDodaj);
@@ -221,6 +232,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataKorisnici)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -244,5 +256,6 @@
         private System.Windows.Forms.Button uiActionDodaj;
         private System.Windows.Forms.Button uiActionUredi;
         private System.Windows.Forms.Button uiActionObriši;
+        private System.Windows.Forms.Label uiOznakaGreška;
     }
 }
