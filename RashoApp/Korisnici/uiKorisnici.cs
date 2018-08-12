@@ -25,31 +25,36 @@ namespace RashoApp.Korisnici {
             this.Validate();
             this.korisnikBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.baza18043_DBDataSet);
-
         }
 
+        // Učitava korisnike u tablicu pri pokretanju
         private void uiKorisnici_Load(object sender, EventArgs e) {
-            // TODO: This line of code loads data into the 'baza18043_DBDataSet.UlogaKorisnika' table. You can move, or remove it, as needed.
             this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
-            // TODO: This line of code loads data into the 'baza18043_DBDataSet.Korisnik' table. You can move, or remove it, as needed.
             this.korisnikTableAdapter.Fill(this.baza18043_DBDataSet.Korisnik);
-
         }
 
+        // Otvara formu za unos/izmjenu korisnika klikom na gumb
         private void uiActionDodaj_Click(object sender, EventArgs e) {
             UIKorisnik frm = new UIKorisnik();
             frm.ShowDialog();
             this.korisnikTableAdapter.Fill(this.baza18043_DBDataSet.Korisnik);
         }
 
+        // Otvara formu za unos/izmjenu korisnika klikom na gumb
         private void uiActionUredi_Click(object sender, EventArgs e) {
-            UIKorisnik frm = new UIKorisnik(int.Parse(uiOutputTableDataKorisnici.CurrentRow.Cells[0].Value.ToString()));
+            int idKorisnika = int.Parse(uiOutputTableDataKorisnici.CurrentRow.Cells[0].Value.ToString());
+            UIKorisnik frm = new UIKorisnik(idKorisnika);
             frm.ShowDialog();
             this.korisnikTableAdapter.Fill(this.baza18043_DBDataSet.Korisnik);
         }
 
+        // Briše označenog korisnika iz baze
         private void uiActionObriši_Click(object sender, EventArgs e) {
-            korisnikTableAdapter.DeleteRow(int.Parse(uiOutputTableDataKorisnici.CurrentRow.Cells[0].Value.ToString()));
+
+            // TODO Onemogućiti brisanje zadnjeg admina
+
+            int idKorisnika = int.Parse(uiOutputTableDataKorisnici.CurrentRow.Cells[0].Value.ToString());
+            korisnikTableAdapter.DeleteRow(idKorisnika);
             this.korisnikTableAdapter.Fill(this.baza18043_DBDataSet.Korisnik);
         }
     }

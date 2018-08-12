@@ -9,14 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace RashoApp
-{
-    public partial class uiGlavniIzbornik : Form
-    {
+namespace RashoApp {
+    public partial class uiGlavniIzbornik : Form {
         public int ulogaPrijavljenogKorisnika { get; set; }
 
-        public uiGlavniIzbornik(int ulogaKorisnika)
-        {
+        public uiGlavniIzbornik(int ulogaKorisnika) {
             ulogaPrijavljenogKorisnika = ulogaKorisnika;
             InitializeComponent();
 
@@ -40,8 +37,7 @@ namespace RashoApp
             PrilagodiVisinuTabova();
         }
 
-        private void uiTabControl_DrawItem(object sender, DrawItemEventArgs e)
-        {
+        private void uiTabControl_DrawItem(object sender, DrawItemEventArgs e) {
             Graphics g = e.Graphics;
             Brush textBrush;
 
@@ -56,39 +52,32 @@ namespace RashoApp
             SolidBrush brushNeaktivno = new SolidBrush(PopisBoja.bojaNeaktivniTab);
 
             g.FillRectangle(brushNeaktivno, e.Bounds);
-            if (e.State == DrawItemState.Selected)
-            {
+            if (e.State == DrawItemState.Selected) {
                 textBrush = new SolidBrush(Color.White);
-                if (e.Index == 0)
-                {
+                if (e.Index == 0) {
                     g.FillRectangle(brushProizvodi, e.Bounds);
                 }
-                if (e.Index == 1)
-                {
+                if (e.Index == 1) {
                     g.FillRectangle(brushNarudžbe, e.Bounds);
                 }
-                if (e.Index == 2)
-                {
+                if (e.Index == 2) {
                     g.FillRectangle(brushDnevnik, e.Bounds);
                 }
-                if (e.Index == 3)
-                {
+                if (e.Index == 3) {
                     g.FillRectangle(brushKorisnici, e.Bounds);
                 }
-            }
-            else
-            {
+            } else {
                 g.FillRectangle(brushNeaktivno, e.Bounds);
                 textBrush = new System.Drawing.SolidBrush(Color.White);
             }
             Font _tabFont = new Font("Arial", (float)18.0, FontStyle.Bold, GraphicsUnit.Pixel);
-           
-            
+
+
             // Nacrtaj string i poravnaj ga po sredini
             StringFormat _stringFlags = new StringFormat();
             _stringFlags.Alignment = StringAlignment.Center;
             _stringFlags.LineAlignment = StringAlignment.Center;
-            g.DrawString(tabPage.Text, _tabFont, textBrush, tabBounds, new StringFormat(_stringFlags));                    
+            g.DrawString(tabPage.Text, _tabFont, textBrush, tabBounds, new StringFormat(_stringFlags));
         }
 
         private void PopuniOdUiUlogeKorisnika() {
@@ -109,8 +98,7 @@ namespace RashoApp
             uiTabKorisniciKorisnici.Controls.Add(frm);
         }
 
-        private void PopuniOdUiDjelovi()
-        {
+        private void PopuniOdUiDjelovi() {
             uiDjelovi frm = new uiDjelovi();
             frm.TopLevel = false;
             frm.Visible = true;
@@ -119,8 +107,7 @@ namespace RashoApp
             uiTabProizvodiDio.Controls.Add(frm);
         }
 
-        private void PopuniOdUiElement()
-        {
+        private void PopuniOdUiElement() {
             Element.uiElement frm = new Element.uiElement(); ;
             frm.TopLevel = false;
             frm.Visible = true;
@@ -129,8 +116,7 @@ namespace RashoApp
             uiTabProizvodiElement.Controls.Add(frm);
         }
 
-        private void PopuniOdUiKomponenta()
-        {
+        private void PopuniOdUiKomponenta() {
             Komponenta.uiKomponenta frm = new Komponenta.uiKomponenta();
             frm.TopLevel = false;
             frm.Visible = true;
@@ -139,8 +125,7 @@ namespace RashoApp
             uiTabProizvodiKomponenta.Controls.Add(frm);
         }
 
-        private void PopuniOdUiProizvod()
-        {
+        private void PopuniOdUiProizvod() {
             Proizvod.uiProizvod frm = new Proizvod.uiProizvod();
             frm.TopLevel = false;
             frm.Visible = true;
@@ -149,8 +134,7 @@ namespace RashoApp
             uiTabProizvodiProizvod.Controls.Add(frm);
         }
 
-        private void PopuniOdUiUlogaDijela()
-        {
+        private void PopuniOdUiUlogaDijela() {
             UlogaDijela.uiUlogaDijela frm = new UlogaDijela.uiUlogaDijela();
             frm.TopLevel = false;
             frm.Visible = true;
@@ -159,21 +143,16 @@ namespace RashoApp
             uiTabProizvodiUlogaDijela.Controls.Add(frm);
         }
 
-        private void uiGlavniIzbornik_SizeChanged(object sender, EventArgs e)
-        {
+        private void uiGlavniIzbornik_SizeChanged(object sender, EventArgs e) {
             PrilagodiVisinuTabova();
         }
 
-        private void PrilagodiVisinuTabova()
-        {
-            if (!(WindowState == FormWindowState.Minimized))
-            {
-                if (uiTabControl.TabCount == 4)
-                {
+        private void PrilagodiVisinuTabova() {
+            if (!(WindowState == FormWindowState.Minimized)) {
+                if (uiTabControl.TabCount == 4) {
                     uiTabControl.ItemSize = new System.Drawing.Size((this.Height / uiTabControl.TabCount) - 11, 120);
                 }
-                if (uiTabControl.TabCount == 3)
-                {
+                if (uiTabControl.TabCount == 3) {
                     uiTabControl.ItemSize = new System.Drawing.Size((this.Height / uiTabControl.TabCount) - 15, 120);
                 }
             }

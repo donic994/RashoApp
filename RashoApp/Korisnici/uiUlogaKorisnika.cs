@@ -26,31 +26,36 @@ namespace RashoApp.Korisnici {
             InitializeComponent();
             ulogaTableAdapter = new Baza18043_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter();
             this.ulogaID = ulogaID;
-            if (ulogaID > 0) {
-                uiInputID.Text = ulogaID.ToString();
-                var uloga = ulogaTableAdapter.GetDataByID(ulogaID);
-                uiInputNaziv.Text = uloga[0].naziv;
-                uiInputOpis.Text = uloga[0].opis;
+
+            // Ako je uloga prosljeđena formi (ako se radi o izmjeni uloge)
+            if (ulogaID >= 0) {
+                IspuniPodatkeOUlogi();
             }
         }
 
+        // Ispunjava podatke o ulogi iz baze
+        private void IspuniPodatkeOUlogi() {
+            uiInputID.Text = ulogaID.ToString();
+            var uloga = ulogaTableAdapter.GetDataByID(ulogaID);
+            uiInputNaziv.Text = uloga[0].naziv;
+            uiInputOpis.Text = uloga[0].opis;
+        }
+
         private void uiActionPrihvati_Click(object sender, EventArgs e) {
-            if (ulogaID > 0) {
-                try { 
+
+            // TODO Provjera unosa
+
+            try {
+                // Ako se radi o izmjeni uloge
+                if (ulogaID >= 0) {
                     ulogaTableAdapter.UpdateRow(uiInputNaziv.Text, uiInputOpis.Text, ulogaID);
-                    Close();
-                } catch (Exception) {
-                    uiOznakaGreška.Text = "Greška: Promjene nisu spremljene.";
-                }
-            } else if (uiInputNaziv.Text.Length > 0) {
-                try {
+                // Ako se radi o novoj ulogi
+                } else {
                     ulogaTableAdapter.InsertRow(uiInputNaziv.Text, uiInputOpis.Text);
-                    Close();
-                } catch (Exception) {
-                    uiOznakaGreška.Text = "Greška: Promjene nisu spremljene.";
                 }
-            } else {
-                uiOznakaGreška.Text = "Unesite naziv uloge";
+                Close();
+            } catch (Exception) {
+                uiOznakaGreška.Text = "Greška: Promjene nisu spremljene.";
             }
         }
 

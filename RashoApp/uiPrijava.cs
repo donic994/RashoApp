@@ -35,20 +35,23 @@ namespace RashoApp
             try {
                 isValid = phObj.Verify(uiInputLozinka.Text, korisnik[0].lozinka);
                 if (isValid) {
-                    this.Hide();
-                    uiGlavniIzbornik glavnaForma = new uiGlavniIzbornik(korisnik[0].id_uloga);
-                    glavnaForma.ShowDialog();
-
-                    uiInputKorisničkoIme.Text = "";
-                    uiInputLozinka.Text = "";
-                    this.Show();
-                }
-                else {
+                    PrikaziGlavnuFormu(korisnik[0].id_uloga);
+                } else {
                     uiOznakaGreškaUPrijavi.Text = "Pogrešna lozinka";
                 }
             } catch (IndexOutOfRangeException) {
                 uiOznakaGreškaUPrijavi.Text = "Uneseni korisnik ne postoji.";
             }
+        }
+
+        private void PrikaziGlavnuFormu(int ulogaKorisnika) {
+            this.Hide();
+            uiGlavniIzbornik glavnaForma = new uiGlavniIzbornik(ulogaKorisnika);
+            glavnaForma.ShowDialog();
+
+            uiInputKorisničkoIme.Text = "";
+            uiInputLozinka.Text = "";
+            this.Show();
         }
     }
 }

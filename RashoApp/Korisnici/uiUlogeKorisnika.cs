@@ -26,29 +26,32 @@ namespace RashoApp.Korisnici {
             this.Validate();
             this.ulogaKorisnikaBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.baza18043_DBDataSet);
-
         }
 
         private void uiUlogeKorisnika_Load(object sender, EventArgs e) {
-            // TODO: This line of code loads data into the 'baza18043_DBDataSet.UlogaKorisnika' table. You can move, or remove it, as needed.
             this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
-
         }
 
+        // Otvori formu za dodavanje/izmjenu uloge
         private void uiActionDodaj_Click(object sender, EventArgs e) {
             UIUlogaKorisnika frm = new UIUlogaKorisnika();
             frm.ShowDialog();
             this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
         }
 
+        // Otvori formu za dodavanje/izmjenu uloge
         private void uiActionUredi_Click(object sender, EventArgs e) {
             int id = int.Parse(uiOutputTableDataUlogaKorisnika.CurrentRow.Cells[0].Value.ToString());
             UIUlogaKorisnika frm = new UIUlogaKorisnika(id);
             frm.ShowDialog();
             this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
         }
-
+        
+        // Briše ulogu iz baze
         private void uiActionObriši_Click(object sender, EventArgs e) {
+
+            // TODO Onemogućiti brisanje admin uloge
+
             int id = int.Parse(uiOutputTableDataUlogaKorisnika.CurrentRow.Cells[0].Value.ToString());
             ulogaKorisnikaTableAdapter.DeleteRowByID(id);
             this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
