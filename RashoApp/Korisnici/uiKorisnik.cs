@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using PasswordHashDLL;
 
@@ -40,7 +41,7 @@ namespace RashoApp.Korisnici {
             var korisnik = korisnikTableAdapter.GetDataByID(korisnikID)[0];
             uiInputIme.Text = korisnik.ime;
             uiInputPrezime.Text = korisnik.prezime;
-            uiInputEmail.Text = korisnik.adresa;
+            uiInputEmail.Text = korisnik.email;
             uiInputAdresa.Text = korisnik.adresa;
             uiInputKorisničkoIme.Text = korisnik.korisnickoIme;
             uiInputKontaktBroj.Text = korisnik.kontaktBroj;
@@ -97,8 +98,20 @@ namespace RashoApp.Korisnici {
                 return false;
             }
 
-            // TODO Jesu li polja popunita valjanim podacima
+            // Jesu li polja popunita valjanim podacima
+            Regex imePattern = new Regex(@"^([A-ZŠĐŽĆČ][a-zšđžćč]+)(-[A-ZŠĐŽĆČ])?[a-zšđžćč]+$");
+            Regex prezimePattern = new Regex(@"^([A-ZŠĐŽĆČ][a-zšđžćč]+)(-[A-ZŠĐŽĆČ])?[a-zšđžćč]+$");
+            Regex adresaPattern = new Regex(@"^([A-ZŠĐŽĆČ][a-zšđžćč]+)([\ \-]([A-ZŠĐŽĆČ]?[a-zšđžćč]+)?(\d+)?)*$");
+            Regex emailPattern = new Regex(@"\A[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\z");
+            Regex korisnickoImePattern = new Regex(@"^[a-z][a-z0-9]{3,}$");
+            Regex lozinkaPattern = new Regex(@"^([a-zA-Z0-9@*#šđžćčŠĐŽĆČ ]{4,20})$");
+            Regex kontaktPattern = new Regex(@"^(\d+)([\ \-\\\/]\d+)*$");
 
+            
+            if (!lozinkaPattern.IsMatch(uiInputLozinka.Text)) {
+                uiOznakaGreška.Text = "Nevalja lozinka.";
+                return false;
+            }
 
             return true;
         }
