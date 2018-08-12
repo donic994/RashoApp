@@ -53,6 +53,7 @@
             this.ulogaKorisnikaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.uiOznakaGreška = new System.Windows.Forms.Label();
             this.helpProvider = new System.Windows.Forms.HelpProvider();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).BeginInit();
@@ -98,7 +99,7 @@
             // 
             // uiInputIme
             // 
-            this.helpProvider.SetHelpString(this.uiInputIme, "Unesite ime korisnika");
+            this.helpProvider.SetHelpString(this.uiInputIme, "Unesite ime korisnika. Koristite velika i mala slova te znak -");
             this.uiInputIme.Location = new System.Drawing.Point(234, 59);
             this.uiInputIme.Name = "uiInputIme";
             this.helpProvider.SetShowHelp(this.uiInputIme, true);
@@ -107,14 +108,16 @@
             // 
             // uiInputPrezime
             // 
+            this.helpProvider.SetHelpString(this.uiInputPrezime, "Unesite prezime korisnika. Koristite velika i mala slova te znak -");
             this.uiInputPrezime.Location = new System.Drawing.Point(234, 85);
             this.uiInputPrezime.Name = "uiInputPrezime";
+            this.helpProvider.SetShowHelp(this.uiInputPrezime, true);
             this.uiInputPrezime.Size = new System.Drawing.Size(125, 20);
             this.uiInputPrezime.TabIndex = 2;
             // 
             // uiInputAdresa
             // 
-            this.helpProvider.SetHelpString(this.uiInputAdresa, "Unesite adresu korisnika");
+            this.helpProvider.SetHelpString(this.uiInputAdresa, "Unesite adresu korisnika.");
             this.uiInputAdresa.Location = new System.Drawing.Point(234, 111);
             this.uiInputAdresa.Multiline = true;
             this.uiInputAdresa.Name = "uiInputAdresa";
@@ -124,7 +127,7 @@
             // 
             // uiInputEmail
             // 
-            this.helpProvider.SetHelpString(this.uiInputEmail, "Unesite email korisnika");
+            this.helpProvider.SetHelpString(this.uiInputEmail, "Unesite email korisnika.");
             this.uiInputEmail.Location = new System.Drawing.Point(234, 148);
             this.uiInputEmail.Name = "uiInputEmail";
             this.helpProvider.SetShowHelp(this.uiInputEmail, true);
@@ -133,7 +136,7 @@
             // 
             // uiInputKorisničkoIme
             // 
-            this.helpProvider.SetHelpString(this.uiInputKorisničkoIme, "Unesite korisničko ime korisnika");
+            this.helpProvider.SetHelpString(this.uiInputKorisničkoIme, "Unesite korisničko ime korisnika. Koristite mala slova i brojeve.");
             this.uiInputKorisničkoIme.Location = new System.Drawing.Point(234, 174);
             this.uiInputKorisničkoIme.Name = "uiInputKorisničkoIme";
             this.helpProvider.SetShowHelp(this.uiInputKorisničkoIme, true);
@@ -142,7 +145,7 @@
             // 
             // uiInputLozinka
             // 
-            this.helpProvider.SetHelpString(this.uiInputLozinka, "Unesite lozinku korisnika");
+            this.helpProvider.SetHelpString(this.uiInputLozinka, "Unesite lozinku korisnika. Lozinka mora imati 4-20 znakova.");
             this.uiInputLozinka.Location = new System.Drawing.Point(234, 200);
             this.uiInputLozinka.Name = "uiInputLozinka";
             this.uiInputLozinka.PasswordChar = '•';
@@ -152,7 +155,8 @@
             // 
             // uiInputKontaktBroj
             // 
-            this.helpProvider.SetHelpString(this.uiInputKontaktBroj, "Unesite kontakt broj korisnika");
+            this.helpProvider.SetHelpString(this.uiInputKontaktBroj, "Unesite kontakt broj korisnika. Dozvoljeno je koristiti znamenke, razmake te znak" +
+        "ove -, /, \\");
             this.uiInputKontaktBroj.Location = new System.Drawing.Point(234, 226);
             this.uiInputKontaktBroj.Name = "uiInputKontaktBroj";
             this.helpProvider.SetShowHelp(this.uiInputKontaktBroj, true);
@@ -304,6 +308,14 @@
             this.uiOznakaGreška.Size = new System.Drawing.Size(0, 13);
             this.uiOznakaGreška.TabIndex = 21;
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Error;
+            this.notifyIcon1.BalloonTipText = "Hello";
+            this.notifyIcon1.BalloonTipTitle = "HelloWorld";
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // UIKorisnik
             // 
             this.AcceptButton = this.uiActionPrihvati;
@@ -377,5 +389,6 @@
         private System.Windows.Forms.BindingSource ulogaKorisnikaBindingSource1;
         private System.Windows.Forms.Label uiOznakaGreška;
         private System.Windows.Forms.HelpProvider helpProvider;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }

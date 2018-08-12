@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using PasswordHashDLL;
@@ -33,6 +33,7 @@ namespace RashoApp.Korisnici {
             if (korisnikID >= 0) {
                 IspuniPodatkeOKorisniku();
             }
+
         }
 
         // Ispunjava formu podacima iz baze radi lakše izmjene podataka o korisniku
@@ -87,6 +88,9 @@ namespace RashoApp.Korisnici {
 
         private bool IsInputValid() {
 
+            bool isValid = true;
+            uiOznakaGreška.Text = "";
+
             // Jesu li popunita obvezna polja
             if (uiInputIme.Text.Length < 1 
                 || uiInputPrezime.Text.Length < 1 
@@ -101,19 +105,49 @@ namespace RashoApp.Korisnici {
             // Jesu li polja popunita valjanim podacima
             Regex imePattern = new Regex(@"^([A-ZŠĐŽĆČ][a-zšđžćč]+)(-[A-ZŠĐŽĆČ])?[a-zšđžćč]+$");
             Regex prezimePattern = new Regex(@"^([A-ZŠĐŽĆČ][a-zšđžćč]+)(-[A-ZŠĐŽĆČ])?[a-zšđžćč]+$");
-            Regex adresaPattern = new Regex(@"^([A-ZŠĐŽĆČ][a-zšđžćč]+)([\ \-]([A-ZŠĐŽĆČ]?[a-zšđžćč]+)?(\d+)?)*$");
+            Regex adresaPattern = new Regex(@"^([A-ZŠĐŽĆČ\.][a-zšđžćč\.]+)([\ \-]([A-ZŠĐŽĆČ\.]?[a-zšđžćč\.]+)?(\d+[A-Za-z]{0,2})?)*$");
             Regex emailPattern = new Regex(@"\A[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\z");
             Regex korisnickoImePattern = new Regex(@"^[a-z][a-z0-9]{3,}$");
             Regex lozinkaPattern = new Regex(@"^([a-zA-Z0-9@*#šđžćčŠĐŽĆČ ]{4,20})$");
             Regex kontaktPattern = new Regex(@"^(\d+)([\ \-\\\/]\d+)*$");
 
             
-            if (!lozinkaPattern.IsMatch(uiInputLozinka.Text)) {
-                uiOznakaGreška.Text = "Nevalja lozinka.";
-                return false;
-            }
+            if (!imePattern.IsMatch(uiInputIme.Text)) {
+                uiInputIme.BackColor = Color.Red;
+                isValid = false;
+            } else { uiInputIme.BackColor = Color.White; }
 
-            return true;
+            if (!prezimePattern.IsMatch(uiInputPrezime.Text)) {
+                uiInputPrezime.BackColor = Color.Red;
+                isValid = false;
+            } else { uiInputPrezime.BackColor = Color.White; }
+
+            if (!adresaPattern.IsMatch(uiInputAdresa.Text)) {
+                uiInputAdresa.BackColor = Color.Red;
+                isValid = false;
+            } else { uiInputAdresa.BackColor = Color.White; }
+
+            if (!emailPattern.IsMatch(uiInputEmail.Text)) {
+                uiInputEmail.BackColor = Color.Red;
+                isValid = false;
+            } else { uiInputEmail.BackColor = Color.White; }
+
+            if (!korisnickoImePattern.IsMatch(uiInputKorisničkoIme.Text)) {
+                uiInputKorisničkoIme.BackColor = Color.Red;
+                isValid = false;
+            } else { uiInputKorisničkoIme.BackColor = Color.White; }
+
+            if (!lozinkaPattern.IsMatch(uiInputLozinka.Text)) {
+                uiInputLozinka.BackColor = Color.Red;
+                isValid = false;
+            } else { uiInputLozinka.BackColor = Color.White; }
+
+            if (!kontaktPattern.IsMatch(uiInputKontaktBroj.Text)) {
+                uiInputKontaktBroj.BackColor = Color.Red;
+                isValid = false;
+            } else { uiInputKontaktBroj.BackColor = Color.White; }
+
+            return isValid;
         }
 
         private void uiActionPoništi_Click(object sender, EventArgs e) {
