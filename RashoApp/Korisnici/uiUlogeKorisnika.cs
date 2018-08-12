@@ -50,11 +50,15 @@ namespace RashoApp.Korisnici {
         // Briše ulogu iz baze
         private void uiActionObriši_Click(object sender, EventArgs e) {
 
-            // TODO Onemogućiti brisanje admin uloge
-
             int id = int.Parse(uiOutputTableDataUlogaKorisnika.CurrentRow.Cells[0].Value.ToString());
-            ulogaKorisnikaTableAdapter.DeleteRowByID(id);
-            this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
+
+            try {
+                ulogaKorisnikaTableAdapter.DeleteRowByID(id);
+                this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
+            } catch(Exception) {
+                uiOznakaGreška.Text = "Uloga ne može biti obrisana.";
+            }
+
         }
     }
 }

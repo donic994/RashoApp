@@ -43,7 +43,7 @@ namespace RashoApp.Korisnici {
 
         private void uiActionPrihvati_Click(object sender, EventArgs e) {
 
-            // TODO Provjera unosa
+            if (!IsValidInput()) { return; }
 
             try {
                 // Ako se radi o izmjeni uloge
@@ -57,6 +57,19 @@ namespace RashoApp.Korisnici {
             } catch (Exception) {
                 uiOznakaGreška.Text = "Greška: Promjene nisu spremljene.";
             }
+        }
+
+        private bool IsValidInput() {
+            uiOznakaGreška.Text = "";
+            bool isValid = true;
+
+            // Jesu li unesena obvezna polja
+            if (uiInputNaziv.Text.Length < 1) {
+                uiOznakaGreška.Text = "Nisu unesena sva obvezna polja.";
+                return false;
+            }
+
+            return isValid;
         }
 
         private void uiActionPoništi_Click(object sender, EventArgs e) {

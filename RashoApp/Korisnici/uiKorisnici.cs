@@ -54,8 +54,12 @@ namespace RashoApp.Korisnici {
             int idKorisnika = int.Parse(uiOutputTableDataKorisnici.CurrentRow.Cells[0].Value.ToString());
 
             if (idKorisnika != LoginInfo.UserID) {
-                korisnikTableAdapter.DeleteRow(idKorisnika);
-                this.korisnikTableAdapter.Fill(this.baza18043_DBDataSet.Korisnik);
+                try {
+                    korisnikTableAdapter.DeleteRow(idKorisnika);
+                    this.korisnikTableAdapter.Fill(this.baza18043_DBDataSet.Korisnik);
+                } catch(Exception) {
+                    uiOznakaGreška.Text = "Korisnik ne može biti obrisan.";
+                }
             } else {
                 uiOznakaGreška.Text = "Nemoguće obrisati trenutno prijavljenog korisnika.";
             }
