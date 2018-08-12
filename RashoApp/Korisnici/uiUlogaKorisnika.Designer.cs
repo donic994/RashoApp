@@ -33,6 +33,8 @@
             this.uiOznakaOpis = new System.Windows.Forms.Label();
             this.uiOznakaGreška = new System.Windows.Forms.Label();
             this.helpProvider = new System.Windows.Forms.HelpProvider();
+            this.uiTreeDozvole = new System.Windows.Forms.TreeView();
+            this.uiOznakaDozvole = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // uiInputID
@@ -68,7 +70,7 @@
             this.uiActionPrihvati.FlatAppearance.BorderSize = 0;
             this.uiActionPrihvati.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionPrihvati.ForeColor = System.Drawing.Color.White;
-            this.uiActionPrihvati.Location = new System.Drawing.Point(162, 148);
+            this.uiActionPrihvati.Location = new System.Drawing.Point(162, 319);
             this.uiActionPrihvati.Name = "uiActionPrihvati";
             this.uiActionPrihvati.Size = new System.Drawing.Size(75, 23);
             this.uiActionPrihvati.TabIndex = 3;
@@ -82,7 +84,7 @@
             this.uiActionPoništi.FlatAppearance.BorderSize = 0;
             this.uiActionPoništi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uiActionPoništi.ForeColor = System.Drawing.Color.White;
-            this.uiActionPoništi.Location = new System.Drawing.Point(257, 147);
+            this.uiActionPoništi.Location = new System.Drawing.Point(257, 318);
             this.uiActionPoništi.Name = "uiActionPoništi";
             this.uiActionPoništi.Size = new System.Drawing.Size(75, 23);
             this.uiActionPoništi.TabIndex = 4;
@@ -126,12 +128,32 @@
             this.uiOznakaGreška.Size = new System.Drawing.Size(0, 13);
             this.uiOznakaGreška.TabIndex = 8;
             // 
+            // uiTreeDozvole
+            // 
+            this.uiTreeDozvole.CheckBoxes = true;
+            this.uiTreeDozvole.Location = new System.Drawing.Point(162, 147);
+            this.uiTreeDozvole.Name = "uiTreeDozvole";
+            this.uiTreeDozvole.Size = new System.Drawing.Size(170, 143);
+            this.uiTreeDozvole.TabIndex = 9;
+            this.uiTreeDozvole.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.uiTreeDozvole_AfterCheck);
+            // 
+            // uiOznakaDozvole
+            // 
+            this.uiOznakaDozvole.AutoSize = true;
+            this.uiOznakaDozvole.Location = new System.Drawing.Point(67, 147);
+            this.uiOznakaDozvole.Name = "uiOznakaDozvole";
+            this.uiOznakaDozvole.Size = new System.Drawing.Size(46, 13);
+            this.uiOznakaDozvole.TabIndex = 10;
+            this.uiOznakaDozvole.Text = "Dozvole";
+            // 
             // UIUlogaKorisnika
             // 
             this.AcceptButton = this.uiActionPrihvati;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 225);
+            this.ClientSize = new System.Drawing.Size(404, 354);
+            this.Controls.Add(this.uiOznakaDozvole);
+            this.Controls.Add(this.uiTreeDozvole);
             this.Controls.Add(this.uiOznakaGreška);
             this.Controls.Add(this.uiOznakaOpis);
             this.Controls.Add(this.uiOznakaNaziv);
@@ -143,6 +165,7 @@
             this.Controls.Add(this.uiInputID);
             this.Name = "UIUlogaKorisnika";
             this.Text = "Uloga korisnika";
+            this.Load += new System.EventHandler(this.UIUlogaKorisnika_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +183,7 @@
         private System.Windows.Forms.Label uiOznakaOpis;
         private System.Windows.Forms.Label uiOznakaGreška;
         private System.Windows.Forms.HelpProvider helpProvider;
+        private System.Windows.Forms.TreeView uiTreeDozvole;
+        private System.Windows.Forms.Label uiOznakaDozvole;
     }
 }

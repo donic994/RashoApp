@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 /// <summary>
 /// UIUlogaKorisnika služi za dodavanje ili izmjenu već postojećih uloga korisnika
@@ -21,15 +22,50 @@ namespace RashoApp.Korisnici {
 
         private int ulogaID;
         private Baza18043_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter ulogaTableAdapter;
+        private Baza18043_DBDataSetTableAdapters.UIElementiTableAdapter uiElementiTableAdapter;
 
         public UIUlogaKorisnika(int ulogaID=-1) {
             InitializeComponent();
             ulogaTableAdapter = new Baza18043_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter();
+            uiElementiTableAdapter = new Baza18043_DBDataSetTableAdapters.UIElementiTableAdapter();
+
             this.ulogaID = ulogaID;
 
             // Ako je uloga prosljeđena formi (ako se radi o izmjeni uloge)
             if (ulogaID >= 0) {
                 IspuniPodatkeOUlogi();
+            }
+        }
+
+        private void UIUlogaKorisnika_Load(object sender, EventArgs e) {
+            // Popuni tree view rootove
+            var uiElementi = uiElementiTableAdapter.GetDataByNullRoditelj();
+            foreach (DataRow row in uiElementi.Rows) {
+                // Kreiraj čvor
+                TreeNode node = new TreeNode();
+                node.Text = row[1].ToString();
+                node.Name = row[0].ToString();
+
+                uiTreeDozvole.Nodes.Add(node);
+
+                // Popuni trenutni node
+                PopuniTreeNode(node);
+            }
+        }
+
+        // Popunjava tree view podacima iz baze
+        private void PopuniTreeNode(TreeNode parent) {
+            var uiElementi = uiElementiTableAdapter.GetDataByRoditelj(int.Parse(parent.Name));
+            
+            foreach (DataRow row in uiElementi.Rows) {
+                TreeNode node = new TreeNode();
+                node.Text = row[1].ToString();
+                node.Name = row[0].ToString();
+                Debug.WriteLine("redak: " + row[1].ToString());
+
+                parent.Nodes.Add(node);
+                // Popuni trenutni node
+                PopuniTreeNode(node);
             }
         }
 
@@ -42,6 +78,11 @@ namespace RashoApp.Korisnici {
         }
 
         private void uiActionPrihvati_Click(object sender, EventArgs e) {
+
+            
+            //Debug.WriteLine();
+
+            return;
 
             if (!IsValidInput()) { return; }
 
@@ -59,6 +100,7 @@ namespace RashoApp.Korisnici {
             }
         }
 
+        // Provjerava valjanost unesenih podataka
         private bool IsValidInput() {
             uiOznakaGreška.Text = "";
             bool isValid = true;
@@ -74,6 +116,23 @@ namespace RashoApp.Korisnici {
 
         private void uiActionPoništi_Click(object sender, EventArgs e) {
             Close();
+        }
+
+        private void uiTreeDozvole_AfterCheck(object sender, TreeViewEventArgs e) {
+
+            TreeNode node = e.Node;
+            bool check = e.Node.Checked;
+
+            CheckNodes(node, check);
+
+        }
+
+        // Označava svu djecu označenog čvora
+        private void CheckNodes(TreeNode node, bool check) {
+            foreach (TreeNode child in node.Nodes) {
+                child.Checked = check;
+                CheckNodes(child, check);
+            }
         }
     }
 }

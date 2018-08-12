@@ -62,7 +62,6 @@ namespace RashoApp.Korisnici {
             PasswordHash phObj = new PasswordHash();
             string newPassword = phObj.Hash(uiInputLozinka.Text, phObj.GenerateSalt());
 
-            int kontakt = int.Parse(uiInputKontaktBroj.Text); // TODO popravit
             int ulogaID = int.Parse(uiInputOdabirUloga.SelectedValue.ToString());
 
             try {
