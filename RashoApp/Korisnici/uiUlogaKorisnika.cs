@@ -23,11 +23,15 @@ namespace RashoApp.Korisnici {
         private int ulogaID;
         private Baza18043_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter ulogaTableAdapter;
         private Baza18043_DBDataSetTableAdapters.UIElementiTableAdapter uiElementiTableAdapter;
+        private Baza18043_DBDataSetTableAdapters.VidiElementTableAdapter vidiElementTableAdapter;
+
+        private bool canTriggerCheckEvent = true;
 
         public UIUlogaKorisnika(int ulogaID=-1) {
             InitializeComponent();
             ulogaTableAdapter = new Baza18043_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter();
             uiElementiTableAdapter = new Baza18043_DBDataSetTableAdapters.UIElementiTableAdapter();
+            vidiElementTableAdapter = new Baza18043_DBDataSetTableAdapters.VidiElementTableAdapter();
 
             this.ulogaID = ulogaID;
 
@@ -79,20 +83,31 @@ namespace RashoApp.Korisnici {
 
         private void uiActionPrihvati_Click(object sender, EventArgs e) {
 
-            
-            //Debug.WriteLine();
-
-            return;
-
             if (!IsValidInput()) { return; }
 
             try {
+
+                var checkedNodes = GetCheckedNodes();
+
                 // Ako se radi o izmjeni uloge
                 if (ulogaID >= 0) {
                     ulogaTableAdapter.UpdateRow(uiInputNaziv.Text, uiInputOpis.Text, ulogaID);
+                    
+                    // Obriši stare redove
+                    vidiElementTableAdapter.DeleteRowsByUloga(ulogaID);
+                    // Dodaj nove redove
+                    foreach (var node in checkedNodes) {
+                        vidiElementTableAdapter.Insert(int.Parse(node.Name), ulogaID);
+                    }
                 // Ako se radi o novoj ulogi
                 } else {
-                    ulogaTableAdapter.InsertRow(uiInputNaziv.Text, uiInputOpis.Text);
+                    // Dodaj novu ulogu
+                    ulogaID = int.Parse(ulogaTableAdapter.InsertRow(uiInputNaziv.Text, uiInputOpis.Text).ToString());
+                    
+                    // Dodaj vidljive elemente za tu ulogu
+                    foreach(var node in checkedNodes) {
+                        vidiElementTableAdapter.Insert(int.Parse(node.Name), ulogaID);
+                    }
                 }
                 Close();
             } catch (Exception) {
@@ -120,18 +135,52 @@ namespace RashoApp.Korisnici {
 
         private void uiTreeDozvole_AfterCheck(object sender, TreeViewEventArgs e) {
 
+            if (canTriggerCheckEvent == false) { return; }
+
+            canTriggerCheckEvent = false;
+
             TreeNode node = e.Node;
             bool check = e.Node.Checked;
 
-            CheckNodes(node, check);
+            CheckChildNodes(node, check);
+            CheckParentNodes(node);            
+
+            canTriggerCheckEvent = true;
 
         }
 
+        private void CheckParentNodes(TreeNode node) {
+            while (node.Parent != null) {
+                node.Parent.Checked = true;
+                node = node.Parent;
+            }
+        }
+
         // Označava svu djecu označenog čvora
-        private void CheckNodes(TreeNode node, bool check) {
+        private void CheckChildNodes(TreeNode node, bool check) {
             foreach (TreeNode child in node.Nodes) {
                 child.Checked = check;
-                CheckNodes(child, check);
+                CheckChildNodes(child, check);
+            }
+        }
+
+        private List<TreeNode> GetCheckedNodes() {
+            List<TreeNode> nodes = new List<TreeNode>();
+            foreach (TreeNode node in uiTreeDozvole.Nodes) {
+                if (node.Checked) {
+                    nodes.Add(node);
+                    GetCheckedChildNodes(nodes, node);
+                }
+            }
+            return nodes;
+        }
+
+        private void GetCheckedChildNodes(List<TreeNode> nodes, TreeNode parent) {
+            foreach (TreeNode node in parent.Nodes) {
+                if (node.Checked) {
+                    nodes.Add(node);
+                    GetCheckedChildNodes(nodes, node);
+                }
             }
         }
     }

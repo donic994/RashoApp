@@ -29,16 +29,19 @@
             this.ulogaKorisnikaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter();
             this.tableAdapterManager = new RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager();
             this.uiOutputTableDataUlogaKorisnika = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uiActionDodaj = new System.Windows.Forms.Button();
             this.uiActionUredi = new System.Windows.Forms.Button();
             this.uiActionObriši = new System.Windows.Forms.Button();
             this.uiOznakaGreška = new System.Windows.Forms.Label();
+            this.fKVidiElementUlogaKorisnikaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vidiElementTableAdapter1 = new RashoApp.Baza18043_DBDataSetTableAdapters.VidiElementTableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataUlogaKorisnika)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKVidiElementUlogaKorisnikaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // baza18043_DBDataSet
@@ -66,18 +69,20 @@
             this.tableAdapterManager.NarudzbaTableAdapter = null;
             this.tableAdapterManager.ProizvodTableAdapter = null;
             this.tableAdapterManager.StavkaNarudzbeTableAdapter = null;
+            this.tableAdapterManager.UIElementiTableAdapter = null;
             this.tableAdapterManager.UlogaDijelaTableAdapter = null;
             this.tableAdapterManager.UlogaKorisnikaTableAdapter = this.ulogaKorisnikaTableAdapter;
             this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.VidiElementTableAdapter = null;
             // 
             // uiOutputTableDataUlogaKorisnika
             // 
             this.uiOutputTableDataUlogaKorisnika.AutoGenerateColumns = false;
             this.uiOutputTableDataUlogaKorisnika.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uiOutputTableDataUlogaKorisnika.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
+            this.iDDataGridViewTextBoxColumn,
+            this.nazivDataGridViewTextBoxColumn,
+            this.opisDataGridViewTextBoxColumn});
             this.uiOutputTableDataUlogaKorisnika.DataSource = this.ulogaKorisnikaBindingSource;
             this.uiOutputTableDataUlogaKorisnika.Dock = System.Windows.Forms.DockStyle.Top;
             this.uiOutputTableDataUlogaKorisnika.Location = new System.Drawing.Point(0, 0);
@@ -85,25 +90,6 @@
             this.uiOutputTableDataUlogaKorisnika.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.uiOutputTableDataUlogaKorisnika.Size = new System.Drawing.Size(566, 310);
             this.uiOutputTableDataUlogaKorisnika.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "naziv";
-            this.dataGridViewTextBoxColumn2.HeaderText = "naziv";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "opis";
-            this.dataGridViewTextBoxColumn3.HeaderText = "opis";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // uiActionDodaj
             // 
@@ -156,6 +142,34 @@
             this.uiOznakaGreška.Size = new System.Drawing.Size(0, 13);
             this.uiOznakaGreška.TabIndex = 5;
             // 
+            // fKVidiElementUlogaKorisnikaBindingSource
+            // 
+            this.fKVidiElementUlogaKorisnikaBindingSource.DataMember = "FK_VidiElement_UlogaKorisnika";
+            this.fKVidiElementUlogaKorisnikaBindingSource.DataSource = this.ulogaKorisnikaBindingSource;
+            // 
+            // vidiElementTableAdapter1
+            // 
+            this.vidiElementTableAdapter1.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nazivDataGridViewTextBoxColumn
+            // 
+            this.nazivDataGridViewTextBoxColumn.DataPropertyName = "naziv";
+            this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
+            this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            // 
+            // opisDataGridViewTextBoxColumn
+            // 
+            this.opisDataGridViewTextBoxColumn.DataPropertyName = "opis";
+            this.opisDataGridViewTextBoxColumn.HeaderText = "opis";
+            this.opisDataGridViewTextBoxColumn.Name = "opisDataGridViewTextBoxColumn";
+            // 
             // UIUlogeKorisnika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,6 +186,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiOutputTableDataUlogaKorisnika)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKVidiElementUlogaKorisnikaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,12 +199,14 @@
         private Baza18043_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter ulogaKorisnikaTableAdapter;
         private Baza18043_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView uiOutputTableDataUlogaKorisnika;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Button uiActionDodaj;
         private System.Windows.Forms.Button uiActionUredi;
         private System.Windows.Forms.Button uiActionObriši;
         private System.Windows.Forms.Label uiOznakaGreška;
+        private System.Windows.Forms.BindingSource fKVidiElementUlogaKorisnikaBindingSource;
+        private Baza18043_DBDataSetTableAdapters.VidiElementTableAdapter vidiElementTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opisDataGridViewTextBoxColumn;
     }
 }

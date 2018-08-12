@@ -85,9 +85,11 @@
             this.tableAdapterManager.NarudzbaTableAdapter = null;
             this.tableAdapterManager.ProizvodTableAdapter = null;
             this.tableAdapterManager.StavkaNarudzbeTableAdapter = null;
+            this.tableAdapterManager.UIElementiTableAdapter = null;
             this.tableAdapterManager.UlogaDijelaTableAdapter = null;
             this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.VidiElementTableAdapter = null;
             // 
             // uiInputID
             // 
@@ -103,7 +105,7 @@
             this.uiInputIme.Location = new System.Drawing.Point(234, 59);
             this.uiInputIme.Name = "uiInputIme";
             this.helpProvider.SetShowHelp(this.uiInputIme, true);
-            this.uiInputIme.Size = new System.Drawing.Size(125, 20);
+            this.uiInputIme.Size = new System.Drawing.Size(161, 20);
             this.uiInputIme.TabIndex = 1;
             // 
             // uiInputPrezime
@@ -112,7 +114,7 @@
             this.uiInputPrezime.Location = new System.Drawing.Point(234, 85);
             this.uiInputPrezime.Name = "uiInputPrezime";
             this.helpProvider.SetShowHelp(this.uiInputPrezime, true);
-            this.uiInputPrezime.Size = new System.Drawing.Size(125, 20);
+            this.uiInputPrezime.Size = new System.Drawing.Size(161, 20);
             this.uiInputPrezime.TabIndex = 2;
             // 
             // uiInputAdresa
@@ -122,7 +124,7 @@
             this.uiInputAdresa.Multiline = true;
             this.uiInputAdresa.Name = "uiInputAdresa";
             this.helpProvider.SetShowHelp(this.uiInputAdresa, true);
-            this.uiInputAdresa.Size = new System.Drawing.Size(125, 31);
+            this.uiInputAdresa.Size = new System.Drawing.Size(161, 31);
             this.uiInputAdresa.TabIndex = 3;
             // 
             // uiInputEmail
@@ -131,7 +133,7 @@
             this.uiInputEmail.Location = new System.Drawing.Point(234, 148);
             this.uiInputEmail.Name = "uiInputEmail";
             this.helpProvider.SetShowHelp(this.uiInputEmail, true);
-            this.uiInputEmail.Size = new System.Drawing.Size(125, 20);
+            this.uiInputEmail.Size = new System.Drawing.Size(161, 20);
             this.uiInputEmail.TabIndex = 4;
             // 
             // uiInputKorisničkoIme
@@ -140,7 +142,7 @@
             this.uiInputKorisničkoIme.Location = new System.Drawing.Point(234, 174);
             this.uiInputKorisničkoIme.Name = "uiInputKorisničkoIme";
             this.helpProvider.SetShowHelp(this.uiInputKorisničkoIme, true);
-            this.uiInputKorisničkoIme.Size = new System.Drawing.Size(125, 20);
+            this.uiInputKorisničkoIme.Size = new System.Drawing.Size(161, 20);
             this.uiInputKorisničkoIme.TabIndex = 5;
             // 
             // uiInputLozinka
@@ -150,7 +152,7 @@
             this.uiInputLozinka.Name = "uiInputLozinka";
             this.uiInputLozinka.PasswordChar = '•';
             this.helpProvider.SetShowHelp(this.uiInputLozinka, true);
-            this.uiInputLozinka.Size = new System.Drawing.Size(125, 20);
+            this.uiInputLozinka.Size = new System.Drawing.Size(161, 20);
             this.uiInputLozinka.TabIndex = 6;
             // 
             // uiInputKontaktBroj
@@ -160,7 +162,7 @@
             this.uiInputKontaktBroj.Location = new System.Drawing.Point(234, 226);
             this.uiInputKontaktBroj.Name = "uiInputKontaktBroj";
             this.helpProvider.SetShowHelp(this.uiInputKontaktBroj, true);
-            this.uiInputKontaktBroj.Size = new System.Drawing.Size(125, 20);
+            this.uiInputKontaktBroj.Size = new System.Drawing.Size(161, 20);
             this.uiInputKontaktBroj.TabIndex = 7;
             // 
             // uiOznakaID
@@ -253,7 +255,7 @@
             this.uiInputOdabirUloga.Location = new System.Drawing.Point(234, 252);
             this.uiInputOdabirUloga.Name = "uiInputOdabirUloga";
             this.helpProvider.SetShowHelp(this.uiInputOdabirUloga, true);
-            this.uiInputOdabirUloga.Size = new System.Drawing.Size(125, 21);
+            this.uiInputOdabirUloga.Size = new System.Drawing.Size(161, 21);
             this.uiInputOdabirUloga.TabIndex = 18;
             this.uiInputOdabirUloga.ValueMember = "ID";
             // 

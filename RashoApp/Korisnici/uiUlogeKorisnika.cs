@@ -18,8 +18,11 @@ using System.Windows.Forms;
 namespace RashoApp.Korisnici {
     public partial class UIUlogeKorisnika : Form {
 
+        private Baza18043_DBDataSetTableAdapters.VidiElementTableAdapter vidiElementTableAdapter;
+
         public UIUlogeKorisnika() {
             InitializeComponent();
+            vidiElementTableAdapter = new Baza18043_DBDataSetTableAdapters.VidiElementTableAdapter();
         }
 
         private void ulogaKorisnikaBindingNavigatorSaveItem_Click(object sender, EventArgs e) {
@@ -29,6 +32,8 @@ namespace RashoApp.Korisnici {
         }
 
         private void uiUlogeKorisnika_Load(object sender, EventArgs e) {
+            // TODO: This line of code loads data into the 'baza18043_DBDataSet.VidiElement' table. You can move, or remove it, as needed.
+            this.vidiElementTableAdapter1.Fill(this.baza18043_DBDataSet.VidiElement);
             this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
         }
 
@@ -53,8 +58,13 @@ namespace RashoApp.Korisnici {
             int id = int.Parse(uiOutputTableDataUlogaKorisnika.CurrentRow.Cells[0].Value.ToString());
 
             try {
+                // Obriši vidljive elemente
+                vidiElementTableAdapter.DeleteRowsByUloga(id);
+
+                // Obriši ulogu
                 ulogaKorisnikaTableAdapter.DeleteRowByID(id);
                 this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
+
             } catch(Exception) {
                 uiOznakaGreška.Text = "Uloga ne može biti obrisana.";
             }

@@ -61,7 +61,7 @@
             this.uiInputOpis.Multiline = true;
             this.uiInputOpis.Name = "uiInputOpis";
             this.helpProvider.SetShowHelp(this.uiInputOpis, true);
-            this.uiInputOpis.Size = new System.Drawing.Size(170, 45);
+            this.uiInputOpis.Size = new System.Drawing.Size(361, 45);
             this.uiInputOpis.TabIndex = 2;
             // 
             // uiActionPrihvati
@@ -133,7 +133,7 @@
             this.uiTreeDozvole.CheckBoxes = true;
             this.uiTreeDozvole.Location = new System.Drawing.Point(162, 147);
             this.uiTreeDozvole.Name = "uiTreeDozvole";
-            this.uiTreeDozvole.Size = new System.Drawing.Size(170, 143);
+            this.uiTreeDozvole.Size = new System.Drawing.Size(361, 143);
             this.uiTreeDozvole.TabIndex = 9;
             this.uiTreeDozvole.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.uiTreeDozvole_AfterCheck);
             // 
@@ -151,7 +151,7 @@
             this.AcceptButton = this.uiActionPrihvati;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 354);
+            this.ClientSize = new System.Drawing.Size(535, 354);
             this.Controls.Add(this.uiOznakaDozvole);
             this.Controls.Add(this.uiTreeDozvole);
             this.Controls.Add(this.uiOznakaGreška);
