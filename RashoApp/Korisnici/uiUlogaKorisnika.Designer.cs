@@ -32,6 +32,7 @@
             this.uiOznakaNaziv = new System.Windows.Forms.Label();
             this.uiOznakaOpis = new System.Windows.Forms.Label();
             this.uiOznakaGreška = new System.Windows.Forms.Label();
+            this.helpProvider = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // uiInputID
@@ -44,16 +45,20 @@
             // 
             // uiInputNaziv
             // 
+            this.helpProvider.SetHelpString(this.uiInputNaziv, "Unesite naziv uloge");
             this.uiInputNaziv.Location = new System.Drawing.Point(162, 70);
             this.uiInputNaziv.Name = "uiInputNaziv";
+            this.helpProvider.SetShowHelp(this.uiInputNaziv, true);
             this.uiInputNaziv.Size = new System.Drawing.Size(170, 20);
             this.uiInputNaziv.TabIndex = 1;
             // 
             // uiInputOpis
             // 
+            this.helpProvider.SetHelpString(this.uiInputOpis, "Unesite opis uloge");
             this.uiInputOpis.Location = new System.Drawing.Point(162, 96);
             this.uiInputOpis.Multiline = true;
             this.uiInputOpis.Name = "uiInputOpis";
+            this.helpProvider.SetShowHelp(this.uiInputOpis, true);
             this.uiInputOpis.Size = new System.Drawing.Size(170, 45);
             this.uiInputOpis.TabIndex = 2;
             // 
@@ -153,5 +158,6 @@
         private System.Windows.Forms.Label uiOznakaNaziv;
         private System.Windows.Forms.Label uiOznakaOpis;
         private System.Windows.Forms.Label uiOznakaGreška;
+        private System.Windows.Forms.HelpProvider helpProvider;
     }
 }

@@ -52,6 +52,7 @@
             this.ulogaKorisnikaTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter();
             this.ulogaKorisnikaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.uiOznakaGreška = new System.Windows.Forms.Label();
+            this.helpProvider = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.korisnikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ulogaKorisnikaBindingSource)).BeginInit();
@@ -97,8 +98,10 @@
             // 
             // uiInputIme
             // 
+            this.helpProvider.SetHelpString(this.uiInputIme, "Unesite ime korisnika");
             this.uiInputIme.Location = new System.Drawing.Point(234, 59);
             this.uiInputIme.Name = "uiInputIme";
+            this.helpProvider.SetShowHelp(this.uiInputIme, true);
             this.uiInputIme.Size = new System.Drawing.Size(125, 20);
             this.uiInputIme.TabIndex = 1;
             // 
@@ -111,38 +114,48 @@
             // 
             // uiInputAdresa
             // 
+            this.helpProvider.SetHelpString(this.uiInputAdresa, "Unesite adresu korisnika");
             this.uiInputAdresa.Location = new System.Drawing.Point(234, 111);
             this.uiInputAdresa.Multiline = true;
             this.uiInputAdresa.Name = "uiInputAdresa";
+            this.helpProvider.SetShowHelp(this.uiInputAdresa, true);
             this.uiInputAdresa.Size = new System.Drawing.Size(125, 31);
             this.uiInputAdresa.TabIndex = 3;
             // 
             // uiInputEmail
             // 
+            this.helpProvider.SetHelpString(this.uiInputEmail, "Unesite email korisnika");
             this.uiInputEmail.Location = new System.Drawing.Point(234, 148);
             this.uiInputEmail.Name = "uiInputEmail";
+            this.helpProvider.SetShowHelp(this.uiInputEmail, true);
             this.uiInputEmail.Size = new System.Drawing.Size(125, 20);
             this.uiInputEmail.TabIndex = 4;
             // 
             // uiInputKorisničkoIme
             // 
+            this.helpProvider.SetHelpString(this.uiInputKorisničkoIme, "Unesite korisničko ime korisnika");
             this.uiInputKorisničkoIme.Location = new System.Drawing.Point(234, 174);
             this.uiInputKorisničkoIme.Name = "uiInputKorisničkoIme";
+            this.helpProvider.SetShowHelp(this.uiInputKorisničkoIme, true);
             this.uiInputKorisničkoIme.Size = new System.Drawing.Size(125, 20);
             this.uiInputKorisničkoIme.TabIndex = 5;
             // 
             // uiInputLozinka
             // 
+            this.helpProvider.SetHelpString(this.uiInputLozinka, "Unesite lozinku korisnika");
             this.uiInputLozinka.Location = new System.Drawing.Point(234, 200);
             this.uiInputLozinka.Name = "uiInputLozinka";
             this.uiInputLozinka.PasswordChar = '•';
+            this.helpProvider.SetShowHelp(this.uiInputLozinka, true);
             this.uiInputLozinka.Size = new System.Drawing.Size(125, 20);
             this.uiInputLozinka.TabIndex = 6;
             // 
             // uiInputKontaktBroj
             // 
+            this.helpProvider.SetHelpString(this.uiInputKontaktBroj, "Unesite kontakt broj korisnika");
             this.uiInputKontaktBroj.Location = new System.Drawing.Point(234, 226);
             this.uiInputKontaktBroj.Name = "uiInputKontaktBroj";
+            this.helpProvider.SetShowHelp(this.uiInputKontaktBroj, true);
             this.uiInputKontaktBroj.Size = new System.Drawing.Size(125, 20);
             this.uiInputKontaktBroj.TabIndex = 7;
             // 
@@ -232,8 +245,10 @@
             this.uiInputOdabirUloga.DataSource = this.ulogaKorisnikaBindingSource;
             this.uiInputOdabirUloga.DisplayMember = "naziv";
             this.uiInputOdabirUloga.FormattingEnabled = true;
+            this.helpProvider.SetHelpString(this.uiInputOdabirUloga, "Odaberite ulogu korisnika");
             this.uiInputOdabirUloga.Location = new System.Drawing.Point(234, 252);
             this.uiInputOdabirUloga.Name = "uiInputOdabirUloga";
+            this.helpProvider.SetShowHelp(this.uiInputOdabirUloga, true);
             this.uiInputOdabirUloga.Size = new System.Drawing.Size(125, 21);
             this.uiInputOdabirUloga.TabIndex = 18;
             this.uiInputOdabirUloga.ValueMember = "ID";
@@ -315,7 +330,10 @@
             this.Controls.Add(this.uiInputPrezime);
             this.Controls.Add(this.uiInputIme);
             this.Controls.Add(this.uiInputID);
+            this.HelpButton = true;
+            this.helpProvider.SetHelpString(this, "Unesite prezime korisnika");
             this.Name = "UIKorisnik";
+            this.helpProvider.SetShowHelp(this, true);
             this.Text = "Korisnik";
             this.Load += new System.EventHandler(this.uiKorisnik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.baza18043_DBDataSet)).EndInit();
@@ -357,5 +375,6 @@
         private Baza18043_DBDataSetTableAdapters.UlogaKorisnikaTableAdapter ulogaKorisnikaTableAdapter;
         private System.Windows.Forms.BindingSource ulogaKorisnikaBindingSource1;
         private System.Windows.Forms.Label uiOznakaGreška;
+        private System.Windows.Forms.HelpProvider helpProvider;
     }
 }

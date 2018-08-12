@@ -33,8 +33,8 @@
             this.uiInputLozinka = new System.Windows.Forms.TextBox();
             this.uiInputKorisničkoIme = new System.Windows.Forms.TextBox();
             this.uiAkcijaPrijaviSe = new System.Windows.Forms.Button();
-            this.HelpPrijava = new System.Windows.Forms.HelpProvider();
             this.uiOznakaGreškaUPrijavi = new System.Windows.Forms.Label();
+            this.helpProvider = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // uiOznakaLozinka
@@ -59,16 +59,20 @@
             // 
             // uiInputLozinka
             // 
+            this.helpProvider.SetHelpString(this.uiInputLozinka, "Unesite svoju lozinku");
             this.uiInputLozinka.Location = new System.Drawing.Point(213, 72);
             this.uiInputLozinka.Name = "uiInputLozinka";
             this.uiInputLozinka.PasswordChar = '•';
+            this.helpProvider.SetShowHelp(this.uiInputLozinka, true);
             this.uiInputLozinka.Size = new System.Drawing.Size(188, 20);
             this.uiInputLozinka.TabIndex = 7;
             // 
             // uiInputKorisničkoIme
             // 
+            this.helpProvider.SetHelpString(this.uiInputKorisničkoIme, "Unesite svoje korisničko ime");
             this.uiInputKorisničkoIme.Location = new System.Drawing.Point(213, 46);
             this.uiInputKorisničkoIme.Name = "uiInputKorisničkoIme";
+            this.helpProvider.SetShowHelp(this.uiInputKorisničkoIme, true);
             this.uiInputKorisničkoIme.Size = new System.Drawing.Size(188, 20);
             this.uiInputKorisničkoIme.TabIndex = 6;
             // 
@@ -86,10 +90,6 @@
             this.uiAkcijaPrijaviSe.UseVisualStyleBackColor = false;
             this.uiAkcijaPrijaviSe.Click += new System.EventHandler(this.uiAkcijaPrijaviSe_Click);
             // 
-            // HelpPrijava
-            // 
-            this.HelpPrijava.HelpNamespace = "C:\\Users\\filip\\Desktop\\help.html";
-            // 
             // uiOznakaGreškaUPrijavi
             // 
             this.uiOznakaGreškaUPrijavi.AutoSize = true;
@@ -101,6 +101,7 @@
             // 
             // UIPrijava
             // 
+            this.AcceptButton = this.uiAkcijaPrijaviSe;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 182);
@@ -128,7 +129,7 @@
         private System.Windows.Forms.TextBox uiInputLozinka;
         private System.Windows.Forms.TextBox uiInputKorisničkoIme;
         private System.Windows.Forms.Button uiAkcijaPrijaviSe;
-        private System.Windows.Forms.HelpProvider HelpPrijava;
         private System.Windows.Forms.Label uiOznakaGreškaUPrijavi;
+        private System.Windows.Forms.HelpProvider helpProvider;
     }
 }
