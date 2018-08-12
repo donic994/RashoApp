@@ -11,15 +11,13 @@ using System.Diagnostics;
 
 namespace RashoApp {
     public partial class uiGlavniIzbornik : Form {
-        public int ulogaPrijavljenogKorisnika { get; set; }
 
-        public uiGlavniIzbornik(int ulogaKorisnika) {
-            ulogaPrijavljenogKorisnika = ulogaKorisnika;
+        public uiGlavniIzbornik() {
             InitializeComponent();
 
             // ako nije admin
-            Debug.WriteLine("uloga:" + ulogaKorisnika);
-            if (ulogaKorisnika != 1) {
+            Debug.WriteLine("uloga:" + LoginInfo.Role);
+            if (LoginInfo.Role != 1) {
                 uiTabControl.TabPages.RemoveAt(3);
                 uiTabControlProizvodi.TabPages.Remove(uiTabProizvodiElement);
                 uiTabControlProizvodi.TabPages.Remove(uiTabProizvodiKomponenta);

@@ -144,6 +144,7 @@
     <Compile Include="Korisnici\uiUlogeKorisnika.Designer.cs">
       <DependentUpon>uiUlogeKorisnika.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginInfo.cs" />
     <Compile Include="PopisBoja.cs" />
     <Compile Include="Djelovi\uiDjelovi.cs">
       <SubType>Form</SubType>

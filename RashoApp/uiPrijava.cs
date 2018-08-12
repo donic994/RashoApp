@@ -35,7 +35,10 @@ namespace RashoApp
             try {
                 isValid = phObj.Verify(uiInputLozinka.Text, korisnik[0].lozinka);
                 if (isValid) {
-                    PrikaziGlavnuFormu(korisnik[0].id_uloga);
+                    LoginInfo.UserID = korisnik[0].ID;
+                    LoginInfo.Role = korisnik[0].id_uloga;
+                    LoginInfo.Username = korisnik[0].korisnickoIme;
+                    PrikaziGlavnuFormu();
                 } else {
                     uiOznakaGreškaUPrijavi.Text = "Pogrešna lozinka";
                 }
@@ -44,9 +47,9 @@ namespace RashoApp
             }
         }
 
-        private void PrikaziGlavnuFormu(int ulogaKorisnika) {
+        private void PrikaziGlavnuFormu() {
             this.Hide();
-            uiGlavniIzbornik glavnaForma = new uiGlavniIzbornik(ulogaKorisnika);
+            uiGlavniIzbornik glavnaForma = new uiGlavniIzbornik();
             glavnaForma.ShowDialog();
 
             uiInputKorisničkoIme.Text = "";
