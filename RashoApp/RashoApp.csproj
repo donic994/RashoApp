@@ -298,7 +298,7 @@
     <None Include="Baza18043_DBDataSet.xss">
       <DependentUpon>Baza18043_DBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="packages.config" />
+    <None Include="Proizvod\packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

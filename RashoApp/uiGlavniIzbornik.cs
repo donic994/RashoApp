@@ -12,17 +12,13 @@ using System.Diagnostics;
 namespace RashoApp {
     public partial class uiGlavniIzbornik : Form {
 
+        List<Control> TabControls;
+
         public uiGlavniIzbornik() {
             InitializeComponent();
 
-            // ako nije admin
-            Debug.WriteLine("uloga:" + LoginInfo.Role);
-            if (LoginInfo.Role != 1) {
-                uiTabControl.TabPages.RemoveAt(3);
-                uiTabControlProizvodi.TabPages.Remove(uiTabProizvodiElement);
-                uiTabControlProizvodi.TabPages.Remove(uiTabProizvodiKomponenta);
-                uiTabControlProizvodi.TabPages.Remove(uiTabProizvodiUlogaDijela);
-            }
+            TabControls = new List<Control>();
+            GetAllControlsByType(this, typeof(TabPage), TabControls);
 
             PopuniOdUiDjelovi();
             PopuniOdUiElement();
@@ -37,6 +33,24 @@ namespace RashoApp {
 
         ~uiGlavniIzbornik() {
             LoginInfo.CloseSession();
+        }
+
+        private void uiGlavniIzbornik_Load(object sender, EventArgs e) {
+            // ako nije admin
+            Debug.WriteLine("uloga:" + LoginInfo.Role);
+            if (LoginInfo.Role != 1) {
+
+                foreach(var c in TabControls) {
+                    Debug.WriteLine("Control: " + c.Name);
+                }
+
+                HideTabPage("uiTabKorisniciKorisnici");
+                HideTabPage("Dnevnik");
+                Debug.WriteLine("Tag: " + GetTabByName("Dnevnik").Tag);
+                ShowTabPage("uiTabKorisniciKorisnici");
+                ShowTabPage("Dnevnik");
+
+            }
         }
 
         private void uiTabControl_DrawItem(object sender, DrawItemEventArgs e) {
@@ -158,7 +172,71 @@ namespace RashoApp {
                     uiTabControl.ItemSize = new System.Drawing.Size((this.Height / uiTabControl.TabCount) - 15, 120);
                 }
             }
+        }
 
+        private void HideTabPage(string tabName) {
+            TabPage tab = GetTabByName(tabName);
+            if (tab != null) {
+                tab.Parent.Controls.RemoveByKey(tabName);
+            }
+        }
+
+        private void ShowTabPage(string tabName) {
+            TabPage tab = GetTabByName(tabName);
+            ShowTabPage(tab, uiTabControlKorisnici.TabPages.Count);
+        }
+        
+        private void ShowTabPage(TabPage tab, int index) {
+            TabControl parent = tab.Tag as TabControl;
+
+            if (parent == null) {
+                Debug.WriteLine("Roditelj nije pronađen.");
+                return;
+            }
+            
+            if (parent.Controls.Contains(tab)) { return; }
+            InsertTabPage(tab, parent, index);
+        }
+
+        private void InsertTabPage(TabPage tab, TabControl parent, int index) {
+            if (index < 0 || index > parent.Controls.Count)
+                throw new ArgumentException("Index out of Range.");
+            parent.Controls.Add(tab);
+            if (index < parent.Controls.Count - 1)
+                do {
+                    SwapTabPages(tab, parent.Controls[parent.Controls.IndexOf(tab) - 1] as TabPage);
+                }
+                while (parent.Controls.IndexOf(tab) != index);
+        }
+
+        private void SwapTabPages(TabPage tab1, TabPage tab2) {
+            if (tab1.Parent.Controls.Contains(tab1) == false || tab1.Parent.Controls.Contains(tab2) == false)
+                throw new ArgumentException("TabPages must be in the TabControls TabPageCollection.");
+
+            int Index1 = tab1.Parent.Controls.IndexOf(tab1);
+            int Index2 = tab1.Parent.Controls.IndexOf(tab2);
+            tab1.Parent.Controls.SetChildIndex(tab2, Index1);
+            tab1.Parent.Controls.SetChildIndex(tab1, Index2);
+        }
+
+
+        private void GetAllControlsByType(Control parent, Type type, List<Control> ControlList) {
+            foreach (Control c in parent.Controls) {
+                GetAllControlsByType(c, type, ControlList);
+                if (c.GetType() == type) {
+                    c.Tag = c.Parent; // da mogu vratiti tab kod pravog roditelja
+                    ControlList.Add(c);
+                }
+            }
+        }
+
+        private TabPage GetTabByName(string tabName) {
+            foreach(TabPage tab in TabControls) {
+                if (tab.Name == tabName) {
+                    return tab;
+                }
+            }
+            return null;
         }
     }
 }

@@ -279,6 +279,7 @@
             this.Name = "uiGlavniIzbornik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "uiGlavniIzbornik";
+            this.Load += new System.EventHandler(this.uiGlavniIzbornik_Load);
             this.SizeChanged += new System.EventHandler(this.uiGlavniIzbornik_SizeChanged);
             this.uiTabControl.ResumeLayout(false);
             this.Proizvodi.ResumeLayout(false);
