@@ -24,6 +24,7 @@ namespace RashoApp
 
         public UIPrijava() {
             InitializeComponent();
+            
             korisnikTableAdapter = new Baza18043_DBDataSetTableAdapters.KorisnikTableAdapter();
         }
 
@@ -39,6 +40,9 @@ namespace RashoApp
                     LoginInfo.Role = korisnik[0].id_uloga;
                     LoginInfo.Username = korisnik[0].korisnickoIme;
                     PrikaziGlavnuFormu();
+
+                    // Nakon zatvaranja glavne forme
+                    LoginInfo.CloseSession();
                 } else {
                     uiOznakaGreškaUPrijavi.Text = "Pogrešna lozinka";
                 }

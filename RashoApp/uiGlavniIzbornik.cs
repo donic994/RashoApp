@@ -36,33 +36,32 @@ namespace RashoApp {
             PrilagodiVisinuTabova();
         }
 
-        ~uiGlavniIzbornik() {
-            LoginInfo.CloseSession();
-        }
-
         private void uiGlavniIzbornik_Load(object sender, EventArgs e) {
-            // ako nije admin
-            Debug.WriteLine("uloga:" + LoginInfo.Role);
-            if (LoginInfo.Role != 1) {
 
-                foreach(var c in TabControls) {
-                    Debug.WriteLine("Control: " + c.Name);
-                }
-
-                // Na početku su svi tabovi skriveni
-                foreach (var tab in TabControls) {
-                    HideTabPage(tab.Name);
-                }
-
-                // Dohvati iz baze listu tabova koje smije viditi
-                var vidljiviElementi = vidiElement.GetVisibleElementsByUloga(LoginInfo.Role);
-                
-                foreach (var element in vidljiviElementi) {
-                    string nazivElementa = UIElementi.GetNameByID(element.id_uiElement)[0][1].ToString();
-                    Debug.WriteLine("Prikazuje: " + nazivElementa);
-                    ShowTabPage(nazivElementa);
-                }
+            foreach (var c in TabControls) {
+                Debug.WriteLine("Control: " + c.Name);
             }
+
+            // Na početku su svi tabovi skriveni
+            foreach (var tab in TabControls) {
+                Debug.WriteLine("Hiding: " + tab.Name);
+                HideTabPage(tab.Name);
+            }
+
+            // Dohvati iz baze listu tabova koje smije viditi
+            var vidljiviElementi = vidiElement.GetVisibleElementsByUloga(LoginInfo.Role);
+
+            if (vidljiviElementi == null || vidljiviElementi.Count < 1) {
+                Debug.WriteLine("Role: " + LoginInfo.Role);
+                Debug.WriteLine("Nema vidljivih elemenata");
+            }
+
+            foreach (var element in vidljiviElementi) {
+                string nazivElementa = UIElementi.GetNameByID(element.id_uiElement)[0][1].ToString();
+                Debug.WriteLine("Prikazuje: " + nazivElementa);
+                ShowTabPage(nazivElementa);
+            }
+
         }
 
         private void uiTabControl_DrawItem(object sender, DrawItemEventArgs e) {
@@ -195,17 +194,11 @@ namespace RashoApp {
 
         private void ShowTabPage(string tabName) {
             TabPage tab = GetTabByName(tabName);
-            ShowTabPage(tab, uiTabControlKorisnici.TabPages.Count);
-        }
-        
-        private void ShowTabPage(TabPage tab, int index) {
             TabControl parent = tab.Tag as TabControl;
+            ShowTabPage(tab, parent, parent.Controls.Count);
+        }
 
-            if (parent == null) {
-                Debug.WriteLine("Roditelj nije pronađen.");
-                return;
-            }
-            
+        private void ShowTabPage(TabPage tab, TabControl parent, int index) {
             if (parent.Controls.Contains(tab)) { return; }
             InsertTabPage(tab, parent, index);
         }
@@ -217,8 +210,7 @@ namespace RashoApp {
             if (index < parent.Controls.Count - 1)
                 do {
                     SwapTabPages(tab, parent.Controls[parent.Controls.IndexOf(tab) - 1] as TabPage);
-                }
-                while (parent.Controls.IndexOf(tab) != index);
+                } while (parent.Controls.IndexOf(tab) != index);
         }
 
         private void SwapTabPages(TabPage tab1, TabPage tab2) {
@@ -243,7 +235,7 @@ namespace RashoApp {
         }
 
         private TabPage GetTabByName(string tabName) {
-            foreach(TabPage tab in TabControls) {
+            foreach (TabPage tab in TabControls) {
                 if (tab.Name == tabName) {
                     return tab;
                 }
