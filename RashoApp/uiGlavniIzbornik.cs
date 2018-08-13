@@ -13,13 +13,18 @@ namespace RashoApp {
     public partial class uiGlavniIzbornik : Form {
 
         List<Control> TabControls;
+        Baza18043_DBDataSetTableAdapters.VidiElementTableAdapter vidiElement;
+        Baza18043_DBDataSetTableAdapters.UIElementiTableAdapter UIElementi;
 
         public uiGlavniIzbornik() {
             InitializeComponent();
+            vidiElement = new Baza18043_DBDataSetTableAdapters.VidiElementTableAdapter();
+            UIElementi = new Baza18043_DBDataSetTableAdapters.UIElementiTableAdapter();
 
             TabControls = new List<Control>();
             GetAllControlsByType(this, typeof(TabPage), TabControls);
 
+            // Popuni tablice
             PopuniOdUiDjelovi();
             PopuniOdUiElement();
             PopuniOdUiKomponenta();
@@ -44,12 +49,19 @@ namespace RashoApp {
                     Debug.WriteLine("Control: " + c.Name);
                 }
 
-                HideTabPage("uiTabKorisniciKorisnici");
-                HideTabPage("Dnevnik");
-                Debug.WriteLine("Tag: " + GetTabByName("Dnevnik").Tag);
-                ShowTabPage("uiTabKorisniciKorisnici");
-                ShowTabPage("Dnevnik");
+                // Na početku su svi tabovi skriveni
+                foreach (var tab in TabControls) {
+                    HideTabPage(tab.Name);
+                }
 
+                // Dohvati iz baze listu tabova koje smije viditi
+                var vidljiviElementi = vidiElement.GetVisibleElementsByUloga(LoginInfo.Role);
+                
+                foreach (var element in vidljiviElementi) {
+                    string nazivElementa = UIElementi.GetNameByID(element.id_uiElement)[0][1].ToString();
+                    Debug.WriteLine("Prikazuje: " + nazivElementa);
+                    ShowTabPage(nazivElementa);
+                }
             }
         }
 

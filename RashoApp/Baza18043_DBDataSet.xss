@@ -9,19 +9,19 @@
     <Shape ID="DesignTable:Dio" ZOrder="26" X="440" Y="70" Height="248" Width="168" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
     <Shape ID="DesignTable:Dobavljac" ZOrder="25" X="1259" Y="70" Height="172" Width="202" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:Element" ZOrder="24" X="706" Y="649" Height="191" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
-    <Shape ID="DesignTable:Komponenta" ZOrder="23" X="70" Y="70" Height="267" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
-    <Shape ID="DesignTable:Korisnik" ZOrder="7" X="1259" Y="312" Height="324" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
-    <Shape ID="DesignTable:Narudzba" ZOrder="22" X="988" Y="70" Height="153" Width="201" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
-    <Shape ID="DesignTable:Proizvod" ZOrder="21" X="440" Y="649" Height="229" Width="196" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
-    <Shape ID="DesignTable:StavkaNarudzbe" ZOrder="20" X="678" Y="70" Height="134" Width="240" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
-    <Shape ID="DesignTable:UlogaDijela" ZOrder="19" X="440" Y="948" Height="153" Width="230" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:UlogaKorisnika" ZOrder="2" X="1550" Y="312" Height="210" Width="269" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
-    <Shape ID="DesignTable:PogledDjelovaPoProoizvodu" ZOrder="18" X="1853" Y="70" Height="343" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
-    <Shape ID="DesignTable:UIElementi" ZOrder="6" X="0" Y="0" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
-    <Shape ID="DesignTable:VidiElement" ZOrder="1" X="0" Y="0" Height="154" Width="224" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
+    <Shape ID="DesignTable:Komponenta" ZOrder="3" X="118" Y="85" Height="267" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
+    <Shape ID="DesignTable:Korisnik" ZOrder="8" X="1259" Y="312" Height="324" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
+    <Shape ID="DesignTable:Narudzba" ZOrder="23" X="988" Y="70" Height="153" Width="201" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
+    <Shape ID="DesignTable:Proizvod" ZOrder="22" X="440" Y="649" Height="229" Width="196" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
+    <Shape ID="DesignTable:StavkaNarudzbe" ZOrder="21" X="678" Y="70" Height="134" Width="240" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
+    <Shape ID="DesignTable:UlogaDijela" ZOrder="20" X="440" Y="948" Height="153" Width="230" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
+    <Shape ID="DesignTable:UlogaKorisnika" ZOrder="4" X="1550" Y="312" Height="210" Width="269" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
+    <Shape ID="DesignTable:PogledDjelovaPoProoizvodu" ZOrder="19" X="1853" Y="70" Height="343" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
+    <Shape ID="DesignTable:UIElementi" ZOrder="2" X="0" Y="0" Height="191" Width="208" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
+    <Shape ID="DesignTable:VidiElement" ZOrder="1" X="232" Y="-13" Height="154" Width="224" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK_Element_Proizvod" ZOrder="17" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Element_Proizvod" ZOrder="18" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>636</X>
@@ -33,7 +33,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Element_Proizvod1" ZOrder="16" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Element_Proizvod1" ZOrder="17" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>636</X>
@@ -45,51 +45,51 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Komponenta_Dio" ZOrder="15" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Komponenta_Dio" ZOrder="16" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>440</X>
-          <Y>194</Y>
+          <Y>209</Y>
         </Point>
         <Point>
-          <X>370</X>
-          <Y>194</Y>
+          <X>418</X>
+          <Y>209</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Komponenta_Proizvod" ZOrder="14" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Komponenta_Proizvod" ZOrder="15" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>440</X>
           <Y>666</Y>
         </Point>
         <Point>
-          <X>353</X>
+          <X>401</X>
           <Y>666</Y>
         </Point>
         <Point>
-          <X>353</X>
-          <Y>337</Y>
+          <X>401</X>
+          <Y>352</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Komponenta_UlogaDijela" ZOrder="13" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Komponenta_UlogaDijela" ZOrder="14" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>440</X>
           <Y>965</Y>
         </Point>
         <Point>
-          <X>345</X>
+          <X>393</X>
           <Y>965</Y>
         </Point>
         <Point>
-          <X>345</X>
-          <Y>337</Y>
+          <X>393</X>
+          <Y>352</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Korisnik_UlogaKorisnika" ZOrder="12" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Korisnik_UlogaKorisnika" ZOrder="13" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>1576</X>
@@ -105,7 +105,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Narudzba_Dobavljac" ZOrder="11" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Narudzba_Dobavljac" ZOrder="12" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>1259</X>
@@ -117,7 +117,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_Narudzba_Korisnik" ZOrder="10" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Narudzba_Korisnik" ZOrder="11" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>1259</X>
@@ -133,7 +133,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_StavkaNarudzbe_Dio" ZOrder="9" LineWidth="11">
+    <Connector ID="DesignRelation:FK_StavkaNarudzbe_Dio" ZOrder="10" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>608</X>
@@ -145,7 +145,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_StavkaNarudzbe_Narudzba" ZOrder="8" LineWidth="11">
+    <Connector ID="DesignRelation:FK_StavkaNarudzbe_Narudzba" ZOrder="9" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>988</X>
@@ -157,7 +157,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_UIElementi_UIElementi" ZOrder="5" LineWidth="11">
+    <Connector ID="DesignRelation:FK_UIElementi_UIElementi" ZOrder="7" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>0</X>
@@ -181,43 +181,35 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_VidiElement_UIElementi" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:FK_VidiElement_UIElementi" ZOrder="6" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>70</X>
-          <Y>0</Y>
+          <X>208</X>
+          <Y>161</Y>
         </Point>
         <Point>
-          <X>70</X>
-          <Y>-38</Y>
+          <X>298</X>
+          <Y>161</Y>
         </Point>
         <Point>
-          <X>70</X>
-          <Y>-38</Y>
-        </Point>
-        <Point>
-          <X>70</X>
-          <Y>0</Y>
+          <X>298</X>
+          <Y>141</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_VidiElement_UlogaKorisnika" ZOrder="3" LineWidth="11">
+    <Connector ID="DesignRelation:FK_VidiElement_UlogaKorisnika" ZOrder="5" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>62</X>
-          <Y>0</Y>
+          <X>1550</X>
+          <Y>337</Y>
         </Point>
         <Point>
-          <X>62</X>
-          <Y>-38</Y>
+          <X>439</X>
+          <Y>337</Y>
         </Point>
         <Point>
-          <X>62</X>
-          <Y>-38</Y>
-        </Point>
-        <Point>
-          <X>62</X>
-          <Y>0</Y>
+          <X>439</X>
+          <Y>141</Y>
         </Point>
       </RoutePoints>
     </Connector>

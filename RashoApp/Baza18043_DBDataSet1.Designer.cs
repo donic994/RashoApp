@@ -11790,7 +11790,7 @@ SELECT ID, naziv, roditelj FROM UIElementi WHERE (ID = @ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, naziv, roditelj FROM dbo.UIElementi";
@@ -11804,6 +11804,11 @@ SELECT ID, naziv, roditelj FROM UIElementi WHERE (ID = @ID)";
             this._commandCollection[2].CommandText = "SELECT ID, naziv, roditelj FROM dbo.UIElementi\r\nWHERE roditelj=@roditelj";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@roditelj", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "roditelj", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT ID, naziv, roditelj FROM dbo.UIElementi\r\nWHERE ID=@id";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11853,6 +11858,18 @@ SELECT ID, naziv, roditelj FROM UIElementi WHERE (ID = @ID)";
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
+            Baza18043_DBDataSet.UIElementiDataTable dataTable = new Baza18043_DBDataSet.UIElementiDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Baza18043_DBDataSet.UIElementiDataTable GetNameByID(int id) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id));
             Baza18043_DBDataSet.UIElementiDataTable dataTable = new Baza18043_DBDataSet.UIElementiDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -12187,7 +12204,7 @@ SELECT id_uiElement, id_uloga FROM VidiElement WHERE (id_uiElement = @id_uiEleme
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@uloga", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_uloga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT id_uiElement FROM dbo.VidiElement\r\nWHERE id_uloga=@uloga";
+            this._commandCollection[2].CommandText = "SELECT id_uiElement, id_uloga FROM dbo.VidiElement\r\nWHERE id_uloga=@uloga";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@uloga", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_uloga", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

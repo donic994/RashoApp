@@ -6,8 +6,9 @@
 }
 
 namespace RashoApp.Baza18043_DBDataSetTableAdapters {
-    
-    
+    partial class UIElementiTableAdapter {
+    }
+
     public partial class KomponentaTableAdapter {
     }
 }
