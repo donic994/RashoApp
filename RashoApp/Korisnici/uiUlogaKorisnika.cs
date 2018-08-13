@@ -26,6 +26,7 @@ namespace RashoApp.Korisnici {
         private Baza18043_DBDataSetTableAdapters.VidiElementTableAdapter vidiElementTableAdapter;
 
         private bool canTriggerCheckEvent = true;
+        private List<TreeNode> NodeList;
 
         public UIUlogaKorisnika(int ulogaID=-1) {
             InitializeComponent();
@@ -34,11 +35,7 @@ namespace RashoApp.Korisnici {
             vidiElementTableAdapter = new Baza18043_DBDataSetTableAdapters.VidiElementTableAdapter();
 
             this.ulogaID = ulogaID;
-
-            // Ako je uloga prosljeđena formi (ako se radi o izmjeni uloge)
-            if (ulogaID >= 0) {
-                IspuniPodatkeOUlogi();
-            }
+            NodeList = new List<TreeNode>();
         }
 
         private void UIUlogaKorisnika_Load(object sender, EventArgs e) {
@@ -50,11 +47,19 @@ namespace RashoApp.Korisnici {
                 node.Text = row[1].ToString();
                 node.Name = row[0].ToString();
 
+                NodeList.Add(node);
                 uiTreeDozvole.Nodes.Add(node);
 
                 // Popuni trenutni node
                 PopuniTreeNode(node);
             }
+
+            // Ako je uloga prosljeđena formi (ako se radi o izmjeni uloge)
+            if (ulogaID >= 0) {
+                IspuniPodatkeOUlogi();
+                IspuniCheckboxe();
+            }
+            
         }
 
         // Popunjava tree view podacima iz baze
@@ -67,6 +72,7 @@ namespace RashoApp.Korisnici {
                 node.Name = row[0].ToString();
                 Debug.WriteLine("redak: " + row[1].ToString());
 
+                NodeList.Add(node);
                 parent.Nodes.Add(node);
                 // Popuni trenutni node
                 PopuniTreeNode(node);
@@ -79,6 +85,22 @@ namespace RashoApp.Korisnici {
             var uloga = ulogaTableAdapter.GetDataByID(ulogaID);
             uiInputNaziv.Text = uloga[0].naziv;
             uiInputOpis.Text = uloga[0].opis;
+        }
+
+        // Ispunjava checkboxe iz baze
+        private void IspuniCheckboxe() {
+            var vidljiviElementi = vidiElementTableAdapter.GetVisibleElementsByUloga(ulogaID);
+            Debug.WriteLine("CB count: " + NodeList.Count);
+
+            canTriggerCheckEvent = false;
+            foreach (TreeNode node in NodeList) {
+                foreach (var element in vidljiviElementi) {
+                    if (node.Name == element.id_uiElement.ToString()) {
+                        node.Checked = true;
+                    }
+                }
+            }
+            canTriggerCheckEvent = true;
         }
 
         private void uiActionPrihvati_Click(object sender, EventArgs e) {
@@ -183,5 +205,6 @@ namespace RashoApp.Korisnici {
                 }
             }
         }
+
     }
 }
