@@ -49,13 +49,15 @@ namespace RashoApp.Korisnici {
             uiInputOdabirUloga.SelectedValue = korisnik.id_uloga;
         }
 
+        // Popunjava combobox podacima pri učitavanju forme
         private void uiKorisnik_Load(object sender, EventArgs e) {
             this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
         }
 
+        // Sprema promjene pri kliku na gumb
         private void uiActionPrihvati_Click(object sender, EventArgs e) {
 
-            if (!IsInputValid()) {
+            if (!JeUnosValjan()) {
                 return;
             }
 
@@ -85,7 +87,8 @@ namespace RashoApp.Korisnici {
             }
         }
 
-        private bool IsInputValid() {
+        // Provjerava valjanost unesenih podataka
+        private bool JeUnosValjan() {
 
             bool isValid = true;
             uiOznakaGreška.Text = "";
@@ -148,7 +151,8 @@ namespace RashoApp.Korisnici {
 
             return isValid;
         }
-
+        
+        // Zatvara formu ne spremajući promjene
         private void uiActionPoništi_Click(object sender, EventArgs e) {
             Close();
         }

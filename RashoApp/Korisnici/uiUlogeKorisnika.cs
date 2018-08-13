@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Transactions;
 
 /// <summary>
 /// U formi UIUlogeKorisnika korisnik ima pregled svih korisnika u bazi te mogućnost dodavanja, brisanja i ažuriranja istih.
@@ -31,14 +32,15 @@ namespace RashoApp.Korisnici {
             this.tableAdapterManager.UpdateAll(this.baza18043_DBDataSet);
         }
 
+        // Učitava podatke iz baze u tablicu pri pokretanju
         private void uiUlogeKorisnika_Load(object sender, EventArgs e) {
-            // TODO: This line of code loads data into the 'baza18043_DBDataSet.VidiElement' table. You can move, or remove it, as needed.
-            this.vidiElementTableAdapter1.Fill(this.baza18043_DBDataSet.VidiElement);
             this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
         }
 
         // Otvori formu za dodavanje/izmjenu uloge
         private void uiActionDodaj_Click(object sender, EventArgs e) {
+            uiOznakaGreška.Text = "";
+
             UIUlogaKorisnika frm = new UIUlogaKorisnika();
             frm.ShowDialog();
             this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
@@ -46,6 +48,13 @@ namespace RashoApp.Korisnici {
 
         // Otvori formu za dodavanje/izmjenu uloge
         private void uiActionUredi_Click(object sender, EventArgs e) {
+            uiOznakaGreška.Text = "";
+
+            if (uiOutputTableDataUlogaKorisnika.SelectedCells[0].Value.ToString() == LoginInfo.Role.ToString()) {
+                uiOznakaGreška.Text = "Nije moguće izmijeniti ulogu prijavljenog korisnika.";
+                return;
+            }
+
             int id = int.Parse(uiOutputTableDataUlogaKorisnika.CurrentRow.Cells[0].Value.ToString());
             UIUlogaKorisnika frm = new UIUlogaKorisnika(id);
             frm.ShowDialog();
@@ -54,18 +63,15 @@ namespace RashoApp.Korisnici {
         
         // Briše ulogu iz baze
         private void uiActionObriši_Click(object sender, EventArgs e) {
+            uiOznakaGreška.Text = "";
 
             int id = int.Parse(uiOutputTableDataUlogaKorisnika.CurrentRow.Cells[0].Value.ToString());
-
             try {
-                // Obriši vidljive elemente
-                vidiElementTableAdapter.DeleteRowsByUloga(id);
-
                 // Obriši ulogu
                 ulogaKorisnikaTableAdapter.DeleteRowByID(id);
                 this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
-
-            } catch(Exception) {
+            // Zbog ograničenja vanjskog ključa
+            } catch (Exception) {
                 uiOznakaGreška.Text = "Uloga ne može biti obrisana.";
             }
 

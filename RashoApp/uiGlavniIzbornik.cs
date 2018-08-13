@@ -22,7 +22,7 @@ namespace RashoApp {
             UIElementi = new Baza18043_DBDataSetTableAdapters.UIElementiTableAdapter();
 
             TabControls = new List<Control>();
-            GetAllControlsByType(this, typeof(TabPage), TabControls);
+            DajSveKontrolePremaTipu(this, typeof(TabPage), TabControls);
 
             // Popuni tablice
             PopuniOdUiDjelovi();
@@ -45,7 +45,7 @@ namespace RashoApp {
             // Na početku su svi tabovi skriveni
             foreach (var tab in TabControls) {
                 Debug.WriteLine("Hiding: " + tab.Name);
-                HideTabPage(tab.Name);
+                SakrijTab(tab.Name);
             }
 
             // Dohvati iz baze listu tabova koje smije viditi
@@ -59,7 +59,7 @@ namespace RashoApp {
             foreach (var element in vidljiviElementi) {
                 string nazivElementa = UIElementi.GetNameByID(element.id_uiElement)[0][1].ToString();
                 Debug.WriteLine("Prikazuje: " + nazivElementa);
-                ShowTabPage(nazivElementa);
+                PrikaziTab(nazivElementa);
             }
 
         }
@@ -185,35 +185,40 @@ namespace RashoApp {
             }
         }
 
-        private void HideTabPage(string tabName) {
-            TabPage tab = GetTabByName(tabName);
+        // Skriva tab kojemu znamo naziv
+        private void SakrijTab(string tabName) {
+            TabPage tab = DajTabPremaImenu(tabName);
             if (tab != null) {
                 tab.Parent.Controls.RemoveByKey(tabName);
             }
         }
 
-        private void ShowTabPage(string tabName) {
-            TabPage tab = GetTabByName(tabName);
+        // Prikazuje tab za koji znamo naziv
+        private void PrikaziTab(string tabName) {
+            TabPage tab = DajTabPremaImenu(tabName);
             TabControl parent = tab.Tag as TabControl;
-            ShowTabPage(tab, parent, parent.Controls.Count);
+            PrikaziTab(tab, parent, parent.Controls.Count);
         }
 
-        private void ShowTabPage(TabPage tab, TabControl parent, int index) {
+        // Pomoćna metoda za prikazivanje taba na formi
+        private void PrikaziTab(TabPage tab, TabControl parent, int index) {
             if (parent.Controls.Contains(tab)) { return; }
-            InsertTabPage(tab, parent, index);
+            UbaciTab(tab, parent, index);
         }
 
-        private void InsertTabPage(TabPage tab, TabControl parent, int index) {
+        // Ubacuje tab na formu
+        private void UbaciTab(TabPage tab, TabControl parent, int index) {
             if (index < 0 || index > parent.Controls.Count)
                 throw new ArgumentException("Index out of Range.");
             parent.Controls.Add(tab);
             if (index < parent.Controls.Count - 1)
                 do {
-                    SwapTabPages(tab, parent.Controls[parent.Controls.IndexOf(tab) - 1] as TabPage);
+                    ZamijeniMjestaTabovima(tab, parent.Controls[parent.Controls.IndexOf(tab) - 1] as TabPage);
                 } while (parent.Controls.IndexOf(tab) != index);
         }
 
-        private void SwapTabPages(TabPage tab1, TabPage tab2) {
+        // Mijenja mjesta tabovima na formi
+        private void ZamijeniMjestaTabovima(TabPage tab1, TabPage tab2) {
             if (tab1.Parent.Controls.Contains(tab1) == false || tab1.Parent.Controls.Contains(tab2) == false)
                 throw new ArgumentException("TabPages must be in the TabControls TabPageCollection.");
 
@@ -223,10 +228,10 @@ namespace RashoApp {
             tab1.Parent.Controls.SetChildIndex(tab1, Index2);
         }
 
-
-        private void GetAllControlsByType(Control parent, Type type, List<Control> ControlList) {
+        // Vraća sve kontrole na formi zadanog tipa
+        private void DajSveKontrolePremaTipu(Control parent, Type type, List<Control> ControlList) {
             foreach (Control c in parent.Controls) {
-                GetAllControlsByType(c, type, ControlList);
+                DajSveKontrolePremaTipu(c, type, ControlList);
                 if (c.GetType() == type) {
                     c.Tag = c.Parent; // da mogu vratiti tab kod pravog roditelja
                     ControlList.Add(c);
@@ -234,7 +239,8 @@ namespace RashoApp {
             }
         }
 
-        private TabPage GetTabByName(string tabName) {
+        // Vraća tab za koji smo dali ime
+        private TabPage DajTabPremaImenu(string tabName) {
             foreach (TabPage tab in TabControls) {
                 if (tab.Name == tabName) {
                     return tab;

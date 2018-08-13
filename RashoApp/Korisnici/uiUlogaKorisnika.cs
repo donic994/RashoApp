@@ -38,6 +38,7 @@ namespace RashoApp.Korisnici {
             NodeList = new List<TreeNode>();
         }
 
+        // Kreira tree view za dozvole pri pokretanju forme
         private void UIUlogaKorisnika_Load(object sender, EventArgs e) {
             // Popuni tree view rootove
             var uiElementi = uiElementiTableAdapter.GetDataByNullRoditelj();
@@ -103,13 +104,15 @@ namespace RashoApp.Korisnici {
             canTriggerCheckEvent = true;
         }
 
+        // Sprema promjene pri kliku na gumb
         private void uiActionPrihvati_Click(object sender, EventArgs e) {
+            uiOznakaGreška.Text = "";
 
-            if (!IsValidInput()) { return; }
+            if (!JeValjanUnos()) { return; }
 
             try {
 
-                var checkedNodes = GetCheckedNodes();
+                var checkedNodes = DajOznaceneCvorove();
 
                 // Ako se radi o izmjeni uloge
                 if (ulogaID >= 0) {
@@ -138,7 +141,7 @@ namespace RashoApp.Korisnici {
         }
 
         // Provjerava valjanost unesenih podataka
-        private bool IsValidInput() {
+        private bool JeValjanUnos() {
             uiOznakaGreška.Text = "";
             bool isValid = true;
 
@@ -151,10 +154,12 @@ namespace RashoApp.Korisnici {
             return isValid;
         }
 
+        // Zatvara formu i ne spremi promjene
         private void uiActionPoništi_Click(object sender, EventArgs e) {
             Close();
         }
 
+        // Označava svu djecu i roditelje označenog čvora
         private void uiTreeDozvole_AfterCheck(object sender, TreeViewEventArgs e) {
 
             if (canTriggerCheckEvent == false) { return; }
@@ -164,44 +169,47 @@ namespace RashoApp.Korisnici {
             TreeNode node = e.Node;
             bool check = e.Node.Checked;
 
-            CheckChildNodes(node, check);
-            CheckParentNodes(node);            
+            OznaciDjecuCvorove(node, check);
+            OznaciRoditeljeCvorove(node);            
 
             canTriggerCheckEvent = true;
 
         }
 
-        private void CheckParentNodes(TreeNode node) {
+        // Označava roditelje danog čvora
+        private void OznaciRoditeljeCvorove(TreeNode node) {
             while (node.Parent != null) {
                 node.Parent.Checked = true;
                 node = node.Parent;
             }
         }
 
-        // Označava svu djecu označenog čvora
-        private void CheckChildNodes(TreeNode node, bool check) {
+        // Označava svu djecu danog čvora
+        private void OznaciDjecuCvorove(TreeNode node, bool check) {
             foreach (TreeNode child in node.Nodes) {
                 child.Checked = check;
-                CheckChildNodes(child, check);
+                OznaciDjecuCvorove(child, check);
             }
         }
 
-        private List<TreeNode> GetCheckedNodes() {
+        // Vraća listu označenih čvorova
+        private List<TreeNode> DajOznaceneCvorove() {
             List<TreeNode> nodes = new List<TreeNode>();
             foreach (TreeNode node in uiTreeDozvole.Nodes) {
                 if (node.Checked) {
                     nodes.Add(node);
-                    GetCheckedChildNodes(nodes, node);
+                    DajOznaceneDjecuCvorove(nodes, node);
                 }
             }
             return nodes;
         }
 
-        private void GetCheckedChildNodes(List<TreeNode> nodes, TreeNode parent) {
+        // Pomoćna rekurzivna metoda za traženje označenih čvorova
+        private void DajOznaceneDjecuCvorove(List<TreeNode> nodes, TreeNode parent) {
             foreach (TreeNode node in parent.Nodes) {
                 if (node.Checked) {
                     nodes.Add(node);
-                    GetCheckedChildNodes(nodes, node);
+                    DajOznaceneDjecuCvorove(nodes, node);
                 }
             }
         }

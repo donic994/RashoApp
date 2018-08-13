@@ -35,21 +35,28 @@ namespace RashoApp.Korisnici {
 
         // Otvara formu za unos/izmjenu korisnika klikom na gumb
         private void uiActionDodaj_Click(object sender, EventArgs e) {
+            uiOznakaGreška.Text = "";
+
             UIKorisnik frm = new UIKorisnik();
             frm.ShowDialog();
             this.korisnikTableAdapter.Fill(this.baza18043_DBDataSet.Korisnik);
+            this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
         }
 
         // Otvara formu za unos/izmjenu korisnika klikom na gumb
         private void uiActionUredi_Click(object sender, EventArgs e) {
+            uiOznakaGreška.Text = "";
+
             int idKorisnika = int.Parse(uiOutputTableDataKorisnici.CurrentRow.Cells[0].Value.ToString());
             UIKorisnik frm = new UIKorisnik(idKorisnika);
             frm.ShowDialog();
             this.korisnikTableAdapter.Fill(this.baza18043_DBDataSet.Korisnik);
+            this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
         }
 
         // Briše označenog korisnika iz baze
         private void uiActionObriši_Click(object sender, EventArgs e) {
+            uiOznakaGreška.Text = "";
 
             int idKorisnika = int.Parse(uiOutputTableDataKorisnici.CurrentRow.Cells[0].Value.ToString());
 

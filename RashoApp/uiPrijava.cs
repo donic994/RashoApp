@@ -29,6 +29,8 @@ namespace RashoApp
         }
 
         private void uiAkcijaPrijaviSe_Click(object sender, EventArgs e) {
+            uiOznakaGreškaUPrijavi.Text = "";
+
             var korisnik = korisnikTableAdapter.GetDataByKorisnickoIme(uiInputKorisničkoIme.Text);
             bool isValid = false;
             PasswordHash phObj = new PasswordHash();
@@ -43,6 +45,7 @@ namespace RashoApp
 
                     // Nakon zatvaranja glavne forme
                     LoginInfo.CloseSession();
+                    uiInputKorisničkoIme.Focus();
                 } else {
                     uiOznakaGreškaUPrijavi.Text = "Pogrešna lozinka";
                 }
