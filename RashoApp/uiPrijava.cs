@@ -30,28 +30,31 @@ namespace RashoApp
 
         private void uiAkcijaPrijaviSe_Click(object sender, EventArgs e) {
             uiOznakaGreškaUPrijavi.Text = "";
+            Baza18043_DBDataSet.KorisnikRow korisnik;
 
-            var korisnik = korisnikTableAdapter.GetDataByKorisnickoIme(uiInputKorisničkoIme.Text);
-            bool isValid = false;
-            PasswordHash phObj = new PasswordHash();
-
+            // Dohvati korisnika iz baze
             try {
-                isValid = phObj.Verify(uiInputLozinka.Text, korisnik[0].lozinka);
-                if (isValid) {
-                    LoginInfo.UserID = korisnik[0].ID;
-                    LoginInfo.Role = korisnik[0].id_uloga;
-                    LoginInfo.Username = korisnik[0].korisnickoIme;
-                    PrikaziGlavnuFormu();
-
-                    // Nakon zatvaranja glavne forme
-                    LoginInfo.CloseSession();
-                    uiInputKorisničkoIme.Focus();
-                } else {
-                    uiOznakaGreškaUPrijavi.Text = "Pogrešna lozinka";
-                }
+                korisnik = korisnikTableAdapter.GetDataByKorisnickoIme(uiInputKorisničkoIme.Text)[0];
             } catch (IndexOutOfRangeException) {
                 uiOznakaGreškaUPrijavi.Text = "Uneseni korisnik ne postoji.";
+                return;
             }
+
+            bool lozinkaIspravna = false;
+            PasswordHash phObj = new PasswordHash();
+
+            lozinkaIspravna = phObj.Verify(uiInputLozinka.Text, korisnik.lozinka);
+            if (lozinkaIspravna) {
+                LoginInfo.OtvoriSesiju(korisnik);
+                PrikaziGlavnuFormu();
+
+                // Nakon zatvaranja glavne forme
+                LoginInfo.ZatvoriSesiju();
+                uiInputKorisničkoIme.Focus();
+            } else {
+                uiOznakaGreškaUPrijavi.Text = "Pogrešna lozinka";
+            }
+
         }
 
         private void PrikaziGlavnuFormu() {

@@ -10,14 +10,20 @@ using System.Threading.Tasks;
 namespace RashoApp {
     public static class LoginInfo {
 
-        public static int UserID { get; set; }
-        public static string Username { get; set; }
-        public static int Role { get; set; }
+        public static int KorisnikID { get; set; }
+        public static string KorisnickoIme { get; set; }
+        public static int UlogaKorisnika { get; set; }
 
-        public static void CloseSession() {
-            UserID = -1;
-            Username = "";
-            Role = -1;
+        public static void OtvoriSesiju(Baza18043_DBDataSet.KorisnikRow korisnik) {
+            KorisnikID = korisnik.ID;
+            KorisnickoIme = korisnik.korisnickoIme;
+            UlogaKorisnika = korisnik.id_uloga;
+        }
+
+        public static void ZatvoriSesiju() {
+            KorisnikID = -1;
+            KorisnickoIme = "";
+            UlogaKorisnika = -1;
         }
 
     }

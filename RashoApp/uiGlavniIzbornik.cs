@@ -49,10 +49,10 @@ namespace RashoApp {
             }
 
             // Dohvati iz baze listu tabova koje smije viditi
-            var vidljiviElementi = vidiElement.GetVisibleElementsByUloga(LoginInfo.Role);
+            var vidljiviElementi = vidiElement.GetVisibleElementsByUloga(LoginInfo.UlogaKorisnika);
 
             if (vidljiviElementi == null || vidljiviElementi.Count < 1) {
-                Debug.WriteLine("Role: " + LoginInfo.Role);
+                Debug.WriteLine("Role: " + LoginInfo.UlogaKorisnika);
                 Debug.WriteLine("Nema vidljivih elemenata");
             }
 
