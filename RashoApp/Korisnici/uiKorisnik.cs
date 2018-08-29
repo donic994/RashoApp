@@ -29,6 +29,11 @@ namespace RashoApp.Korisnici {
 
             this.korisnikID = korisnikID;
 
+            // Ako je ID korisnika prenesen ovoj formi (ako se radi o izmjeni korisnika)
+            if (korisnikID >= 0) {
+                IspuniPodatkeOKorisniku();
+            }
+
         }
 
         // Ispunjava formu podacima iz baze radi lakše izmjene podataka o korisniku
@@ -47,11 +52,6 @@ namespace RashoApp.Korisnici {
         // Popunjava combobox podacima pri učitavanju forme
         private void uiKorisnik_Load(object sender, EventArgs e) {
             this.ulogaKorisnikaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaKorisnika);
-
-            // Ako je ID korisnika prenesen ovoj formi (ako se radi o izmjeni korisnika)
-            if (korisnikID >= 0) {
-                IspuniPodatkeOKorisniku();
-            }
         }
 
         // Sprema promjene pri kliku na gumb

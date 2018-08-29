@@ -60,7 +60,7 @@ namespace RashoApp.Korisnici {
 
             int idKorisnika = int.Parse(uiOutputTableDataKorisnici.CurrentRow.Cells[0].Value.ToString());
 
-            if (idKorisnika != LoginInfo.KorisnikID) {
+            if (idKorisnika != LoginInfo.UserID) {
                 try {
                     korisnikTableAdapter.DeleteRow(idKorisnika);
                     this.korisnikTableAdapter.Fill(this.baza18043_DBDataSet.Korisnik);

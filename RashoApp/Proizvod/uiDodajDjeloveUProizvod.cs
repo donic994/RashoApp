@@ -352,5 +352,12 @@ namespace RashoApp.Proizvod
             PopuniTablicu();
         }
 
+        private void IzračunajDimenzije()
+        {
+            string formula = "";
+            formula = ulogaDijelaTableAdapter.Adapter.GetType().GetField(duljinaDataGridViewTextBoxColumn.ToString()).ToString();
+
+        }
+
     }
 }

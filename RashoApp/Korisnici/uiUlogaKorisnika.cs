@@ -112,7 +112,7 @@ namespace RashoApp.Korisnici {
 
             try {
 
-                var checkedNodes = DohvatiOznaceneCvorove();
+                var checkedNodes = DajOznaceneCvorove();
 
                 // Ako se radi o izmjeni uloge
                 if (ulogaID >= 0) {
@@ -193,23 +193,23 @@ namespace RashoApp.Korisnici {
         }
 
         // Vraća listu označenih čvorova
-        private List<TreeNode> DohvatiOznaceneCvorove() {
+        private List<TreeNode> DajOznaceneCvorove() {
             List<TreeNode> nodes = new List<TreeNode>();
             foreach (TreeNode node in uiTreeDozvole.Nodes) {
                 if (node.Checked) {
                     nodes.Add(node);
-                    DohvatiOznaceneDjecuCvorove(nodes, node);
+                    DajOznaceneDjecuCvorove(nodes, node);
                 }
             }
             return nodes;
         }
 
         // Pomoćna rekurzivna metoda za traženje označenih čvorova
-        private void DohvatiOznaceneDjecuCvorove(List<TreeNode> nodes, TreeNode parent) {
+        private void DajOznaceneDjecuCvorove(List<TreeNode> nodes, TreeNode parent) {
             foreach (TreeNode node in parent.Nodes) {
                 if (node.Checked) {
                     nodes.Add(node);
-                    DohvatiOznaceneDjecuCvorove(nodes, node);
+                    DajOznaceneDjecuCvorove(nodes, node);
                 }
             }
         }

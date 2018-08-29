@@ -1,7 +1,9 @@
-﻿namespace RashoApp {
+﻿namespace RashoApp
+{
 
 
-    partial class Baza18043_DBDataSet {
+    partial class Baza18043_DBDataSet
+    {
     }
 }
 

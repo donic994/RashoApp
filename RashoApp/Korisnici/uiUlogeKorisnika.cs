@@ -50,7 +50,7 @@ namespace RashoApp.Korisnici {
         private void uiActionUredi_Click(object sender, EventArgs e) {
             uiOznakaGreška.Text = "";
 
-            if (uiOutputTableDataUlogaKorisnika.SelectedCells[0].Value.ToString() == LoginInfo.UlogaKorisnika.ToString()) {
+            if (uiOutputTableDataUlogaKorisnika.SelectedCells[0].Value.ToString() == LoginInfo.Role.ToString()) {
                 uiOznakaGreška.Text = "Nije moguće izmijeniti ulogu prijavljenog korisnika.";
                 return;
             }

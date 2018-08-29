@@ -74,9 +74,20 @@ namespace RashoApp.UlogaDijela
                 }
                 else
                 {
+                    string boja = "", debljina = "", duzina = "", kantiranost = "", materijal = "", sirina = "";
+                    int kolicina = 0;
+                     
                     naziv = uiInputNaziv.Text;
+                    boja = uiInputBoja.Text;
+                    debljina = uiInputDebljina.Text;
+                    duzina = uiInputDuzina.Text;
+                    sirina = uiInputŠirina.Text;
+                    kantiranost = uiInputKantiranost.Text;
+                    materijal = uiInputMaterijal.Text;
+                    int.TryParse(uiInputKoličina.Text, out kolicina);
+
                     Baza18043_DBDataSetTableAdapters.UlogaDijelaTableAdapter noviUlogaDijelaTableAdapter = new Baza18043_DBDataSetTableAdapters.UlogaDijelaTableAdapter();
-                    noviUlogaDijelaTableAdapter.Insert(naziv);
+                    noviUlogaDijelaTableAdapter.Insert(naziv, boja, debljina, duzina, kantiranost, kolicina, materijal, sirina);
 
                     SpremiPromjene();
                     this.Close();
