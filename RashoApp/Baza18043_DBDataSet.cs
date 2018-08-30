@@ -7,7 +7,12 @@
     }
 }
 
-namespace RashoApp.Baza18043_DBDataSetTableAdapters {
+namespace RashoApp.Baza18043_DBDataSetTableAdapters
+{
+    partial class UlogaDijelaTableAdapter
+    {
+    }
+
     partial class UIElementiTableAdapter {
     }
 

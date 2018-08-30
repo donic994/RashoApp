@@ -16,6 +16,7 @@ namespace RashoApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Proizvod.uiDodajDjeloveUProizvod(82, 150, 150, 52));
             Application.Run(new UIPrijava());
         }
     }
