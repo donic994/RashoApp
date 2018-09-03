@@ -48,13 +48,6 @@ namespace RashoApp {
                     SakrijTab(tab.Name);
                 }
             }
-
-            // Prikaži sve vidljive elemente
-            foreach (var element in vidljiviElementi) {
-                Debug.WriteLine("Prikazuje: " + element.naziv);
-                PrikaziTab(element.naziv);
-            }
-
         }
 
         private void uiTabControl_DrawItem(object sender, DrawItemEventArgs e) {
