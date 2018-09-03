@@ -38,13 +38,16 @@ namespace RashoApp {
 
         private void uiGlavniIzbornik_Load(object sender, EventArgs e) {
 
-            // Na početku su svi tabovi skriveni
-            foreach (var tab in TabControls) {
-                SakrijTab(tab.Name);
-            }
-
             // Dohvati iz baze listu tabova koje smije viditi
             var vidljiviElementi = this.vidljiviElementi.GetVidljiviElementiByUloga(LoginInfo.UlogaKorisnika);
+
+            foreach (var tab in TabControls) {
+                // Ako se tab ne nalazi na listi, tada ga sakrij
+                bool contains = vidljiviElementi.AsEnumerable().Any(row => tab.Name == row.Field<String>("naziv"));
+                if (!contains) {
+                    SakrijTab(tab.Name);
+                }
+            }
 
             // Prikaži sve vidljive elemente
             foreach (var element in vidljiviElementi) {
