@@ -13,12 +13,12 @@ namespace RashoApp {
     public partial class uiGlavniIzbornik : Form {
 
         List<Control> TabControls;
-        Baza18043_DBDataSetTableAdapters.VidiElementTableAdapter vidiElement;
+        Baza18043_DBDataSetTableAdapters.VidljiviElementiTableAdapter vidljiviElementi;
         Baza18043_DBDataSetTableAdapters.UIElementiTableAdapter UIElementi;
 
         public uiGlavniIzbornik() {
             InitializeComponent();
-            vidiElement = new Baza18043_DBDataSetTableAdapters.VidiElementTableAdapter();
+            vidljiviElementi = new Baza18043_DBDataSetTableAdapters.VidljiviElementiTableAdapter();
             UIElementi = new Baza18043_DBDataSetTableAdapters.UIElementiTableAdapter();
 
             TabControls = new List<Control>();
@@ -38,28 +38,18 @@ namespace RashoApp {
 
         private void uiGlavniIzbornik_Load(object sender, EventArgs e) {
 
-            foreach (var c in TabControls) {
-                Debug.WriteLine("Control: " + c.Name);
-            }
-
             // Na početku su svi tabovi skriveni
             foreach (var tab in TabControls) {
-                Debug.WriteLine("Hiding: " + tab.Name);
                 SakrijTab(tab.Name);
             }
 
             // Dohvati iz baze listu tabova koje smije viditi
-            var vidljiviElementi = vidiElement.GetVisibleElementsByUloga(LoginInfo.UlogaKorisnika);
+            var vidljiviElementi = this.vidljiviElementi.GetVidljiviElementiByUloga(LoginInfo.UlogaKorisnika);
 
-            if (vidljiviElementi == null || vidljiviElementi.Count < 1) {
-                Debug.WriteLine("Role: " + LoginInfo.UlogaKorisnika);
-                Debug.WriteLine("Nema vidljivih elemenata");
-            }
-
+            // Prikaži sve vidljive elemente
             foreach (var element in vidljiviElementi) {
-                string nazivElementa = UIElementi.GetNameByID(element.id_uiElement)[0][1].ToString();
-                Debug.WriteLine("Prikazuje: " + nazivElementa);
-                PrikaziTab(nazivElementa);
+                Debug.WriteLine("Prikazuje: " + element.naziv);
+                PrikaziTab(element.naziv);
             }
 
         }
