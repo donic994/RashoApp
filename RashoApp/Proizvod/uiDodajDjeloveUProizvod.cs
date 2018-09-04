@@ -53,7 +53,7 @@ namespace RashoApp.Proizvod
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.UlogaDijela' table. You can move, or remove it, as needed.
             //this.ulogaDijelaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaDijela);
 
-            IzračunajDimenzije();
+            IzračunajPrijedlogeDimenzija();
         }
 
         private void uiActionOdaberiUloga_Click(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace RashoApp.Proizvod
             UlogaDijela.uiOdaberiUlogaDijela frm = new UlogaDijela.uiOdaberiUlogaDijela("proizvod");
             frm.ShowDialog();
             //DajPrijedlogDimenzija();
-            IzračunajDimenzije();
+            IzračunajPrijedlogeDimenzija();
             uiInputOdabirTipaUnosaDijela.Visible = true;
         }
 
@@ -134,7 +134,7 @@ namespace RashoApp.Proizvod
             }
         } 
 
-        private void DajPrijedlogDimenzija()
+        /*private void DajPrijedlogDimenzija()
         {
             switch (uiOutputUlogaNaziv.Text)
             {
@@ -272,6 +272,7 @@ namespace RashoApp.Proizvod
                     }
             }
         }
+        */
 
         private void DodajDio()
         {            
@@ -354,7 +355,7 @@ namespace RashoApp.Proizvod
             PopuniTablicu();
         }
 
-        private void IzračunajDimenzije()
+        private void IzračunajPrijedlogeDimenzija()
         {
             string formulaDuzina = "", formulaSirina = "";
             int prviOperator = 0, drugiOperator = 0;

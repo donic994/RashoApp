@@ -47,14 +47,18 @@ namespace RashoApp.Proizvod
         private void uiActionDalje_Click(object sender, EventArgs e)
         {
             int kolicina = 1;
-            int.TryParse(uiInputElementKolicina.Text.ToString(), out kolicina);
-            int element = int.Parse(uiInputElementElement.Text.ToString());
 
-            Baza18043_DBDataSetTableAdapters.ElementTableAdapter noviElementTableAdapter = new Baza18043_DBDataSetTableAdapters.ElementTableAdapter();
-            noviElementTableAdapter.Insert(kolicina, ProizvodID, element);
+            if (uiInputElementElement.TextLength != 0 && uiInputElementKolicina.TextLength != 0)
+            {
+                int.TryParse(uiInputElementKolicina.Text.ToString(), out kolicina);
+                int element = int.Parse(uiInputElementElement.Text.ToString());
 
-            SpremiPromjene();
-            PopuniTablicu();
+                Baza18043_DBDataSetTableAdapters.ElementTableAdapter noviElementTableAdapter = new Baza18043_DBDataSetTableAdapters.ElementTableAdapter();
+                noviElementTableAdapter.Insert(kolicina, ProizvodID, element);
+
+                SpremiPromjene();
+                PopuniTablicu();
+            }
         }
 
         private void uiActionSpremiElement_Click(object sender, EventArgs e)
