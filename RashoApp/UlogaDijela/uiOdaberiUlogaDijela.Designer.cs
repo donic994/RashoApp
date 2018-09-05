@@ -68,9 +68,11 @@
             this.tableAdapterManager.NarudzbaTableAdapter = null;
             this.tableAdapterManager.ProizvodTableAdapter = null;
             this.tableAdapterManager.StavkaNarudzbeTableAdapter = null;
+            this.tableAdapterManager.UIElementiTableAdapter = null;
             this.tableAdapterManager.UlogaDijelaTableAdapter = this.ulogaDijelaTableAdapter;
             this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.VidiElementTableAdapter = null;
             // 
             // uiOutputDataTableUlogaDijela
             // 
@@ -131,6 +133,7 @@
             this.Controls.Add(this.uiActionOdaberiUlogaDijela);
             this.Controls.Add(this.uiOutputDataTableUlogaDijela);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "uiOdaberiUlogaDijela";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Odaberi ulogu dijela";

@@ -29,12 +29,13 @@ namespace RashoApp.UlogaDijela
         private void uiUlogaDijela_Load(object sender, EventArgs e)
         {
             PopuniPodacimaUlogaDijela();
+
         }
 
         private void uiActionDodajNoviUlogaDijela_Click(object sender, EventArgs e)
         {
             int id = int.Parse(uiOutputTableDataUlogaDijela.SelectedCells[0].Value.ToString());
-            UlogaDijela.uiDodajUrediUlogaDijela frm = new UlogaDijela.uiDodajUrediUlogaDijela(id, "dodaj");
+            UlogaDijela.uiDodajUrediUlogaDijela frm = new uiDodajUrediUlogaDijela(id, "dodaj");
             frm.ShowDialog();
         }
 

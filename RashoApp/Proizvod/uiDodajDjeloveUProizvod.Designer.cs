@@ -83,6 +83,7 @@
             this.uiLabelOdabraniDioID = new System.Windows.Forms.Label();
             this.uiActionObrišiDio = new System.Windows.Forms.Button();
             this.pogledDjelovaPoProoizvoduTableAdapter = new RashoApp.Baza18043_DBDataSetTableAdapters.PogledDjelovaPoProoizvoduTableAdapter();
+            this.uiOutputISPIS = new System.Windows.Forms.Label();
             iDLabel = new System.Windows.Forms.Label();
             nazivLabel = new System.Windows.Forms.Label();
             uiLabelKomponentaKolicina = new System.Windows.Forms.Label();
@@ -355,9 +356,11 @@
             this.tableAdapterManager.NarudzbaTableAdapter = null;
             this.tableAdapterManager.ProizvodTableAdapter = null;
             this.tableAdapterManager.StavkaNarudzbeTableAdapter = null;
+            this.tableAdapterManager.UIElementiTableAdapter = null;
             this.tableAdapterManager.UlogaDijelaTableAdapter = this.ulogaDijelaTableAdapter;
             this.tableAdapterManager.UlogaKorisnikaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = RashoApp.Baza18043_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.VidiElementTableAdapter = null;
             // 
             // dioTableAdapter
             // 
@@ -579,12 +582,22 @@
             // 
             this.pogledDjelovaPoProoizvoduTableAdapter.ClearBeforeFill = true;
             // 
+            // uiOutputISPIS
+            // 
+            this.uiOutputISPIS.AutoSize = true;
+            this.uiOutputISPIS.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uiOutputISPIS.Location = new System.Drawing.Point(342, 104);
+            this.uiOutputISPIS.Name = "uiOutputISPIS";
+            this.uiOutputISPIS.Size = new System.Drawing.Size(0, 36);
+            this.uiOutputISPIS.TabIndex = 41;
+            // 
             // uiDodajDjeloveUProizvod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(668, 582);
+            this.Controls.Add(this.uiOutputISPIS);
             this.Controls.Add(this.uiActionObrišiDio);
             this.Controls.Add(this.uiLabelOdabraniDioID);
             this.Controls.Add(this.uiLabelOdabraniDioNaziv);
@@ -684,5 +697,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bojaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ulogaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn slikaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label uiOutputISPIS;
     }
 }

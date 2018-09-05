@@ -45,7 +45,7 @@ namespace RashoApp.Proizvod
         {
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.PogledDjelovaPoProoizvodu' table. You can move, or remove it, as needed.
             this.pogledDjelovaPoProoizvoduTableAdapter.FillByProizvodID(this.baza18043_DBDataSet.PogledDjelovaPoProoizvodu, ProizvodID);
-          
+
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Komponenta' table. You can move, or remove it, as needed.
             //this.komponentaTableAdapter.Fill(this.baza18043_DBDataSet.Komponenta);
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.Dio' table. You can move, or remove it, as needed.
@@ -53,13 +53,15 @@ namespace RashoApp.Proizvod
             // TODO: This line of code loads data into the 'baza18043_DBDataSet.UlogaDijela' table. You can move, or remove it, as needed.
             //this.ulogaDijelaTableAdapter.Fill(this.baza18043_DBDataSet.UlogaDijela);
 
+            IzračunajPrijedlogeDimenzija();
         }
 
         private void uiActionOdaberiUloga_Click(object sender, EventArgs e)
         {
             UlogaDijela.uiOdaberiUlogaDijela frm = new UlogaDijela.uiOdaberiUlogaDijela("proizvod");
             frm.ShowDialog();
-            DajPrijedlogDimenzija();
+            //DajPrijedlogDimenzija();
+            IzračunajPrijedlogeDimenzija();
             uiInputOdabirTipaUnosaDijela.Visible = true;
         }
 
@@ -132,7 +134,7 @@ namespace RashoApp.Proizvod
             }
         } 
 
-        private void DajPrijedlogDimenzija()
+        /*private void DajPrijedlogDimenzija()
         {
             switch (uiOutputUlogaNaziv.Text)
             {
@@ -270,6 +272,7 @@ namespace RashoApp.Proizvod
                     }
             }
         }
+        */
 
         private void DodajDio()
         {            
@@ -350,6 +353,77 @@ namespace RashoApp.Proizvod
             }
             SpremiPromjene();
             PopuniTablicu();
+        }
+
+        private void IzračunajPrijedlogeDimenzija()
+        {
+            string formulaDuzina = "", formulaSirina = "";
+            int prviOperator = 0, drugiOperator = 0;
+
+            try
+            {
+                var uloga = ulogaDijelaTableAdapter.GetDataByUlogaNaziv(uiOutputUlogaNaziv.Text);
+                formulaDuzina = uloga[0].duzina.ToString();
+                formulaSirina = uloga[0].sirina.ToString();
+
+                uiInputDioNaziv.Text = uloga[0].naziv.ToString();
+                uiInputDioDebljina.Text = uloga[0].debljina.ToString();
+                uiInputKomponentaBoja.Text = uloga[0].boja.ToString();
+                uiInputKomponentaKantiranost.Text = uloga[0].kantiranost.ToString();
+                uiInputKomponentaKolicina.Text = uloga[0].kolicina.ToString();
+                uiInputDioMaterijal.Text = uloga[0].materijal.ToString();
+            }
+            catch (IndexOutOfRangeException) { };
+
+
+            string[] operatoriDuzina = formulaDuzina.Split('-').ToArray();
+            string[] operatoriSirina = formulaSirina.Split('-').ToArray();
+
+            if (operatoriDuzina[0] == "duzina")
+            {
+                prviOperator = Duzina;
+            }
+            else if(operatoriDuzina[0] == "sirina")
+            {
+                prviOperator = Sirina;
+            }
+            else if(operatoriDuzina[0] == "dubina")
+            {
+                prviOperator = Dubina;
+            }
+            else
+            {
+                prviOperator = 0;
+            }
+            try
+            {
+                int.TryParse(operatoriDuzina[1].ToString(), out drugiOperator);
+            }
+            catch (IndexOutOfRangeException) { }
+            uiInputDioDužina.Text =  (prviOperator - drugiOperator).ToString();
+
+            if (operatoriSirina[0] == "duzina")
+            {
+                prviOperator = Duzina;
+            }
+            else if (operatoriSirina[0] == "sirina")
+            {
+                prviOperator = Sirina;
+            }
+            else if (operatoriSirina[0] == "dubina")
+            {
+                prviOperator = Dubina;
+            }
+            else
+            {
+                prviOperator = 0;
+            }
+            try
+            {
+                int.TryParse(operatoriSirina[1].ToString(), out drugiOperator);
+            }
+            catch (IndexOutOfRangeException) { }
+            uiInputDioŠirina.Text = (prviOperator - drugiOperator).ToString();
         }
 
     }
