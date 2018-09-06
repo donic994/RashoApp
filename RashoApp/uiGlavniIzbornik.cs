@@ -36,14 +36,12 @@ namespace RashoApp {
             PrilagodiVisinuTabova();
         }
 
-        private void uiGlavniIzbornik_Load(object sender, EventArgs e)
-        {
+        private void uiGlavniIzbornik_Load(object sender, EventArgs e) {
 
             // Dohvati iz baze listu tabova koje smije viditi
             var vidljiviElementi = this.vidljiviElementi.GetVidljiviElementiByUloga(LoginInfo.UlogaKorisnika);
 
-            foreach (var tab in TabControls)
-            {
+            foreach (var tab in TabControls) {
                 // Ako se tab ne nalazi na listi, tada ga sakrij
                 bool contains = vidljiviElementi.AsEnumerable().Any(row => tab.Name == row.Field<String>("naziv"));
                 if (!contains) {
