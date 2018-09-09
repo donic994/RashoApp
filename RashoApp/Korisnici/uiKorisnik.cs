@@ -56,7 +56,7 @@ namespace RashoApp.Korisnici {
 
         // Sprema promjene pri kliku na gumb
         private void uiActionPrihvati_Click(object sender, EventArgs e) {
-
+            uiOznakaGreška.Text = "";
             if (!JeUnosValjan()) {
                 return;
             }
@@ -91,27 +91,15 @@ namespace RashoApp.Korisnici {
         private bool JeUnosValjan() {
 
             bool isValid = true;
-            uiOznakaGreška.Text = "";
-
-            // Jesu li popunita obvezna polja
-            if (uiInputIme.Text.Length < 1 
-                || uiInputPrezime.Text.Length < 1 
-                || uiInputAdresa.Text.Length < 1
-                || uiInputKorisničkoIme.Text.Length < 1 
-                || uiInputLozinka.Text.Length < 1) {
-
-                uiOznakaGreška.Text = "Nisu popunita obvezna polja.";
-                return false;
-            }
-
+            
             // Jesu li polja popunita valjanim podacima
             Regex imePattern = new Regex(@"^([A-ZŠĐŽĆČ][a-zšđžćč]+)(-[A-ZŠĐŽĆČ])?[a-zšđžćč]+$");
             Regex prezimePattern = new Regex(@"^([A-ZŠĐŽĆČ][a-zšđžćč]+)(-[A-ZŠĐŽĆČ])?[a-zšđžćč]+$");
             Regex adresaPattern = new Regex(@"^([A-ZŠĐŽĆČ\.][a-zšđžćč\.]+)([\ \-]([A-ZŠĐŽĆČ\.]?[a-zšđžćč\.]+)?(\d+[A-Za-z]{0,2})?)*$");
-            Regex emailPattern = new Regex(@"\A[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\z");
+            Regex emailPattern = new Regex(@"\A([a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)?\z");
             Regex korisnickoImePattern = new Regex(@"^[a-z][a-z0-9]{3,}$");
             Regex lozinkaPattern = new Regex(@"^([a-zA-Z0-9@*#šđžćčŠĐŽĆČ ]{4,20})$");
-            Regex kontaktPattern = new Regex(@"^(\d+)([\ \-\\\/]\d+)*$");
+            Regex kontaktPattern = new Regex(@"^((\d+)([\ \-\\\/]\d+)*)?$");
 
             
             if (!imePattern.IsMatch(uiInputIme.Text)) {
